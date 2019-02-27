@@ -1,0 +1,615 @@
+<resources>
+    <string name="app_name">华图教师</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_directTab_all">全部</string>
+    <string name="text_directTab_my">我的</string>
+    <string name="home_page">首页</string>
+    <string name="interview_video">面试视频</string>
+    <string name="subject_choices">科目选择</string>
+    <string name="freeDirect">直播</string>
+    <string name="payDirect">默认排序</string>
+    <string name="notice">公告</string>
+    <string name="zeroDirect">0元</string>
+    <string name="directTitle">课程详情</string>
+    <string name="directIntroduce">课程介绍</string>
+    <string name="directCurriculum">课程表</string>
+    <string name="directCurr">课程</string>
+    <string name="directTeacherIntroduce"> 教师介绍</string>
+    <string name="interview_form_choices">面试形式</string>
+    <string name="grade_choices">学段</string>
+    <string name="default_value">测试</string>
+    <string name="default_num_value">120</string>
+    <string name="studyRecord">做题记录</string>
+    <string name="store_mine">我的收藏</string>
+    <string name="msg_mine">我的消息</string>
+    <string name="loading">加载中...</string>
+    <string name="introduce">简介</string>
+    <string name="video_text">课文</string>
+    <string name="video_plan">教案</string>
+    <string name="study">立即学习</string>
+    <string name="buy">购买</string>
+    <string name="buynow">立即购买</string>
+    <string name="activate">激活</string>
+    <string name="goldRecharge">金币充值</string>
+    <string name="goldPersonal">金币账户</string>
+    <string name="bill">账单</string>
+    <string name="add_ly">点击开始留言</string>
+    <string name="feedback">请描述您使用华图教师时遇到的问题和意见，若功能异常，上传页面截图更快解决哦！</string>
+    <string name="about">方法有三种：投稿视频赚取金币，点击广告赚取金币，\n
+    每天登陆货的金币。其中关于登陆获得的金币，要注意\n一下几点：\n
+    1.要是正式会员。\n
+    2.并不是每天登陆送金币，而是每间隔24小时送金币。\n
+    3.登陆并不是指登陆B站，而是登陆B站弹幕服务器所以\n
+        你需要在登陆的情况下点开任意一个视频即可。</string>
+    <string name="qq">1912452074</string>
+    <string name="toPay">支付订单</string>
+    <string name="goldPay">金币支付</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="payMethod">选择支付方式</string>
+    <string name="submitFaile">提交失败</string>
+    <string name="submitSucess">感谢您的反馈，我们会尽快完善</string>
+    <string name="video_des">视频上传中，敬请期待...</string>
+    <string name="teacher_serviceNO">教师公众号</string>
+
+    <string name="training_today">今日特训</string>
+    <string name="module_examocean">模块题海</string>
+    <string name="exam_test">真题测评</string>
+    <string name="exam_dryrun">真题模考</string>
+    <string name="examerror_center">错题中心</string>
+    <string name="video_interview">面试视频</string>
+    <string name="live_video">直播在线</string>
+    <string name="time_video">24小时直播</string>
+    <string name="time_video_direct">24小时直播课堂</string>
+    <string name="live_consult">咨询</string>
+    <string name="Questions">题库</string>
+    <string name="live_mine">我的直播课</string>
+    <string name="live_my">我的直播</string>
+    <string name="class_my">我的课程</string>
+    <string name="class_notice">课程通知</string>
+
+    <string name="live_class">直播课</string>
+    <string name="account_gold">金币账户</string>
+    <string name="error_correction">我的纠错</string>
+    <string name="clearCache">清除缓存</string>
+    <string name="customerCommand">意见反馈</string>
+    <string name="appZan">给我们好评</string>
+    <string name="aboutUs">关于我们</string>
+    <string name="exitApp">退出账户</string>
+    <string name="setApp">设置</string>
+    <string name="network">您的网络出现点问题，请稍后再试!</string>
+    <string name="server_error">服务器异常，请稍后再试!</string>
+    <string name="no_data">暂无数据</string>
+    <string name="data_loading">数据加载中</string>
+    <string name="no_more">暂无更多</string>
+    <string name="video_error_state">无法播放此视频，请检查视频状态</string>
+    <string name="video_error_network">无法播放此视频，请检查网络状态</string>
+    <string name="video_error_account">无法播放此视频，请检查帐户信息</string>
+
+    <string name="mobile_input_username">用户名/手机号/教师网账号</string>
+    <string name="mobile_input">请输入手机号</string>
+    <string name="pwd_login_input">请输入登录密码</string>
+    <string name="login">登录</string>
+    <string name="register_quick">快速注册</string>
+    <string name="pwd_find">忘记密码</string>
+    <string name="find_pwd">找回密码</string>
+    <string name="login_quick">快捷登录</string>
+    <string name="register">注册</string>
+    <string name="bind_mobile">绑定手机号</string>
+    <string name="change_mobile">更换手机号</string>
+    <string name="register_fail">注册失败，请稍后重试！</string>
+    <string name="save_success">保存成功</string>
+    <string name="del_success">删除成功</string>
+    <string name="save_fail">保存失败，请稍后重试！</string>
+    <string name="login_fail">登录失败，请稍后重试！</string>
+    <string name="confirm_pwd_input">请输入验证码</string>
+    <string name="next_step">下一步</string>
+    <string name="confirm_pwd_obtain">获取验证码</string>
+    <string name="valid_phonenumber">请填写有效的手机号码</string>
+    <string name="verification_code_wrong">验证码不正确</string>
+    <string name="nickname_input">请输入昵称</string>
+    <string name="pwd_input">请输入密码</string>
+    <string name="pwd_confirm">请确认密码</string>
+    <string name="pwd_length">密码长度最低为六位</string>
+    <string name="pwd_different">两次输入的密码不同，请重新输入</string>
+    <string name="complete">完成</string>
+    <string name="complete_data">完善资料</string>
+    <string name="city_chooose">选择城市</string>
+    <string name="stage_chooose">选择学段</string>
+    <string name="catagory_exam_choose">选择考试类型</string>
+    <string name="stage_exam_choose">选择考试学段</string>
+    <string name="subject_exam_choose">选择考试科目</string>
+    <string name="Sso_prompt">您的账号已在其他设备登录,请重新登陆</string>
+
+    <string-array name="eva_years">
+        <item name="years6">2016</item>
+        <item name="years5">2015</item>
+        <item name="years4">2014</item>
+        <item name="years3">2013</item>
+        <item name="years2">2012</item>
+        <item name="years1">2011</item>
+        <item name="years1">2010</item>
+        <item name="years1">2009</item>
+        <item name="years1">2008</item>
+        <item name="years1">2007</item>
+        <item name="years1">2006</item>
+    </string-array>
+
+    <string-array name="categoryArrForExamStage">
+        <item name="education_preschool">幼教</item>
+        <item name="primaryschool">小学</item>
+        <item name="middleschool">中学</item>
+        <item name="highschool">高中</item>
+        <item name="secondaryschool">中职</item>
+    </string-array>
+
+    <string-array name="key_stage">
+        <item name="key_stage_education_preschool">stage_yj</item>
+        <item name="key_stage_primaryschool">stage_xx</item>
+        <item name="key_stage_middleschool">stage_zx</item>
+        <item name="key_stage_highschool">stage_zx</item>
+        <item name="key_stage_secondaryschool">stage_zx</item>
+    </string-array>
+
+    <string name="government_confirm">国家教师资格证考试</string>
+    <string name="province_city_eve">教师招聘考试</string>
+
+    <string-array name="name_category">
+        <item name="government_confirm">@string/government_confirm</item>
+        <item name="province_city_eve">@string/province_city_eve</item>
+    </string-array>
+
+    <string name="key_stage_government_confirm">examType_qgjs</string>
+    <string name="key_stage_province_city_eve">examType_dqjs</string>
+
+    <string-array name="key_category">
+        <item name="key_stage_government_confirm">@string/key_stage_government_confirm</item>
+        <item name="key_stage_province_city_eve">@string/key_stage_province_city_eve</item>
+    </string-array>
+
+    <string-array name="video_form">
+        <item name="video_form_lecture">试讲</item>
+        <item name="video_form_lesson">说课</item>
+        <item name="video_form_structure">结构化</item>
+        <item name="video_form_other">其他</item>
+    </string-array>
+
+    <string name="current_info">当前：</string>
+    <string name="current_gj">国家教师资格证考试</string>
+    <string name="current_dq">教师招聘考试</string>
+
+    <string name="commit">提交</string>
+    <string name="downloading">正在下载中</string>
+    <string name="download">下载</string>
+    <string name="nodownladpackage">暂无题包...</string>
+    <string name="updateinfoforexercise">该题包有更新,是否进行更新?</string>
+    <string name="confirm">确定</string>
+    <string name="too_offen">您的操作过于频繁，请稍后再试！</string>
+    <string name="logining">登录中...</string>
+    <string name="waiting">请稍后...</string>
+    <string name="test_code">验证中...</string>
+    <string name="binding">正在绑定...</string>
+    <string name="registering">注册中...</string>
+    <string name="saveing">保存中...</string>
+    <string name="deleting">删除中...</string>
+    <string name="modifying">正在修改，请稍后...</string>
+    <string name="modify_success">修改成功</string>
+    <string name="modify_fail">修改失败，请稍后重试！</string>
+    <string name="verify_mobile_fail">验证手机号失败，请重试!</string>
+    <string name="numforexercise">模块题数:</string>
+    <string name="five">5道</string>
+    <string name="ten">10道</string>
+    <string name="fifteen">15道</string>
+    <string name="choosecategory">请选择知识点</string>
+    <string name="alter">修改</string>
+
+    <string name="pay_sucess">支付成功</string>
+    <string name="pay_failure">支付失败</string>
+    <string name="pay_wait">支付结果确认中</string>
+
+    <string name="sms_success">短信发送成功，请耐心等待！</string>
+    <string name="sms_fail">短信发送失败，请稍后重试！</string>
+
+    <string name="prompt">提示</string>
+    <string name="exit_confirm">确定退出吗？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+    <string name="answercard">答题卡</string>
+    <string name="analysis">解析</string>
+    <string name="analysisAndstore">收藏/错题</string>
+    <string name="next">下一题</string>
+    <string name="delete">垃圾桶</string>
+    <string name="deletecn">删除</string>
+    <string name="hand_in_papers">交卷</string>
+    <string name="store">收藏</string>
+    <string name="storing">收藏中。。。</string>
+    <string name="unstoring">取消收藏中。。。</string>
+    <string name="handinpapers_confirminfo">你还有题目未做完\n确定交卷吗?</string>
+    <string name="store_delete_gone">此题已经下线啦</string>
+    <string name="wrongexercise_last">已经是最后一题，重新查看错题？</string>
+    <string name="handinpapers_ing">交卷中。。。</string>
+    <string name="wrongexercise_analysis">错题解析</string>
+    <string name="exercise_continue">继续做题</string>
+    <string name="exercise_analysisforall">全部解析</string>
+    <string name="exercise_type">练习类型:</string>
+    <string name="num_right">答对:</string>
+    <string name="percent_right">%\n正确率</string>
+    <string name="time_used">实际用时:</string>
+    <string name="time_recommand">推荐用时:</string>
+    <string name="situation_answer">答题情况:</string>
+    <string name="objective_test">客观题</string>
+    <string name="ctive_question">主观题</string>
+    <string name="Analysis">试卷分析</string>
+    <string name="nowrongexercise_info">没有错题，请查看全部解析</string>
+    <string name="noexericse">暂无习题</string>
+    <string name="startdownloadexercisepackage_info">开始下载题包，离线也能做题哦~</string>
+    <string name="exercisepackagedowning_info">离线题包下载中,请耐心等待~</string>
+    <string name="quickexercise">快速组卷训练</string>
+    <string name="lastexericse">已经是最后一题了</string>
+
+    <string-array name="video_subject">
+        <item name="video_subject_chinese">语文</item>
+        <item name="video_subject_math">数学</item>
+        <item name="video_subject_english">英语</item>
+        <item name="video_subject_music">音乐</item>
+        <item name="video_subject_sports">体育</item>
+        <item name="video_subject_art">美术</item>
+        <item name="video_subject_technology">信息技术</item>
+        <item name="video_subject_science">科学</item>
+        <item name="video_subject_history">历史</item>
+        <item name="video_subject_geography">地理</item>
+        <item name="video_subject_geography">幼教</item>
+        <item name="video_subject_geography">生物</item>
+        <item name="video_subject_geography">政治</item>
+        <item name="video_subject_geography">思想品德</item>
+        <item name="video_subject_geography">物理</item>
+    </string-array>
+
+    <string-array name="tw_middle_subject">
+        <item name="video_subject_chinese">语文</item>
+        <item name="video_subject_math">数学</item>
+        <item name="video_subject_english">英语</item>
+        <item name="video_subject_music">音乐</item>
+        <item name="video_subject_sports">体育</item>
+        <item name="video_subject_art">美术</item>
+        <item name="subject_art">心理健康教育</item>
+        <item name="video_subject_technology">信息技术</item>
+        <item name="rey_subjects1">教育综合知识</item>
+        <item name="video_subject_science">物理</item>
+        <item name="video_subject_science">化学</item>
+        <item name="video_subject_science">生物</item>
+        <item name="video_subject_history">历史</item>
+        <item name="video_subject_geography">地理</item>
+        <item name="video_subject_geography">政治</item>
+        <item name="video_subject_geography">其他学科</item>
+    </string-array>
+    <!--private LinearLayout ll_test_categories, ll__interview, ll_learning_period, ll_subjects, ll_charge_type;-->
+    <!-- 筛选考试类别-->
+    <string-array name="test_categories">
+        <item name="categories_certification">教师资格证面试</item>
+        <item name="categories_certification">教师资格证笔试</item>
+        <item name="categories_recruitment">教师招聘面试</item>
+        <item name="categories_recruitment">教师招聘笔试</item>
+        <item name="categories_special">特岗教师</item>
+        <item name="categories_special">事业单位D类</item>
+    </string-array>
+    <!-- 筛选考试类别-->
+    <string-array name="test_materialss">
+        <item name="categories_certification">教师资格证面试</item>
+        <item name="categories_certification">教师资格证笔试</item>
+        <item name="categories_recruitment">教师招聘面试</item>
+        <item name="categories_recruitment">教师招聘笔试</item>
+    </string-array>
+    <!-- 筛选笔面试-->
+    <string-array name="interview">
+        <item name="content_written">笔试</item>
+        <item name="content_interview">面试</item>
+    </string-array>
+    <!-- 课程班型-->
+    <string-array name="class_type">
+        <item name="content_written">精讲系列</item>
+        <item name="content_interview">冲刺系列</item>
+        <item name="content_written">习题系列</item>
+        <item name="content_interview">专项系列</item>
+        <item name="content_interview">面试测评系列</item>
+    </string-array>
+    <!-- 筛选笔面试学段-->
+    <string-array name="learning_period">
+        <item name="period_young">幼儿</item>
+        <item name="period_primary">小学</item>
+        <item name="period_high">中学</item>
+    </string-array>
+    <!-- 筛选笔试幼儿学科-->
+    <string-array name="wy_subjects">
+        <item name="wy_subjects1">综合素质</item>
+        <item name="wy_subjects2">保教知识与能力</item>
+    </string-array>
+    <!-- 筛选笔试小学学科-->
+    <string-array name="wp_subjects">
+        <item name="wp_subjects1">综合素质</item>
+        <item name="wp_subjects2">教育知识与能力</item>
+    </string-array>
+    <!-- 筛选笔试初中学科-->
+    <string-array name="wh_subjects">
+        <item name="wh_subjects1">综合素质</item>
+        <item name="wh_subjects2">教育教学知识与能力</item>
+        <item name="subject_chinese">语文</item>
+        <item name="subject_math">数学</item>
+        <item name="subject_english">英语</item>
+        <item name="subject_music">音乐</item>
+        <item name="subject_sports">体育</item>
+        <item name="subject_art">美术</item>
+        <item name="subject_art">心理健康教育</item>
+        <item name="subject_technology">信息技术</item>
+        <item name="subject_science">物理</item>
+        <item name="subject_science">化学</item>
+        <item name="subject_science">生物</item>
+        <item name="subject_history">历史</item>
+        <item name="subject_geography">地理</item>
+        <item name="subject_geography">政治</item>
+        <item name="rey_subjects1">其他学科</item>
+    </string-array>
+    <!-- 筛选面试幼儿学科-->
+    <string-array name="i_subjects">
+        <item name="w_subjects1">试讲</item>
+        <item name="w_subjects1">结构化</item>
+    </string-array>
+
+    <!-- 筛选笔试幼儿学科-->
+    <string-array name="recruitment_wy_subjects">
+        <item name="rey_subjects1">教育综合知识</item>
+        <item name="rey_subjects1">幼教学科专业知识</item>
+    </string-array>
+    <!-- 筛选事业单位D类学科-->
+    <string-array name="career_subjects">
+        <item name="rey_subjects1">公共基础知识</item>
+        <item name="rey_subjects1">综合应用能力d类</item>
+    </string-array>
+
+    <!-- 筛选笔试幼儿学科-->
+    <string-array name="recruitment_wp_subjects">
+        <item name="subject_chinese">语文</item>
+        <item name="subject_math">数学</item>
+        <item name="subject_english">英语</item>
+        <item name="subject_music">音乐</item>
+        <item name="subject_sports">体育</item>
+        <item name="subject_art">美术</item>
+        <item name="subject_art">心理健康教育</item>
+        <item name="subject_technology">信息技术</item>
+        <item name="rey_subjects1">教育综合知识</item>
+        <item name="subject_science">其他学科</item>
+    </string-array>
+    <!-- 筛选笔试幼儿学科-->
+    <string-array name="recruitment_iy_subjects">
+        <item name="rey_subjects3">说课</item>
+        <item name="rey_subjects2">试讲</item>
+        <item name="rey_subjects1">结构化</item>
+    </string-array>
+    <!-- 筛选笔试幼儿学科-->
+    <string-array name="charge_types">
+        <item name="charge_type1">收费直播</item>
+        <item name="charge_type2">免费直播</item>
+    </string-array>
+
+    <string name="minute">分钟</string>
+    <string name="totaltime">总时间</string>
+    <string name="total">共</string>
+    <string name="exercise">题</string>
+    <string name="percent">%</string>
+    <string name="divide">/</string>
+    <string name="prepareexercise_ing">出题中。。。</string>
+    <string name="downloadfirstinfo">请先到模块题海模块,下载题包..</string>
+    <string name="notcomplete">未完成</string>
+    <string name="rightpercent">正确率</string>
+    <string name="deletestudyrecords_info">是否删除该学习记录</string>
+    <string name="nickname">昵称</string>
+    <string name="mobile">手机</string>
+    <string name="sex">性别</string>
+    <string name="personal_info">个人资料</string>
+    <string name="save">保存</string>
+    <string name="info_sex_female">女</string>
+    <string name="info_sex_male">男</string>
+    <string name="select_photo">选择照片</string>
+    <string name="cancel">取消</string>
+    <string name="take_photo">拍照</string>
+    <string name="local_library">本地图库</string>
+    <string name="unregister_mobile">该手机号还未被注册，请先注册！</string>
+    <string name="deletewrongques_success">错题移除成功</string>
+    <string name="action_name_exit_activity">ExitActivity</string>
+    <string name="sdnotexit_info">SD卡不可用,请检查后再次尝试</string>
+    <string name="sd_is_full_info">SD卡剩余容量不足,请清理后再次尝试</string>
+    <string name="analysis_error">错题解析</string>
+    <string name="analysis_all">全部解析</string>
+    <string name="appUpdatefailure">更新失败,请到个人中心进行检查更新</string>
+    <string name="pdfDownloadError">讲义下载失败，请检查网络</string>
+    <string name="sdk_no">sd卡不可用</string>
+    <string name="appUpdateInfo">您正在使用最新版本，不需要升级</string>
+    <string name="tv_checkVersion">更新检测</string>
+    <string name="check_failure">检查失败</string>
+    <string name="gold">金币</string>
+    <string name="signcard_already">您今天已打卡</string>
+    <string name="signcard_failed">打卡失败</string>
+    <string name="signcard_success">打卡成功</string>
+
+    <string-array name="info_sex">
+        <item name="info_sex_female">@string/info_sex_female</item>
+        <item name="info_sex_male">@string/info_sex_male</item>
+    </string-array>
+    <string name="lbrace">(</string>
+    <string name="rbrace">)</string>
+    <string name="dot">·</string>
+    <string name="chooseall">全选</string>
+    <string name="submit_error">我要纠错</string>
+    <string name="my_error">我的纠错</string>
+    <string name="exercise_error">题目纠错</string>
+    <string name="exercise_error1">题干错误</string>
+    <string name="exercise_error2">选项错误</string>
+    <string name="exercise_error3">答案错误</string>
+    <string name="exercise_error4">解析错误</string>
+    <string name="submit_sucess">提交成功，待老师审核通过发放金币</string>
+    <string name="auditing">提交审核</string>
+    <string name="auditingg">待审核</string>
+    <string name="audit_sucess">审核通过</string>
+    <string name="audit_fail">审核未通过</string>
+    <string name="feedbackSrc">请描述您宝贵的意见</string>
+    <string name="phonemodel">请输入手机型号</string>
+    <string name="phoneversion">请输入系统版本号</string>
+    <string name="charge_type">收费类型</string>
+    <string name="subjects">学科</string>
+    <string name="please_choose_subjects">请选择学科</string>
+    <string name="test_categories">考试类别</string>
+    <string name="eva_years">年份</string>
+    <string name="eva_area">地区</string>
+    <string name="learning_period">学段</string>
+    <string name="please_choose_learning_period">请选择学段</string>
+    <string name="interview">笔面试</string>
+    <string name="select">筛选</string>
+    <string name="message">资讯</string>
+    <string name="downloadpdf">讲义下载中</string>
+    <string name="translation">讲义</string>
+    <string name="noTranslation">暂无讲义</string>
+    <string name="wxdyh">微信订阅号</string>
+    <string name="wxdyhr">htjiaoshi</string>
+    <string name="kefutel">客服热线</string>
+    <string name="kefutelr">400-815-6661</string>
+    <string name="xlweibo">新浪微博</string>
+    <string name="xlweibor">教师网</string>
+    <string name="pleaseInputAccode">请输入激活码</string>
+    <string name="accodeAlreadyUsed">激活码已经使用</string>
+    <string name="accodeSuccess">激活成功</string>
+    <string name="accodeAlready">您已经激活该课程</string>
+    <string name="accodeError">激活码错误</string>
+    <string name="section_interview">学段</string>
+    <string name="type_interview">面试形式</string>
+    <string name="sub_interview">科目</string>
+    <string name="title_activity_choose_obtain_address">ChooseObtainAddressActivity</string>
+    <string name="title_activity_create_new_address">CreateNewAddressActivity</string>
+    <string name="pleaseBuy">"请先购买！谢谢！"</string>
+    <string name="Gufen">真题估分</string>
+    <string name="competition">模考大赛</string>
+    <string name="addressIdIsNull">请添加寄送讲义的地址</string>
+    <string name="generalDefinition">清晰</string>
+    <string name="hdDefinition">高清</string>
+    <string name="video_down">课件下载</string>
+    <string name="ok_delete_video">确定删除吗？</string>
+    <string name="my_footprint">我的足迹</string>
+    <string name="no_footprint">暂无足迹</string>
+    <string name="logistics">查看物流</string>
+    <string name="cacle_order">取消订单</string>
+    <string name="logisticsnull">尚未发货</string>
+    <string name="zixun">咨询客服</string>
+    <string name="logDetail">物流详情</string>
+    <string name="my_order">我的订单</string>
+    <string name="my_message">我的消息</string>
+    <string name="clear">清空</string>
+    <string name="direct_shelves">商品已下架</string>
+    <string name="direct_offline">课程已下线</string>
+    <string name="acconut">账号</string>
+    <string name="birthday">生日</string>
+    <string name="change_pwd">修改密码</string>
+    <string name="old_pwd">旧密码</string>
+    <string name="new_pwd">新密码</string>
+    <string name="new_pwd_agin">请再次输入新密码</string>
+    <string name="change_success">密码修改成功</string>
+    <string name="change_fail">密码修改失败</string>
+    <string name="old_mobile_mind">更换手机后，下次登录可使用新的手机号登录。当前手机号：</string>
+    <string name="change_mobile_existing">更换的手机号不能和原来的一致</string>
+    <string name="bind_success">绑定手机号成功</string>
+    <string name="change_mobile_success">您可以使用新的手机号登录了</string>
+    <string name="skip">跳过</string>
+    <string name="setPwd">设置密码</string>
+    <string name="bind_mobile_get_gold_coins_">绑定手机，立即获得1个购课金币</string>
+    <string name="gold_yuan">（1金币 = 1元钱）</string>
+    <string name="Immediately_binding">马上绑定</string>
+    <string name="bind_later">以后再说</string>
+    <string name="bind_success_set_pwd">您可以去设置密码登录了</string>
+
+    <string name="Live_video">直播视频</string>
+    <string name="will_play">直播暂未开始</string>
+    <string name="no_replay">暂无回放</string>
+    <string name="getChapterTreeFail">根据科目获取模块失败</string>
+    <string name="mind_zgmk">本题不支持作答，请点击查看解析并估分</string>
+    <string name="mind_zgth">本题不支持作答，请点击查看解析</string>
+    <string name="evaluation_continue">继续做题</string>
+    <string name="code_logn">扫码登录</string>
+    <string name="teacher_confirm_login">教师网登录确认</string>
+    <string name="confirm_login">确认登录</string>
+    <string name="title_activity_codestyle">CodestyleActivity</string>
+    <string name="text_close">关闭</string>
+    <string name="video_not_download">该视频暂不提供下载</string>
+    <string name="course_not_start">该课程尚未开课</string>
+    <string name="hd_video">高清视频</string>
+    <string name="immediately_learn">马上学习</string>
+    <string name="immediately_pay">马上付款</string>
+    <string name="order_comiting">订单提交中。。。</string>
+    <string name="text_search">搜索</string>
+    <string name="text_keyword_empty">请输入搜索的关键字</string>
+    <string name="text_keyword_nodata">暂无数据</string>
+    <string name="delete_gone">删除该题</string>
+    <string name="store_gone">取消收藏</string>
+    <string name="update_questions">此题更新啦</string>
+    <string name="iKnow">知道了</string>
+    <string name="check_prassing">查看解析</string>
+    <string name="check_stander">评分标准</string>
+    <string name="result_for_papers">交卷查看结果</string>
+    <string name="correct">正确率</string>
+    <string name="share_result">分享本次战果</string>
+    <string name="text_beat">打败</string>
+    <string name="current_ranking">当前排名</string>
+    <string name="share_this_result">分享本次战果</string>
+    <string name="score_result">测评报告</string>
+    <string name="no_notes">本课程暂未提供任何讲义哦！</string>
+    <string name="you_want_here_all">你想要的，这里都有</string>
+    <string name="today_living">今日直播</string>
+    <string name="tomorrow_living">明日直播</string>
+    <string name="class_type">课程班型</string>
+    <string name="speed_quick3">x2</string>
+    <string name="speed_quick2">x1.5</string>
+    <string name="speed_quick1">x1.25</string>
+    <string name="speed_original">x1</string>
+    <string name="no_teacher_message">暂无留言</string>
+    <string name="my_error_exercise">我的错题</string>
+    <string name="my_collection_exercise">我的收藏</string>
+    <string name="no_error_exercise">暂无错题</string>
+    <string name="no_collect_exercise">暂无收藏</string>
+    <string name="message_teacher">留言老师</string>
+    <string name="analysis_pop_report">您要查看的解析</string>
+    <string name="no_analysis_pop_report">老师还未开放解析，是否返回查看做题情况？</string>
+
+    <string-array name="do_ex_ccs">
+        <item name="do_ex_ccs1">收藏本题</item>
+        <item name="do_ex_ccs2">纠错本题</item>
+        <item name="do_ex_ccs3">分享本题</item>
+    </string-array>
+    <string-array name="do_ex_ucs">
+        <item name="do_ex_ccs1">取消收藏</item>
+        <item name="do_ex_ccs2">纠错本题</item>
+        <item name="do_ex_ccs3">分享本题</item>
+    </string-array>
+    <string-array name="do_ex_ec">
+        <item name="do_ex_ccs2">纠错本题</item>
+        <item name="do_ex_ccs3">分享本题</item>
+    </string-array>
+    <string-array name="do_ex_eac">
+        <item name="do_ex_ccs1">错题解析</item>
+        <item name="do_ex_ccs2">全部解析</item>
+        <item name="do_ex_ccs3">继续做题</item>
+    </string-array>
+    <string-array name="do_ex_module">
+        <item name="do_ex_ccs1">我的收藏</item>
+        <item name="do_ex_ccs2">我的错题</item>
+    </string-array>
+    <string name="texts_score_completed">打分完成</string>
+    <string name="texts_score_uncompleted">打分未完成</string>
+    <string name="texts_course_not_evaluated">课程未评价</string>
+    <string name="text_withdrawal">提现</string>
+    <string name="text_rmb">元</string>
+    <string name="text_Immediately_withdraw">马上提现</string>
+    <string name="text_parameter_error">参数错误</string>
+    <string name="text_accpasswordnotnull">账号、姓名不能为空！</string>
+    <string name="notice_bjy_kik_out">你已被老师踢出直播间!</string>
+    <string name="notice_bjy_enter_error">进入直播间失败!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

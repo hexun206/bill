@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--height:233dp-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_playlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fra_live_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/ll_live_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fra_live_ppt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fra_live_touch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_live_center_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bjplayer_bg_radius_8"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_live_center_dialog"
+                    style="@style/bjplayer_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bjplayer_ic_volume_up_white"/>
+
+                <TextView
+                    android:id="@+id/tv_live_center_dialog"
+                    style="@style/bjplayer_text_big"
+                    android:text="50%"
+                    />
+
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/player_topbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                ></include>
+
+            <include
+
+                layout="@layout/bjplayer_layout_center_controller_copy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                ></include>
+
+            <include
+                layout="@layout/player_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                ></include>
+
+            <include
+
+                layout="@layout/live_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                ></include>
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_tovi"
+            android:padding="2dp"
+            android:visibility="visible"
+            app:layout_marginRightPercent="2.78%w"/>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_directScreen"-->
+        <!--android:layout_width="32dp"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_margin="6dp"-->
+        <!--android:padding="6dp"-->
+        <!--android:src="@drawable/ic_fullsc"-->
+        <!--android:visibility="gone"/>-->
+
+        <!--height:38-->
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_deatil_waiting"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_waiting"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@anim/anim_direct_loading"
+                android:indeterminateDuration="1500"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b3000000"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/pic_guide_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/pic_guide_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.24"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/pic_guide_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/img_guide_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/pic_guide_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.724"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_player_definition"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        ></android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_player_speed"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        ></android.support.v7.widget.RecyclerView>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_live_timetable"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/black"
+        android:orientation="vertical"
+        app:layout_widthPercent="40%sw"
+
+        >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_live_timetable_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="课表"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+                />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/bg_triangle"
+
+                />
+
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+        <ExpandableListView
+            android:id="@+id/lv_live_fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/white"
+            android:dividerHeight="@dimen/width_1"
+            android:scrollbars="none"
+            >
+
+        </ExpandableListView>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fra_live_chat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"/>
+
+    <ExpandableListView
+        android:id="@+id/listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray012"
+        android:dividerHeight="@dimen/width_1"
+        android:groupIndicator="@null"
+        android:scrollbars="none"
+        android:visibility="gone"
+        />
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

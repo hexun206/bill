@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/tv_choose_param_tittle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="12.5dp"
+          android:text="教育综合"
+          android:textColor="@color/black007"
+
+          android:textSize="15sp">
+
+</TextView>

@@ -1,0 +1,1 @@
+include ':teacheronline', ':greendao', ':PushSDK', ':UmengShareLibrary', ':mupdf',':xiaonengChatUI',':library_video_selector',':library_card_stack',':ucrop'

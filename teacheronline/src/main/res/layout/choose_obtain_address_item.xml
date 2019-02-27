@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_chooseo_btain_address_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="21.38%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_state"
+            android:gravity="center_vertical"
+            app:layout_heightPercent="21.38%w">
+
+            <ImageView
+                android:id="@+id/iv_choose_address"
+                android:layout_width="wrap_content"
+                android:src="@drawable/oval_g"
+                app:layout_paddingRightPercent = "4%w"
+                app:layout_paddingTopPercent = "1%w"
+                app:layout_paddingBottomPercent = "2%w"
+                app:layout_paddingLeftPercent = "2.9%w"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_choose_obtain_address_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="请填写姓名"
+                android:textColor="#101619"
+                app:layout_marginLeftPercent="10.9%w"
+                app:layout_textSizePercent="4.58%w"/>
+
+            <TextView
+                android:id="@+id/tv_choose_obtain_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_choose_obtain_address_person"
+                android:text="请填写地址"
+                android:textColor="#4b4b4b"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_marginLeftPercent="4.16%w"
+                app:layout_marginTopPercent="2.88%w"
+                app:layout_textSizePercent="4.58%w"/>
+
+            <TextView
+                android:id="@+id/tv_choose_obtain_address_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:layout_marginRightPercent="4.25%w"
+                android:layout_alignBottom="@+id/tv_choose_obtain_address_person"
+                android:text="请填写电话"
+                android:textColor="#101619"
+                app:layout_textSizePercent="4.58%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="8.78%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray011"/>
+
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_choose_address_default"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_marginBottomPercent="2.08%w"
+            app:layout_marginLeftPercent="3.93%w"
+            android:visibility="gone"
+            app:layout_marginTopPercent="2.08%w">
+
+
+            <!-- width:21dp height:21dp -->
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_choose_address"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:src="@drawable/ic_add"/>-->
+
+
+            <TextView
+                android:id="@+id/tv_choose_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_choose_address"
+                android:text="默认地址"
+                android:textColor="#4b4b4b"
+                app:layout_marginLeftPercent="13.33%w"
+                app:layout_textSizePercent="80%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_choose_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/rl_choose_address_default"
+            app:layout_marginBottomPercent="1.94%w"
+            app:layout_marginRightPercent="16.33%w"
+            app:layout_marginTopPercent="1.94%w"
+            app:layout_paddingLeftPercent="330%h">
+
+
+            <!-- width:21dp height:21dp -->
+            <ImageView
+                android:id="@+id/iv_choose_address_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_add_edit"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_choose_address_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_choose_address_edit"
+                android:text="编辑"
+                android:textColor="@color/green013"
+                app:layout_marginLeftPercent="1.39%w"
+                app:layout_textSizePercent="78%h"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_choose_address_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_marginBottomPercent="1.39%w"
+            android:layout_alignParentRight="true"
+            app:layout_marginLeftPercent="1.5%w"
+            app:layout_marginTopPercent="1.39%w">
+
+
+            <!-- width:21dp height:21dp -->
+            <ImageView
+                android:id="@+id/iv_choose_address_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_add_del"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_choose_address_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_choose_address_delete"
+                android:text="删除"
+                android:textColor="@color/green013"
+                app:layout_marginLeftPercent="4.39%w"
+                app:layout_marginTopPercent="2.08%w"
+                app:layout_textSizePercent="63%h"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/width_1"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@color/gray008"/>-->
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     android:id="@+id/rl_directlayout"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:background="@color/white008"
+                                                     android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_titleContainer_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="13.89%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_main_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            app:layout_widthPercent="13.89%w">
+
+            <ImageView
+                android:id="@+id/ib_main_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_arrow"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_class_liveclas"
+            android:layout_width="45dp"
+
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_liveclas"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="@string/live_class"
+                android:textColor="@color/gray013"
+                app:layout_textSizePercent="4.16%w"/>
+
+            <View
+                android:id="@+id/v_live"
+                android:layout_width="45dp"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/green013"
+                android:visibility="gone"></View>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_class_faces"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_class_liveclas">
+
+            <TextView
+                android:id="@+id/tv_faces"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="面授课"
+                android:textColor="@color/green013"
+                app:layout_textSizePercent="4.16%w"/>
+
+            <View
+                android:id="@+id/v_face"
+                android:layout_width="wrap_content"
+                android:layout_height="6px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/green013"></View>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_class_wisdom"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rl_class_liveclas">
+
+            <TextView
+                android:id="@+id/tv_wisdom"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="智学课"
+                android:textColor="@color/gray013"
+                app:layout_textSizePercent="4.16%w"/>
+
+            <View
+                android:id="@+id/v_wisdom"
+                android:layout_width="wrap_content"
+                android:layout_height="6px"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:background="@color/green013"></View>
+
+        </RelativeLayout>
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <!--<View-->
+    <!--android:id="@+id/view_line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/width_1"-->
+    <!--android:background="@color/gray004"/>-->
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2"
+        app:layout_heightPercent="11.55%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_face"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="面授课"
+                android:textColor="@color/green001"
+                app:layout_textSizePercent="39.47%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!--<View-->
+        <!--android:layout_width="@dimen/width_1"-->
+        <!--android:background="@color/gray004"-->
+        <!--app:layout_marginTopPercent="0.89%w"-->
+        <!--app:layout_marginBottomPercent="0.89%w"-->
+        <!--android:layout_height="match_parent"/>-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_liveclass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_liveclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/live_class"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="39.47%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <!--<View-->
+    <!--android:id="@+id/line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/width_1"-->
+    <!--android:layout_below="@+id/ll_select"-->
+    <!--android:background="@color/gray004"/>-->
+    <!--<com.zhy.android.percent.support.PercentLinearLayout-->
+    <!--android:id="@+id/ll_zs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="9dp">-->
+    <!--</com.zhy.android.percent.support.PercentLinearLayout>-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:background="@color/white008">
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/live_refresh_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--&lt;!&ndash;<com.huatu.teacheronline.widget.swipemenulistview.SwipeMenuListView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/lv_face"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:cacheColorHint="#00000000"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:layout_marginTopPercent="2.33%w"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:divider="@color/white008"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:dividerHeight="22px"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:scrollbars="none"/>&ndash;&gt;-->
+    <!--<com.huatu.teacheronline.widget.swipemenulistview.SwipeMenuListView-->
+    <!--android:id="@+id/listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:cacheColorHint="#00000000"-->
+    <!--android:divider="@color/white008"-->
+    <!--android:dividerHeight="@dimen/width_1"-->
+    <!--android:scrollbars="none"/>-->
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

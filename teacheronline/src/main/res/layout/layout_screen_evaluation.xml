@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_eva_years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray004"
+            android:layout_height="@dimen/width_1"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_eva_years"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/tv_eva_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eva_years"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="2.78%h"/>
+
+            <ImageView
+                android:id="@+id/img_eva_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tri_down_hide"/>
+        </RelativeLayout>
+
+        <com.huatu.teacheronline.widget.RadioGroupEx
+            android:id="@+id/gv_eva_years"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="15dp"
+            android:background="#dbdbdb"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_eva_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_eva_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/tv_eva_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eva_area"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="2.78%h"/>
+
+            <ImageView
+                android:id="@+id/img_eva_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tri_down_hide"/>
+        </RelativeLayout>
+
+        <com.huatu.teacheronline.widget.RadioGroupEx
+            android:id="@+id/gv_eva_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="15dp"
+            android:background="#dbdbdb"/>
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_charge_type"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="gone"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_charge_type"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="20dp">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_charge_type"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/charge_type"-->
+    <!--android:textColor="@color/black"-->
+    <!--app:layout_textSizePercent="2.78%h" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_charge_type"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:src="@drawable/tri_down_hide" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<com.huatu.teacheronline.widget.RadioGroupEx-->
+    <!--android:id="@+id/gv_charge_type"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center" />-->
+
+    <!--</LinearLayout>-->
+    <Button
+        android:id="@+id/btn_commit_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/green004"
+        android:text="@string/commit"
+        android:textColor="@color/white"
+        android:textSize="16dp"/>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="赠品"
+            app:layout_marginLeftPercent="5%w"
+            android:textColor="@color/green013"
+            app:layout_textSizePercent="3.88%w"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_gift_context"
+            android:layout_width="wrap_content"
+            android:text="教材：中学音乐精讲讲义1本"
+            android:textColor="@color/gray007"
+            app:layout_marginLeftPercent="5%w"
+            app:layout_textSizePercent="3.88%w"
+            android:layout_marginTop="2dp"
+            android:paddingBottom="8dp"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray016"
+            app:layout_marginLeftPercent="5%w"
+            app:layout_marginRightPercent="5%w"
+            android:layout_height="1px"></View>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

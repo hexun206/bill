@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white001"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_oldpwd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        app:layout_heightPercent="13.33%w"
+        app:layout_paddingLeftPercent="5.27%w"
+        app:layout_paddingRightPercent="5.27%w">
+
+        <EditText
+            android:id="@+id/et_oldpwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:password="true"
+            android:hint="@string/old_pwd"
+            android:textColor="@color/gray010"
+            app:layout_textSizePercent="31.25%h"/>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_marginLeft="19dp"
+        android:background="@color/gray005"
+        app:layout_marginLeftPercent="5.27%w"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        app:layout_heightPercent="13.33%w"
+        app:layout_paddingLeftPercent="5.27%w"
+        app:layout_paddingRightPercent="5.27%w">
+
+        <EditText
+            android:id="@+id/et_newpwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:password="true"
+            android:singleLine="true"
+            android:hint="@string/new_pwd"
+            android:textColor="@color/gray010"
+            app:layout_textSizePercent="31.25%h"/>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_marginLeft="19dp"
+        android:background="@color/gray005"
+        app:layout_marginLeftPercent="5.27%w"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        app:layout_heightPercent="13.33%w"
+        app:layout_paddingLeftPercent="5.27%w"
+        app:layout_paddingRightPercent="5.27%w">
+
+        <EditText
+            android:id="@+id/et_newtpwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:password="true"
+            android:hint="@string/new_pwd_agin"
+            android:textColor="@color/gray010"
+            app:layout_textSizePercent="31.25%h"/>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray005"/>
+
+    <TextView
+        android:layout_marginTop="17dp"
+        android:text="6-16个字符，区分大小写"
+        android:textSize="12dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#b5b5b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/tv"
+        android:layout_marginTop="9dp"
+        android:text="123456"
+        android:textSize="12dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#b5b5b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.zhy.android.percent.support.PercentLinearLayout>

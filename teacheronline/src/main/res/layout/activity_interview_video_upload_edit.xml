@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".personal.InterviewVideoUploadEditActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+
+
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="6dp"
+            android:paddingLeft="11dp"
+            android:paddingTop="6dp"
+            android:src="@drawable/ic_back"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上传面试视频"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#EAEAEA"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        >
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/bg_rect_yellow"
+                    android:drawablePadding="2dp"
+                    android:text="添加视频"
+                    android:textColor="@color/black007"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/img_video_edit_add"
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/gray017"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_add_upvideo"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rel_video_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/img_video_edit_uploading"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="fitCenter"/>
+
+
+                    <ProgressBar
+                        android:id="@+id/pb_video_edit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="62.5dp"
+                        android:indeterminateOnly="false"
+                        android:max="100"
+                        android:progress="25"
+                        android:progressDrawable="@drawable/pb_circular_reveal_20r"
+                        android:rotation="-90"/>
+
+                    <ImageView
+                        android:id="@+id/img_video_edit_state"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="62.5dp"
+                        android:src="@drawable/ic_pause_vb"
+                        android:visibility="invisible"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_video_edit_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="107.5dp"
+                        android:text="上传成功"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="invisible"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_video_edit_uploading"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_remain_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="剩余可替换次数：3次"
+                            android:textColor="@color/black003"
+                            android:textSize="13sp"
+                            android:visibility="gone"
+
+                            />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_pause"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_pause_upvideo"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="暂停"
+                            android:textColor="@color/black003"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:drawableLeft="@drawable/ic_delete_v"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="删除"
+                            android:textColor="@color/black003"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_continue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_play_upvideo"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="继续上传"
+                            android:textColor="@color/black003"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_restart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_re_v"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="重新上传"
+                            android:textColor="@color/black003"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_change_v"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="替换"
+                            android:textColor="@color/black003"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_video_edit_preview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:drawableLeft="@drawable/ic_preview_v"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="预览"
+                            android:textColor="@color/black003"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_agree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.5dp"
+                android:background="#f8f8f8"
+                android:drawableLeft="@drawable/login_check_nor"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="同意上传的视频在面试视频模块展示，供其他学员观看"
+                android:textColor="@color/gray013"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_remind_yellow"
+                android:drawablePadding="6dp"
+                android:text="视频录制规范："
+                android:textColor="@color/black007"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="3sp"
+                android:text="本视频录制时长不得超过20分钟(15分钟左右为宜)；包含结构化、试讲2部分内容；"
+                android:textColor="@color/black007"
+                android:textSize="14sp"
+
+                />
+
+
+            <View
+                android:id="@+id/line_dash"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/bg_dash_line"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="录制内容"
+                android:textColor="@color/black007"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/bg_round_gray_small"
+                android:drawablePadding="5dp"
+                android:text="结构化面试"
+                android:textColor="@color/black007"
+                android:textSize="15sp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="3sp"
+                android:text="考生回答前一页所抽取的2道随机问题，录制时长5分钟；"
+                android:textColor="@color/black003"
+                android:textSize="14sp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/bg_round_gray_small"
+                android:drawablePadding="5dp"
+                android:text="试讲"
+                android:textColor="@color/black007"
+                android:textSize="15sp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="3sp"
+                android:text="考生按照上一页所填写篇目进行试讲，录制时长10分钟；"
+                android:textColor="@color/black003"
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="特别说明"
+                android:textColor="@color/black007"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="3sp"
+                android:text="视频提交前如果对所录制视频不满意，有3次替换机会，一旦视频进行提交则不可撤回或更改；"
+                android:textColor="@color/black003"
+                android:textSize="14sp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="奖励政策"
+                android:textColor="@color/black007"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="3sp"
+                android:text="若面试视频被选为精选视频，将随机获得一定的金币奖励。"
+                android:textColor="@color/black003"
+                android:textSize="14sp"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_video_edit_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/gray_to_teal"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/gray_to_white"
+        android:textSize="15sp"
+
+        />
+</LinearLayout>

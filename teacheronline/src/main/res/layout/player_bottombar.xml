@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_play_bottom_"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/playbg"
+    android:gravity="center_vertical"
+
+    >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_bottombar_top"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="6dp"
+            android:padding="6dp"
+            />
+
+        <TextView
+            android:id="@+id/playDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+
+
+        <SeekBar
+            android:id="@+id/skbProgress"
+            style="@style/customSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"/>
+
+        <TextView
+            android:id="@+id/videoDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:layout_marginRight="6dp"
+            android:textSize="12sp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_screen"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="6dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_fullsc"
+            />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_bottombar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/ll_bottombar_top"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/switch_bottombar"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="24dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            app:kswBackDrawable="@drawable/miui_back_drawable"
+            app:kswThumbDrawable="@drawable/miui_thumb_drawable"
+            app:kswThumbHeight="18dp"
+            app:kswThumbRangeRatio="2"
+            app:kswThumbWidth="18dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="连续播放"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            />
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_bottombar_withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            >
+
+            <ProgressBar
+                android:id="@+id/pb_bottombar_withdraw"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:progress="40"
+                android:progressDrawable="@drawable/pb_circular_reveal"
+                android:rotation="-90"/>
+
+
+            <ImageView
+                android:id="@+id/img_bottombar_withdraw"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_bottombar_withdraw"
+                android:visibility="gone"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_bottombar_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="听课返现"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+
+                />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_bottombar_timetable"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/img_bottombar_timetable"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_timetable"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_bottombar_timetable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="课表"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+
+                />
+
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

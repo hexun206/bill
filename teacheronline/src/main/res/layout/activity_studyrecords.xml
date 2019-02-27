@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white001">
+
+    <include
+        layout="@layout/general_topbar_type3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topbar"/>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_nodata"
+        android:layout_below="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white001"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wdzj_kong"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_nodata"
+            android:layout_centerHorizontal="true"
+            android:text="暂无做题记录"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_studyrecords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_below="@id/topbar"/>
+</com.zhy.android.percent.support.PercentRelativeLayout>

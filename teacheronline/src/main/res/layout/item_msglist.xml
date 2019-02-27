@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="11dp"
+        android:layout_height="wrap_content">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:text="我："
+                app:layout_marginLeftPercent="3.33%w"
+                android:textColor="@color/black007"
+                app:layout_marginTopPercent="1.66%w"
+                app:layout_textSizePercent="3.33%w"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_me_msg"
+                android:layout_width="wrap_content"
+                app:layout_marginTopPercent="1.66%w"
+                android:textColor="@color/gray007"
+                android:layout_toRightOf="@+id/tv_me"
+                app:layout_marginRightPercent="3.61%w"
+                app:layout_textSizePercent="3.33%w"
+                android:text=""
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_me_time"
+                android:layout_width="wrap_content"
+                android:text="2017-08-55"
+                app:layout_marginLeftPercent="3.33%w"
+                android:layout_below="@+id/tv_me_msg"
+                app:layout_marginTopPercent="0.66%w"
+                android:textColor="@color/gray002"
+                app:layout_textSizePercent="3.33%w"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rl_hf"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="4px"
+                app:layout_heightPercent="4.5%w"
+                app:layout_marginTopPercent="1.66%w"
+                app:layout_marginLeftPercent="5.66%w"
+                android:background="@color/green013"
+                android:layout_height="wrap_content"></View>
+
+            <TextView
+                android:id="@+id/tv_he"
+                android:layout_width="wrap_content"
+                android:text="华图教务："
+                app:layout_marginLeftPercent="6.66%w"
+                android:textColor="@color/black007"
+                app:layout_marginTopPercent="1.66%w"
+                app:layout_textSizePercent="3.33%w"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_he_msg"
+                android:layout_width="wrap_content"
+                app:layout_marginTopPercent="1.66%w"
+                app:layout_marginLeftPercent="1.33%w"
+                app:layout_marginRightPercent="3.61%w"
+                android:textColor="@color/gray007"
+                android:layout_toRightOf="@+id/tv_he"
+                android:text=""
+                app:layout_textSizePercent="3.33%w"
+
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_he_time"
+                android:layout_width="wrap_content"
+                android:text="2017-08-55"
+                app:layout_marginLeftPercent="6.66%w"
+                android:layout_below="@+id/tv_he_msg"
+                app:layout_marginTopPercent="0.66%w"
+                android:textColor="@color/gray002"
+                app:layout_textSizePercent="3.33%w"
+                android:layout_height="wrap_content" />
+
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

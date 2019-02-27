@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_class_shecdule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:background="@color/white"
+        app:layout_heightPercent="12.2%w">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:background="@drawable/ic_time_list"
+            app:layout_marginLeftPercent="2.92%w"
+            android:layout_height="match_parent"/>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_state"
+            android:gravity="center_vertical"
+            app:layout_heightPercent="18.75%w"
+            app:layout_marginLeftPercent="7%w">
+
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textColor="@color/green011"
+                app:layout_marginTopPercent="1.6%w"
+                android:text="2015-09-15 09:23"
+                app:layout_textSizePercent="4.32%w"/>
+
+            <TextView
+                android:id="@+id/tv_directTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/green011"
+                android:text="80分申论批改班申论批改班申论批改80分申论批改班申论"
+                app:layout_marginTopPercent="1%w"
+                app:layout_textSizePercent="4.62%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        <!--height:240dp-->
+
+        <!--height:69dp-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_state"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_marginLeftPercent="2.72%w"
+            app:layout_marginRightPercent="1.24%w"
+            app:layout_widthPercent="16.67%w">
+
+            <TextView
+                android:id="@+id/tv_directState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="马上开始"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_rectangle_green"
+                android:padding="5dp"
+                android:visibility="visible"
+                app:layout_textSizePercent="22.78%h"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dotted_line_gray"
+            app:layout_marginLeftPercent="7%w"
+            app:layout_marginRightPercent="2.35%w"
+            android:layout_height="2dp"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

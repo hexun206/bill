@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+ >
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_heightPercent="15%w">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="请选择支付方式"
+                android:textColor="@color/green002"
+                app:layout_marginLeftPercent="50%h"
+                app:layout_textSizePercent="35%h"
+                />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        <!-- height:50dp -->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_alipy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_money"
+            android:background="@color/white"
+            app:layout_heightPercent="15%w">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray008"/>
+
+
+            <!-- height:50dp -->
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_iconAlipy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                app:layout_paddingLeftPercent="40%h"
+                app:layout_paddingRightPercent="45%h">
+
+
+                <!-- width:21dp height:21dp -->
+                <ImageView
+                    android:id="@+id/iv_iconForAlipy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rance_select_paymethod"
+
+                    app:layout_heightPercent="42%h"
+                    app:layout_widthPercent="42%h"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_alipy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_zfb_zf"
+                android:drawablePadding="9dp"
+                android:gravity="center"
+                android:text="支付宝支付"
+                android:textColor="@color/gray010"
+                app:layout_paddingLeftPercent="50%h"
+                app:layout_paddingRightPercent="36%h"
+                app:layout_textSizePercent="32%h"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray008"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        <!-- height:50dp -->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_weixinpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_alipy"
+            android:background="@color/white"
+            app:layout_heightPercent="15%w">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray008"/>
+
+            <!-- height:50dp -->
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_iconWeixinpay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                app:layout_paddingLeftPercent="40%h"
+                app:layout_paddingRightPercent="45%h">
+
+                <!-- width:21dp height:21dp -->
+                <ImageView
+                    android:id="@+id/iv_iconForWeixinpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rance_noselect_paymethod"
+                    app:layout_heightPercent="42%h"
+
+                    app:layout_widthPercent="42%h"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_weixinpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_wx_zf"
+                android:drawablePadding="9dp"
+                android:gravity="center"
+                android:text="微信支付"
+                android:textColor="@color/gray010"
+                app:layout_paddingLeftPercent="50%h"
+                app:layout_paddingRightPercent="36%h"
+                app:layout_textSizePercent="32%h"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray008"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_goldpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_alipy"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_heightPercent="15%w">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray008"/>
+
+            <!-- height:50dp -->
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_icongoldpay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                app:layout_paddingLeftPercent="40%h"
+                app:layout_paddingRightPercent="45%h">
+
+                <!-- width:21dp height:21dp -->
+                <ImageView
+                    android:id="@+id/iv_iconForGoldpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rance_noselect_paymethod"
+                    app:layout_heightPercent="42%h"
+
+                    app:layout_widthPercent="42%h"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_goldpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_jb_zf"
+                android:drawablePadding="9dp"
+                android:gravity="center"
+                android:text="金币支付"
+                android:textColor="@color/gray010"
+                app:layout_paddingLeftPercent="50%h"
+                app:layout_paddingRightPercent="36%h"
+                app:layout_textSizePercent="32%h"/>
+
+            <TextView
+                android:id="@+id/tv_gold_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_goldpay"
+                android:drawablePadding="9dp"
+                android:gravity="center"
+                android:text="(余额0)"
+                android:textColor="@color/gray004"
+                app:layout_textSizePercent="32%h"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray008"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_goldPay"
+                android:layout_centerHorizontal="true"
+                android:background="@color/green001"
+                android:gravity="center"
+                android:text="@string/toPay"
+                android:textColor="@color/white"
+                app:layout_heightPercent="11.94%w"
+                app:layout_marginBottomPercent="5.83%w"
+                app:layout_marginTopPercent="5.83%w"
+                app:layout_textSizePercent="4.16%w"
+                app:layout_widthPercent="91.94%w"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

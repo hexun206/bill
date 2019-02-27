@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--height:232-->
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:background="@drawable/zbxq_mrt"
+        app:layout_heightPercent="64.44%w"/>
+
+    <!--height:65-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sdv_icon"
+        app:layout_heightPercent="18.05%w">
+
+        <TextView
+            android:id="@+id/tv_direct_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="6dp"
+            android:lines="2"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_marginLeftPercent="20%h"
+            app:layout_marginRightPercent="20%h"
+            app:layout_marginTopPercent="27.69%h"
+            app:layout_textSizePercent="21.53%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray006"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_context"
+        android:scrollbars="none"
+        android:visibility="visible"/>
+
+    <!--height:48-->
+    <TextView
+        android:id="@+id/tv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_heightPercent="13.33%w"
+        app:layout_textSizePercent="4.7%w"/>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

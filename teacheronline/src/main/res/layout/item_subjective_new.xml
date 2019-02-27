@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13.33%w">
+
+        <TextView
+            android:id="@+id/tv_num_subjective"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/no_zgt"
+            android:gravity="center"
+            android:text="14"
+            app:layout_marginLeftPercent="6.75%w"/>
+
+        <TextView
+            android:id="@+id/tv_pro_subjective"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pb_subjective"
+            android:layout_alignParentLeft="true"
+            android:text="0.0"
+            android:enabled="false"
+            android:textColor="@color/green004"
+            app:layout_marginLeftPercent="15.83%w"
+            app:layout_textSizePercent="3.5%w"/>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="14dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_score_subjective"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="#0ab28b"
+                android:textSize="22dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_total_subjective"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="14dp"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <SeekBar
+            android:id="@+id/pb_subjective"
+            android:layout_width="match_parent"
+            android:layout_height="5.5dp"
+            android:indeterminate="false"
+            android:progress="70"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@drawable/laryer_progressbar_style2"
+            android:thumb="@null"
+            app:layout_marginLeftPercent="15.83%w"
+            app:layout_marginRightPercent="11.39%w"
+            />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

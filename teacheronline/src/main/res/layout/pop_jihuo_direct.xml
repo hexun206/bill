@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        app:layout_marginLeftPercent="9%w"
+        app:layout_marginRightPercent="9%w"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/bg_vip_paperlist_bg"
+        android:layout_height="160dp">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="激活课程"
+                android:layout_centerInParent="true"
+                app:layout_textSizePercent="4.44%w"
+                android:textColor="@color/gray007"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_canle"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_shut"
+                android:layout_alignParentRight="true"
+                app:layout_marginRightPercent="2.77%w"
+                app:layout_marginTopPercent="2.77%w"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        app:layout_marginTopPercent="3.77%w"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_accode_directdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="输入激活码"
+            android:padding="5dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_marginLeftPercent="17.39%w"
+            app:layout_marginRightPercent="17.39%w"
+            app:layout_textSizePercent="4%w"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray002"
+            android:layout_below="@+id/et_accode_directdetail"
+            app:layout_marginLeftPercent="17.39%w"
+            app:layout_marginRightPercent="17.39%w"
+            android:layout_height="1px"></View>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            app:layout_marginTopPercent="4%w"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_activate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_rectangle_green2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="马上激活"
+                android:textColor="@color/white"
+                app:layout_heightPercent="11.67%w"
+                app:layout_marginRightPercent="3.89%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

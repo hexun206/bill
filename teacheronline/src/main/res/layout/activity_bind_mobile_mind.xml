@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/ic_bdsj_jinbi"
+        app:layout_marginTopPercent="23.6%w"
+        android:layout_below="@+id/topbar"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bind_mobile_get_gold_coins_"
+        android:id="@+id/textView"
+        android:layout_below="@+id/imageView3"
+        app:layout_marginTopPercent="7.33%w"
+        app:layout_textSizePercent="4.27%w"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gold_yuan"
+        android:id="@+id/textView2"
+        app:layout_textSizePercent="3.1%w"
+        app:layout_marginTopPercent="3.33%w"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_bind_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tv_bind_later"
+        android:background="@drawable/bg_rectangle_green"
+        android:gravity="center"
+        android:text="@string/Immediately_binding"
+        android:textColor="@color/white"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginLeftPercent="4.03%w"
+        app:layout_marginRightPercent="4.03%w"
+        app:layout_marginBottomPercent="2.81%w"
+        app:layout_textSizePercent="4.17%w"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bind_later"
+        android:gravity="center"
+        android:textColor="@color/green001"
+        android:id="@+id/tv_bind_later"
+        app:layout_textSizePercent="3.87%w"
+        android:padding="10dp"
+        android:layout_alignLeft="@+id/tv_bind_mobile"
+        android:layout_alignStart="@+id/tv_bind_mobile"
+        android:layout_alignRight="@+id/tv_bind_mobile"
+        android:layout_alignEnd="@+id/tv_bind_mobile"
+        android:layout_alignParentBottom = "true"
+        app:layout_marginBottomPercent="10.78%w"
+        />
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

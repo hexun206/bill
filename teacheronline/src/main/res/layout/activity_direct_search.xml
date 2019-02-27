@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:lee="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context="com.huatu.teacheronline.direct.DirectFootprintActivity">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/topbar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/PercentLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:gravity="top"
+        android:background="@color/background_color"
+        android:layout_above="@+id/Select_down"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout-->
+            <!--android:id="@+id/live_refresh_layout"-->
+            <!--android:layout_below="@+id/ll_select"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <ListView
+                android:layout_below="@+id/ll_select"
+                android:id="@+id/lv_footprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/gray002"
+                android:dividerHeight="@dimen/width_1"
+                android:scrollbars="none"/>
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_wifi"
+        android:layout_below="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white001"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wifi"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_wifi"
+            android:layout_centerHorizontal="true"
+            android:text="@string/network"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_nodata"
+        android:layout_below="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white001"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wdzj_kong"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_nodata"
+            android:layout_centerHorizontal="true"
+            android:text="@string/text_keyword_nodata"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_keyword_lenovo"
+        android:layout_below="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:visibility="gone">
+        <ListView
+            android:id="@+id/lv_lenovo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/gray012"
+            android:dividerHeight="@dimen/width_1"
+            android:scrollbars="none"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_searchhis"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:background="@color/background_color"
+        android:layout_height="match_parent">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/ll_history"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                app:layout_marginTopPercent="3.89%w"
+                app:layout_marginLeftPercent="4.44%w"
+                app:layout_marginRightPercent="4.44%w"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="历史搜索"
+                    android:textColor="@color/gray013"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/img_delete_hiskey"
+                    android:layout_width="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_his_delete"
+                    android:layout_height="14dp"
+                    />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.huatu.teacheronline.widget.TagsLayout
+                android:id="@+id/tl_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                lee:tagHorizontalSpace="5dp"
+                lee:tagVerticalSpace="10dp"
+                app:layout_marginTopPercent="3.89%w"
+                app:layout_marginLeftPercent="4.44%w"
+                app:layout_marginRightPercent="4.44%w"
+                />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ll_recommended"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="搜索推荐"
+                app:layout_textSizePercent="3.89%w"
+                android:textColor="@color/gray013"
+                app:layout_marginTopPercent="3.89%w"
+                app:layout_marginLeftPercent="4.44%w"
+                android:layout_height="wrap_content"/>
+            <com.huatu.teacheronline.widget.TagsLayout
+                android:id="@+id/tl_recommended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                lee:tagHorizontalSpace="5dp"
+                lee:tagVerticalSpace="10dp"
+                app:layout_marginTopPercent="3.89%w"
+                app:layout_marginLeftPercent="4.44%w"
+                app:layout_marginRightPercent="4.44%w"
+                />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

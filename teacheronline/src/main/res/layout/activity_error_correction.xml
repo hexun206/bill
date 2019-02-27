@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huatu.teacheronline.personal.ErrorCorrectionActivity">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_heightPercent="11.55%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_Pending"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="待审核"
+                android:background="@null"
+                android:textColor="@color/green001"
+                app:layout_textSizePercent="35.47%h"/>
+
+
+            <View
+                android:id="@+id/v_Pending"
+                android:layout_width="50dp"
+                android:background="@color/green001"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="2dp"></View>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_review"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核中"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="35.47%h"/>
+
+            <View
+                android:id="@+id/v_review"
+                android:layout_width="55dp"
+                android:background="@color/green001"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_height="2dp"></View>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_adopt"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_adopt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核通过"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="35.47%h"/>
+
+            <View
+                android:id="@+id/v_adopt"
+                android:layout_width="65dp"
+                android:background="@color/green001"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_height="2dp"></View>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_pass"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核未通过"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="35.47%h"/>
+            <View
+                android:id="@+id/v_pass"
+                android:layout_width="80dp"
+                android:background="@color/green001"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_height="2dp"></View>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+   <com.zhy.android.percent.support.PercentRelativeLayout
+       android:layout_width="match_parent"
+       app:layout_marginTopPercent="1.66%w"
+       android:layout_height="match_parent">
+       <ListView
+           android:id="@+id/listview"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:cacheColorHint="#00000000"
+           android:divider="#00000000"
+           android:dividerHeight="10dp" />
+   </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

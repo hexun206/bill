@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/layout_city_choose_button_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13.33%w"
+        >
+
+        <TextView
+            android:id="@+id/layout_city_choose_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="请选择考试地区"
+            app:layout_textSizePercent="3.89%w"
+            app:layout_marginLeftPercent="3.89%w"
+            android:textColor="@color/black007"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="确定"
+            android:gravity="center"
+            app:layout_textSizePercent="3.89%w"
+            app:layout_paddingRightPercent="3.89%w"
+            app:layout_paddingLeftPercent="3.89%w"
+            android:textColor="@color/green004" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.huatu.teacheronline.widget.WheelView
+            android:id="@+id/wv_province_area_select"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:itemNumber="5"
+            app:lineColor="#00000000"
+            app:lineHeight="0dp"
+            app:noEmpty="true"
+            app:isCyclic="false"
+            app:maskDarkColor="#00000000"
+            app:maskLightColor="#00000000"
+            app:normalTextColor="@color/gray013"
+            app:normalTextSize="12sp"
+            app:selectedTextColor="@color/black007"
+            app:selectedTextSize="16sp"
+            app:unitHeight="37dp"
+            />
+
+        <com.huatu.teacheronline.widget.WheelView
+            android:id="@+id/wv_city_area_select"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            app:itemNumber="5"
+            app:isCyclic="false"
+            app:lineColor="#00000000"
+            app:lineHeight="0dp"
+            app:maskDarkColor="#00000000"
+            app:maskLightColor="#00000000"
+            app:noEmpty="true"
+            app:normalTextColor="@color/gray013"
+            app:normalTextSize="12sp"
+            app:selectedTextColor="@color/black007"
+            app:selectedTextSize="16sp"
+            app:unitHeight="37dp"
+            />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="?attr/actionBarSize"
+                                                     android:fitsSystemWindows="true"
+                                                     android:background="@color/white003"
+                                                     android:orientation="vertical">
+
+    <!--height:50dp-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13.88%w">
+
+        <!--width:50dp-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_main_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="13.88%w"
+            android:layout_alignParentLeft="true">
+
+            <!--width:23.5dp height:18dp-->
+            <ImageView
+                android:id="@+id/ib_main_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_arrow"
+                android:scaleType="fitCenter"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!--width:178dp height:29dp-->
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_topbar_direct_all">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/text_directTab_all"
+                android:textColor="@color/white"
+                android:id="@+id/tv_main_all"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/text_directTab_my"
+                android:textColor="@color/green001"
+                android:id="@+id/tv_main_my"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <!-- 该布局为了增大点击区域-->
+        <LinearLayout
+            android:id="@+id/ll_main_touch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/ll_main_title"
+            android:layout_alignRight="@id/ll_main_title"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/tv_main_all_touch"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/tv_main_my_touch"/>
+        </LinearLayout>
+
+        <!-- 右边按钮-->
+        <!--width:50dp-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_main_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_widthPercent="13.89%w">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_search_zhibo"
+                app:layout_heightPercent="44%w"
+                app:layout_widthPercent="44%w"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray001"/>
+</com.zhy.android.percent.support.PercentLinearLayout>

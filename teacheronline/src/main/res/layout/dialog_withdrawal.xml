@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pic_tkfx"
+        app:layout_widthPercent="94.86%w">
+
+        <ImageView
+            android:id="@+id/img_close_withdrawa_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_shut_w"
+            app:layout_marginRightPercent="1.8%w"
+            app:layout_marginTopPercent="3.8%w"
+            app:layout_paddingPercent="2%w"/>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_center_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_withdrawal_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_marginTopPercent="28.95%w">
+
+                <TextView
+                    android:id="@+id/tv_rmb_withdrawa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/red004"
+                    app:layout_textSizePercent="13.46%w"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_rmb_withdrawa"
+                    android:layout_toRightOf="@+id/tv_rmb_withdrawa"
+                    android:text="@string/text_rmb"
+                    android:textColor="@color/red004"
+                    app:layout_marginBottomPercent="2%w"
+                    app:layout_textSizePercent="7.6%w"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_rmb_withdrawa"
+                    android:layout_centerHorizontal="true"
+                    android:text="提现金额将原路返回你的支付账户"
+                    android:textColor="@color/red004"
+                    app:layout_marginTopPercent="2%w"
+                    app:layout_textSizePercent="3.5%w"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_input_withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                app:layout_marginTopPercent="28%w"
+                app:layout_widthPercent="70.32%w">
+
+                <EditText
+                    android:id="@+id/et_alipy_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rectangle_red_radius"
+                    android:hint="请输入支付宝账号"
+                    android:singleLine="true"
+                    app:layout_heightPercent="16.83%w"
+                    app:layout_marginTopPercent="8.3%w"
+                    app:layout_textSizePercent="7.22%w"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_clean_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/et_alipy_account"
+                    app:layout_marginTopPercent="5%w"
+                    app:layout_marginEndPercent="5%w"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_clean"/>
+
+                <EditText
+                    android:id="@+id/et_alipy_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_alipy_account"
+                    android:background="@drawable/bg_rectangle_red_radius"
+                    android:hint="请输入支付宝姓名"
+                    android:singleLine="true"
+                    app:layout_heightPercent="16.83%w"
+                    app:layout_marginTopPercent="7.3%w"
+                    app:layout_textSizePercent="7.22%w"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_mind_withdrawal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_alipy_name"
+                    android:text="登录号对应多个账户且账户名相同，请重新填写"
+                    android:textColor="@color/red004"
+                    android:visibility="visible"
+                    app:layout_marginTopPercent="8.3%w"
+                    app:layout_paddingLeftPercent="8%w"
+                    app:layout_paddingRightPercent="8%w"
+                    app:layout_textSizePercent="4.44%w"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_clean_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/et_alipy_name"
+                    app:layout_marginTopPercent="5%w"
+                    app:layout_marginEndPercent="5%w"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_clean"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+        <TextView
+            android:id="@+id/btn_comit_withdrawal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_center_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bt_mstx"
+            android:gravity="center"
+            android:text="@string/text_Immediately_withdraw"
+            android:textColor="@color/red004"
+            android:visibility="visible"
+            app:layout_marginBottomPercent="2.3%w"
+            app:layout_marginTopPercent="6.3%w"
+            app:layout_textSizePercent="4.68%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

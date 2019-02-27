@@ -1,0 +1,88 @@
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white005"
+        >
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_above="@+id/rl_sendMessage"
+            android:layout_gravity="top"
+            android:background="@color/gray008"/>
+
+        <!-- width:56dp height:34dp -->
+        <ImageView
+            android:id="@+id/img_chat_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/direct_user_send"
+            app:layout_heightPercent="9.45%w"
+            app:layout_marginBottomPercent="3.10%w"
+            app:layout_marginRightPercent="3.10%w"
+            app:layout_marginTopPercent="3.20%w"
+            android:visibility="gone"
+            app:layout_widthPercent="15.55%w"
+            />
+
+        <ImageView
+            android:id="@+id/img_chat_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/img_chat_send"
+            android:src="@drawable/ic_emoji"
+            app:layout_heightPercent="9.45%w"
+            app:layout_marginBottomPercent="3.10%w"
+            app:layout_marginTopPercent="3.20%w"
+            app:layout_widthPercent="15.55%w"
+            />
+        <!-- width:230dp height:40dp -->
+        <EditText
+            android:id="@+id/edt_chat_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:layout_toLeftOf="@+id/img_chat_emoji"
+            android:background="@drawable/bg_chat_send"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            app:layout_heightPercent="11.11%w"
+            app:layout_marginBottomPercent="2.36%w"
+            app:layout_marginLeftPercent="3.10%w"
+            app:layout_marginTopPercent="2.22%w"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_chat_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_chat_msg"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            app:layout_marginBottomPercent="2.36%w">
+        </android.support.v4.view.ViewPager>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

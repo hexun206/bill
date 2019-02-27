@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white003"
+    tools:context="com.huatu.teacheronline.paymethod.CreateNewAddressActivity">
+    <include
+        android:id="@+id/ll_obtainaddress_top_bar"
+        layout="@layout/general_topbar_type3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="2.77%w"
+        android:background="@color/white"
+        app:layout_heightPercent="7.22%h">
+
+        <TextView
+            android:id="@+id/tv_obtain_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收货人："
+            android:textColor="#333333"
+            app:layout_marginLeftPercent="4.17%w"
+            app:layout_marginTopPercent="3.33%w"
+            app:layout_textSizePercent="3.88%w"/>
+
+        <EditText
+            android:id="@+id/et_obtain_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_obtain_person"
+            android:layout_toRightOf="@+id/tv_obtain_person"
+            android:background="@null"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray011"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="7.22%h">
+
+
+        <TextView
+            android:id="@+id/tv_obtain_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系电话："
+            android:textColor="#333333"
+            app:layout_marginLeftPercent="4.17%w"
+            app:layout_marginTopPercent="3.33%w"
+            app:layout_textSizePercent="3.88%w"/>
+
+
+        <EditText
+            android:id="@+id/et_obtain_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_alignBottom="@+id/tv_obtain_telephone"
+            android:layout_toRightOf="@+id/tv_obtain_telephone"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray011"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="7.22%h">
+
+
+        <TextView
+            android:id="@+id/tv_city_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在市区："
+            android:layout_centerVertical="true"
+            android:textColor="#333333"
+            app:layout_marginLeftPercent="4.17%w"
+            app:layout_textSizePercent="3.88%w"/>
+
+        <EditText
+            android:id="@+id/et_city_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textColor="#999999"
+            android:textColorHint="#999999"
+            app:layout_textSizePercent="3.33%w"
+            android:gravity="right"
+            app:layout_marginRightPercent="5.2%w"
+            android:layout_toRightOf="@+id/tv_city_area"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:hint="请选择"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/m_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray011"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="19.1%w">
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_obtain_address_stress"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="街道地址："-->
+            <!--android:textColor="#333333"-->
+            <!--app:layout_marginLeftPercent="4.17%w"-->
+            <!--app:layout_marginTopPercent="3.33%w"-->
+            <!--app:layout_textSizePercent="3.88%w"/>-->
+
+        <EditText
+            android:id="@+id/et_obtain_address_stress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请填写详细地址，不少于5个字"
+            android:textSize="14dp"
+            app:layout_marginTopPercent="4.33%w"
+            app:layout_marginLeftPercent="3.05%w"
+            app:layout_marginRightPercent="3.05%w"
+            android:textColorHint="@color/gray002"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray011"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+
+
+        android:id="@+id/rl_choose_province_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:visibility="gone"
+        android:background="@color/white">
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/rl_ios_text"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="9dp"
+                android:text="请选择省市区"
+                android:textColor="#101619"
+                app:layout_textSizePercent="5.17%w"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/rl_ios_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/rl_ios_text"
+            >
+
+            <com.huatu.teacheronline.paymethod.kankan.wheel.chooseaddresswidget.customview.WheelView
+                android:id="@+id/id_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.huatu.teacheronline.paymethod.kankan.wheel.chooseaddresswidget.customview.WheelView
+                android:id="@+id/id_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.huatu.teacheronline.paymethod.kankan.wheel.chooseaddresswidget.customview.WheelView
+                android:id="@+id/id_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_ios_address"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="确定"
+            android:background="@color/green001"
+            android:textColor="#000000"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

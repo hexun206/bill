@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.huatu.teacheronline.personal.EncycloActivity">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_vip_topbar"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_live"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white006"
+        android:max="100"
+        android:layout_below="@+id/top_bar"
+        android:progress="0"
+        android:visibility="visible"
+        android:progressDrawable="@drawable/progress_selector"/>
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/progressBar_live"
+        android:layout_above="@+id/rl_dowm_buton"
+        android:layout_height="match_parent">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/ll_webview"
+            android:layout_below="@+id/top_bar"
+            android:layout_height="match_parent">
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/rl_dowm_buton"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="9.4%w"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green013"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_one"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:text="备考资料"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="4px"
+                android:background="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_two"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="wrap_content"
+                android:text="考试咨询"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="4px"
+                android:background="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_three"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="wrap_content"
+                android:text="每日一练"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

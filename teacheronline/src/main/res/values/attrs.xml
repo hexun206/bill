@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="string"/>
+        <attr name="layout_heightPercent" format="string"/>
+
+        <attr name="layout_marginPercent" format="string"/>
+        <attr name="layout_marginLeftPercent" format="string"/>
+        <attr name="layout_marginTopPercent" format="string"/>
+        <attr name="layout_marginRightPercent" format="string"/>
+        <attr name="layout_marginBottomPercent" format="string"/>
+        <attr name="layout_marginStartPercent" format="string"/>
+        <attr name="layout_marginEndPercent" format="string"/>
+
+        <attr name="layout_textSizePercent" format="string"/>
+
+        <attr name="layout_maxWidthPercent" format="string"/>
+        <attr name="layout_maxHeightPercent" format="string"/>
+        <attr name="layout_minWidthPercent" format="string"/>
+        <attr name="layout_minHeightPercent" format="string"/>
+
+        <attr name="layout_paddingPercent" format="string"/>
+        <attr name="layout_paddingTopPercent" format="string"/>
+        <attr name="layout_paddingBottomPercent" format="string"/>
+        <attr name="layout_paddingLeftPercent" format="string"/>
+        <attr name="layout_paddingRightPercent" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemWithIconAndArrow">
+        <attr name="ItemWithIconAndArrow_Icon_Id" format="reference"/>
+        <attr name="ItemWithIconAndArrow_Icon_Arrow" format="reference"/>
+        <attr name="ItemWithIconAndArrow_Text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RollViewPager">
+        <attr name="rollviewpager_hint_mode">
+            <enum name="point" value="0"/>
+            <enum name="number" value="1"/>
+        </attr>
+        <attr name="rollviewpager_hint_gravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="rollviewpager_hint_paddingRight" format="dimension"/>
+        <attr name="rollviewpager_hint_paddingLeft" format="dimension"/>
+        <attr name="rollviewpager_hint_paddingTop" format="dimension"/>
+        <attr name="rollviewpager_hint_paddingBottom" format="dimension"/>
+
+        <attr name="rollviewpager_play_delay" format="integer"/>
+        <attr name="rollviewpager_hint_color" format="color"/>
+        <attr name="rollviewpager_hint_alpha" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="SlideSelectView">
+        <attr name="circleCount" format="integer"></attr>
+        <attr name="textSize" format="integer"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerViewPager">
+        <attr name="rvp_triggerOffset" format="float"/>
+        <attr name="rvp_flingFactor" format="float"/>
+        <attr name="rvp_singlePageFling" format="boolean"/>
+        <attr name="rvp_inertia" format="boolean"/>
+        <attr name="rvp_millisecondsPerInch" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="WheelView">
+        <attr name="unitHeight" format="dimension"/>
+        <attr name="itemNumber" format="integer"/>
+
+        <attr name="normalTextColor" format="color"/>
+        <attr name="normalTextSize" format="dimension"/>
+        <attr name="selectedTextColor" format="color"/>
+        <attr name="selectedTextSize" format="dimension"/>
+        <attr name="isCyclic" format="boolean"/>
+
+        <attr name="lineColor" format="color"/>
+        <attr name="lineHeight" format="dimension"/>
+
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+
+        <attr name="maskDarkColor" format="color"/>
+        <attr name="maskLightColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="AppraiseRatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension"/>
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension"/>
+        <!--星星总数-->
+        <attr name="starCount" format="integer"/>
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference"/>
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference"/>
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference"/>
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean"/>
+        <!--当前进度float值-->
+        <attr name="starStep" format="float"/>
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0"/>
+            <enum name="Full" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension"/>
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension"/>
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorName" format="string"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundProgress">
+        <!--圆环颜色-->
+        <attr name="srp_roundColor" format="color"/>
+        <!--圆环的宽度-->
+        <attr name="srp_roundWidth" format="dimension"/>
+        <!--圆环上的进度颜色-->
+        <attr name="srp_progressColor" format="color"/>
+        <!--圆环上的进度宽度-->
+        <attr name="srp_progressWidth" format="dimension"/>
+        <!--进度值的最大值，一般为100-->
+        <attr name="srp_max" format="integer"/>
+        <!--开始角度，指定进度初始点的绘制位置-->
+        <attr name="srp_startAngle" format="integer"/>
+        <!--样式，空心还是实心-->
+        <attr name="srp_style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircularCoverView">
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="cover_color" format="color" />
+    </declare-styleable>
+
+</resources>

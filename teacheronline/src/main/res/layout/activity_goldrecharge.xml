@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:background="@color/white001"
+                                                     android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择合适的金币"
+        android:textColor="@color/gray010"
+        app:layout_marginLeftPercent="4.02%w"
+        app:layout_marginTopPercent="5.27%w"
+        app:layout_textSizePercent="3.33%w"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="3.88%w"
+        app:layout_paddingLeftPercent="4%w"
+        app:layout_paddingRightPercent="4%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_frame_green"
+            android:gravity="center"
+            app:layout_heightPercent="15.97%w">
+
+            <TextView
+                android:id="@+id/tv_money_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="￥12.00"
+                android:textColor="@color/green001"
+                app:layout_textSizePercent="15.6%w"/>
+
+            <TextView
+                android:id="@+id/tv_goldNumber_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money_one"
+                android:layout_centerHorizontal="true"
+                android:text="12金币"
+                android:textColor="@color/green001"
+                app:layout_marginTopPercent="7.8%w"
+                app:layout_textSizePercent="11.21%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_frame_gray"
+            android:gravity="center"
+            app:layout_heightPercent="15.97%w"
+            app:layout_marginLeftPercent="3.19%w">
+
+            <TextView
+                android:id="@+id/tv_money_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="￥40.00"
+                android:textColor="@color/gray014"
+                app:layout_textSizePercent="15.6%w"/>
+
+            <TextView
+                android:id="@+id/tv_goldNumber_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money_two"
+                android:layout_centerHorizontal="true"
+                android:text="40金币"
+                android:textColor="@color/gray014"
+                app:layout_marginTopPercent="7.8%w"
+                app:layout_textSizePercent="11.21%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_frame_gray"
+            android:gravity="center"
+            app:layout_heightPercent="15.97%w"
+            app:layout_marginLeftPercent="3.19%w">
+
+            <TextView
+                android:id="@+id/tv_money_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="￥88.00"
+                android:textColor="@color/gray014"
+                app:layout_textSizePercent="15.6%w"/>
+
+            <TextView
+                android:id="@+id/tv_goldNumber_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money_three"
+                android:layout_centerHorizontal="true"
+                android:text="88金币"
+                android:textColor="@color/gray014"
+                app:layout_marginTopPercent="7.8%w"
+                app:layout_textSizePercent="11.21%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="3.19%w"
+        app:layout_paddingLeftPercent="4%w"
+        app:layout_paddingRightPercent="4%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_four"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_frame_gray"
+            android:gravity="center"
+            app:layout_heightPercent="15.97%w">
+
+            <TextView
+                android:id="@+id/tv_money_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="￥198.00"
+                android:textColor="@color/gray014"
+                app:layout_textSizePercent="15.6%w"/>
+
+            <TextView
+                android:id="@+id/tv_goldNumber_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money_four"
+                android:layout_centerHorizontal="true"
+                android:text="198金币"
+                android:textColor="@color/gray014"
+                app:layout_marginTopPercent="7.8%w"
+                app:layout_textSizePercent="11.21%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_five"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_frame_gray"
+            android:gravity="center"
+            app:layout_heightPercent="15.97%w"
+            app:layout_marginLeftPercent="3.19%w">
+
+            <TextView
+                android:id="@+id/tv_money_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="￥388.00"
+                android:textColor="@color/gray014"
+                app:layout_textSizePercent="15.6%w"/>
+
+            <TextView
+                android:id="@+id/tv_goldNumber_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money_five"
+                android:layout_centerHorizontal="true"
+                android:text="388金币"
+                android:textColor="@color/gray014"
+                app:layout_marginTopPercent="7.8%w"
+                app:layout_textSizePercent="11.21%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_six"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_frame_gray"
+            android:gravity="center"
+            app:layout_heightPercent="15.97%w"
+            app:layout_marginLeftPercent="3.19%w">
+
+            <TextView
+                android:id="@+id/tv_money_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="￥698.00"
+                android:textColor="@color/gray014"
+                app:layout_textSizePercent="15.6%w"/>
+
+            <TextView
+                android:id="@+id/tv_goldNumber_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money_six"
+                android:layout_centerHorizontal="true"
+                android:text="698金币"
+                android:textColor="@color/gray014"
+                app:layout_marginTopPercent="7.8%w"
+                app:layout_textSizePercent="11.21%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginLeftPercent="4.02%w"
+        app:layout_marginTopPercent="3.88%w">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="供需支付"
+            android:textColor="@color/gray003"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:id="@+id/tv_sumMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.00"
+            android:textColor="@color/green001"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元，获得"
+            android:textColor="@color/gray003"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:id="@+id/tv_sumGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textColor="@color/green001"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金币"
+            android:textColor="@color/gray003"
+            app:layout_textSizePercent="3.33%w"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/green001"
+        android:gravity="center"
+        android:text="确认充值"
+        android:textColor="@color/white"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginTopPercent="5.83%w"
+        app:layout_textSizePercent="4.16%w"
+        app:layout_widthPercent="91.94%w"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="12dp"
+        android:text="说明\n购买课程1金币=1元人民币\n请在网络畅通的情况下进行充值，请耐心等待充值结果的返回，不要进行其他操作。"
+        android:textColor="@color/gray003"
+        app:layout_marginLeftPercent="4.02%w"
+        app:layout_marginTopPercent="5.55%w"
+        app:layout_textSizePercent="3.33%w"/>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

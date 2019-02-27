@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/rl_class_shecdule"
+        app:layout_heightPercent="18.75%w">
+        <ImageView
+            android:id="@+id/tv_tick"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:src="@drawable/ic_sc_weixuan"
+            />
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/tv_zhon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_state"
+            app:layout_marginLeftPercent="7.72%w"
+            app:layout_heightPercent="18.75%w"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_directTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="初中英语教材解析啊啊啊啊啊啊啊啊啊 "
+                app:layout_textSizePercent="22.22%h"
+                android:textColor="@color/gray010"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_below="@+id/tv_directTitle"
+                app:layout_marginTopPercent="8.33%h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2015-09-15 09:23"
+                app:layout_textSizePercent="20%h"
+                android:textColor="@color/gray013"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        <!--height:240dp-->
+
+        <!--height:69dp-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_state"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            app:layout_widthPercent="91.85%h"
+            app:layout_marginLeftPercent="4.72%w">
+
+<!--            <ImageView
+                android:id="@+id/tv_directState"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_zj_xiazai"
+                />-->
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:layout_heightPercent="30.33%h"
+                app:layout_widthPercent="30.33%h">
+
+                <com.huatu.teacheronline.widget.CircleView
+                    android:id="@+id/cv_prograss"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    app:layout_heightPercent="95%h"
+                    app:layout_paddingPercent="5.43%h"
+                    app:layout_widthPercent="95%h"/>
+
+                <ImageView
+                    android:id="@+id/tv_directState"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_zj_xiazai"
+                    />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

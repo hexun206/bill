@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="14.73%w"
+        >
+
+        <TextView
+            android:id="@+id/tv_pdf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="36dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/default_value"
+            android:textColor="@color/black013"
+            android:textSize="16sp"
+            />
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+
+            <com.huatu.teacheronline.widget.CircleView
+                android:id="@+id/cv_prograss"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:layout_heightPercent="95%h"
+                app:layout_paddingPercent="5.43%h"
+                app:layout_widthPercent="95%h"
+                />
+
+            <ImageView
+                android:id="@+id/img_pdf_down"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_zj_xiazai"/>
+
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

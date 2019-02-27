@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    android:id="@+id/ll_live_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white008"
+    android:orientation="vertical">
+
+    <!-- height:38dp -->
+    <!--<com.zhy.android.percent.support.PercentLinearLayout-->
+    <!--android:id="@+id/ll_select"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!--android:baselineAligned="false"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="3"-->
+    <!--app:layout_heightPercent="10.55%w">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_payDirect"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_payDirect"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/payDirect"-->
+    <!--android:textColor="@color/green001"-->
+    <!--app:layout_textSizePercent="39.47%h"/>-->
+    <!--</RelativeLayout>-->
+    <!--<View-->
+    <!--android:layout_width="@dimen/width_1"-->
+    <!--android:background="@color/gray004"-->
+    <!--android:layout_height="match_parent"/>-->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_zeroDirect"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_zeroDirect"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/zeroDirect"-->
+    <!--android:textColor="@color/black"-->
+    <!--app:layout_textSizePercent="39.47%h"/>-->
+    <!--</RelativeLayout>-->
+    <!--<View-->
+    <!--android:layout_width="@dimen/width_1"-->
+    <!--android:background="@color/gray004"-->
+    <!--android:layout_height="match_parent"/>-->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_selectDirect"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_selectDirect"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/select"-->
+    <!--android:drawableRight="@drawable/ic_shaixuan"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:drawablePadding="3dp"-->
+    <!--app:layout_textSizePercent="39.47%h"/>-->
+    <!--</RelativeLayout>-->
+    <!--</com.zhy.android.percent.support.PercentLinearLayout>-->
+
+    <!--<View-->
+    <!--android:id="@+id/line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/width_1"-->
+    <!--android:layout_below="@+id/ll_select"-->
+    <!--android:background="@color/gray002"/>-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/zbzx_my_none"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_nodata"
+            android:layout_centerHorizontal="true"
+            android:text="赶紧购买我们的优质课程哦！"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white001"
+        android:visibility="gone"
+        app:layout_heightPercent="100%h"
+        app:layout_widthPercent="100%w">
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wifi"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_wifi"
+            android:layout_centerHorizontal="true"
+            android:text="@string/network"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/live_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.huatu.teacheronline.widget.swipemenulistview.SwipeMenuListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/white008"
+            android:dividerHeight="10dp"
+            android:clickable="false"
+            android:clipToPadding="false"
+            android:scrollbars="none"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--<ScrollView-->
+    <!--android:id="@+id/sv_select"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/ll_select"-->
+    <!--android:scrollbars="none"-->
+    <!--android:visibility="visible">-->
+
+    <!--<include-->
+    <!--layout="@layout/layout_screen_live"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--></include>-->
+    <!--</ScrollView>-->
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

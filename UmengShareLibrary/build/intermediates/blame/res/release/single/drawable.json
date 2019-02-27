@@ -1,0 +1,1426 @@
+[
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\vk_clear_shape.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\vk_clear_shape.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_track_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\btnbg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\btnbg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/thumb.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/thumb.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_login_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_login_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_share_music.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_share_music.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_flickr.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_flickr.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_fbmessage.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_fbmessage.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/logo.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/logo.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_at_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_at_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\edit_view_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\edit_view_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_follow_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_follow_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_login.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_login.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_share_watermark.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_share_watermark.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_qzone.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_qzone.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_copyurl.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_copyurl.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\dadadatu.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\dadadatu.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\aa.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\aa.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_x_button.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_x_button.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/water.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/water.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_tx_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_tx_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_nav_bar_bg.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_nav_bar_bg.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_login.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_login.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_ynote.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_ynote.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_delete.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_delete.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_shareboard_item_background.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_shareboard_item_background.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\datu.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\datu.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_laiwang_dynamic.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_laiwang_dynamic.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_right_bt_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_right_bt_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_linkedin.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_linkedin.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_search_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_search_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_share_watermark.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_share_watermark.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_light_bar_bg.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_light_bar_bg.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_tumblr.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_tumblr.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\logo.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_tx_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_tx_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_tx.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_tx.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\longlong.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\longlong.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_wechat_gray.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_wechat_gray.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umsocial_defaultwatermark.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umsocial_defaultwatermark.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_laiwang_dynamic.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_laiwang_dynamic.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/vk_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/vk_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_delete.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_delete.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_oauth_check_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_oauth_check_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sidebar_selected.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sidebar_selected.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_white.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_white.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_ynote.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_ynote.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_renren_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_renren_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_tx_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_tx_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_douban.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_douban.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_follow_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_follow_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_fbmessage.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_fbmessage.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_back_bt_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_back_bt_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_back_bt_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_back_bt_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_tumblr.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_tumblr.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_follow_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_follow_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_arrow.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_arrow.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_yixin.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_yixin.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\vk_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\vk_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_google.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_google.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_app_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_app_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/zijian.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/zijian.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_at_button.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_at_button.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_qzone_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_qzone_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_arrow.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_arrow.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_qzone.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_qzone.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_share_to_button.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_share_to_button.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_qq_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_qq_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_white_blue.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_white_blue.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_follow_check.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_follow_check.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_location_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_location_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_tab_left_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_tab_left_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_qq.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_qq.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_evernote.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_evernote.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_copy.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_copy.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_laiwang.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_laiwang.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_back_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_back_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_evernote.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_evernote.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_shape_solid_black.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_shape_solid_black.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_action_back_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_action_back_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sidebar_selector.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sidebar_selector.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_whatsapp.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_whatsapp.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_grey_blue.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_grey_blue.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_gmail_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_gmail_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_back_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_back_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_left_pressed.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_tab_left_pressed.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_renren_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_renren_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_yixin_circle.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_yixin_circle.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_alipay.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_alipay.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sidebar_selected.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sidebar_selected.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_location_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_location_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_right_bt.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_right_bt.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_renren.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_renren.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_qq_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_qq_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sina_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sina_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\thumb.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\thumb.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_default_avatar.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_default_avatar.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_action_back_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_action_back_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_dropbox.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_dropbox.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_laiwang.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_laiwang.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/ic_ab_app.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/ic_ab_app.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/dadadatu.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/dadadatu.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_right_bt_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_right_bt_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_btn_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_btn_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_yixin_circle.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_yixin_circle.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_fav.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_fav.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_fav.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_fav.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_login_pressed.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_login_pressed.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_twitter.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_twitter.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_pocket.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_pocket.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_bind_bg.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_bind_bg.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sidebar_selector.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sidebar_selector.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_app_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_app_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_oauth_check_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_oauth_check_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_action_back_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_action_back_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_wxcircle.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_wxcircle.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_tab_button_left.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_tab_button_left.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_kakao.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_kakao.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_qq_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_qq_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_ding.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_ding.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_oauth_check.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_oauth_check.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_yixin.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_yixin.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_pinterest.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_pinterest.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_wechat_gray.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_wechat_gray.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_share_transparent_corner.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_share_transparent_corner.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/datu.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/datu.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/vk_share_send_button_background.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/vk_share_send_button_background.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_at_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_at_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_pocket.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_pocket.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_douban_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_douban_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_btn_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_btn_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_tab_button_right.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_tab_button_right.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_right_pressed.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_tab_right_pressed.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_ding.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_ding.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_follow_check.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_follow_check.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sidebar_normal.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sidebar_normal.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\fenxiang.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\fenxiang.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/longtu.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/longtu.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_right_bt_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_right_bt_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_action_back.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_action_back.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_more.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_more.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_refersh.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_refersh.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_tab_right_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_tab_right_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_fetch_image.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_fetch_image.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_douban.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_douban.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_back_bt_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_back_bt_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umsocial_defaultwatermark.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umsocial_defaultwatermark.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_shape_solid_grey.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_shape_solid_grey.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_window_shadow_pad.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_window_shadow_pad.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_dropbox.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_dropbox.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_share_solid_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_share_solid_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_follow_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_follow_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_blue.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_blue.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_location_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_location_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_wechat.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_wechat.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_menu_default.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_menu_default.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\huoqu.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\huoqu.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/aa.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/aa.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_shape_solid_black.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_shape_solid_black.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_colored_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\gengxin.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\gengxin.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_menu_default.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_menu_default.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sidebar_normal.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sidebar_normal.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_gmail.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_gmail.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sina_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sina_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_copy.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_copy.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_light_bar_bg.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_light_bar_bg.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sms.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sms.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_edit_text_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_google.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_google.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_share_transparent_corner.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_share_transparent_corner.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_more.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_more.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_back_bt_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_back_bt_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ic_ab_done.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\ic_ab_done.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_gmail_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_gmail_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_share_video.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_share_video.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_qq.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_qq.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_renren.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_renren.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_back_bt.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_back_bt.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/shouquan.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/shouquan.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\longtu.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\longtu.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\zijian.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\zijian.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_shape_solid_grey.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_shape_solid_grey.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_gmail.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_gmail.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_share_web.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_share_web.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_bind_bg.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_bind_bg.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_back_bt.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_back_bt.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_share_web.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_share_web.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_foursquare.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_foursquare.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/editbg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/editbg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_edit_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_edit_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_line.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_line.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_white_blue.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_white_blue.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_grey_blue.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_grey_blue.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_line.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_line.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_qzone_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_qzone_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_alipay.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_alipay.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_login_pressed.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_login_pressed.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_blue.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_blue.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_location_ic.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_location_ic.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/longlong.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/longlong.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/btnbg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/btnbg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_douban_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_douban_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_pinterest.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_pinterest.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_red.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_red.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/info_icon_1.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/info_icon_1.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_red_blue.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_red_blue.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_edit_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_edit_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_kakao.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_kakao.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_vector_test.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_fetch_image.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_fetch_image.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_tx.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_tx.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_renren_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_renren_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/vk_gray_transparent_shape.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/vk_gray_transparent_shape.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_button_right.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_tab_button_right.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_gmail_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_gmail_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_white.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_white.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_nav_bar_bg.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_nav_bar_bg.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_qzone_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_qzone_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_facebook.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_facebook.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_facebook.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_facebook.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_copyurl.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_copyurl.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_at_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_at_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_shareboard_item_background.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_shareboard_item_background.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_login_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_login_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\editbg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\editbg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng.jpg",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng.jpg"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_share_music.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_share_music.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_wechat.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_wechat.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_left_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_tab_left_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/edit_view_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/edit_view_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_default_avatar.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_default_avatar.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\info_icon_1.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\info_icon_1.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_button_left.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_tab_button_left.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_qzone_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_qzone_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_share_solid_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_share_solid_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_x_button.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_x_button.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_wxcircle_gray.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_wxcircle_gray.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_tab_right_normal.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_tab_right_normal.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_search_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_search_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\vk_share_send_button_background.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\vk_share_send_button_background.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_instagram.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_instagram.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_action_back.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_action_back.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\shouquan.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\shouquan.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_oauth_check.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_oauth_check.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/huoqu.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/huoqu.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_back_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_back_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_title_right_bt.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_title_right_bt.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_share_video.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_share_video.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_linkedin.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_linkedin.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_back_icon.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_back_icon.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_btn_check_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_location_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_location_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/ic_ab_done.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/ic_ab_done.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_right_bt_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_right_bt_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_wxcircle.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_wxcircle.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_refersh.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_refersh.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_instagram.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_instagram.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_oauth_check_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_oauth_check_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/vk_clear_shape.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/vk_clear_shape.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\com_facebook_close.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\com_facebook_close.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_tab_right_pressed.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_tab_right_pressed.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_oauth_check_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_oauth_check_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sina.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sina.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_location_ic.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_location_ic.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\water.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\water.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sina.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sina.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sina_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sina_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_tx_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_tx_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/gengxin.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/gengxin.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_wxcircle_gray.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_wxcircle_gray.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\vk_gray_transparent_shape.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\vk_gray_transparent_shape.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_douban_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_douban_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ic_ab_app.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\ic_ab_app.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_action_back_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_action_back_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_sms.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_sms.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_button_grey.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_button_grey.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_window_shadow_pad.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_window_shadow_pad.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_qq_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_qq_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_sina_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_sina_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_grey.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_grey.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/fenxiang.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/fenxiang.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_red.9.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_red.9.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_whatsapp.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_whatsapp.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_at_selected.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_at_selected.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_flickr.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_flickr.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_share_to_button.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_share_to_button.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_gmail_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_gmail_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_douban_off.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_douban_off.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_title_tab_left_pressed.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_title_tab_left_pressed.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_renren_on.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_renren_on.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_at_button.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_at_button.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_twitter.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_twitter.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/umeng_socialize_button_red_blue.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/umeng_socialize_button_red_blue.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/com_facebook_close.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/src/main/res/drawable/com_facebook_close.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/UmengShareLibrary/build/intermediates/res/merged/release/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/hexunxun/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/d33d7e1582418557e88639ce3dfab493/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\umeng_socialize_foursquare.png",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\src\\main\\res\\drawable\\umeng_socialize_foursquare.png"
+    },
+    {
+        "merged": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\res\\merged\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "/Users/hexunxun/StudioProjects/TeacherOnline_Android/E:\\workspace\\TeacherOnlineS\\UmengShareLibrary\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    }
+]

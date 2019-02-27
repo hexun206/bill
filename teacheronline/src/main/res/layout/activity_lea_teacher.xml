@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white008"
+    tools:context="com.huatu.teacheronline.vipexercise.LeaTeacherActivity">
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_vip_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/chat_refresh_layout"
+        android:background="@color/white008"
+        android:layout_above="@+id/ll_bottom_send_message"
+        android:layout_below="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/listview"
+            android:paddingTop="11dp"
+            android:background="@color/background_color"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:scrollbars="none"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_bottom_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="11.9%w"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/ed_addleat"
+        android:layout_width="match_parent"
+        app:layout_marginLeftPercent="3.61%w"
+        android:background="@drawable/bg_dialog_main_bg"
+        app:layout_widthPercent="80%w"
+        android:paddingLeft="5dp"
+        app:layout_heightPercent="9.72%w"
+        android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="50dp"
+            android:text="发送"
+            android:gravity="center"
+            android:background="@drawable/bg_dialog_main_bg"
+            app:layout_marginLeftPercent="1%w"
+            android:textColor="@color/gray007"
+            android:textSize="14dp"
+            android:layout_height="35dp" />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

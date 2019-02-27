@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_play_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/playbg"
+        android:visibility="visible">
+
+        <SeekBar
+            android:id="@+id/skbProgress"
+            style="@style/customSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"/>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_play"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/skbProgress">
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_pause"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_screen"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/skbProgress">
+
+            <ImageView
+                android:id="@+id/iv_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_fullsc"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/skbProgress"
+            android:layout_toLeftOf="@id/rl_screen"
+            android:layout_toRightOf="@id/rl_play">
+
+            <TextView
+                android:id="@+id/videoDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/playDuration"
+                android:text="/00:00"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_textSizePercent="50%h"/>
+
+            <TextView
+                android:id="@+id/playDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_textSizePercent="50%h"/>
+            <TextView
+                android:id="@+id/tv_speed"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/bg_rectangle_white_noradius"
+                android:gravity="center"
+                android:text="原始速度"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:visibility="visible"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

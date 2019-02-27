@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white001">
+
+    <View
+        android:id="@+id/v_label_teacherOnline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_label_teacheronline"
+        app:layout_heightPercent="7.92%w"
+        app:layout_marginTopPercent="13.89%w"
+        app:layout_widthPercent="33.61%w"/>
+
+    <View
+        android:id="@+id/v_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray002"
+        app:layout_marginTopPercent="34.72%w"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_mobile_login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/v_line1"
+        android:background="@color/white"
+        app:layout_heightPercent="13.33%w">
+
+        <View
+            android:id="@+id/v_label_email"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_email"
+            app:layout_heightPercent="4.58%w"
+            app:layout_marginLeftPercent="4.03%w"
+            app:layout_widthPercent="5.23%w"/>
+
+        <EditText
+            android:id="@+id/et_moblie_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/v_label_email"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/mobile_input_username"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:textColorHint="@color/gray003"
+            app:layout_marginLeftPercent="4.03%w"
+            app:layout_textSizePercent="4.17%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:id="@+id/v_line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/rl_mobile_login"
+        android:background="@color/gray002"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_pwd_login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/v_line2"
+        android:background="@color/white"
+        app:layout_heightPercent="13.33%w">
+
+        <View
+            android:id="@+id/v_label_pwd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_lock"
+            app:layout_heightPercent="4.58%w"
+            app:layout_marginLeftPercent="4.03%w"
+            app:layout_widthPercent="5.23%w"/>
+
+        <EditText
+            android:id="@+id/et_pwd_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/v_label_pwd"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/pwd_login_input"
+            android:imeOptions="actionDone"
+            android:password="true"
+            android:singleLine="true"
+            android:textColorHint="@color/gray003"
+            app:layout_marginLeftPercent="4.03%w"
+            app:layout_textSizePercent="4.17%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:id="@+id/v_line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/rl_pwd_login"
+        android:background="@color/gray002"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/v_line3"
+        android:background="@drawable/bg_rectangle_green"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginLeftPercent="4.03%w"
+        app:layout_marginRightPercent="4.03%w"
+        app:layout_marginTopPercent="5.28%w"
+        app:layout_textSizePercent="4.17%w"/>
+
+    <TextView
+        android:id="@+id/tv_register_quick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login"
+        android:text="@string/register_quick"
+        android:textColor="@color/gray003"
+        app:layout_paddingPercent="4.03%w"
+        app:layout_textSizePercent="3.61%w"/>
+
+    <TextView
+        android:id="@+id/tv_forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_login"
+        android:text="@string/pwd_find"
+        android:textColor="@color/gray003"
+        app:layout_paddingPercent="4.03%w"
+        app:layout_textSizePercent="3.61%w"/>
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/width_1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray003"
+        app:layout_marginBottomPercent="39.31%w"
+        app:layout_marginLeftPercent="4.03%w"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white001"
+        android:text="@string/login_quick"
+        android:textColor="@color/gray003"
+        app:layout_marginBottomPercent="34.86%w"
+        app:layout_paddingPercent="2.64%w"
+        app:layout_textSizePercent="3.61%w"/>
+
+    <ImageView
+        android:id="@+id/iv_weixin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/icon_weixin"
+        app:layout_heightPercent="15.28%w"
+        app:layout_marginBottomPercent="11.94%w"
+        app:layout_marginLeftPercent="13.89%w"
+        app:layout_marginRightPercent="13.89%w"
+        app:layout_widthPercent="15.28%w"/>
+
+    <ImageView
+        android:id="@+id/iv_weibo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/iv_weixin"
+        android:src="@drawable/icon_weibo"
+        android:visibility="invisible"
+        app:layout_heightPercent="15.28%w"
+        app:layout_marginBottomPercent="11.94%w"
+        app:layout_marginRightPercent="13.89%w"
+        app:layout_widthPercent="15.28%w"/>
+
+    <ImageView
+        android:id="@+id/iv_qq"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/iv_weibo"
+        android:src="@drawable/icon_qq"
+        app:layout_heightPercent="15.28%w"
+        app:layout_marginBottomPercent="11.94%w"
+        app:layout_marginRightPercent="12.89%w"
+        app:layout_widthPercent="15.28%w"/>
+</com.zhy.android.percent.support.PercentRelativeLayout>

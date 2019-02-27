@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_heightPercent="32.64%w">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/tv_tick"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:src="@drawable/ic_sc_weixuan"
+        />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_icon"
+        android:layout_toRightOf="@+id/tv_tick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zb_mrt"
+        app:layout_heightPercent="24.31%w"
+        app:layout_marginBottomPercent="4.17%w"
+        app:layout_marginRightPercent="2.36%w"
+        app:layout_marginLeftPercent="2.36%w"
+        app:layout_marginTopPercent="4.17%w"
+        app:layout_widthPercent="42.78%w"
+        >
+        <!-- width:122dp height:19dp -->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_icon"
+            android:layout_toRightOf="@+id/tv_tick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/zb_mrt"
+            />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_isover_footprint"
+            android:layout_toRightOf="@+id/tv_tick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_yxj_mask"
+            />
+
+        <ImageView
+            android:id="@+id/iv_todayTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_tab_today"
+            android:visibility="gone"
+
+            />
+
+
+        <!--width:216dp height:88-->
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_direct_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rl_icon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="2016公务员多省联考笔试2016公"
+        android:textColor="@color/black"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_marginTopPercent="6.25%w"
+        app:layout_textSizePercent="3.85%w"/>
+
+    <TextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_direct_title"
+        android:layout_toLeftOf="@+id/tv_classNumber"
+        android:layout_toRightOf="@+id/rl_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:visibility="visible"
+        android:text="华图资深教师"
+        android:textColor="@color/black005"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_marginTopPercent="3.33%w"
+        app:layout_textSizePercent="3.43%w"/>
+
+    <TextView
+        android:id="@+id/tv_classNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_direct_title"
+        android:text="120课时"
+        android:visibility="visible"
+        android:textColor="@color/black005"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_marginTopPercent="3.43%w"
+        app:layout_textSizePercent="3.43%w"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teacher"
+        android:layout_toRightOf="@+id/rl_icon"
+        android:text="￥580"
+        android:visibility="visible"
+        android:textColor="@color/orange001"
+        app:layout_marginTopPercent="3.33%w"
+        app:layout_textSizePercent="3.63%w"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_classNumber"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/tv_payNumber"
+        android:src="@drawable/fire"
+        android:visibility="gone"
+        app:layout_marginTopPercent="3.03%w"/>
+
+    <TextView
+        android:id="@+id/tv_payNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_classNumber"
+        android:text="4070人已抢"
+        android:visibility="gone"
+        android:textColor="@color/gray003"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_marginTopPercent="3.43%w"
+        app:layout_textSizePercent="3.43%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--height:233dp-->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_playlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- height:220dp -->
+        <com.gensee.view.GSVideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- height:220dp -->
+        <com.gensee.view.GSDocViewGx
+            android:id="@+id/docView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include
+            android:id="@+id/top_bar_no_titlebar"
+            layout="@layout/player_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:layout_marginRightPercent="2.78%w"
+            app:layout_marginBottomPercent="30%w"
+            android:background="@drawable/ic_tovi"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/iv_directScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            app:layout_marginRightPercent="2.78%w"
+            app:layout_marginBottomPercent="1.38%w"
+            android:background="@drawable/ic_fullsc_g"/>
+
+        <!--height:38-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_fullScreenTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:alpha="0.7"
+            android:background="@color/black006"
+            android:visibility="gone">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_fullScreenBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_widthPercent="10.55%w">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/back_full_screen"
+                    app:layout_heightPercent="44.73%h"
+                    app:layout_widthPercent="23.68%h"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_fullScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/rl_fullScreenBack"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/white"
+                app:layout_marginLeftPercent="2.38%w"
+                app:layout_marginRightPercent="4.38%w"
+                app:layout_textSizePercent="39.47%h"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_play_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/playbg"
+            android:visibility="gone">
+            android:background="@color/black006"
+
+            <SeekBar
+                android:id="@+id/skbProgress"
+                style="@style/customSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"/>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_play"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/skbProgress">
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_pause"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_screen"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/skbProgress">
+
+                <ImageView
+                    android:id="@+id/iv_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_fullsc"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/skbProgress"
+                android:layout_toLeftOf="@id/rl_screen"
+                android:layout_toRightOf="@id/rl_play">
+
+                <TextView
+                    android:id="@+id/videoDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/playDuration"
+                    android:text="/00:00"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_textSizePercent="50%h"/>
+
+                <TextView
+                    android:id="@+id/playDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_textSizePercent="50%h"/>
+
+                <!--<SeekBar-->
+                <!--android:id="@+id/skbProgress"-->
+                <!--style="@style/customSeekBar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_toLeftOf="@id/playDuration"-->
+                <!--android:maxHeight="3dp"-->
+                <!--android:minHeight="3dp"/>-->
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:background="@drawable/bg_rectangle_white_noradius"
+                    android:gravity="center"
+                    android:text="原始速度"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:visibility="visible"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+        <!--android:id="@+id/rl_play_bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/black006"-->
+        <!--android:visibility="visible">-->
+
+        <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+        <!--android:id="@+id/rl_play"-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_play"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/icon_play_play"/>-->
+        <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+
+        <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+        <!--android:id="@+id/rl_screen"-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentRight="true">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_screen"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/icon_play_halfscreen"/>-->
+        <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+
+        <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_toLeftOf="@id/rl_screen"-->
+        <!--android:layout_toRightOf="@id/rl_play">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/videoDuration"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:text="/00:00"-->
+        <!--android:textColor="@color/gray009"-->
+        <!--android:textSize="12sp"-->
+        <!--app:layout_textSizePercent="30%h"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/playDuration"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toLeftOf="@id/videoDuration"-->
+        <!--android:text="00:00"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="12sp"-->
+        <!--app:layout_textSizePercent="30%h"/>-->
+
+        <!--<SeekBar-->
+        <!--android:id="@+id/skbProgress"-->
+        <!--style="@style/customSeekBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_toLeftOf="@id/playDuration"-->
+        <!--android:maxHeight="3dp"-->
+        <!--android:minHeight="3dp"/>-->
+        <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+        <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_deatil_waiting"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_waiting"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@anim/anim_direct_loading"
+                android:indeterminateDuration="1500"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <!--height:30dp-->
+    <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+    <!--android:id="@+id/rl_tab"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/rl_playlayout"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_heightPercent="8.33%w">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_hudong"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:text="互动"-->
+    <!--android:textColor="@color/black004"-->
+
+    <!--app:layout_marginLeftPercent="26.38%w"-->
+    <!--app:layout_textSizePercent="3.88%w"/>-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_jianjie"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_toRightOf="@+id/tv_kebiao"-->
+    <!--android:text="讲义"-->
+    <!--android:textColor="@color/black004"-->
+    <!--app:layout_marginLeftPercent="12.22%w"-->
+    <!--app:layout_marginRightPercent="26.38%w"-->
+    <!--app:layout_textSizePercent="3.88%w"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_kebiao"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_toRightOf="@+id/tv_hudong"-->
+    <!--android:text="课表"-->
+    <!--android:textColor="@color/black004"-->
+    <!--app:layout_marginLeftPercent="12.22%w"-->
+    <!--app:layout_textSizePercent="3.88%w"/>-->
+
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/width_1"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/gray008"/>-->
+
+    <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+
+    <RadioGroup
+        android:id="@+id/rl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/rl_playlayout"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/tv_hudong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_select_rg_play"
+            android:button="@null"
+            android:gravity="center"
+            android:text="互动"
+            android:textColor="@color/text_check_staus_play"
+            android:textSize="14dp"
+            />
+
+        <RadioButton
+            android:id="@+id/tv_kebiao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_select_rg_play"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="课程表"
+            android:textColor="@color/text_check_staus_play"
+            android:textSize="14dp"
+            />
+
+        <RadioButton
+            android:id="@+id/tv_jianjie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_select_rg_play"
+            android:button="@null"
+            android:gravity="center"
+            android:text="讲义"
+            android:textColor="@color/text_check_staus_play"
+            android:textSize="14dp"/>
+
+        <RadioButton
+            android:id="@+id/tv_chanjian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_select_rg_play"
+            android:button="@null"
+            android:gravity="center"
+            android:text="常见问题"
+            android:textColor="@color/text_check_staus_play"
+            android:textSize="14dp"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@+id/rl_tab"
+        android:background="@color/gray008"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_tab"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_no_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            app:layout_marginTopPercent="5.56%w"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无聊天记录!"
+                android:textColor="@color/black014"
+                app:layout_textSizePercent="3.78%w"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/ll_no_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_heightPercent="55.56%w"
+            >
+
+            <ImageView
+                android:id="@+id/img_no_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:src="@drawable/pic_nopaper"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_no_notes"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_notes"
+                />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_content_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_tab"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:weightSum="1"
+            >
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <com.huatu.teacheronline.widget.PinnedHeaderListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/gray012"
+                android:dividerHeight="@dimen/width_1"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/chat_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <com.joanzapata.pdfview.PDFView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_sendMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white005"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_1"
+                    android:layout_above="@+id/rl_sendMessage"
+                    android:layout_gravity="top"
+                    android:background="@color/gray008"/>
+
+                <!-- width:56dp height:34dp -->
+                <ImageView
+                    android:id="@+id/btn_direct_dealite_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/direct_user_send"
+                    app:layout_heightPercent="9.45%w"
+                    app:layout_marginBottomPercent="3.10%w"
+                    app:layout_marginRightPercent="3.10%w"
+                    app:layout_marginTopPercent="3.20%w"
+                    app:layout_widthPercent="15.55%w"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_direct_dealite_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_direct_dealite_send"
+                    android:src="@drawable/ic_emoji"
+                    app:layout_heightPercent="9.45%w"
+                    app:layout_marginBottomPercent="3.10%w"
+                    app:layout_marginTopPercent="3.20%w"
+                    app:layout_widthPercent="15.55%w"
+                    />
+                <!-- width:230dp height:40dp -->
+                <com.gensee.view.ChatEditText
+                    android:id="@+id/et_live_detail_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/img_direct_dealite_face"
+                    android:background="@drawable/bg_black_direct"
+                    app:layout_heightPercent="11.11%w"
+                    app:layout_marginBottomPercent="2.36%w"
+                    app:layout_marginLeftPercent="3.10%w"
+                    app:layout_marginTopPercent="2.22%w"/>
+
+                <GridView
+                    android:id="@+id/chat_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_live_detail_msg"
+                    android:layout_gravity="center_vertical"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="6"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"
+                    app:layout_marginBottomPercent="2.36%w">
+                </GridView>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <!--<View-->
+    <!--android:id="@+id/line1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/width_1"-->
+    <!--android:layout_above="@+id/rl_sendMessage"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:background="@color/gray008"/>-->
+    <!-- height:56.5dp -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/img_customer_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_diret_kefu"/>
+    </RelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

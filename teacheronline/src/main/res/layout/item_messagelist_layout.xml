@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!-- height:112dp -->
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/img_weidu_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/wdxx_weidu"
+        android:visibility="invisible"
+        app:layout_marginLeftPercent="1.67%w"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_date_message"
+        android:layout_toRightOf="@+id/img_weidu_message"
+        android:ellipsize="end"
+
+        android:singleLine="true"
+        android:text="我的消息"
+        app:layout_marginBottomPercent="2.22%w"
+        app:layout_marginLeftPercent="2.22%w"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_marginTopPercent="2.22%w"
+        app:layout_textSizePercent="3.89%w"
+        />
+
+    <TextView
+        android:id="@+id/tv_date_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/img_right_message"
+        android:text="一天前"
+        android:textColor="@color/green004"
+        app:layout_marginRightPercent="1.67%w"
+        app:layout_textSizePercent="3.89%w"
+        />
+
+    <ImageView
+        android:id="@+id/img_right_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/wdxx_xiangqing"
+        app:layout_marginRightPercent="3.33%w"/>
+</com.zhy.android.percent.support.PercentRelativeLayout>

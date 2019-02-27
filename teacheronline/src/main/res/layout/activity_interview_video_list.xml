@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/general_topbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- height:75.96px -->
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_top_interview_screening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="10.55%w">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_subject"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subject_choices"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="39.49%h"/>
+
+            <ImageView
+                android:id="@+id/iv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_down_black"
+                app:layout_marginLeftPercent="13.16%h"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/ll_interview_form"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <View
+                android:layout_width="@dimen/width_1"
+                android:background="@color/gray004"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/tv_interview_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/interview_form_choices"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="39.49%h"/>
+
+            <ImageView
+                android:id="@+id/iv_interview_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_interview_form"
+                android:src="@drawable/arrow_down_black"
+                app:layout_marginLeftPercent="13.16%h"/>
+            <View
+                android:layout_width="@dimen/width_1"
+                android:background="@color/gray004"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_grade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_choices"
+                android:textColor="@color/black"
+                app:layout_textSizePercent="39.49%h"/>
+
+            <ImageView
+                android:id="@+id/iv_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_down_black"
+                app:layout_marginLeftPercent="13.16%h"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray004"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white001"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/wifi"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_wifi"
+            android:layout_centerHorizontal="true"
+            android:text="@string/network"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_nodata"
+        android:layout_below="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white001"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/mssp_none"
+            app:layout_heightPercent="31.94%w"
+            app:layout_marginTopPercent="34.72%w"
+            app:layout_widthPercent="39.44%w"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_nodata"
+            android:layout_centerHorizontal="true"
+            android:text="此分类下暂无面试视频"
+            android:textColor="@color/gray003"
+            app:layout_marginTopPercent="10.69%w"
+            app:layout_textSizePercent="4.16%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    <ListView
+        android:id="@+id/lv_interview_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="11dp"
+        android:clipToPadding="false"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/white008"
+        android:dividerHeight="11dp"
+        android:scrollbars="none"/>
+</com.zhy.android.percent.support.PercentLinearLayout>

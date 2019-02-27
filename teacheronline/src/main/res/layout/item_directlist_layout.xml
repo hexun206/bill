@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><!-- height:112dp -->
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_heightPercent="32.64%w">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <!-- width:122dp height:19dp -->
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zb_mrt"
+        app:layout_heightPercent="24.31%w"
+        app:layout_marginBottomPercent="4.17%w"
+        app:layout_marginLeftPercent="2.36%w"
+        app:layout_marginRightPercent="2.36%w"
+        app:layout_marginTopPercent="4.17%w"
+        app:layout_widthPercent="42.78%w"/>
+
+    <ImageView
+        android:id="@+id/iv_todayTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_tab_today"
+        android:visibility="visible"
+        app:layout_marginBottomPercent="4.17%w"
+        app:layout_marginLeftPercent="2.36%w"
+        app:layout_marginRightPercent="2.36%w"
+        app:layout_marginTopPercent="4.17%w"/>
+
+
+    <!--width:216dp height:88-->
+
+    <TextView
+        android:id="@+id/tv_direct_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sdv_icon"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="2016公务员多省联考笔试2016公"
+        android:textColor="@color/black007"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_marginTopPercent="5.25%w"
+        app:layout_textSizePercent="3.85%w"/>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_direct_title"
+            android:layout_toRightOf="@+id/sdv_icon"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_rebates"
+                android:layout_width="wrap_content"
+                android:text="听课返现"
+                android:background="@color/orange002"
+                android:textColor="@color/white"
+                app:layout_marginTopPercent="0.53%w"
+                android:visibility="gone"
+                app:layout_marginRightPercent="2.22%w"
+                android:padding="1dp"
+                android:textSize="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_Seckill"
+                android:layout_width="wrap_content"
+                android:text="秒杀"
+                android:background="@color/orange002"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_marginTopPercent="0.53%w"
+                app:layout_marginRightPercent="2.22%w"
+                android:padding="1dp"
+                android:textSize="10dp"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_offers"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:text="特价"-->
+                <!--android:background="@color/orange002"-->
+                <!--app:layout_marginLeftPercent="2.22%w"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:visibility="gone"-->
+                <!--app:layout_marginTopPercent="0.53%w"-->
+                <!--android:padding="1dp"-->
+                <!--android:textSize="10dp"-->
+                <!--android:layout_height="wrap_content" />-->
+
+            <TextView
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:text="7折"
+                android:background="@color/orange002"
+                app:layout_marginRightPercent="2.22%w"
+                android:textColor="@color/white"
+                app:layout_marginTopPercent="0.53%w"
+                android:padding="1dp"
+                android:visibility="gone"
+                android:textSize="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_gift"
+                android:layout_width="wrap_content"
+                android:text="赠品"
+                android:background="@color/orange002"
+                app:layout_marginRightPercent="2.22%w"
+                android:textColor="@color/white"
+                app:layout_marginTopPercent="0.53%w"
+                android:padding="1dp"
+                android:visibility="gone"
+                android:textSize="10dp"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_direct_title"
+        android:layout_toRightOf="@+id/sdv_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/tv_price"
+        android:text="华图资深教师华图"
+        android:textColor="@color/gray013"
+        app:layout_marginTopPercent="5.66%w"
+        app:layout_textSizePercent="3.43%w"/>
+
+    <TextView
+        android:id="@+id/tv_classNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teacher"
+        android:layout_toRightOf="@+id/sdv_icon"
+        android:text="120课时"
+        android:textColor="@color/gray013"
+        app:layout_textSizePercent="3.43%w"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥580"
+        android:layout_below="@+id/tv_direct_title"
+         android:layout_alignParentRight="true"
+        app:layout_marginTopPercent="4.13%w"
+        android:textColor="@color/orange002"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_textSizePercent="5%w"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/tv_payNumber"
+        android:src="@drawable/fire" />
+
+    <TextView
+        android:id="@+id/tv_payNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_price"
+        android:text="4070人已抢"
+        android:textColor="@color/gray013"
+        app:layout_marginRightPercent="2.22%w"
+        app:layout_textSizePercent="3.43%w"/>
+
+
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

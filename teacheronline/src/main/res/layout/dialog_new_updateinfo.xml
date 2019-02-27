@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- width:260dp -->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="380dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/uppopw">
+
+<ScrollView
+    android:layout_width="match_parent"
+    app:layout_marginTopPercent="45%w"
+    android:layout_height="150dp">
+     <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_up"
+        android:layout_height="150dp">
+
+        <TextView
+        android:id="@+id/tv_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginLeftPercent="15.85%w"
+        app:layout_marginRightPercent="16.85%w"
+        android:lineSpacingExtra="8dp"
+        android:text="加载中..."
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:scrollbars="vertical"
+        app:layout_textSizePercent="4.54%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</ScrollView>
+        <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_new_up"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:layout_marginBottomPercent="4.85%w"
+        android:layout_height="wrap_content">
+
+        <TextView
+        android:id="@+id/tv_dialog_ok"
+        android:layout_width="wrap_content"
+        android:text="马上更新"
+        android:background="@drawable/bt_update"
+        android:gravity="center"
+        android:textColor="@color/green013"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+           <TextView
+               android:id="@+id/tv_dialog_cancel"
+               android:layout_width="wrap_content"
+               android:layout_centerHorizontal="true"
+               app:layout_marginTopPercent="4.16%w"
+               android:textColor="@color/white"
+               android:layout_below="@+id/tv_dialog_ok"
+               android:text="稍后更新"
+               android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="60dp"
+                android:background="@color/white"
+                android:layout_below="@+id/tv_dialog_cancel"
+                android:layout_centerHorizontal="true"
+                android:layout_height="1px"></View>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

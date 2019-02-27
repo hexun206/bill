@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:background="@color/white">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_label_exercisenum"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/top_bar"
+        android:gravity="center"
+        android:text="@string/numforexercise"
+        android:textColor="@color/black"
+        app:layout_heightPercent="13.61%w"
+        app:layout_textSizePercent="3.89%w"
+        app:layout_widthPercent="25%w"/>
+
+    <TextView
+        android:id="@+id/tv_num_5"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/top_bar"
+        android:layout_toRightOf="@id/tv_label_exercisenum"
+        android:gravity="center"
+        android:text="@string/five"
+        android:textColor="@color/green005"
+        app:layout_heightPercent="13.61%w"
+        app:layout_textSizePercent="3.89%w"
+        app:layout_widthPercent="25%w"/>
+
+    <TextView
+        android:id="@+id/tv_num_10"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/top_bar"
+        android:layout_toRightOf="@id/tv_num_5"
+        android:gravity="center"
+        android:text="@string/ten"
+        android:textColor="@color/black"
+        app:layout_heightPercent="13.61%w"
+        app:layout_textSizePercent="3.89%w"
+        app:layout_widthPercent="25%w"/>
+
+    <TextView
+        android:id="@+id/tv_num_15"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/top_bar"
+        android:layout_toRightOf="@id/tv_num_10"
+        android:gravity="center"
+        android:text="@string/fifteen"
+        android:textColor="@color/black"
+        app:layout_heightPercent="13.61%w"
+        app:layout_textSizePercent="3.89%w"
+        app:layout_widthPercent="25%w"/>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/tv_label_exercisenum"
+        android:background="@color/gray005"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_rectangle_green"
+        app:layout_heightPercent="13.33%w">
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rectangle_green"
+            android:gravity="center"
+            android:text="@string/commit"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_textSizePercent="4.17%w"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7.5dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/laryer_progressbar_style2"
+            android:visibility="gone"
+            app:layout_heightPercent="2.08%w"
+            app:layout_marginLeftPercent="11.67%w"
+            app:layout_marginRightPercent="11.67%w"
+            app:layout_marginTopPercent="4%w"/>
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:background="@drawable/bg_rectangle_green"
+            android:gravity="center"
+            android:text="@string/downloading"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_heightPercent="13.33%w"
+            app:layout_textSizePercent="3.33%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_category_1"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_below="@id/v_line"
+        android:background="@color/white001"
+        android:divider="@color/gray005"
+        android:dividerHeight="@dimen/width_1"
+        android:scrollbars="none"
+        app:layout_widthPercent="38.89%w"/>
+
+    <ListView
+        android:id="@+id/lv_category_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_below="@id/v_line"
+        android:layout_toRightOf="@id/lv_category_1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"/>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

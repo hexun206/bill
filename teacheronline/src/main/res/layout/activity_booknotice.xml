@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white008"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar_v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/live_refresh_layout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="11dp"
+        android:layout_height="match_parent">
+
+            <com.huatu.teacheronline.widget.swipemenulistview.SwipeMenuListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:scrollbars="none"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/hexunxun/StudioProjects/TeacherOnline_Android/PushSDK/assets"/><source path="/Users/hexunxun/StudioProjects/TeacherOnline_Android/PushSDK/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/hexunxun/StudioProjects/TeacherOnline_Android/PushSDK/build-types/release/assets"/></dataSet></merger>

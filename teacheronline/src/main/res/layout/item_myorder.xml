@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+<com.zhy.android.percent.support.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f4f5"
+        app:layout_heightPercent="5%w"
+        />
+
+    <TextView
+        android:id="@+id/tv_orderno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line2"
+        android:singleLine="true"
+        android:text="订单号：61313"
+        android:textColor="@color/black"
+        app:layout_marginLeftPercent="3.33%w"
+        app:layout_marginRightPercent="4.03%w"
+        app:layout_marginTopPercent="3.33%w"
+        app:layout_textSizePercent="3.33%w"
+        />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_orderno"
+        android:background="@color/green004"
+        app:layout_marginLeftPercent="3.33%w"
+        app:layout_marginRightPercent="3.33%w"
+        app:layout_marginTopPercent="2.5%w"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_pic_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:background="@drawable/ic_loading"
+        app:layout_heightPercent="20.56%w"
+        app:layout_marginLeftPercent="3.33%w"
+        app:layout_marginTopPercent="3.33%w"
+        app:layout_textSizePercent="3.33%w"
+        app:layout_widthPercent="36.11%w"/>
+    <ImageView
+        android:id="@+id/img_over_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:background="@drawable/ygq_mask"
+        app:layout_heightPercent="20.56%w"
+        android:visibility="gone"
+        app:layout_marginLeftPercent="3.33%w"
+        app:layout_marginTopPercent="3.33%w"
+        app:layout_textSizePercent="3.33%w"
+        app:layout_widthPercent="36.11%w"/>
+
+    <TextView
+        android:id="@+id/tv_title_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:layout_toRightOf="@+id/img_pic_order"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="国考"
+        android:textColor="@color/black"
+        app:layout_marginLeftPercent="2.78%w"
+        app:layout_marginRightPercent="2.78%w"
+        app:layout_marginTopPercent="3.17%w"
+
+        app:layout_textSizePercent="3.33%w"/>
+
+    <TextView
+    android:id="@+id/tv_price_order"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_title_order"
+    android:layout_toRightOf="@+id/img_pic_order"
+    android:singleLine="true"
+    android:text="¥998"
+    android:textColor="@color/orange001"
+    app:layout_marginLeftPercent="2.78%w"
+    app:layout_marginRightPercent="0.78%w"
+    app:layout_marginTopPercent="1.37%w"
+    app:layout_textSizePercent="3.33%w"/>
+    <TextView
+        android:id="@+id/tv_adjust_price_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_order"
+        android:layout_toRightOf="@+id/tv_price_order"
+        android:singleLine="true"
+        android:text="¥0"
+        android:visibility="visible"
+        android:textColor="@color/gray004"
+        app:layout_marginRightPercent="2.78%w"
+        app:layout_marginTopPercent="1.37%w"
+        app:layout_textSizePercent="3.33%w"/>
+
+    <TextView
+        android:id="@+id/tv_data_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_price_order"
+        android:layout_toRightOf="@+id/img_pic_order"
+        android:singleLine="true"
+        android:text="有效期："
+        android:textColor="@color/gray004"
+        app:layout_marginLeftPercent="2.78%w"
+        app:layout_marginRightPercent="2.78%w"
+        app:layout_marginTopPercent="2.78%w"
+        app:layout_textSizePercent="3.33%w"/>
+
+    <TextView
+        android:id="@+id/btn_logistics_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/img_pic_order"
+        android:background="@drawable/bg_rectangle_green3"
+        android:text="@string/logistics"
+        android:textColor="@color/white"
+        app:layout_heightPercent="6.67%w"
+        android:clickable="false"
+        android:gravity="center"
+        app:layout_marginBottomPercent="2.78%w"
+        app:layout_marginRightPercent="2.78%w"
+        app:layout_marginTopPercent="1.78%w"
+        app:layout_textSizePercent="3.33%w"
+        app:layout_widthPercent="20%w"
+        />
+
+    <TextView
+        android:id="@+id/btn_cacle_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_pic_order"
+        android:background="@drawable/bg_rectangle_frame_green"
+        android:text="@string/cacle_order"
+        android:textColor="@color/green001"
+        app:layout_heightPercent="6.67%w"
+        android:layout_alignParentRight="true"
+        android:clickable="false"
+        android:gravity="center"
+        app:layout_marginRightPercent="26.39%w"
+        android:visibility="visible"
+        app:layout_marginBottomPercent="2.78%w"
+        app:layout_marginTopPercent="1.78%w"
+        app:layout_textSizePercent="3.33%w"
+        app:layout_widthPercent="20%w"
+        />
+
+</com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

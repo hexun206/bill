@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rectangle_transparent_a0"
+        android:orientation="vertical"
+        app:layout_heightPercent="47.22%w"
+        app:layout_widthPercent="76.94%w">
+
+        <TextView
+            android:id="@+id/tv_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lineSpacingExtra="12dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_marginLeftPercent="9.05%w"
+            app:layout_marginRightPercent="9.05%w"/>
+
+        <TextView
+            android:id="@+id/tv_update_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/percent"
+            android:textColor="@color/white"
+            app:layout_marginBottomPercent="6%w"
+            app:layout_marginLeftPercent="9.05%w"/>
+
+        <TextView
+            android:id="@+id/tv_update_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/default_num_value"
+            android:textColor="@color/white"
+            app:layout_marginBottomPercent="6%w"
+            app:layout_marginRightPercent="9.05%w"/>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@id/tv_update_percent"
+            android:background="@drawable/bg_progress_study_schedule"
+            app:layout_heightPercent="2.22%w"
+            app:layout_marginLeftPercent="9.05%w"
+            app:layout_marginRightPercent="9.05%w">
+
+            <View
+                android:id="@+id/view_progress"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_widthPercent="0%w"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentFrameLayout>

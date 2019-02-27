@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!-- height:112dp -->
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    >
+    <View
+        android:id="@+id/v_interval"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:visibility="gone"
+        android:background="@color/transparent" />
+<com.zhy.android.percent.support.PercentLinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="4dp"
+    app:layout_heightPercent="25.4%w"
+    android:layout_height="wrap_content">
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_weidu_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wdxx_nwd"
+            app:layout_marginBottomPercent="2.22%w"
+            app:layout_marginLeftPercent="2.33%w"
+            app:layout_marginTopPercent="2.22%w"
+            app:layout_textSizePercent="3.89%w"
+            />
+        <TextView
+            android:id="@+id/tv_title_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:layout_marginRightPercent="1.67%w"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black007"
+            android:text="亲们，福利来了！"
+            app:layout_marginLeftPercent="2.33%w"
+            app:layout_marginTopPercent="1.22%w"
+            app:layout_textSizePercent="3.89%w" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <TextView
+        android:id="@+id/tv_date_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_marginLeftPercent="2.33%w"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/img_right_message"
+        android:text="刚刚"
+        android:textColor="@color/gray013"
+        app:layout_textSizePercent="3.33%w" />
+    <TextView
+        android:id="@+id/tv_withouthtml"
+        android:layout_width="wrap_content"
+        app:layout_marginRightPercent="1.67%w"
+        android:textColor="@color/gray013"
+        android:maxLines="2"
+        app:layout_marginLeftPercent="2.33%w"
+        android:lineSpacingExtra="5dp"
+        app:layout_textSizePercent="3.33%w"
+        app:layout_marginTopPercent="1.22%w"
+        android:ellipsize="end"
+        android:text="【小蜜蜂开放日】 亲们，福利来了！ "
+        android:layout_height="wrap_content" />
+
+</com.zhy.android.percent.support.PercentLinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray004"/>
+</com.zhy.android.percent.support.PercentLinearLayout>

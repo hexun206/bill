@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:background="@color/white001">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/v_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/topbar"
+        android:background="@color/gray002"
+        app:layout_marginTopPercent="9.3%w"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_inputPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/v_line1"
+        android:background="@color/white"
+        app:layout_heightPercent="13.33%w">
+
+        <EditText
+            android:id="@+id/et_inputPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:hint="@string/mobile_input"
+            android:textColorHint="@color/gray003"
+            app:layout_marginLeftPercent="6.67%w"
+            app:layout_textSizePercent="4.17%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:id="@+id/v_line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/rl_inputPhoneNum"
+        android:background="@color/gray002"/>
+
+    <TextView
+        android:id="@+id/tv_next_step"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/v_line3"
+        android:background="@drawable/bg_rectangle_green"
+        android:gravity="center"
+        android:text="@string/next_step"
+        android:textColor="@color/white"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginLeftPercent="4.03%w"
+        app:layout_marginRightPercent="4.03%w"
+        app:layout_marginTopPercent="5.28%w"
+        app:layout_textSizePercent="4.17%w"/>
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tv_next_step"
+        android:background="@drawable/bg_rectangle_green"
+        android:gravity="center"
+        android:text="@string/skip"
+        android:textColor="@color/white"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginLeftPercent="4.03%w"
+        app:layout_marginRightPercent="4.03%w"
+        app:layout_marginTopPercent="5.28%w"
+        app:layout_textSizePercent="4.17%w"/>
+</com.zhy.android.percent.support.PercentRelativeLayout>

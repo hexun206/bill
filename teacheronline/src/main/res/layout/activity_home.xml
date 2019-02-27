@@ -1,0 +1,101 @@
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED">
+
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDEDED"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/realtabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/tab_rg_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_tab"
+            android:orientation="horizontal"
+            app:layout_heightPercent="13.61%w">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tab_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_page"
+                    android:textColor="#999999"
+                    app:layout_textSizePercent = "9.18%w"
+                    android:drawablePadding="4dp"
+                    android:drawableTop="@drawable/tab_home_press"
+                    android:gravity="center"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tab_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/tab_shops"
+                    android:gravity="center"
+                    android:text="@string/time_video"
+                    android:drawablePadding="4dp"
+                    android:textColor="#999999"
+                    app:layout_textSizePercent = "9.18%w"
+                    />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tab_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/tab_me"
+                    android:gravity="center"
+                    android:text="@string/text_directTab_my"
+                    android:drawablePadding="4dp"
+                    android:textColor="#999999"
+                    app:layout_textSizePercent = "9.18%w"
+                    />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+        <com.huatu.teacheronline.widget.HuaTuFragmentTabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0"/>
+        </com.huatu.teacheronline.widget.HuaTuFragmentTabHost>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <!--<include layout="@layout/layout_guider_notice"-->
+    <!--android:visibility="gone"/>-->
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

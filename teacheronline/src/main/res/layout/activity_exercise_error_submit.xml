@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:background="@color/white001"
+                                                     android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_error1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="16.11%w"
+        app:layout_marginTopPercent="2.77%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray006"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/exercise_error1"
+            android:textColor="@color/gray010"
+            app:layout_marginLeftPercent="3.61%w"
+            app:layout_textSizePercent="4.44%w"/>
+
+        <ImageView
+            android:id="@+id/iv_error1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_no_select"
+            app:layout_heightPercent="38%h"
+            app:layout_marginLeftPercent="16%h"
+            app:layout_marginRightPercent="26%h"
+            app:layout_widthPercent="38%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray006"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_error2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="16.11%w"
+        app:layout_marginTopPercent="2.77%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray006"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/exercise_error2"
+            android:textColor="@color/gray010"
+            app:layout_marginLeftPercent="3.61%w"
+            app:layout_textSizePercent="4.44%w"/>
+
+        <ImageView
+            android:id="@+id/iv_error2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_no_select"
+            app:layout_heightPercent="38%h"
+            app:layout_marginLeftPercent="16%h"
+            app:layout_marginRightPercent="26%h"
+            app:layout_widthPercent="38%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray006"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_error3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="16.11%w"
+        app:layout_marginTopPercent="2.77%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray006"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/exercise_error3"
+            android:textColor="@color/gray010"
+            app:layout_marginLeftPercent="3.61%w"
+            app:layout_textSizePercent="4.44%w"/>
+
+        <ImageView
+            android:id="@+id/iv_error3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_no_select"
+            app:layout_heightPercent="38%h"
+            app:layout_marginLeftPercent="16%h"
+            app:layout_marginRightPercent="26%h"
+            app:layout_widthPercent="38%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray006"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_error4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="16.11%w"
+        app:layout_marginTopPercent="2.77%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray006"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/exercise_error4"
+            android:textColor="@color/gray010"
+            app:layout_marginLeftPercent="3.61%w"
+            app:layout_textSizePercent="4.44%w"/>
+
+        <ImageView
+            android:id="@+id/iv_error4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_no_select"
+            app:layout_heightPercent="38%h"
+            app:layout_marginLeftPercent="16%h"
+            app:layout_marginRightPercent="26%h"
+            app:layout_widthPercent="38%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray006"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="left"
+        android:hint="请描述您发现的问题..."
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="14dp"
+        android:scrollbars="none"
+        app:layout_heightPercent="39.72%w"
+        app:layout_marginTopPercent="2.77%w"
+        app:layout_textSizePercent="3.75%w"/>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/green001"
+        android:gravity="center"
+        android:text="@string/commit"
+        android:textColor="@color/white"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginTopPercent="8.05%w"
+        app:layout_textSizePercent="4.16%w"
+        app:layout_widthPercent="91.94%w"/>
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>

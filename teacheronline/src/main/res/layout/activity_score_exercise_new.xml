@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?><!--专题小练，顺序练习，错题集·····完成答题情况的布局-->
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white001">
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/general_topbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_above="@+id/view_line_bottom_scpre"
+        android:id="@+id/scrollView2">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_section1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusableInTouchMode="true"
+                app:layout_heightPercent="13.61%w"
+                >
+
+                <TextView
+                    android:id="@+id/tv_examType_section1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_marginTopPercent="2.08%w"
+                    app:layout_marginLeftPercent="3.08%w"
+                    android:text="@string/exercise_type"
+                    android:textColor="@color/gray013"
+                    app:layout_textSizePercent="3.33%w"/>
+
+                <TextView
+                    android:id="@+id/tv_realTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:layout_below="@+id/tv_examType_section1"
+                    android:text="@string/time_used"
+                    android:textColor="@color/gray013"
+                    android:textSize="15sp"
+                    app:layout_marginLeftPercent="3.08%w"
+                    app:layout_textSizePercent="3.33%w"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_recommand_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray013"
+                    app:layout_textSizePercent="3.33%w"
+                    app:layout_marginRightPercent="3.08%w"
+                    android:text="@string/time_recommand"
+                    android:layout_below="@+id/tv_examType_section1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <View
+                android:id="@+id/v_devider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="3.33%w"
+                android:layout_below="@id/rl_section1"
+                android:background="@color/white006"/>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/ll_section2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_below="@id/v_devider"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/pic_fenshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="47.22%w"
+                    app:layout_widthPercent="47.22%w"
+                    />
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/gray013"
+                        android:layout_width="wrap_content"
+                        app:layout_textSizePercent="3.33%w"
+                        android:text="@string/correct"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tv_accuracy"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:id="@+id/tv_accuracy"
+                        app:layout_textSizePercent="13.89%w"
+                        android:layout_width="wrap_content"
+                        android:text="90"
+                        android:textColor="@color/green004"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="@color/green004"
+                        android:layout_width="wrap_content"
+                        app:layout_textSizePercent="3.33%w"
+                        android:text="%"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_accuracy"
+                        android:layout_centerHorizontal="true"/>
+
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_answercard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_section2"
+                android:background="@drawable/pic_timu"
+                android:orientation="vertical"
+                app:layout_marginTopPercent="6.8%w"
+                app:layout_marginBottomPercent="6.8%w"
+                app:layout_marginLeftPercent="4.17%w"
+                app:layout_marginRightPercent="4.17%w"
+                app:layout_heightPercent="50.56%w">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_1"
+                    android:background="@color/gray008"/>
+
+                <GridView
+                    android:id="@+id/gv_all_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="5"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    app:layout_marginLeftPercent="12%w"
+                    app:layout_marginRightPercent="12%w"
+                    app:layout_marginBottomPercent="10.7%w"
+                    app:layout_marginTopPercent="21%w"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/white"
+                android:paddingBottom="28dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_below="@id/ll_section2"
+                app:layout_marginTopPercent="1.7%w"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/tv_answerRightNum_section1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="30dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_answerSumNum_section1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="道/10道"
+                    android:textColor="@color/gray010"
+                    android:textSize="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </ScrollView>
+
+    <View
+        android:layout_above="@+id/tv_share_result"
+        android:id="@+id/view_line_bottom_scpre"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"/>
+
+        <TextView
+            android:id="@+id/tv_share_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            app:layout_heightPercent="13.61%w"
+            android:background="@color/green004"
+            android:text="@string/share_result"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_textSizePercent="3.89%w"/>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

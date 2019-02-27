@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_marginRight="15dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_up_tag"
+        android:layout_width="10dp"
+        android:background="@drawable/triangle"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_alignEnd="@+id/linearLayout2"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"/>
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/tv_up_tag"
+        android:layout_height="wrap_content"
+        app:layout_marginRightPercent="2%w"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/tv_collection_exercise"
+            android:text="收藏本题"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:background="@drawable/top_round_corner_green"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        app:layout_textSizePercent="3.89%w"
+        app:layout_marginTopPercent="3.06%w"
+        app:layout_marginBottomPercent="3.06%w"
+        <View
+            android:id="@+id/view_one"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <TextView
+            android:id="@+id/tv_correction_exercise"
+            android:text="纠错本题"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:background="@color/green004"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="1px"/>
+        <TextView
+            android:id="@+id/tv_share_exercise"
+            android:text="分享本题"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:background="@drawable/bottom_round_corner_green"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

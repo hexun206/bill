@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#f0eff6"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:windowSoftInputMode="stateVisible|adjustResize">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_button_all"
+        android:layout_below="@+id/top_bar"
+        >
+
+        <!--<com.huatu.teacheronline.widget.ScorllPinnedHeaderExpandableListView.MyScrollView-->
+        <!--android:id="@+id/sv_dircdetails"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/ll_button_all"-->
+        <!--android:layout_below="@+id/top_bar">-->
+
+        <!--<com.zhy.android.percent.support.PercentLinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:background="#f0eff6"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f7f7"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_scroll_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_direct_dealite_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_main_top"
+                        app:layout_heightPercent="56.94%w"
+                        />
+
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:id="@+id/rl_context"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_direct_dealite_introduce"
+                        android:background="@color/white"
+                        app:layout_marginBottomPercent="0.78%w">
+
+                        <TextView
+                            android:id="@+id/tv_title_directdetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/view_line_directdetail"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="加载中"
+                            android:textColor="@color/black007"
+                            app:layout_marginLeftPercent="2.78%w"
+                            app:layout_marginRightPercent="2.78%w"
+                            app:layout_marginTopPercent="2.22%w"
+                            app:layout_textSizePercent="4.44%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_rmb_flag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title_directdetail"
+                            android:text="¥"
+                            android:textColor="@color/orange002"
+                            app:layout_marginLeftPercent="4%w"
+                            app:layout_marginTopPercent="4.44%w"
+                            app:layout_textSizePercent="5%w"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_money_directdetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title_directdetail"
+                            android:layout_toRightOf="@+id/tv_rmb_flag"
+                            android:text="0"
+                            android:textColor="@color/orange002"
+                            app:layout_marginTopPercent="2.65%w"
+                            app:layout_textSizePercent="6.66%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_fla_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title_directdetail"
+                            android:layout_toRightOf="@+id/tv_money_directdetail"
+                            android:text=""
+                            android:textColor="@color/gray007"
+                            android:visibility="gone"
+                            app:layout_marginLeftPercent="1.52%w"
+                            app:layout_marginTopPercent="6%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_buynum_directdetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_title_directdetail"
+                            android:text="已有0人购买"
+                            android:textColor="@color/gray007"
+                            app:layout_marginRightPercent="3.75%w"
+                            app:layout_marginTopPercent="5.2%w"
+                            app:layout_textSizePercent="3.33%w"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_date_directdetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_rmb_flag"
+                            android:text="开课时间：加载中"
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="3.05%w"
+                            app:layout_marginTopPercent="2.58%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_date_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_date_directdetail"
+                            android:text="课程编号：加载中"
+                            android:textColor="@color/gray007"
+                            app:layout_marginBottomPercent="2.78%w"
+                            app:layout_marginLeftPercent="3.05%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_longtime_directdetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_rmb_flag"
+                            android:text="时长：17小时"
+                            android:textColor="@color/gray007"
+                            app:layout_marginRightPercent="3.75%w"
+                            app:layout_marginTopPercent="2.78%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_discontinued_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_longtime_directdetail"
+                            android:text="有效期：365天"
+                            android:textColor="@color/gray007"
+                            app:layout_marginBottomPercent="2.78%w"
+                            app:layout_marginRightPercent="3.75%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:id="@+id/ll_cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_marginBottomPercent="0.48%w">
+
+                        <TextView
+                            android:id="@+id/tv_cash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/orange002"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="听课返现"
+                            android:textColor="@color/white"
+                            app:layout_marginLeftPercent="3.47%w"
+                            app:layout_textSizePercent="2.77%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_cash_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="最高返现0元"
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+
+                    </com.zhy.android.percent.support.PercentLinearLayout>
+
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:id="@+id/ll_special"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_marginBottomPercent="0.48%w">
+
+                        <TextView
+                            android:id="@+id/tv_special"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/orange002"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="特价"
+                            android:textColor="@color/white"
+                            app:layout_marginLeftPercent="3.47%w"
+                            app:layout_textSizePercent="2.77%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_startend_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="距离结束还有："
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/cv_countdown_special"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            app:isShowDay="true"
+                            app:isShowHour="true"
+                            app:isShowMillisecond="false"
+                            app:isShowMinute="true"
+                            app:isShowSecond="true"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:suffixDay="天"
+                            app:suffixGravity="bottom"
+                            app:suffixHour="小时"
+                            app:suffixMinute="分钟"
+                            app:suffixSecond="秒"
+                            app:suffixTextColor="#FB5334"
+                            app:suffixTextSize="12dp"
+                            app:timeTextColor="#FB5334"
+                            app:timeTextSize="12dp"/>
+
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:text="100天23小时56分4秒"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:textColor="@color/orange002"-->
+                        <!--app:layout_marginLeftPercent="2.36%w"-->
+                        <!--app:layout_textSizePercent="3.33%w"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    </com.zhy.android.percent.support.PercentLinearLayout>
+
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:id="@+id/rl_seckill"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:layout_marginBottomPercent="0.48%w">
+
+                        <TextView
+                            android:id="@+id/tv_seckill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/orange002"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="秒杀"
+                            android:textColor="@color/white"
+                            app:layout_marginLeftPercent="3.47%w"
+                            app:layout_textSizePercent="2.77%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_seckill_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_toRightOf="@+id/tv_seckill"
+                            android:text="限量200份"
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_seckill_starttime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:text="开始时间：2018年1月11日 10:10"
+                            android:textColor="@color/orange002"
+                            android:visibility="gone"
+                            app:layout_marginRightPercent="2.77%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_endtime_ms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/cv_countdown_seckill"
+                            android:text="距离结束还有："
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/cv_countdown_seckill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:visibility="visible"
+                            app:isShowDay="true"
+                            app:isShowHour="true"
+                            app:isShowMillisecond="false"
+                            app:isShowMinute="true"
+                            app:isShowSecond="true"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_marginRightPercent="2.77%w"
+                            app:suffixDay="天"
+                            app:suffixGravity="bottom"
+                            app:suffixHour="小时"
+                            app:suffixMinute="分钟"
+                            app:suffixSecond="秒"
+                            app:suffixTextColor="#FB5334"
+                            app:suffixTextSize="12dp"
+                            app:timeTextColor="#FB5334"
+                            app:timeTextSize="12dp"/>
+
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:id="@+id/ll_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_marginBottomPercent="0.48%w">
+
+                        <TextView
+                            android:id="@+id/tv_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/orange002"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="折扣"
+                            android:textColor="@color/white"
+                            app:layout_marginLeftPercent="3.47%w"
+                            app:layout_textSizePercent="2.77%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_discount_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="距离结束还有："
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/cv_countdown_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            app:isShowDay="true"
+                            app:isShowHour="true"
+                            app:isShowMillisecond="false"
+                            app:isShowMinute="true"
+                            app:isShowSecond="true"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:suffixDay="天"
+                            app:suffixGravity="bottom"
+                            app:suffixHour="小时"
+                            app:suffixMinute="分钟"
+                            app:suffixSecond="秒"
+                            app:suffixTextColor="#FB5334"
+                            app:suffixTextSize="12dp"
+                            app:timeTextColor="#FB5334"
+                            app:timeTextSize="12dp"/>
+
+                    </com.zhy.android.percent.support.PercentLinearLayout>
+
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:id="@+id/rl_gift"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:layout_marginBottomPercent="2.78%w">
+
+                        <TextView
+                            android:id="@+id/tv_gift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/orange002"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="赠品"
+                            android:textColor="@color/white"
+                            app:layout_marginLeftPercent="3.47%w"
+                            app:layout_textSizePercent="2.77%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_textbook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/tv_gift_num"
+                            android:layout_toRightOf="@+id/tv_gift"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+
+                            android:text="教材：中学音乐精讲讲义1本"
+                            android:textColor="@color/gray007"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <TextView
+                            android:id="@+id/tv_gift_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_bq"
+                            android:text="共有7个赠品"
+                            android:textColor="@color/orange002"
+                            app:layout_marginLeftPercent="2.36%w"
+                            app:layout_textSizePercent="3.33%w"/>
+
+                        <ImageView
+                            android:id="@+id/iv_bq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/more_arrow"/>
+
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/ll_content_direct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sdv_icon"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <RadioGroup
+                    android:id="@+id/rg_directdetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_heightPercent="9.73%w">
+
+
+                    <RadioButton
+                        android:id="@+id/rb_direct_introduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/directIntroduce"
+                        android:textColor="@color/text_direct_detail"
+                        app:layout_textSizePercent="3.33%w"/>
+                    <!--android:drawableBottom="@drawable/bg_line_bottom"-->
+                    <!--android:drawableBottom="@drawable/bg_line_bottom5"-->
+
+                    <RadioButton
+                        android:id="@+id/rb_direct_curriculum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/directCurriculum"
+                        android:textColor="@color/text_direct_detail"
+                        app:layout_textSizePercent="3.33%w"/>
+                    <!--android:drawableBottom="@drawable/bg_line_bottom_n"-->
+
+                    <RadioButton
+                        android:id="@+id/rb_direct_teacher_introduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="教师介绍"
+                        android:textColor="@color/text_direct_detail"
+                        app:layout_textSizePercent="3.33%w"/>
+                    <!--android:drawableBottom="@drawable/bg_line_bottom"-->
+                </RadioGroup>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/line_intrduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="4px"
+                    android:layout_below="@+id/rg_directdetail"
+                    android:weightSum="3">
+
+                    <View
+                        android:id="@+id/view_line_direct_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rg_directdetail"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@color/green007"></View>
+
+                    <View
+                        android:id="@+id/view_line_direct_curriculum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rg_directdetail"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"></View>
+
+                    <View
+                        android:id="@+id/view_line_teacher_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rg_directdetail"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"></View>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/line_intrduce"
+                    android:background="@color/gray001"></View>
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_button_all"
+            android:overScrollMode="always"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view_line"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_dirct_course_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <com.huatu.teacheronline.widget.NestedScrollWebView
+                        android:id="@+id/wv_direct_course_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/view_line"
+                        android:layerType="software"
+                        android:scrollbars="none"
+                        android:visibility="visible">
+                    </com.huatu.teacheronline.widget.NestedScrollWebView>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_listview_course_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_line"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--<com.huatu.teacheronline.widget.ScorllPinnedHeaderExpandableListView.PinnedHeaderExpandableListView-->
+                    <!--android:id="@+id/lv_listview_course_table"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:cacheColorHint="#00000000"-->
+                    <!--android:divider="@color/gray012"-->
+                    <!--android:dividerHeight="@dimen/width_1"-->
+                    <!--android:groupIndicator="@null"-->
+                    <!--android:scrollbars="none"/>-->
+
+                    <ExpandableListView
+                        android:id="@+id/lv_listview_course_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@color/gray012"
+                        android:dividerHeight="@dimen/width_1"
+                        android:groupIndicator="@null"
+                        android:nestedScrollingEnabled="true"
+                        android:scrollbars="none"
+                        android:visibility="visible"
+                        >
+
+                    </ExpandableListView>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_direct_teacher_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/view_line"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_line">
+
+                        <com.zhy.android.percent.support.PercentLinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_line"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/sdv_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/top_bar"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_heightPercent="93.5%w"
+                                app:layout_marginBottomPercent="5.55%w"
+                                app:layout_marginTopPercent="5.55%w"
+                                app:layout_widthPercent="85%w"/>
+
+                            <TextView
+                                android:id="@+id/tv_dirct_teacher"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                app:layout_marginBottomPercent="1.55%w"
+                                app:layout_marginTopPercent="1.55%w"
+                                app:layout_textSizePercent="3.65%w"/>
+
+                            <!--<WebView-->
+                            <!--android:id="@+id/wv_direct_teacher_introduce"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layerType="software"-->
+                            <!--android:scrollbars="none">-->
+                            <!--</WebView>-->
+                        </com.zhy.android.percent.support.PercentLinearLayout>
+                    </ScrollView>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+        <!--</com.zhy.android.percent.support.PercentLinearLayout>-->
+        <!--</com.huatu.teacheronline.widget.ScorllPinnedHeaderExpandableListView.MyScrollView>-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_button_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray001"></View>
+
+        <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+        <!--android:id="@+id/rl_buttom_jihuo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@color/white"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:visibility="gone"-->
+        <!--app:layout_heightPercent="13.89%w">-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/et_accode_directdetail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toLeftOf="@+id/btn_activate"-->
+        <!--android:hint="输入激活码"-->
+        <!--android:padding="5dp"-->
+        <!--android:singleLine="true"-->
+        <!--android:text=""-->
+        <!--android:textColor="@color/black"-->
+        <!--app:layout_marginLeftPercent="1.39%w"-->
+        <!--app:layout_marginRightPercent="1.39%w"-->
+        <!--app:layout_textSizePercent="5%w"/>-->
+
+        <!--<Button-->
+        <!--android:id="@+id/btn_activate"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@drawable/bg_rectangle_green2"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:text="@string/activate"-->
+        <!--android:textColor="@color/white"-->
+        <!--app:layout_heightPercent="11.67%w"-->
+        <!--app:layout_marginRightPercent="3.89%w"/>-->
+
+        <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_buttom_goumai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="visible"
+            app:layout_heightPercent="13.61%w">
+
+            <TextView
+                android:id="@+id/cp_share_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_fxys"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="分享有赏"
+                android:textColor="@color/gray007"
+                app:layout_marginLeftPercent="18.14%w"
+                app:layout_textSizePercent="2.78%w"/>
+
+            <TextView
+                android:id="@+id/cp_date_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/btn_buy"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/ic_zx"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="咨询"
+                android:textColor="@color/gray007"
+                app:layout_marginRightPercent="18.14%w"
+                app:layout_textSizePercent="2.78%w"/>
+
+            <Button
+                android:id="@+id/btn_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bt_buyiti"
+                android:text="@string/buynow"
+                android:textColor="@color/white"
+                app:layout_textSizePercent="4.44%w"
+                app:layout_widthPercent="30.6%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_course_ware_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="6dp"
+    >
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_class_shecdule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_paddingLeftPercent="1.4%w"
+        >
+
+        <ImageView
+            android:id="@+id/img_courseware_download"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_downloaded"
+
+            android:visibility="visible"
+            app:layout_marginRightPercent="1.4%w"/>
+
+
+        <ImageView
+            android:id="@+id/img_courseware_video_status"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/img_courseware_download"
+            android:src="@drawable/ic_courseware_playback_none"
+            android:visibility="visible"
+            app:layout_marginRightPercent="1.4%w"
+            />
+
+        <TextView
+            android:id="@+id/tv_directTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_statePlay"
+            android:layout_toRightOf="@+id/img_courseware_video_status"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="80分申论批改班申论批改班申论批改80分申论批改班申论"
+            android:textColor="@color/green004"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_directTitle"
+            android:gravity="center"
+            android:text="2015-09-15 09:23"
+            android:textSize="12sp"
+            app:layout_marginTopPercent="1%w"/>
+
+
+        <ImageView
+            android:id="@+id/img_statePlay"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_directTitle"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/ic_course_ware_play"
+
+
+           />
+
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_courseware_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_marginTopPercent="1.4%sw">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_weight="1"
+                android:progress="60"
+                android:progressDrawable="@drawable/laryer_progressbar_style2"
+                android:visibility="visible"
+                app:layout_heightPercent="0.6%sh"
+                app:layout_marginRightPercent="2.72%w"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_withdraw"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/text_withdrawal"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+
+                android:visibility="visible"/>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

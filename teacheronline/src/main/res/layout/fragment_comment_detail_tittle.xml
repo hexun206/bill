@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+
+    <com.dd.ShadowLayout
+        android:id="@+id/sl_classtittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="6dp"
+        app:sl_cornerRadius="5dp"
+        app:sl_dx="0dp"
+        app:sl_dy="2dp"
+        app:sl_shadowColor="#2A000000"
+        app:sl_shadowRadius="5dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bg_corner_white_5"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_comment_detail_classtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="从百草园到三味书屋"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_comment_detail_phase_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/bg_point_gray"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="初中·语文"
+                android:textColor="@color/black003"
+                android:textSize="13sp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_comment_detail_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/bg_point_gray"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="人教版"
+                    android:textColor="@color/black003"
+                    android:textSize="13sp"
+
+                    />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_comment_detail_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_corner_round_stroke_gray"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="点评中"
+                        android:textColor="@color/gray013"
+                        android:textSize="13sp"
+
+                        />
+
+
+                    <View
+                        android:id="@+id/view_comment_detail_msg"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_gravity="right|top"
+                        android:background="@drawable/bg_round_red_small"
+                        />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_detail_example_status"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|top"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tag_jxfl"
+            />
+
+    </com.dd.ShadowLayout>
+
+
+</RelativeLayout>

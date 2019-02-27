@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:textColor="@color/green004"
+        android:text="hhhhhhhhhhhhhhhhhhhhhh"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_height="70dp"/>
+        <com.baijiahulian.player.BJPlayerView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:top_controller="@layout/player_topbar">
+            <!--app:aspect_ratio="fill_parent"-->
+        </com.baijiahulian.player.BJPlayerView>
+</com.zhy.android.percent.support.PercentLinearLayout>

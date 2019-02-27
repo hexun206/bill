@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_province_city_eve"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/v_line3"
+        app:layout_heightPercent="17.36%w">
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:background="@color/gray002"
+            app:layout_marginTopPercent="4.03%w"/>
+
+        <TextView
+            android:id="@+id/tv_name_stage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/v_line1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="@string/default_value"
+            android:textColor="@color/black"
+            app:layout_paddingLeftPercent="4.03%w"
+            app:layout_textSizePercent="4.17%w"/>
+
+        <ImageView
+            android:id="@+id/iv_choose"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/v_line1"
+            android:gravity="center_vertical"
+            android:src="@drawable/icon_choice_unselected"
+            app:layout_marginRightPercent="4.03%w"
+            app:layout_marginTopPercent="4.17%w"/>
+
+        <View
+            android:id="@+id/v_line4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_1"
+            android:background="@color/gray002"
+            android:layout_alignParentBottom="true"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

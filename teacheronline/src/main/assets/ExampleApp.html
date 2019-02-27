@@ -1,0 +1,736 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css" >
+
+        .borderImage
+        {
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+        }
+       .allborderImage
+       {
+           -webkit-tap-highlight-color:rgba(0,0,0,0);
+       }
+      #countPersonalData,#countGlobalData
+     {
+      border-spacing:0;
+      border-collapse:collapse;
+      text-align: center;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    th 
+    {
+      border:1px solid #d4d4d4;
+      border-spacing:0;
+      margin:0;
+      padding:0;
+      width: 33.33%;
+      color: #666666;
+    }
+    td 
+    {
+      border:1px solid #d4d4d4;
+      border-spacing:0;
+      margin:0;
+      padding:0;
+      width: 33.33%;
+    }
+    </style>
+
+    <script type="text/javascript">
+        var useSelect="";//用户选项 （array）
+        var selected_index ="";
+        var rightAnsCodeArr = "";//正确选项（array）
+        var screenWidth = "";//屏幕宽度
+        var webType = ""; // 等于  1 解析  2 练习  3错题
+        var countInput = 0;//存储需要显示的输入框总个数
+
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    function connectWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) {
+            callback(WebViewJavascriptBridge)
+        } else {
+            document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                                      callback(WebViewJavascriptBridge)
+                                      }, false)
+        }
+    }
+    //    <!--激活方法-->
+    connectWebViewJavascriptBridge(function(bridge) {
+    var uniqueId = 1
+    function log(message, data) {
+                                }
+    bridge.init(function(message, responseCallback) {
+    if(message.length == 0){}
+    log('JS got a message', message) //JS得到传递过来的消息:message
+    var data = { 'Javascript Responds':'zhangweiwei!' } //回传的数据
+    log('JS responding with', data)
+    responseCallback(data)
+    })
+    /*在javascript里注册方法*/
+    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) 
+    {
+    log('ObjC called testJavascriptHandler with', data)
+    var responseData = { 'Javascript Says':'Right back atcha!' }
+    log('JS responding with', responseData)
+    responseCallback(responseData)
+    })
+
+     // 页面类型（）
+    bridge.registerHandler('WebTestType_id', function(data, responseCallback) {
+    webType = data;
+    })
+
+    // 屏幕宽度
+    bridge.registerHandler('PassScreenWidth_id', function(data, responseCallback) {
+    screenWidth = data;
+    })
+                                                                      
+    /*题目问题*/
+    bridge.registerHandler('testExamHeader', function(data, responseCallback) {
+    var textHeader = document.getElementById('headersT');
+    textHeader.innerHTML = data;
+
+    // var bgDiv = document.getElementById('bgDiv');
+    // bgDiv.style.height = document.body.style.height - 8 + "px";
+    // // if (document.body.style.height > document.documentElement.clientHeight) {
+    // //   bgDiv.style.height = document.body.style.height - 8 + "px";
+    // // }
+
+    })
+
+     /*用户选择的index*/
+    bridge.registerHandler('selectedAnswerIndex_id', function(data, responseCallback) {
+    useSelect=data;
+    })
+
+    /*正确答案*/
+    bridge.registerHandler('rightAnswer_id', function(data, responseCallback) {
+    // var rightAnsweText = document.getElementById('rightAnsweText');
+    // rightAnsweText.innerHTML = data;
+    rightAnsCodeArr = data;
+    })  
+
+    /*创建选项button（选择题）*/
+    bridge.registerHandler('buttonOptions', function(data, responseCallback) 
+    {
+      //隐藏输入框Div(填空题)
+      var showTextFieldDiv = document.getElementById('showTextField');
+      showTextFieldDiv.style.display='none';
+      //使输入框失去焦点
+      for (var i = 0; i < countInput; i++) {
+
+          var index = i + 1;
+          var inputText = document.getElementById('doAnswer'+index);
+          inputText.blur();
+
+          // var inputText = document.getElementById('doAnswer');
+          // inputText.blur();
+      }
+
+      var dd = document.getElementById('BTJS');
+      dd.style.display='none';
+      var ds = document.getElementById('BTJSTest')
+      ds.style.display='none';
+
+
+      // 处理数据  答案数据
+      var str = "";
+      var codeArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"];
+      var answerArr = eval(data);
+      for(index in answerArr)
+      {
+        var width_screen=document.body.clientWidth;
+        if(rightAnsCodeArr.length>1)
+        {
+          // 多选 样式
+          str += "<div class='borderImage' style='margin-top:12px;background-color: #ffffff;'rel='"+codeArr[index] +"' id='"+codeArr[index]+"' ><div id='"+codeArr[index] +"_op_img'  class='choose_icon' style='float:left;text-align:center;width:30px;height:30px;color:#323232;line-height:30px;background-image:url(examlib-detail-fangNew-black.png);background-size:100%;color:#323232;font-size:16px;font-family:Helvetica Light;'>"+codeArr[index]+"</div><style>.divcss7 img{max-width:250px;max-height:70px;word-break:break-all;}p{display:inline;}word-break:break-all;</style><div class='divcss7' style='margin-left:12px;margin-top:3px;float:left;width:"+screenWidth+"px;font-size:15px;'>"+answerArr[index] +"</div><div style='clear:both;'></div></div>";
+        }else{
+
+          //单选 样式
+          str += "<div class='borderImage' style='margin-top:12px;display:inline-block;background-color: #ffffff;'rel='"+ codeArr[index] +"' id='"+ codeArr[index] +"' ><div id='"+ codeArr[index] +"_op_img'  class='item-icon' style='float:left;text-align:center;width:30px;height:30px;color:#323232;line-height:30px;background-image:url(examlib-detail-quanNew-black.png);background-size:100%;color:#323232;font-size:16px;font-family:Helvetica Light;'>"+codeArr[index]+"</div><style>.divcss7 img{max-width:250px;max-height:70px;word-break:break-all;}p{display:inline;}word-break:break-all;</style><div class='divcss7' style='margin-left:12px;margin-top:3px;float:left;width:"+screenWidth+"px;font-size:15px;'>"+answerArr[index]+"</div><div style='clear:both;'></div></div>";
+        }
+
+      }
+      var opText = document.getElementById('option_div');
+      opText.style.display = 'inline';
+      opText.innerHTML = str;
+      if(useSelect!=""){
+        for(n in useSelect){
+          var abb=useSelect[n];
+          document.getElementById(""+abb).setAttribute("class","useselect");
+        }
+      }
+                           
+      if(webType == 1)
+      {
+        //解析模式
+        //正确选项设置为绿色
+        for(i in rightAnsCodeArr)
+        {
+          document.getElementById(""+rightAnsCodeArr[i]).setAttribute("class","curra");
+        }
+        //取消选项的点击事件
+        var disabdiv=opText.getElementsByTagName("div");
+        for(i in disabdiv)
+        {
+          disabdiv[i].removeEventListerner("click",false);
+        }
+      }
+
+      //注册选项点击事件
+      for(i in answerArr)
+      {
+        // addFlag   single 表示单选题  add 表示多选添加选项  cut 表示多选移除选项
+        var addFlag = "single";
+        document.getElementById(codeArr[i]).onclick=function(){
+         selected_index=this.getAttribute("rel");
+          if (rightAnsCodeArr.length<2){
+            //单选
+            //取消其他选项的选中状态
+            for(x=0;x<answerArr.length;x++){
+              var litarget=document.getElementById(codeArr[x]+"");
+              litarget.removeAttribute("class","useselect");
+              // litarget.setAttribute("class","");
+            }
+            //设置当前选项的选中状态
+            this.setAttribute("class","useselect");
+          }else{
+            //多选
+            if (this.getAttribute("class") == "useselect"){
+              this.setAttribute("class","");
+              addFlag = "cut";
+            }else{
+              this.setAttribute("class","useselect");
+              addFlag = "add";
+            }
+          }
+
+          bridge.callHandler('UserSelectedAnswer', {'selectedAnswer':selected_index,'addFlag':addFlag}, function(response){
+            // log('JS got response', response)
+          })
+          getindex();
+        }
+      }
+      // responseCallback(selected_index);
+    })
+
+    /*填空题，显示输入框*/
+    bridge.registerHandler('ShowTextField_id', function(data, responseCallback) {
+
+      var dd = document.getElementById('BTJS');
+      dd.style.display='none';
+      var ds = document.getElementById('BTJSTest')
+      ds.style.display='none';
+
+      //隐藏选项视图
+      var optionDiv = document.getElementById('option_div');
+      optionDiv.style.display = 'none';
+    
+      //显示输入框
+      var showTextFieldDiv = document.getElementById('showTextField');
+      showTextFieldDiv.style.display='block';
+
+      //获取总共需要输入的数量
+      countInput = Number(data);
+
+      var inputString = "<span>答:</span>";
+      for (var i = 0; i < countInput; i++) {
+
+        var index = i + 1;
+        var margingLeft = "6px";
+        if (i != 0) {
+          margingLeft = "25px";
+        }
+        inputString += "<input id='doAnswer"+ index +"' type='text' name='doAnswer' onclick='skipTo()' autofocus='autofocus' style='border-top: none;border-left: none;border-right: none; border-bottom-color: lightGray;background-color: #ffffff; border-radius: 0; border-bottom-width: 1.0px; width: 85%; color: #20c873; font-size:15px; margin-left: "+ margingLeft +";' placeholder = '"+ index +"'>";
+
+      }
+      // alert(""+inputString);
+      showTextFieldDiv.innerHTML = inputString;
+
+      // var inputText = document.getElementById('doAnswer');
+      // inputText.value = "";
+      // inputText.style.color = "#000000";
+      // inputText.disabled = "disabled"
+
+    })
+
+    /*填空题，获取用户输入的内容*/
+    bridge.registerHandler('getUserInput_id', function(data, responseCallback) {
+
+      var inputResult = "";
+      for (var i = 0; i < countInput; i++) {
+
+        var index = i + 1;
+        var inputText = document.getElementById('doAnswer'+index);
+        if (i == (countInput - 1)) {
+
+          inputResult = inputResult + inputText.value;
+
+        }else{
+          inputResult = inputResult + inputText.value + '|';
+        }
+        
+
+      }
+
+      // var inputText = document.getElementById('doAnswer');
+      // inputText.value = 'Hello world';
+      bridge.callHandler('getUserInputCallback', inputResult, function(response){
+            // log('JS got response', response)
+          })
+
+    })
+
+
+    /*设置用户已输入的内容*/
+    bridge.registerHandler('setUserInput_id', function(data, responseCallback) {
+
+      // var inputText = document.getElementById('doAnswer');
+      // inputText.value = data;
+
+      var inputAnswerArray = eval(data);
+      for (var i = 0; i < countInput; i++) {
+
+        var index = i + 1;
+        var inputText = document.getElementById('doAnswer'+index);
+        inputText.value = inputAnswerArray[i];
+
+      }
+
+    })
+
+    /*禁止输入*/
+    bridge.registerHandler('setUserInputDisabled_id', function(data, responseCallback) {
+
+      for (var i = 0; i < countInput; i++) {
+
+        var index = i + 1;
+        var inputText = document.getElementById('doAnswer'+index);
+        inputText.disabled = "disabled"
+        inputText.style.color = "#000000";
+
+        // var inputText = document.getElementById('doAnswer');
+        // inputText.disabled = "disabled"
+        // inputText.style.color = "#000000";
+      }
+    })
+
+
+    /*主观题*/
+    bridge.registerHandler('ShowSubjective_id', function(data, responseCallback) {
+
+      //隐藏选项视图
+      var optionDiv = document.getElementById('option_div');
+      optionDiv.style.display = 'none';
+
+      //隐藏输入框Div
+      var showTextFieldDiv = document.getElementById('showTextField');
+      showTextFieldDiv.style.display='none';
+
+      //使输入框失去焦点
+      for (var i = 0; i < countInput; i++) {
+
+          var index = i + 1;
+          var inputText = document.getElementById('doAnswer'+index);
+          inputText.blur();
+      }
+    })
+
+
+    /*本题视频解释*/
+    bridge.registerHandler('VideoAnsweAnalysis_id', function(data, responseCallback) {
+    if (!data){
+                         //  var bgview = document.getElementById('VideoBTJSBGVIEW')
+                          // bgview.display = 'none'
+                           var calltextData = document.getElementById('VideoBTJSTestData')
+                           
+    var calltext = document.getElementById('VideoBTJSTest')
+    calltext.onclick = function(){}
+    var ddd = document.getElementById('VideoBTJS');
+    ddd.style.display='none';
+    var ddtext = document.getElementById('VideoBTJS');
+    calltext.style.display = 'none';
+                           calltextData.innerHTML = data;
+    }else{
+                          // var bgview = document.getElementById('VideoBTJSBGVIEW')
+                          // bgview.display = 'block'
+                            var calltextData = document.getElementById('VideoBTJSTestData')
+    var calltext = document.getElementById('VideoBTJSTest');
+    calltext.onclick = function(){
+
+       bridge.callHandler('videoAnalysis', data, function(response){
+            // log('JS got response', response)
+          })
+
+    }
+    var ddd = document.getElementById('VideoBTJS');
+    ddd.style.display='block';
+    var ddtext = document.getElementById('VideoBTJS');
+    calltext.style.display = 'block';
+                           calltextData.innerHTML = data;
+   
+    }
+    })
+
+
+
+
+   /*本题解释*/
+    bridge.registerHandler('testJavascriptHandlerTwo2', function(data, responseCallback) {
+    if (!data){
+    var calltext = document.getElementById('BTJSTest')
+    var ddd = document.getElementById('BTJS');
+    ddd.style.display='none';
+    var ddtext = document.getElementById('BTJS');
+    calltext.style.display = 'block';
+    calltext.innerHTML = data;
+                           
+    }else{
+    var calltext = document.getElementById('BTJSTest');
+    var countPersonalTable = document.getElementById('countPersonalData');
+    var countGlobalTable = document.getElementById('countGlobalData');
+    screen_width=screen.width * 0.95 - 20  + "px";
+    countPersonalTable.style.width = screen_width;
+    countGlobalTable.style.width = screen_width;
+
+    var ddd = document.getElementById('BTJS');
+    ddd.style.display='block';
+    var ddtext = document.getElementById('BTJS');
+    calltext.style.display = 'block';
+    calltext.innerHTML = data;
+
+    // var currentPositionheight = calltext.getBoundingClientRect().top + document.documentElement.scrollTop;
+    // alert("网页的内容高度是：" + document.documentElement.scrollHeight + "页面高度是：" + document.documentElement.clientHeight);
+
+    var fillDiv = document.getElementById('FillDiv');
+    fillDiv.style.height = '1px';
+    //如果网页的内容高度 < webview高度
+    if (document.documentElement.scrollHeight < document.documentElement.clientHeight) {
+      
+      var fillHeight = document.documentElement.clientHeight - document.documentElement.scrollHeight + 5;
+      fillDiv.style.height = fillHeight + 'px';
+      // alert("填充的高度是：" + fillHeight);
+
+    }else{
+
+      fillDiv.style.height = '1px';
+    }
+
+    //lbl:2016-4-21修改
+    var wrongAnswer = document.getElementById('Answer_id');
+    wrongAnswer.style.display='block';
+
+    // /*显示全站统计的数据*/
+    // var globalDataDiv = document.getElementById('globalData');
+    // globalDataDiv.style.display = 'block';
+
+    }
+                           
+    })
+
+
+                                   
+    /*错题解析的*/
+    bridge.registerHandler('selectedText_id', function(data, responseCallback) {
+    /*取消onclick事件*/
+    document.getElementById('option_div').onclick = function(){};
+    var wrongAnswer = document.getElementById('Answer_id');
+    wrongAnswer.style.display='block';
+    })
+                                   
+    //是否是学习计划的解析
+    bridge.registerHandler('showHidenJieShi', function(data, responseCallback) {
+     //隐藏
+    var ranking = document.getElementById('Ranking_id');
+    ranking.style.display='block'; //block 是显示
+    })
+    
+    /*lbl:2016-4-25修改*/
+<!--    /*设置个人作答总次数*/                               -->
+<!--    bridge.registerHandler('setCountPersonalAnswer',function(data,responseCallback){-->
+<!--      var rightAnswerSpan = document.getElementById('countPersonalAnswer');-->
+<!--      rightAnswerSpan.innerHTML = data;-->
+<!--    })   -->
+<!--    /*设置个人作答正确的次数*/                               -->
+<!--    bridge.registerHandler('setCountPersonalRightAnswer',function(data,responseCallback){-->
+<!--      var rightAnswerSpan = document.getElementById('countPersonalRightAnswer');-->
+<!--      rightAnswerSpan.innerHTML = data;-->
+<!--    }) -->
+<!--    /*设置个人作答错误的次数*/                               -->
+<!--    bridge.registerHandler('setCountPersonalWrongAnswer',function(data,responseCallback){-->
+<!--      var rightAnswerSpan = document.getElementById('countPersonalWrongAnswer');-->
+<!--      rightAnswerSpan.innerHTML = data;-->
+<!--    })                                    -->
+                                   
+    /*设置正确答案*/                               
+    bridge.registerHandler('setRightAnswer',function(data,responseCallback){
+      var rightAnswerSpan = document.getElementById('rightAnswer');
+      rightAnswerSpan.innerHTML = data;
+    }) 
+
+    /*你的答案*/
+    bridge.registerHandler('yourAnswer_id', function(data, responseCallback) {
+    var yourAnsweText = document.getElementById('yourAnsweText');
+    yourAnsweText.innerHTML = data;
+    })
+
+    /*你的作答结果*/
+    bridge.registerHandler('yourAnsweResult',function(data,responseCallback){
+      var yourAnsweResultSpan = document.getElementById('yourAnsweResult');
+      yourAnsweResultSpan.innerHTML = data;
+    })
+
+    /*被作答*/
+    bridge.registerHandler('countGlobalAnswer',function(data,responseCallback){
+
+      /*显示全站统计的数据*/
+      var globalDataDiv = document.getElementById('globalData');
+      globalDataDiv.style.display = 'block';
+
+      var countGlobalAnswerSpan = document.getElementById('countGlobalAnswer');
+      countGlobalAnswerSpan.innerHTML = data;
+    })
+
+    /*错误率*/
+    bridge.registerHandler('globalErrorRate',function(data,responseCallback){
+      var globalErrorRateSpan = document.getElementById('globalErrorRate');
+      globalErrorRateSpan.innerHTML = data;
+    })
+
+    /*易错项*/
+    bridge.registerHandler('globalFallibilityItem',function(data,responseCallback){
+      var globalFallibilityItemSpan = document.getElementById('globalFallibilityItem');
+      globalFallibilityItemSpan.innerHTML = data;
+    })
+
+
+    /*本题共作答数:TogetherAnswerNumber*/
+    bridge.registerHandler('TogetherAnswerNumber', function(data, responseCallback) {
+    var TogetherAnswerNumberText = document.getElementById('TogetherAnswerNumber_id')
+    TogetherAnswerNumberText.innerHTML = data;
+    })
+                                   
+    /*准确率:OnTimeNumbe*/
+    bridge.registerHandler('OnTimeNumber', function(data, responseCallback) {
+    var OnTimeNumberText = document.getElementById('OnTimeNumber_id')
+    OnTimeNumberText.innerHTML = data;
+                                                          
+    })
+     
+       
+   //  /*VideoAnsweRanalytic_id 视频答案解析的数据*/
+   //  bridge.registerHandler('VideoAnsweRanalytic_id', function(data, responseCallback) {
+   //  var AnsweRanalyticText = document.getElementById('VideoBTJSTest');
+   //  AnsweRanalyticText.innerHTML = data;
+   //  //document.getElementById(arrayZiMu[i]).onclick = function(){}
+   // //test_name
+   //  })     
+
+                                   
+    /*AnsweRanalytic_id 答案解析的数据*/
+    bridge.registerHandler('AnsweRanalytic_id', function(data, responseCallback) {
+    var AnsweRanalyticText = document.getElementById('AnsweRanalytic');
+    AnsweRanalyticText.innerHTML = data;
+    //document.getElementById(arrayZiMu[i]).onclick = function(){}
+   //test_name
+    })
+                                   
+   
+                                   
+
+    
+})
+
+//点击选项的时候调用的方法，返回点击的
+   var getindex=function(){XS
+    responseCallback(selected_index);
+   }
+    </script>
+
+</head>
+<body style='background-color:#ffffff;width:95%;height: 100%; margin: 10 0 100 0;padding: 0; color: #010101;font-size:15px;word-wrap: break-word;'>
+    
+    
+    <!--题目内容的标签-->
+    <style>.divcss5 table{max-width:100%;word-break:break-all;}
+        img{max-width:100%px;word-break:break-all;}
+        word-break:break-all;</style>
+    <!-- 整个背景div：包含题目、答案、解析 -->
+    <div id="bgDiv" style="margin-left: -2.5%;margin-right: -2.5%; padding-left: 2.5%; padding-right: 2.5%;margin-bottom: -20px; margin-top: -10px;padding-top: 10px; background-color: #ffffff;">
+    <div id = 'headersT'class='divcss5' style='color:#323232;font-size:15px;'></div>
+    </br>
+    <div id='buttons'></div>
+    <div id='log'></div>
+    <p1 id = 'pb'></p1>
+
+    <div id = 'showTextField' style='display: none; font-size:15px;'>
+
+      <!-- <a id="anchor_scroll" href="#post" style="display:none"></a> -->
+<!--       <span>答:</span>
+      <input id="doAnswer" type="text" name="doAnswer" onclick="skipTo()" autofocus="autofocus" style="border-top: none;border-left: none;border-right: none; border-bottom-color: lightGray;background-color: #ffffff; border-radius: 0; border-bottom-width: 1.0px; width: 85%; color: #20c873; font-size:15px; margin-left: 2px;" placeholder = "1"> -->
+
+    </div>
+    
+    <!--选项的标签-->
+    <div  class='allborderImage';name='test_name'; style='line-height: 27.5px; font-size:15px;width:100%;display:inline;' id='option_div'></div>
+    <!--</a>-->
+    <br/>
+    <br/>
+
+
+
+    <!--本题解释的标签examlib-detail-jieshi.png-->
+    <div style="clear:both;height:0px;overflow:hidden;zoom:1;"></div>
+    <div id="BTJS" style='display:none;overflow:hidden;zoom:1;margin-left: -2.5%;margin-right: -2.5%; padding-left: 2.5%; padding-right: 2.5%; background-color: #ffffff;' >
+<!--        <span style='width:30px;height:44px;float:left;'>-->
+<!--        <img src='examlib-detail-jieshi.png' width="20" height="20";style='padding-left:5px;'/></span>-->
+
+    <!--正确答案是-->
+    <div id = "Answer_id" style ='display:none;margin-top:5px;'>
+    <span style='color: #010101;font-size: 15px;float: left;margin-bottom:0px;'>正确答案是</span>
+    <span id = "rightAnswer" style='color: #20c873;font-size: 15px'></span>
+    <span style='color: #010101;font-size: 15px'>，</span>
+    <span style='color: #010101;font-size: 15px'>你的答案是</span>
+    <span id = "yourAnsweText" style='color: #ff5a5a;font-size: 15px'></span>
+    <span style='color: #010101;font-size: 15px'>，回答</span>
+    <span id = "yourAnsweResult" style='color: #010101;font-size: 15px'></span>
+    <span style='color: #010101;font-size: 15px'>。</span>
+    <br/><br/>
+    
+
+    <style>.divcss5 img{max-width:300px;word-break:break-all;}word-break:break-all;</style>
+
+    <div id="personalData" style="display: none; color: #010101;font-size:15px;">
+    <span style="display:block;margin-top: 20px;">个人数据</span>
+    <div style="padding: 0px 10px;margin-top: 10px;">
+        <table id="countPersonalData">
+    	<tr>
+    		<td>作答本题</td>
+    		<td>回答正确</td>
+    		<td>回答错误</td>
+    	</tr>
+    	<tr>
+    		<td style="color: #FFA71C;">
+    		<span id="countPersonalAnswer" style="display:inline-block;"></span>
+    		<span style="display:inline-block;">次</span>
+    		</td>
+    		<td style="color: #2FBC75;">
+    		<span id="countPersonalRightAnswer" style="display:inline-block;"></span>
+    		<span style="display:inline-block;">次</span>
+    		</td>
+    		<td style="color: #FF5C5B">
+    		<span id="countPersonalWrongAnswer" style="display:inline-block;"></span>
+    		<span style="display:inline-block;">次</span>
+    		</td>
+    	</tr>
+    </table>
+    </div>
+    </div>
+
+    <div id="globalData" style="display: none; margin-top: -10px; color: #010101;font-size:15px;">
+    <span style="display:block;margin-top: 20px;">全站数据</span>
+    <div style="padding: 0px 10px;margin-top: 10px;">
+        <table id="countGlobalData">
+    	<tr>
+    		<td>被作答</td>
+    		<td>错误率</td>
+    		<td>易错项</td>
+    	</tr>
+    	<tr>
+    		<td style="color: #2FBC75;">
+    		<span id="countGlobalAnswer" style="display:inline-block;">222</span>
+    		<span style="display:inline-block;"></span>
+    		</td>
+    		<td style="color: #FFA71C;">
+    		<span id="globalErrorRate" style="display:inline-block;">10</span>
+    		<span style="display:inline-block;"></span>
+    		</td>
+    		<td id="globalFallibilityItem" style="color: #FF5C5B">A</td>
+    	</tr>
+    </table>
+    </div>
+    </div>
+</div>
+
+
+<!--my解析-->
+
+<!--<div id="VideoBTJSBGVIEW" style="background:#f2f4f5;">-->
+
+    <!--本题视频解释的标签examlib-detail-jieshi.png-->
+    <div style="clear:both;height:0px;overflow:hidden;zoom:1;"></div>
+
+    <!-- 视频解析、文字解析区域 -->
+    <div style="margin-left: -10px;margin-right: -10px; padding-top: 10px; padding-left: 10px; padding-right: 10px; background-color:#f4f4f4;">
+
+    <div id="VideoBTJS" style='margin-left: 0px; display:none;overflow:hidden;zoom:1;background-color:#f4f4f4;' >
+
+    <span style='display:inline-block;float:left;height:20px;line-height:20px;margin-left:1px;'>视频解析</span>
+    </div>
+
+
+
+    <!--本题视频解释下面的数据-->
+    <style>.divcss5 img{max-width:100%;word-break:break-all;}word-break:break-all;</style>
+    
+<!--    -->
+<div id="VideoBTJSTest" style='display:none;overflow:hidden;zoom:1;' >    
+    <span id="VideoBTJSTestData" style='display:inline-block;float:left;height:20px;line-height:20px;padding-right:5px; margin-right:5px;margin-top: 10px;margin-bottom: 10px;'></span>
+    <span style='width:30px;height:20px;float:left;margin-top: 10px;margin-bottom: 10px;'>
+        <img src='examlib-detail-video-analsys.png' width="20" height="20";style='margin-left:5px'/></span>
+    
+    <hr style='height:1px;border-style:none;  background-color:#d4d4d4;width:640px;margin-left:-20px;'/>
+</div>
+    
+
+        <span style='display:inline-block;height:20px;line-height:20px;margin-left:1px;margin-top: 10px; background-color:#f4f4f4;'>文字解析</span>
+<!--    </div>-->
+        <div id = "BTJSTest" class='divcss5' style='color:#323232;word-wrap:break-word;word-break:break-all;margin-top:0px;line-height:28px;font-size:14px;text-align:left;background-color:#f4f4f4;'></div>
+        <br/>
+        <br/>
+        <div id = "FillDiv" class='divcss5' style='display: block; height: 1px; background-color:#f4f4f4;'></div>
+    </div>
+	</div>
+
+	</div>
+
+    <!--本题解释下面的数据-->
+    <!-- <style>.divcss5 img{max-width:300px;word-break:break-all;}word-break:break-all;</style> -->
+
+    
+    <!--题库排行-->
+<!--     <div id = "Ranking_id" style='display:none; width: 280px;color: #666666'>
+    <span style='color: #666666;font-size: 15px;float: left'>本题共作答</span>
+    <span id = "TogetherAnswerNumber_id" style='color: #666666;font-size: 15px'></span>
+    <span style='color: #666666;font-size: 15px'>次,</span>
+    <span style='color: #666666;font-size: 15px'>准确率</span>
+    <span id = "OnTimeNumber_id" style='color: #20c873;font-size: 15px'></span>
+    <span style='color: #666666;font-size: 15px'>。
+        <hr style='height:10px;border: none;background-color:#f4f4f4;margin-left:-15px;border-top:3px'align='left'>
+        <div class='text' style='background-color: white;color: #333333;font-size: 15px;height:44px;width:%fpx;line-height:44px'>答案解析</div>
+        <hr style='height:1px;border: none;background-color:#d1d1d1;margin-left:-15px;'align='left'>
+        <style>.divcss6 table{max-width:90%;word-break:break-all;}
+        img{max-width:90%;word-break:break-all;}
+        word-break:break-all;</style>
+
+    <div id = "VideoAnsweRanalytic" class='divcss6' style='color:#323232;word-wrap:break-word;word-break:break-all;margin-top:15px;line-height:28px;font-size:15px;'></div>
+
+    <div id = "AnsweRanalytic" class='divcss6' style='color:#323232;word-wrap:break-word;word-break:break-all;margin-top:15px;line-height:28px;font-size:15px;'></div>
+    </div> -->
+    
+<!--    </div>-->
+    <!--my解析-->
+    
+    <style>
+        .curra{color:#20c873;}
+        .curra .item-icon{background-image:url(examlib-detail-quan-green.png)!important;background-size:100%;color:#fff !important;}
+        .curra .choose_icon{background-image:url(examlib-detail-quan-green.png)!important;background-size:100%;color:#fff !important;}
+        .useselect .item-icon{background-image:url(examlib-detail-redNew-yuan.png) !important;background-size:100%;color:#fff !important;}
+        .useselect .choose_icon{background-image:url(examlib-detail-redNew-fang.png) !important;background-size:100%;color:#fff !important;}
+        </style>
+    
+</body></html>

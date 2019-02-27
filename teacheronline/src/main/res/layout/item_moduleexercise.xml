@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:background="@color/white">
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <View
+        android:id="@+id/v_interval"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white001"
+        app:layout_heightPercent="2.78%w"/>
+
+    <View
+        android:id="@+id/v_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/v_interval"
+        android:background="@color/gray005"/>
+
+    <TextView
+        android:id="@+id/tv_categoryName"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_below="@id/v_line1"
+        android:gravity="center_vertical"
+        android:text="@string/default_value"
+        android:textColor="@color/black"
+        app:layout_heightPercent="19.17%w"
+        app:layout_paddingLeftPercent="3.61%w"
+        app:layout_textSizePercent="4.72%w"/>
+
+    <View
+        android:id="@+id/v_line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:layout_below="@id/tv_categoryName"
+        android:background="@color/gray005"/>
+
+    <View
+        android:layout_width="14dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/icon_arrow_right_typ3"
+        app:layout_heightPercent="6.11%w"
+        app:layout_marginRightPercent="5.56%w"
+        app:layout_marginTopPercent="10%w"
+        app:layout_widthPercent="3.89%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

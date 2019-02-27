@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_asscode_popup"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/img_asscode_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:src="@drawable/ic_close"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_asscode"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+
+        android:text="微信关联码"
+        android:textSize="18sp"
+
+        />
+
+
+    <com.huatu.teacheronline.widget.AssCodeView
+        android:id="@+id/asv_asscode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_asscode"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="17dp"
+
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asv_asscode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有效时间:  "
+            android:textColor="@color/gray007"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_asscode_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="04"
+            android:textColor="@color/green004"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="分"
+            android:textColor="@color/gray007"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_asscode_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="59"
+            android:textColor="@color/green004"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="秒"
+            android:textColor="@color/gray007"
+            android:textSize="12sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

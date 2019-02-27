@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_class_shecdule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:background="@color/white"
+        app:layout_heightPercent="18.75%w">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_state"
+            android:gravity="center_vertical"
+            app:layout_heightPercent="18.75%w"
+            app:layout_marginLeftPercent="4.72%w">
+
+            <TextView
+                android:id="@+id/tv_directTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="80分申论批改班申论批改班申论批改80分申论批改班申论"
+                android:textColor="@color/gray010"
+                app:layout_textSizePercent="22.22%h"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_directTitle"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="2015-09-15 09:23"
+                app:layout_marginTopPercent="10.33%h"
+                app:layout_textSizePercent="20%h"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        <!--height:240dp-->
+
+        <!--height:69dp-->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_state"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_marginLeftPercent="4.72%w"
+            app:layout_marginRightPercent="4.72%w"
+            app:layout_widthPercent="91.85%h">
+
+            <TextView
+                android:id="@+id/tv_directState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="即将播放"
+                android:textColor="@color/gray014"
+                android:visibility="visible"
+                app:layout_textSizePercent="17.78%h"/>
+
+            <TextView
+                android:id="@+id/tv_directState_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_yello_direct"
+                android:gravity="center"
+                android:text="观看课程"
+                android:textColor="@color/yellow"
+                android:visibility="gone"
+                app:layout_heightPercent="37.04%h"
+                app:layout_textSizePercent="17.78%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

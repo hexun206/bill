@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    android:id="@+id/ll_live_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white008"
+    android:orientation="vertical"
+    >
+
+
+    <ScrollView
+        android:id="@+id/sv_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_eva_subjective"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_dovipex_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_below="@id/top_bar"
+                android:layout_toLeftOf="@+id/tv_progress"
+                android:background="@color/white001"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/loading"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_heightPercent="10.28%w"
+                app:layout_paddingLeftPercent="3.89%w"/>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/top_bar"
+                android:background="@color/white001"
+                android:gravity="center_vertical"
+                android:text="@string/default_num_value"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_heightPercent="10.28%w"
+                app:layout_paddingRightPercent="4.17%w"/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_title"
+                android:background="@color/white"
+                android:lineSpacingExtra="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:text="加载中。。。"
+                android:textColor="@color/black00"
+                app:layout_marginTopPercent="3.89%w"
+                app:layout_textSizePercent="3.89%w"/>
+
+            <com.huatu.teacheronline.widget.CustomListView
+                android:id="@+id/lv_chooselist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_parsing">
+            </com.huatu.teacheronline.widget.CustomListView>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_item_llEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_parsing"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="1."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="2."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="3."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="4."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit5"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="5."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit6"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="6."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit7"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="7."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit8"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="8."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit9"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="9."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_edit10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_edit10"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="10."
+                        app:layout_textSizePercent="3.5%w"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_ex_edit10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left"
+                        android:hint="请输入答案"
+                        android:paddingLeft="5dp"
+                        app:layout_textSizePercent="3.5%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_item_llchoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_parsing"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="B"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="C"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="D"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="E"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="F"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    app:layout_textSizePercent="3.89%w">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="G"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="H"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsH"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="I"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/ll_item_chooseJ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_selector_exchooseJ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round_green_hollow"
+                        android:gravity="center"
+                        android:text="J"
+                        android:textColor="@color/green004"
+                        app:layout_heightPercent="5.56%w"
+                        app:layout_textSizePercent="3.89%w"
+                        app:layout_widthPercent="5.56%w"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_ex_optionsJ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="选项lalala"
+                        android:textColor="@color/black007"
+                        app:layout_textSizePercent="3.89%w"
+                        />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_correct_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_correct_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="正确但是 ，你的答案是 ，回答正确"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    app:layout_textSizePercent="3.89%w"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_toal_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_marginBottomPercent="2.9%w"
+                app:layout_marginTopPercent="2.9%w">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="全站数据"
+                    android:textColor="@color/black"
+                    app:layout_marginBottomPercent="2.9%w"
+                    app:layout_textSizePercent="3.89%w"/>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@color/gray026"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_marginLeftPercent="3.9%w"
+                    >
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="被作答"
+                        android:textColor="@color/black"
+                        app:layout_textSizePercent="3.9%w"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="错误率"
+                        android:textColor="@color/black"
+                        app:layout_textSizePercent="3.9%w"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="易错项"
+                        android:textColor="@color/black"
+                        app:layout_textSizePercent="3.9%w"/>
+
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@color/gray026"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_marginLeftPercent="3.9%w">
+
+
+                    <TextView
+                        android:id="@+id/tv_answer_times"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="#FFA71C"
+                        app:layout_textSizePercent="3.89%w"/>
+
+                    <TextView
+                        android:id="@+id/tv_error_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="9.2%"
+                        android:textColor="#2FBC75"
+                        app:layout_textSizePercent="3.89%w"/>
+
+                    <TextView
+                        android:id="@+id/tv_easy_wrong_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="0.5dp"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textColor="#FF5C5B"
+                        app:layout_textSizePercent="3.89%w"/>
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/ll_video_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_marginBottomPercent="2.9%w">
+
+                <TextView
+                    android:id="@+id/tv_video_resolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="视频解析"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    app:layout_textSizePercent="3.9%w"/>
+
+                <TextView
+                    android:id="@+id/tv_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_video_resolution"
+                    android:paddingLeft="5dp"
+                    android:text="视频"
+                    app:layout_textSizePercent="3.89%w"/>
+
+                <ImageView
+                    android:id="@+id/img_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tv_video"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/live_btn"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_check_parsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_parsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@color/gray"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:text="解析"
+                    android:visibility="gone"
+                    app:layout_textSizePercent="3.89%w"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_check_vip_parsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_answer_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="你的答案C,回答错误"
+                    app:layout_textSizePercent="3.89%w"/>
+
+                <TextView
+                    android:id="@+id/tv_vip_parsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/ic_btda"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:text="本题答案"
+                    android:textColor="@color/black007"
+                    android:visibility="visible"
+                    app:layout_textSizePercent="3.89%w"/>
+
+                <TextView
+                    android:id="@+id/tv_vip_parsing_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@color/gray"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:text="本题答案"
+                    android:visibility="visible"
+                    app:layout_textSizePercent="3.89%w"/>
+
+                <TextView
+                    android:id="@+id/tv_vip_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:drawableLeft="@drawable/btjx"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:text="本题解析"
+                    android:textColor="@color/black007"
+                    android:visibility="visible"
+                    app:layout_textSizePercent="3.89%w"/>
+
+                <TextView
+                    android:id="@+id/tv_vip_analysis_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@color/gray"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"
+                    android:text="本题解析"
+                    android:visibility="visible"
+                    app:layout_textSizePercent="3.89%w"/>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </ScrollView>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_eva_subjective"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_sliding_estimate"
+        android:visibility="gone"
+        >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/ll_eva_subjective"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="horizontal"
+                app:layout_heightPercent="6.94%w"
+                app:layout_paddingLeftPercent="1.5%w"
+                >
+
+                <TextView
+                    android:id="@+id/btn_eva_parsing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bt_ckjx_green"
+                    android:gravity="center"
+                    android:text="@string/check_prassing"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/btn_eva_standard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/btn_eva_parsing"
+                    android:background="@drawable/bt_ckjx_white"
+                    android:gravity="center"
+                    android:text="@string/check_stander"
+                    android:textColor="@color/green004"
+                    android:textSize="12sp"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/img_close_eva_parsing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/jiexi_close"
+                    android:textColor="@color/green004"/>
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <com.huatu.teacheronline.widget.ExpandableTextView
+                android:id="@+id/tv_eva_parsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/white"
+                android:paddingBottom="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:text="解析"
+                android:textColor="@color/gray007"
+                android:visibility="visible"
+                app:layout_maxHeightPercent="52%h"
+                app:layout_textSizePercent="3.8%w"
+                app:trimLength="50"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_check_parsing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="left"
+        android:background="@drawable/bt_ckjx"
+        android:gravity="center"
+        android:text="查看解析"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_marginLeftPercent="1.5%w"
+        app:layout_textSizePercent="3.89%w"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/ll_sliding_estimate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_quota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sb_sliding_estimate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:largeHeap="true"
+            android:text="滑动估分"
+            android:textColor="@color/green004"
+            app:layout_textSizePercent="3.5%w"/>
+
+        <SeekBar
+            android:id="@+id/sb_sliding_estimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/grade_slider"
+            android:thumbOffset="0dp"/>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

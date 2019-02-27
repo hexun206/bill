@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/zysx_pic"
+        android:layout_height="wrap_content">
+    </RelativeLayout>
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        app:layout_marginTopPercent="3.72%w"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="250dp"
+            app:layout_textSizePercent="5.55%w"
+            android:lines="1"
+            android:gravity="center"
+            android:textColor="@color/green010"
+            android:ellipsize="end"
+            android:text="2014年江西省招教语文"
+            android:layout_height="wrap_content" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        app:layout_marginTopPercent="8.72%w"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_textSizePercent="5%w"
+            android:textColor="@color/black011"
+            android:background="@drawable/zysx_fh"
+            android:text="注意事项 "/>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_marginTopPercent="5%w"
+        android:orientation="horizontal">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/attentions"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:textColor="@color/black011"
+            android:layout_height="wrap_content"/>
+        </ScrollView>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        app:layout_marginTopPercent="15%w"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/started"
+            android:layout_width="94dp"
+            android:text="开始做题"
+            android:gravity="center"
+            android:textColor="@color/black012"
+            android:background="@drawable/bt_kszt_720"
+            app:layout_textSizePercent="4.44%w"
+            android:layout_height="30dp" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+</com.zhy.android.percent.support.PercentLinearLayout>

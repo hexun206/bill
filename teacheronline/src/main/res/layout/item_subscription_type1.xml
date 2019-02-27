@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:paddingBottom="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:id="@+id/iv_listview_subscription_itemType1"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="一周综艺节目"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:background="#DD000000"
+        android:id="@+id/tv_listview_subscription_itemType1"/>
+
+</RelativeLayout>

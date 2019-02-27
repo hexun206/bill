@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white005">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/top_bar"
+        android:layout_height="wrap_content">
+
+    <!-- height:50dp -->
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/rl_obtainaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_add_add"/>
+
+        <TextView
+            android:id="@+id/tv_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="left|center"
+            android:padding="10dp"
+            android:text="添加收货地址"
+            android:textColor="#4b4b4b"
+            android:visibility="gone"/>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_state"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/tv_Prompt"
+                android:layout_width="wrap_content"
+                android:text="点击选择收货地址"
+                android:layout_centerVertical="true"
+                app:layout_marginLeftPercent="4.44%w"
+                android:textColor="@color/gray002"
+                app:layout_textSizePercent="3.88%w"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_choose_obtain_address_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_choose_obtain_address_number"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#101619"
+                android:visibility="gone"
+                app:layout_marginLeftPercent="4.16%w"
+                app:layout_marginTopPercent="1.55%w"
+                app:layout_textSizePercent="4.58%w"/>
+
+            <TextView
+                android:id="@+id/tv_choose_obtain_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_choose_obtain_address_person"
+                android:text=""
+                android:textColor="#4b4b4b"
+                app:layout_marginBottomPercent="1.55%w"
+                app:layout_marginLeftPercent="4.16%w"
+                app:layout_marginTopPercent="1.88%w"
+                app:layout_textSizePercent="4.58%w"/>
+
+            <TextView
+                android:id="@+id/tv_choose_obtain_address_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_choose_obtain_address_person"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="#101619"
+                android:textStyle=""
+                android:visibility="visible"
+                app:layout_marginRightPercent="4.25%w"
+                app:layout_textSizePercent="4.58%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_edit_phone"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_phone_zffs"
+                app:layout_marginLeftPercent="4.44%w"
+                android:layout_alignParentBottom="true"
+                app:layout_marginBottomPercent="4.55%w"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tv_edit"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/phone"
+                app:layout_marginLeftPercent="7.08%w"
+
+                android:textSize="14dp"
+                app:layout_marginBottomPercent="4.25%w"
+                android:digits="1234567890"
+                android:hint="输入手机号码,以便客服推送课程服务"
+                android:textColorHint="@color/gray018"
+                android:maxLength="11"
+                android:layout_alignParentBottom="true"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+            <!--android:id="@+id/ts_edit_phone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:gravity="center"-->
+            <!--android:visibility="gone"-->
+            <!--android:background="@color/white005"-->
+            <!--android:layout_height="30dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:text="输入手机号码,以便客服推送课程服务"-->
+                <!--android:textColor="@color/gray018"-->
+                <!--android:layout_height="wrap_content" />-->
+        <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+    <!-- height:107dp -->
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/rl_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_heightPercent="25%w"
+        android:orientation="horizontal"
+        app:layout_marginTopPercent="2.77%w">
+        <!--app:layout_heightPercent="23%w"-->
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/zb_mrt"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="11dp"
+                android:layout_marginTop="13dp"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_projectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="标题标题标题标题标题标题标题标题标题标题标题标题"
+                android:maxLength="45"
+                android:textColor="@color/black007"
+                android:lineSpacingExtra="3dp"
+                app:layout_marginLeftPercent="4.44%w"
+                app:layout_marginRightPercent="4.44%w"
+                app:layout_marginTopPercent="4.8%w"
+                android:textSize="12dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_zhibotime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="中学班级"
+                android:lines="1"
+                android:textColor="@color/gray014"
+                android:layout_below="@+id/tv_projectName"
+                app:layout_marginLeftPercent="4.44%w"
+                app:layout_marginTopPercent="2.11%w"
+                android:textSize="11dp"/>
+
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+                    <com.zhy.android.percent.support.PercentLinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_marginLeftPercent="4.44%w"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_cash"
+                            android:layout_width="wrap_content"
+                            android:text="听课返现"
+                            android:background="@color/orange002"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            app:layout_marginTopPercent="3%w"
+                            app:layout_marginRightPercent="4.44%w"
+                            android:visibility="gone"
+                            android:padding="1dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_discou"
+                            android:layout_width="wrap_content"
+                            android:text="打折"
+                            android:background="@color/orange002"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            app:layout_marginRightPercent="4.44%w"
+                            android:visibility="gone"
+                            app:layout_marginTopPercent="3%w"
+                            android:padding="1dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_gift"
+                            android:layout_width="wrap_content"
+                            android:text="赠品"
+                            android:background="@color/orange002"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            app:layout_marginTopPercent="3%w"
+                            android:visibility="gone"
+                            android:padding="1dp"
+                            android:layout_height="wrap_content" />
+                    </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥0.00"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    app:layout_marginRightPercent="4.44%w"
+                    android:textColor="@color/green013"
+                    android:textSize="16dp"/>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_Voucher"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="13.6%w"
+            app:layout_marginTopPercent="2.77%w"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="代金卷"
+            android:textColor="@color/black007"
+            android:layout_centerVertical="true"
+            app:layout_textSizePercent="3.05%w"
+            app:layout_marginLeftPercent="2.77%w"
+            android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_view"
+                android:layout_centerVertical="true"
+                 android:layout_alignParentRight="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_coupon"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                app:layout_marginRightPercent="6.52%w"
+                android:text="满199减100"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <!-- height:50dp -->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_alipy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_marginTopPercent="1.94%w"
+        app:layout_heightPercent="13.89%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:background="@color/gray008"/>
+
+        <!-- height:50dp -->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_iconAlipy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_paddingLeftPercent="40%h"
+            app:layout_paddingRightPercent="45%h">
+
+
+            <!-- width:21dp height:21dp -->
+            <ImageView
+                android:id="@+id/iv_iconForAlipy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dl_ch"
+                app:layout_heightPercent="42%h"
+                app:layout_widthPercent="42%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_alipy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_zfb_zf"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="支付宝支付"
+            android:textColor="@color/black007"
+            app:layout_paddingLeftPercent="50%h"
+            app:layout_paddingRightPercent="36%h"
+            app:layout_textSizePercent="32%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray005"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    <!-- height:50dp -->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_weixinpay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_heightPercent="13.89%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/white001"/>
+
+        <!-- height:50dp -->
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_iconWeixinpay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_paddingLeftPercent="40%h"
+            app:layout_paddingRightPercent="45%h">
+
+            <!-- width:21dp height:21dp -->
+            <ImageView
+                android:id="@+id/iv_iconForWeixinpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/rance_noselect_paymethod"
+                app:layout_heightPercent="42%h"
+
+                app:layout_widthPercent="42%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_weixinpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_wx_zf"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="微信支付"
+            android:textColor="@color/black007"
+            app:layout_paddingLeftPercent="50%h"
+            app:layout_paddingRightPercent="36%h"
+            app:layout_textSizePercent="32%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white001"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <!-- height:50dp -->
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_goldPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/white"
+        app:layout_heightPercent="13.89%w">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray008"/>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_iconGold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_paddingLeftPercent="40%h"
+            app:layout_paddingRightPercent="45%h">
+
+            <!-- width:21dp height:21dp -->
+            <ImageView
+                android:id="@+id/iv_iconForGoldPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/rance_noselect_paymethod"
+                app:layout_heightPercent="42%h"
+                app:layout_widthPercent="42%h"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_goldPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_jb_zf"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="@string/goldPay"
+            android:textColor="@color/black007"
+            app:layout_paddingLeftPercent="50%h"
+            app:layout_textSizePercent="32%h"/>
+
+        <TextView
+            android:id="@+id/tv_gold_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_goldPay"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="(余额0)"
+            android:textColor="@color/gray004"
+            app:layout_textSizePercent="32%h"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:background="@color/gray008"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            app:layout_marginTopPercent="2.77%w"
+            app:layout_heightPercent="16.6%w"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_xz"
+                android:layout_width="wrap_content"
+                android:text="已阅读教师网购课须知并严格遵守"
+                app:layout_marginTopPercent="2.77%w"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_aniu"
+                android:layout_width="wrap_content"
+                android:src="@drawable/oval_g"
+                app:layout_marginTopPercent="3.5%w"
+                app:layout_marginRightPercent="0.77%w"
+                android:layout_toLeftOf="@+id/tv_xz"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_p"
+                android:layout_width="wrap_content"
+                android:text="(查看须知)"
+                app:layout_textSizePercent="3.88%w"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_xz"
+                app:layout_marginTopPercent="0.77%w"
+                android:textColor="@color/green013"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="84dp"
+                android:background="@color/green013"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_p"
+                android:layout_height="2px"></View>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <!-- width:319dp height:45dp -->
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_goldPay"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="13.6%w"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_pric_total"
+            android:layout_width="wrap_content"
+            android:text="加载中"
+            android:layout_centerVertical="true"
+            android:textColor="@color/orange002"
+            app:layout_marginRightPercent="5.13%w"
+            app:layout_textSizePercent="4.44%w"
+            android:layout_toLeftOf="@+id/rl_pay"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="合计金额："
+            android:layout_centerVertical="true"
+            android:textColor="@color/black007"
+            android:layout_toLeftOf="@+id/tv_pric_total"
+            app:layout_textSizePercent="4.16%w"
+            android:layout_height="wrap_content" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_pay"
+            android:layout_width="wrap_content"
+            app:layout_widthPercent="30.05%w"
+            android:layout_alignParentRight="true"
+            android:background="@color/gray002"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/toPay"
+                android:textSize="16dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

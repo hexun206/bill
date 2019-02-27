@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_main_bg"
+    android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+ <com.zhy.android.percent.support.PercentRelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+     <TextView
+         android:id="@+id/tv_title"
+         android:layout_width="wrap_content"
+         android:text="5月5日 导师班上课讲义"
+         app:layout_textSizePercent="3.88%w"
+         app:layout_marginTopPercent="2.36%w"
+         android:textColor="@color/black007"
+         app:layout_marginLeftPercent="4%w"
+         android:layout_height="wrap_content" />
+     <TextView
+         android:id="@+id/tv_teacher"
+         android:layout_width="wrap_content"
+         android:text="题库归属教师：林少妇"
+         android:layout_below="@+id/tv_title"
+         app:layout_textSizePercent="3.33%w"
+         app:layout_marginTopPercent="3.33%w"
+         android:textColor="@color/gray013"
+         app:layout_marginLeftPercent="4%w"
+         android:layout_height="wrap_content" />
+     <TextView
+         android:id="@+id/tv_vip_time"
+         android:layout_width="wrap_content"
+         android:text="上加载中"
+         android:layout_below="@+id/tv_teacher"
+         app:layout_marginTopPercent="0.83%w"
+         app:layout_textSizePercent="3.33%w"
+         android:textColor="@color/gray013"
+         app:layout_marginLeftPercent="4%w"
+         android:layout_height="wrap_content" />
+
+     <ImageView
+         android:layout_width="wrap_content"
+         android:src="@drawable/ic_ppt"
+         android:layout_alignParentRight="true"
+         app:layout_marginRightPercent="6.8%w"
+         android:layout_centerInParent="true"
+         android:layout_height="wrap_content" />
+
+     <ImageView
+         android:layout_width="wrap_content"
+         android:src="@drawable/more_arrow"
+         android:layout_alignParentRight="true"
+         android:layout_centerInParent="true"
+         android:layout_height="wrap_content" />
+
+     <View
+         android:layout_width="match_parent"
+         app:layout_marginTopPercent="5.4%w"
+         android:layout_below="@+id/tv_vip_time"
+         app:layout_marginLeftPercent="2.77%w"
+         app:layout_marginRightPercent="2.77%w"
+         android:layout_height="@dimen/width_1"
+         android:background="@color/gray004"></View>
+ </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+
+  <ImageView
+      android:id="@+id/iv_zan"
+      android:layout_width="wrap_content"
+      android:src="@drawable/ic_zan_2"
+      app:layout_marginLeftPercent="5%w"
+      app:layout_marginTopPercent="1.94%w"
+      android:layout_height="wrap_content" />
+
+   <TextView
+       android:id="@+id/tv_num"
+       android:layout_width="wrap_content"
+       android:text="99"
+       app:layout_marginTopPercent="2.24%w"
+       app:layout_marginLeftPercent="1.77%w"
+       app:layout_textSizePercent="3.33%w"
+       android:textColor="@color/gray002"
+       android:layout_toRightOf="@+id/iv_zan"
+       android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_yd_num"
+            android:layout_width="wrap_content"
+            android:text="222人已阅读"
+            app:layout_marginTopPercent="1.94%w"
+             android:layout_alignParentRight="true"
+            app:layout_textSizePercent="3.33%w"
+            android:textColor="@color/gray002"
+            app:layout_marginRightPercent="1.97%w"
+            android:layout_height="wrap_content" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

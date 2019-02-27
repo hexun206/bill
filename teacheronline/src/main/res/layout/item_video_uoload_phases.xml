@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_tittle"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:background="@drawable/bg_corner_round_gray"
+    android:gravity="center"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:text="幼儿园"
+    android:textColor="@color/black016"
+    android:textSize="14sp">
+
+</TextView>

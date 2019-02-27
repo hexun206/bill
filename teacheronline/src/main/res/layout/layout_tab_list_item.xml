@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray026"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="30dp">
+    <TextView
+        android:id="@+id/tv_point_pointanalysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="0.5dp"
+        android:singleLine="true"
+        app:layout_textSizePercent="3.9%w"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_weight="0.6"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="测试测试测试测试测试爱神的箭阿萨德"/>
+
+    <TextView
+        android:id="@+id/tv_count_pointanalysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        app:layout_textSizePercent="3.9%w"
+        android:gravity="center"
+        android:text="10"/>
+
+    <TextView
+        android:id="@+id/tv_rigthcount_pointanalysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_weight="1"
+        app:layout_textSizePercent="3.9%w"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="20"/>
+
+    <TextView
+        android:id="@+id/tv_rate_pointanalysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="0.5dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="1dp"
+        app:layout_textSizePercent="3.9%w"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="50%"/>
+</LinearLayout>
+</LinearLayout>
+

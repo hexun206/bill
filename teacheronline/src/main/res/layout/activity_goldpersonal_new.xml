@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white001">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:id="@+id/sv_gold_personal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:scrollbars="none">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_bar"
+                app:layout_heightPercent="50.2%w"
+                android:background="@drawable/ic_jbzh_bg">
+
+                <TextView
+                    android:id="@+id/tv_balance_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="金币余额"
+                    android:textColor="@color/white"
+                    app:layout_marginTopPercent="12.11%w"
+                    app:layout_textSizePercent="3.89%w"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_goldNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    app:layout_textSizePercent="12.78%w"/>
+                <!--            <TextView
+                                android:id="@+id/tv_goldPay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/btn_pay"
+                                app:layout_marginRightPercent="7.91%w"/>-->
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/rl_coins_ruless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_info"
+                android:background="@color/white"
+                app:layout_marginTopPercent="3.47%w">
+
+                <ImageView
+                    android:id="@+id/img_ruless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rule"
+                    app:layout_marginLeftPercent="3.47%w"
+                    app:layout_marginTopPercent="4.27%w"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_ruless"
+                    android:text="关于金币"
+                    android:textColor="@color/green004"
+                    app:layout_marginLeftPercent="2.67%w"
+                    app:layout_marginTopPercent="4.5%w"
+                    app:layout_textSizePercent="4.44%w"/>
+
+                <com.huatu.teacheronline.widget.CustomListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_ruless"
+                    android:divider="@null"
+                    android:scrollbars="none"
+                    app:layout_marginBottomPercent="3.33%w"
+                    app:layout_marginTopPercent="3.19%w"/>
+
+
+                <TextView
+                    android:id="@+id/tv_goldPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/listview"
+                    android:background="@drawable/btn_exchange_selector"
+                    android:gravity="center"
+                    android:text="马上充值"
+                    android:textColor="@color/green004"
+                    app:layout_heightPercent="8.33%w"
+                    app:layout_marginBottomPercent="3.47%w"
+                    app:layout_marginRightPercent="6.66%w"
+                    app:layout_marginTopPercent="2.22%w"
+                    app:layout_textSizePercent="3.33%w"
+                    app:layout_widthPercent="19.44%w"/>
+
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_coins_ruless"
+                android:background="@color/white"
+                app:layout_heightPercent="55.73%w"
+                app:layout_marginBottomPercent="3.33%w"
+                app:layout_marginTopPercent="3.47%w">
+
+                <ImageView
+                    android:id="@+id/img_rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_integral"
+                    app:layout_marginLeftPercent="3.47%w"
+                    app:layout_marginTopPercent="4.27%w"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_rule"
+                    android:text="关于积分"
+                    android:textColor="@color/green004"
+                    app:layout_marginLeftPercent="2.67%w"
+                    app:layout_marginTopPercent="4.5%w"
+                    app:layout_textSizePercent="4.44%w"/>
+
+                <ImageView
+                    android:id="@+id/img_push_unread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_rule"
+                    android:src="@drawable/ic_push_unread"
+                    app:layout_marginLeftPercent="5.14%w"
+                    app:layout_marginTopPercent="3.74%w"/>
+
+                <TextView
+                    android:id="@+id/tv_rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_rule"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="在教师网、华图教师，每消费1元，可获得1积分；\n200积分可兑换1金币。"
+                    android:textColor="@color/gray007"
+                    app:layout_marginLeftPercent="12.08%w"
+                    app:layout_marginRightPercent="2.67%w"
+                    app:layout_marginTopPercent="3%w"
+                    app:layout_textSizePercent="3.33%w"/>
+
+                <TextView
+                    android:id="@+id/tv_fen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_rule"
+                    android:text="分"
+                    android:textColor="@color/green004"
+                    app:layout_marginRightPercent="6.66%w"
+                    app:layout_marginTopPercent="3.33%w"
+                    app:layout_textSizePercent="4.44%w"/>
+
+                <TextView
+                    android:id="@+id/tv_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_rule"
+                    android:text="0"
+                    android:textColor="@color/green004"
+                    app:layout_marginRightPercent="12.22%w"
+                    app:layout_marginTopPercent="1.68%w"
+                    app:layout_textSizePercent="6.67%w"/>
+
+                <TextView
+                    android:id="@+id/tv_exchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_integral"
+                    android:text="可以兑换0金币"
+                    android:textColor="@color/gray007"
+                    app:layout_marginRightPercent="6.66%w"
+                    app:layout_marginTopPercent="2.22%w"
+                    app:layout_textSizePercent="3.33%w"/>
+
+                <Button
+                    android:id="@+id/btn_exchange_gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_exchange"
+                    android:background="@drawable/btn_exchange_selector"
+                    android:text="立即兑换"
+                    android:textColor="@color/green004"
+                    app:layout_heightPercent="8.33%w"
+                    app:layout_marginRightPercent="6.66%w"
+                    app:layout_marginTopPercent="2.22%w"
+                    app:layout_textSizePercent="3.33%w"
+                    app:layout_widthPercent="19.44%w"/>
+
+
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

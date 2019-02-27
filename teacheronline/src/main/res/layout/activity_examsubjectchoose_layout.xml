@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white001">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:scrollbars="none">
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.huatu.teacheronline.widget.CustomListView
+                android:id="@+id/lv_examsubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_bar"
+                android:divider="@null"
+                android:dividerHeight="0dp"/>
+
+            <TextView
+                android:id="@+id/tv_next_step"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/lv_examsubject"
+                android:background="@drawable/bg_rectangle_green"
+                android:gravity="center"
+                android:text="@string/complete"
+                android:textColor="@color/white"
+                app:layout_heightPercent="11.94%w"
+                app:layout_marginBottomPercent="5.28%w"
+                app:layout_marginLeftPercent="4.03%w"
+                app:layout_marginRightPercent="4.03%w"
+                app:layout_marginTopPercent="5.28%w"
+                app:layout_textSizePercent="4.17%w"/>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </ScrollView>
+</com.zhy.android.percent.support.PercentRelativeLayout>

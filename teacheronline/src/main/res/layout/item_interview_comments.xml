@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12.5dp"
+        android:paddingRight="12.5dp"
+        android:paddingTop="10dp"
+
+        >
+
+
+        <TextView
+            android:id="@+id/tv_interview_comments_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="2019年福建省教师招聘笔试 音乐笔试全程班（一期）"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_interview_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:text="可点评次数：3/3次"
+            android:textColor="@color/gray013"
+            android:textSize="13sp"
+
+            />
+
+        <View
+            android:id="@+id/line_dash"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_dash_line"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <FrameLayout
+                android:id="@+id/fra_inteview_comments_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/tv_inteview_comments_result"
+                    android:layout_width="100dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bg_radio_stroke_gray"
+
+                    android:gravity="center"
+                    android:text="查看点评"
+                    android:textColor="@color/black003"
+                    android:textSize="13sp"
+                    />
+
+                <View
+                    android:id="@+id/view_inteview_comments_msg"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="right|top"
+                    android:background="@drawable/bg_round_red_small"
+                    />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_inteview_comments_upload"
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_radio_stroke_gray"
+                android:gravity="center"
+
+                android:text="上传面试视频"
+                android:textColor="@color/black003"
+                android:textSize="13sp"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

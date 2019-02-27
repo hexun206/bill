@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#A0000000"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray005"/>
+
+    <ListView
+        android:id="@+id/lv_interview_screening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white004"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray005"
+        android:dividerHeight="@dimen/width_1"
+        android:fastScrollEnabled="false"
+        android:listSelector="@null"
+        android:scrollbars="none"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray005"/>
+
+    <LinearLayout
+        android:id="@+id/ll_hide_pop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/popup_bottom_dot"
+            android:scaleType="fitXY"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

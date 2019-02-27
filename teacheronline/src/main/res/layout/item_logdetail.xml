@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <ImageView
+        android:id="@+id/img_above_logdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_wl_zuixin"
+        app:layout_marginLeftPercent="6.95%w"/>
+
+    <TextView
+        android:id="@+id/tv_info_logdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_above_logdetail"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="签收信息"
+        android:textColor="@color/gray004"
+        app:layout_marginLeftPercent="2.39%w"
+        app:layout_textSizePercent="3.61%w"
+        app:layout_marginTopPercent="3.61%w"
+        />
+
+    <TextView
+        android:id="@+id/tv_time_logdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_info_logdetail"
+        android:layout_toRightOf="@+id/img_above_logdetail"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="签收信息"
+        android:textColor="@color/gray004"
+        app:layout_marginLeftPercent="2.39%w"
+        app:layout_marginTopPercent="2.22%w"
+        app:layout_textSizePercent="3.61%w"
+        />
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

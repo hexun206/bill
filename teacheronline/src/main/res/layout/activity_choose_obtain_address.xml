@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white008"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ll_obtainaddress_top_bar"
+        layout="@layout/general_topbar_type3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/iv_no_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_obtainaddress_top_bar"
+        android:background="@color/white"
+        app:layout_heightPercent="61.4%w">
+
+        <ImageView
+            android:id="@+id/iv_no_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/pic_noadd"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/tv_no_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_add"
+            android:layout_centerHorizontal="true"
+            android:text="还没有任何地址"
+            app:layout_marginTopPercent="3.08%w"
+            />
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/live_refresh_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_below="@+id/ll_obtainaddress_top_bar"-->
+    <!--android:layout_height="match_parent">-->
+
+    <ListView
+        android:id="@+id/lv_obtainaddress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_obtainaddress_top_bar"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/white008"
+        android:dividerHeight="17dp"
+        android:layout_above="@+id/rl_add_address"
+        android:paddingTop="11dp"
+        android:scrollbars="none"/>
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green013"
+        app:layout_heightPercent="13.1%w">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加新地址"
+            android:textColor="@color/white"
+            app:layout_textSizePercent="4.16%w"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

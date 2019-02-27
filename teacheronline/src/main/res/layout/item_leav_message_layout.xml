@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_tv_time_leav_message"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_time_leav_message"
+            android:text="15:30"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_rectangle_gray3"
+            app:layout_marginBottomPercent = "3.17%w"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_left_teacher"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        app:layout_marginTopPercent = "4.16%w"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_head_leav_message"
+            android:layout_width="wrap_content"
+            android:background="@drawable/avatar_t"
+            android:layout_alignBottom="@+id/tv_teacher_leav_message"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent = "9.72%w"
+            app:layout_heightPercent = "9.72%w"
+            app:layout_marginLeftPercent = "2.78%w"
+            />
+        <TextView
+            android:id="@+id/tv_teacher_leav_message"
+            android:layout_toRightOf="@+id/img_head_leav_message"
+            android:background="@drawable/bubble_i"
+            android:layout_width="wrap_content"
+            android:text="@string/default_value"
+            android:textColor="@color/black007"
+            app:layout_maxWidthPercent = "63.47%w"
+            android:layout_height="wrap_content"
+            app:layout_textSizePercent = "4.17%w"
+            />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_right_me"
+        android:layout_width="match_parent"
+        app:layout_marginTopPercent = "4.16%w"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_headtv_me_leav_message"
+            android:layout_width="wrap_content"
+            android:background="@drawable/avatar_s"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/tv_me_leav_message"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent = "9.72%w"
+            app:layout_heightPercent = "9.72%w"
+            app:layout_marginRightPercent = "2.78%w"
+            />
+        <TextView
+            android:id="@+id/tv_me_leav_message"
+            android:layout_toLeftOf="@+id/img_headtv_me_leav_message"
+            android:background="@drawable/bubble_ii"
+            android:layout_width="wrap_content"
+            app:layout_maxWidthPercent = "63.47%w"
+            android:textColor="@color/white"
+            app:layout_textSizePercent = "4.17%w"
+            android:text=""
+            android:layout_height="wrap_content"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

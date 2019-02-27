@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:nestedScrollingEnabled="true"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.dd.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:sl_cornerRadius="5dp"
+            app:sl_dx="0dp"
+            app:sl_dy="2dp"
+            app:sl_shadowColor="#2A000000"
+            app:sl_shadowRadius="5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_corner_white_5">
+
+
+                <com.huatu.teacheronline.widget.WrapContentHeightViewPager
+                    android:id="@+id/vp_question_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="38.5dp"
+                    >
+
+                </com.huatu.teacheronline.widget.WrapContentHeightViewPager>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <View
+                        android:id="@+id/view_comment_detail_tittle_1"
+                        android:layout_width="20dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/bg_corner_gray_50"/>
+
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/bg_corner_gray_50"/>
+
+                    <View
+                        android:id="@+id/view_comment_detail_tittle_2"
+                        android:layout_width="20dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/bg_corner_gray_50"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </com.dd.ShadowLayout>
+
+
+        <com.dd.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:sl_cornerRadius="5dp"
+            app:sl_dx="0dp"
+            app:sl_dy="2dp"
+            app:sl_shadowColor="#2A000000"
+            app:sl_shadowRadius="5dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_corner_white_5"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="面试视频"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_comment_detail_upload_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="上传时间：2018.10.19 12:00:21"
+                    android:textColor="@color/black003"
+                    android:textSize="12sp"
+
+                    />
+
+
+                <FrameLayout
+                    android:id="@+id/fra_video_container"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <View
+                        android:id="@+id/view_touch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+
+                        />
+
+                    <include
+                        layout="@layout/player_comment_topbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        />
+
+                    <include
+                        layout="@layout/bjplayer_layout_center_controller_copy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        />
+
+                    <include
+                        layout="@layout/player_comment_bottombar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_comment_detail_preview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"/>
+
+
+                    <ImageView
+                        android:id="@+id/img_comment_detail_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_play_mark"/>
+
+
+                    <com.huatu.teacheronline.widget.CircularCoverView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cover_color="@color/white"
+                        app:left_bottom_radius="5dp"
+                        app:left_top_radius="5dp"
+                        app:right_bottom_radius="5dp"
+                        app:right_top_radius="5dp"
+
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </com.dd.ShadowLayout>
+
+
+        <com.dd.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:sl_cornerRadius="5dp"
+            app:sl_dx="0dp"
+            app:sl_dy="2dp"
+            app:sl_shadowColor="#2A000000"
+            app:sl_shadowRadius="5dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_corner_white_5"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老师点评"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_comment_detail_teacher_replay_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="39dp"
+                    android:layout_marginTop="30dp"
+                    android:text="暂时还没有点评信息"
+                    android:textColor="@color/gray013"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_comment_detail_teacher_replay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="点评时间：2018.10.19 12:00:21"
+                    android:textColor="@color/black003"
+                    android:textSize="12sp"
+
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_comment_detail_teacher_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+
+                    >
+
+                    <FrameLayout
+                        android:id="@+id/fra_voice"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_corner_green_50"
+
+                        android:elevation="2dp">
+
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_marginLeft="12.5dp"
+                            android:src="@drawable/ic_voice"
+
+                            />
+
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_comment_detail_teacher_comment_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:text="--'--''"
+                        android:textColor="@color/gray013"
+                        android:textSize="12sp"
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.dd.ShadowLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+

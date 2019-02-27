@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huatu.teacheronline.H5DetailActivity">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/topbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_live"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white006"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        android:progressDrawable="@drawable/progress_selector"/>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+
+        android:layout_width="match_parent"
+        android:id="@+id/ll_webview"
+        android:layout_height="match_parent">
+        <!--<WebView-->
+            <!--android:id="@+id/wv_h5detail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layerType="software"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_height="match_parent"/>-->
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+
+</LinearLayout>

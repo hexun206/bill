@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/lLayout_bg"
+    android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        app:layout_heightPercent="137.4%w"
+        app:layout_marginLeftPercent="9%w"
+        android:layout_marginTop="42dp"
+        android:orientation="vertical"
+        app:layout_marginRightPercent="9%w"
+        android:layout_height="wrap_content">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_dialog_main_bg"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            app:layout_heightPercent="147.4%w"
+            app:layout_marginLeftPercent="4.16%w"
+            app:layout_marginRightPercent="4.16%w"
+            app:layout_marginTopPercent="4.16%w"
+            android:layout_height="wrap_content">
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="107.4%w"
+            app:layout_marginLeftPercent="4.16%w"
+            android:layout_height="wrap_content"
+            app:layout_marginRightPercent="4.16%w"
+            app:layout_marginTopPercent="4.16%w">
+
+            <TextView
+                android:id="@+id/tv_context"
+                android:layout_width="wrap_content"
+                android:text="加载中....."
+                android:textColor="@color/black007"
+                app:layout_textSizePercent="3.61%w"
+                android:layout_height="wrap_content" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+        </ScrollView>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/gray002"
+            app:layout_marginLeftPercent="4.16%w"
+            app:layout_marginTopPercent="3.88%w"
+            app:layout_marginRightPercent="4.16%w"
+            android:layout_height="1px"></View>
+
+   <com.zhy.android.percent.support.PercentRelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_marginLeftPercent="4.16%w"
+       app:layout_marginRightPercent="4.16%w">
+
+       <ImageView
+           android:id="@+id/iv_canle"
+           android:layout_width="wrap_content"
+           android:src="@drawable/ic_shut"
+           android:layout_centerInParent="true"
+           android:layout_height="wrap_content" />
+
+   </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

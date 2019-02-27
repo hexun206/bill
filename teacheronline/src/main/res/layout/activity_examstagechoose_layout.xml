@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:id="@+id/lv_stagelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <TextView
+        android:id="@+id/tv_next_step"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/lv_stagelist"
+        android:background="@drawable/bg_rectangle_green"
+        android:gravity="center"
+        android:text="@string/next_step"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_heightPercent="11.94%w"
+        app:layout_marginLeftPercent="4.03%w"
+        app:layout_marginRightPercent="4.03%w"
+        app:layout_marginTopPercent="5.28%w"
+        app:layout_textSizePercent="4.17%w"/>
+</com.zhy.android.percent.support.PercentRelativeLayout>

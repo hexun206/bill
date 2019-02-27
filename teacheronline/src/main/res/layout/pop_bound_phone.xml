@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:background="@drawable/bdsj_popup">
+
+        <TextView
+            android:id="@+id/canle"
+            android:layout_width="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_height="30dp" />
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/cwq"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="110dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black000"
+                android:text="绑定手机"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                app:layout_marginTopPercent="2.2%w"
+                android:textColor="@color/black010"
+                android:text="解锁更多题目"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/cwq"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/bound_phone"
+                android:layout_width="wrap_content"
+                android:text="马上绑定"
+                android:textSize="18dp"
+                app:layout_marginTopPercent="6.3%w"
+                android:textColor="@color/green009"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/bdsj_popup"/>-->
+
+    </RelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

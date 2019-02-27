@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!-- height:112dp -->
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    >
+    <View
+        android:id="@+id/v_interval"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/white001" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_marginBottomPercent="1.66%w"
+        android:layout_height="wrap_content">
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_weidu_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wdxx_nwd"
+                app:layout_marginBottomPercent="2.22%w"
+                app:layout_marginLeftPercent="3.44%w"
+                app:layout_marginTopPercent="2.77%w"
+                />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="14dp"
+                android:textColor="@color/black007"
+                android:text="中小学教宗课程安排"
+                app:layout_marginLeftPercent="3.44%w"
+                app:layout_marginTopPercent="1.66%w"
+                app:layout_textSizePercent="3.88%w" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_just"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/gray013"
+                    android:singleLine="true"
+                    app:layout_marginLeftPercent="3.44%w"
+                    app:layout_marginTopPercent="0.38%w"
+                    android:ellipsize="end"
+                    app:layout_textSizePercent="3.33%w"
+                    android:text="刚刚"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    app:layout_marginRightPercent="1.67%w"
+                    android:textColor="@color/gray013"
+                    android:singleLine="true"
+                    app:layout_textSizePercent="3.33%w"
+                    app:layout_marginLeftPercent="3.44%w"
+                    app:layout_marginTopPercent="1.38%w"
+                    android:ellipsize="end"
+                    android:text="上课地点"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_place"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/gray013"
+                    app:layout_marginTopPercent="0.38%w"
+                    android:singleLine="true"
+                    app:layout_marginRightPercent="18.44%w"
+                    android:ellipsize="end"
+                    app:layout_marginLeftPercent="3.44%w"
+                    app:layout_textSizePercent="3.33%w"
+                    android:text=""
+                    android:layout_height="wrap_content" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="match_parent">-->
+            <ImageView
+                android:id="@+id/iv_mark_isno"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/mark_isno"
+                app:layout_marginTopPercent="3.16%w"
+                app:layout_marginRightPercent="4.44%w"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+            <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_1"
+        android:background="@color/gray004"/>
+</com.zhy.android.percent.support.PercentLinearLayout>

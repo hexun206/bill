@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white008"
+    tools:context="com.huatu.teacheronline.personal.AddMessageActivity">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+   <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+       app:layout_heightPercent="32.2%w"
+       android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/et_content"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="31.2%w"
+        android:hint="@string/add_ly"
+        android:textColorHint="@color/gray002"
+        app:layout_marginTopPercent="2.7%w"
+        android:gravity="left"
+        android:maxLength="100"
+        android:paddingLeft="14dp"
+        android:paddingTop="14dp"
+        android:paddingRight="14dp"
+        app:layout_textSizePercent="3.88%w"
+        android:textColor="@color/gray003"/>
+
+       <TextView
+           android:id="@+id/tv_num"
+           android:layout_width="wrap_content"
+           android:text="0/100"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+           app:layout_marginRightPercent="4.16%w"
+           android:textColor="@color/gray002"
+           app:layout_textSizePercent="3.88%w"
+           app:layout_marginBottomPercent="1.7%w"
+           android:layout_height="wrap_content" />
+
+   </com.zhy.android.percent.support.PercentRelativeLayout>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <com.zhy.android.percent.support.PercentRelativeLayout
+         android:id="@+id/rl_ok"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:background="@color/green012"
+         app:layout_heightPercent="12.2%w">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="提交"
+        app:layout_textSizePercent="5%w"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+
+     </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

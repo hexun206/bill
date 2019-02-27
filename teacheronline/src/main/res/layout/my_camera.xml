@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.uuzuche.lib_zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        app:inner_width="240dp"
+        app:inner_height="240dp"
+        app:inner_corner_length="15dp"
+        app:inner_corner_width="3dp"
+        android:layout_height="wrap_content"
+        app:inner_scan_bitmap="@drawable/qr_scansti"
+        app:inner_margintop="170dp"
+        app:inner_scan_speed="20"
+        app:inner_corner_color="@color/green001"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="放入框内，自动扫描"
+        android:textSize="16dp"
+        android:textColor="@color/gray029"
+        app:layout_marginBottomPercent="44.5%w"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+</com.zhy.android.percent.support.PercentRelativeLayout>

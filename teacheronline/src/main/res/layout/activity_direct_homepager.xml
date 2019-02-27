@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/top_bar"
+            layout="@layout/topbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_bar">
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/drawer_view_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/white">
+
+        <ScrollView
+            android:id="@+id/sv_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/line"
+            android:background="@color/white"
+            android:scrollbars="none">
+
+            <include
+                layout="@layout/layout_screen_live"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></include>
+            <!--<com.zhy.android.percent.support.PercentLinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1px"-->
+                    <!--android:background="#dbdbdb"/>-->
+
+                <!--<com.zhy.android.percent.support.PercentLinearLayout-->
+                    <!--android:id="@+id/ll_test_categories"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/rl_test_categories"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="10dp">-->
+
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_test_categories"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/test_categories"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--app:layout_textSizePercent="2.78%h"/>-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<com.huatu.teacheronline.widget.RadioGroupEx-->
+                        <!--android:id="@+id/gv_test_categories"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"/>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1px"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:background="#dbdbdb"/>-->
+
+                <!--</com.zhy.android.percent.support.PercentLinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_interview"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/rl_interview"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="20dp">-->
+
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_interview"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/interview"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--app:layout_textSizePercent="2.78%h"/>-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<com.huatu.teacheronline.widget.RadioGroupEx-->
+                        <!--android:id="@+id/gv_interview"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"/>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1px"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:background="#dbdbdb"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_learning_period"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/rl_learning_period"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="20dp">-->
+
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_learning_period"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/learning_period"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--app:layout_textSizePercent="2.78%h"/>-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<com.huatu.teacheronline.widget.RadioGroupEx-->
+                        <!--android:id="@+id/gv_learning_period"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"/>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1px"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:background="#dbdbdb"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_subjects"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/rl_subjects"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="20dp">-->
+
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_subjects"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/subjects"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--app:layout_textSizePercent="2.78%h"/>-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<com.huatu.teacheronline.widget.RadioGroupEx-->
+                        <!--android:id="@+id/gv_subjects"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"/>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1px"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--android:background="#dbdbdb"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_commit_select"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="25dp"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="25dp"-->
+                    <!--android:background="@color/green004"-->
+                    <!--android:text="@string/commit"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="16dp"/>-->
+
+
+            <!--</com.zhy.android.percent.support.PercentLinearLayout>-->
+        </ScrollView>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/ll_bottom_commit_select"
+            android:background="@color/gray002"
+            android:layout_height="1px"/>
+        <LinearLayout
+            android:id="@+id/ll_bottom_commit_select"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_cancle_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColor="@color/green004"
+                android:text="@string/cancel"
+                android:textSize="14dp"/>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_commit_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green004"
+                android:textColor="@color/white"
+                android:text="@string/confirm"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

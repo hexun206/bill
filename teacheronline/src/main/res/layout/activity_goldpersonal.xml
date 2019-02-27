@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:background="@color/white001">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:background="@color/green001"
+        android:gravity="center_vertical"
+        app:layout_heightPercent="24.16%w">
+
+        <TextView
+            android:id="@+id/tv_goldNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前金币0.00(个)"
+            android:textColor="@color/white"
+            app:layout_marginLeftPercent="3.47%w"
+            app:layout_textSizePercent="4.16%w"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goldNumber"
+            android:text="用于线上直播课，视频购买"
+            android:textColor="@color/white"
+            app:layout_marginLeftPercent="3.47%w"
+            app:layout_marginTopPercent="3.33%w"
+            app:layout_textSizePercent="3.61%w"/>
+
+        <TextView
+            android:id="@+id/tv_goldPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_pay"
+            app:layout_marginRightPercent="7.91%w"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_info"
+        android:divider="@null"
+        android:scrollbars="none"
+        app:layout_marginTopPercent="3.47%w"/>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

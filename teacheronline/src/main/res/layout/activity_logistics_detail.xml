@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_detail"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_pic_logdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="20.56%w"
+            android:background="@drawable/ic_loading"
+            app:layout_marginBottomPercent="3.33%w"
+            app:layout_marginLeftPercent="3.33%w"
+            app:layout_marginTopPercent="3.33%w"
+            app:layout_widthPercent="36.11%w"/>
+
+        <TextView
+            android:id="@+id/tv_statu_logdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_pic_logdetail"
+            android:singleLine="true"
+            android:text="物流状态:"
+            android:textColor="@color/black"
+            app:layout_marginLeftPercent="3.89%w"
+            app:layout_marginRightPercent="3.89%w"
+            app:layout_marginTopPercent="3.67%w"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:id="@+id/tv_com_logdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_statu_logdetail"
+            android:layout_toRightOf="@+id/img_pic_logdetail"
+            android:singleLine="true"
+            android:text="物流公司:"
+            android:textColor="@color/gray004"
+            app:layout_marginLeftPercent="3.89%w"
+            app:layout_marginRightPercent="3.89%w"
+            app:layout_marginTopPercent="2.22%w"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:id="@+id/tv_no_logdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_com_logdetail"
+            android:layout_toRightOf="@+id/img_pic_logdetail"
+            android:singleLine="true"
+            android:text="物流编号:"
+            android:textColor="@color/gray004"
+            app:layout_marginLeftPercent="3.89%w"
+            app:layout_marginRightPercent="3.89%w"
+            app:layout_marginTopPercent="2.22%w"
+            app:layout_textSizePercent="3.33%w"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_detail"
+        android:background="#f2f4f5"
+        app:layout_heightPercent="5%w"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_buttom_zixun"
+        android:layout_below="@+id/view_line2"
+        android:background="@color/white">
+
+
+        <ListView
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:background="@color/white"
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000"
+            android:cacheColorHint="@color/gray002"
+            android:dividerHeight="0dip"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_buttom_zixun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green004"
+        android:gravity="center"
+        app:layout_heightPercent="12.5%w">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_consult"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="@string/zixun"
+            android:textColor="@color/white"
+            app:layout_textSizePercent="5%w"/>
+
+    </RelativeLayout>
+
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

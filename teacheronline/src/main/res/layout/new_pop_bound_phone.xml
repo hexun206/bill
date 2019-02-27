@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="39.7%w"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/popup_bdsj"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content" />
+
+
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/cwq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_marginTopPercent="44.7%w"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:text="绑定手机"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                app:layout_marginTopPercent="1.2%w"
+                android:textColor="@color/white"
+                android:text="解锁更多题目"/>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/rl_bd"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/cwq"
+            app:layout_marginTopPercent="3.88%w"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/canle"
+                android:layout_width="wrap_content"
+                android:src="@drawable/popup_shut"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_bd"
+            android:gravity="center_horizontal"
+            app:layout_marginTopPercent="5.9%w"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/bound_phone"
+                android:layout_width="wrap_content"
+                android:text="马上绑定"
+                android:textSize="18dp"
+                android:background="@drawable/popuop_w6"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/bdsj_popup"/>-->
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

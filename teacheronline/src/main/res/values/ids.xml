@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="categoryArrIds">
+        <item name="training_today" type="id"/>
+        <item name="module_examocean" type="id"/>
+        <item name="exam_test" type="id"/>
+        <item name="examerror_center" type="id"/>
+        <item name="video_inerview" type="id"/>
+        <item name="live_video" type="id"/>
+    </array>
+
+    <item name="tv_dialog_content" type="id"/>
+    <item name="ed_password" type="id"/>
+    <item name="tv_dialog_ok" type="id"/>
+    <item name="tv_dialog_cancel" type="id"/>
+    <item name="floating_side_header" type="id"/>
+    <item name="viewpager_inner" type="id"/>
+</resources>

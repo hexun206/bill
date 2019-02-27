@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:background="@color/white">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/general_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ExpandableListView
+        android:id="@+id/lv_cityList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <com.huatu.teacheronline.widget.ExSideBar
+        android:id="@+id/sidebar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/topbar"
+        app:layout_marginBottomPercent="16.67%w"
+        android:visibility="gone"
+        app:layout_marginTopPercent="16.67%w"
+        app:layout_widthPercent="5.56%w"/>
+
+    <TextView
+        android:id="@+id/floating_side_header"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"/>
+</com.zhy.android.percent.support.PercentRelativeLayout>

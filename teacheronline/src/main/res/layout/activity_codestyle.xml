@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_my_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/iv_canle"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_qr_back"
+        android:layout_gravity="left"
+        app:layout_marginLeftPercent="5%w"
+        app:layout_marginTopPercent="6.66%w"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_Scanning"
+        android:layout_width="240dp"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="45.66%w"
+        android:src="@drawable/qr_scansticx"
+        android:layout_height="250dp" />
+</com.zhy.android.percent.support.PercentRelativeLayout>
+
+

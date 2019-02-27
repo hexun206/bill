@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    android:id="@+id/rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/general_topbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_section1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        app:layout_heightPercent="13.61%w"
+        >
+
+        <TextView
+            android:id="@+id/tv_paper_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/exercise_type"
+            android:textColor="@color/gray013"
+            app:layout_marginLeftPercent="3.08%w"
+            app:layout_marginTopPercent="2.08%w"
+            app:layout_textSizePercent="3.33%w"/>
+
+        <TextView
+            android:id="@+id/tv_realTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_paper_title"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/time_used"
+            android:textColor="@color/gray013"
+            android:textSize="15sp"
+            app:layout_marginLeftPercent="3.08%w"
+            app:layout_textSizePercent="3.33%w"
+            />
+
+        <TextView
+            android:id="@+id/tv_recommand_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_paper_title"
+            android:text="@string/time_recommand"
+            android:textColor="@color/gray013"
+            app:layout_marginRightPercent="3.08%w"
+            app:layout_textSizePercent="3.33%w"/>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/ll_section2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_heightPercent="55.56%w"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_no_analysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pic_timer"
+            app:layout_marginBottomPercent="4.17%w"
+            app:layout_marginTopPercent="3.48%w"
+            />
+
+        <TextView
+            android:layout_below="@+id/img_no_analysis"
+            android:id="@+id/tv_no_analysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:layout_widthPercent="62.78%w"
+            android:text="模考未结束，为确保公正，暂时无法查看解析！请在模考结束后查看。"
+            android:textColor="@color/gray013"
+            app:layout_textSizePercent="3.33%w"/>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

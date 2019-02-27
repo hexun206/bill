@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bg_course_ware_simple_group"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:background="@color/green004"
+        app:layout_heightPercent="45%h"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_course_ware_group_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:paddingLeft="6dp"
+        android:paddingRight="12dp"
+        android:singleLine="true"
+        android:text="tittle"
+        android:textColor="@color/black003"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        />
+
+
+    <ImageView
+        android:id="@+id/img_course_ware_group_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginRight="12dp"
+        android:src="@drawable/ic_course_ware_group_arrow_up"
+
+        app:layout_heightPercent="4%w"
+
+        app:layout_widthPercent="4%w"
+        />
+
+
+</com.zhy.android.percent.support.PercentLinearLayout>
