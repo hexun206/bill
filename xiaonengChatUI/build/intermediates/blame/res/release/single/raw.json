@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\raw\\emoji",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\raw\\emoji"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\raw\\xnsdkconfig.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\raw\\xnsdkconfig.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\raw\\xnemoji",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\raw\\xnemoji"
+    }
+]

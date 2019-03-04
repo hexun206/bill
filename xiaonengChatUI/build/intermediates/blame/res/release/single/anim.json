@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\progress_smallround.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\progress_smallround.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\my_alpha_action_in.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\my_alpha_action_in.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\scale_in.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\scale_in.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\blacklist_anim.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\blacklist_anim.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\scale_out.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\scale_out.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\sdk_loading_animation.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\sdk_loading_animation.xml"
+    },
+    {
+        "merged": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\build\\intermediates\\res\\merged\\release\\anim\\my_alpha_action_out.xml",
+        "source": "E:\\workspace\\TeacherOnlineS\\xiaonengChatUI\\src\\main\\res\\anim\\my_alpha_action_out.xml"
+    }
+]
