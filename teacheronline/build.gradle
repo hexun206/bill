@@ -192,7 +192,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'pub.devrel:easypermissions:0.2.1'
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
-    compile 'com.baijia.player:videoplayer:1.7.0'
+
     compile 'com.github.iwgang:countdownview:2.1.6'
 
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
@@ -200,7 +200,10 @@ dependencies {
     compile 'com.baijia.live:liveplayer-sdk-core:1.4.6'
     compile 'com.baijia.live:liveplayer-sdk-core-ppt:1.4.6'
     //百家云回放
-    compile 'com.baijia.player:video-playback:1.4.9'
+//    compile 'com.baijia.player:video-playback:1.4.9'
+//    compile 'com.baijia.player:videoplayer:1.7.0'
+    //百家云点播和回放2.0版本
+    compile'com.baijia.player:VideoplayerCore:2.0.2-alpha'
     //    compile 'com.github.markzhai:blockcanary-android:1.5.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
