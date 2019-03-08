@@ -10,11 +10,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.baijiahulian.common.networkv2.HttpException;
-import com.baijiahulian.player.BJPlayerView;
-import com.baijiahulian.player.OnPlayerViewListener;
-import com.baijiahulian.player.bean.SectionItem;
-import com.baijiahulian.player.bean.VideoItem;
-import com.baijiahulian.player.playerview.BJCenterViewPresenter;
+
+import com.baijiayun.videoplayer.bean.SectionItem;
+import com.baijiayun.videoplayer.bean.VideoItem;
 import com.huatu.teacheronline.BaseActivity;
 import com.huatu.teacheronline.CustomApplication;
 import com.huatu.teacheronline.R;
@@ -45,7 +43,7 @@ public class InterviewCommentVideoActivity extends BaseActivity {
     private long videoId;
     private String token;
     private boolean immersive;
-    private BJPlayerView mPlayerView;
+//    private BJPlayerView mPlayerView;
 
     public final static String KEY_PROGRESS = "key_progress";
     public final static int CODE_REQUEST = 0xf0;
@@ -103,81 +101,81 @@ public class InterviewCommentVideoActivity extends BaseActivity {
         mIvScreen.setImageResource(R.drawable.ic_fullsc_land);
 
 
-        mPlayerView = new BJPlayerView(this);
-        mPlayerView.removeView(mPlayerView.getTopView());
-        mPlayerView.removeView(mPlayerView.getBottomView());
-        mPlayerView.removeView(mPlayerView.getCenterView());
-
-        mPlayerView.setBottomPresenter(new BjyBottomViewPresenter(mFraComentBottom, null));
-        mPlayerView.setCenterPresenter(new BJCenterViewPresenter(mfraCenter));
-        mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
-        mPlayerView.setMemoryPlayEnable(true);
-        mPlayerView.setOnPlayerViewListener(new OnPlayerViewListener() {
-            @Override
-            public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException e) {
-
-            }
-
-            @Override
-            public void onPause(BJPlayerView bjPlayerView) {
-
-            }
-
-            @Override
-            public void onPlay(BJPlayerView bjPlayerView) {
-
-            }
-
-            @Override
-            public void onError(BJPlayerView bjPlayerView, int i) {
-
-            }
-
-            @Override
-            public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
-                mUpdatePosition = i;
-            }
-
-            @Override
-            public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
-
-            }
-
-            @Override
-            public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
-
-            }
-
-            @Override
-            public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
-
-            }
-
-            @Override
-            public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem sectionItem) {
-
-            }
-
-            @Override
-            public void onVideoPrepared(BJPlayerView bjPlayerView) {
-
-            }
-
-            @Override
-            public void onCaton(BJPlayerView bjPlayerView) {
-
-            }
-
-            @Override
-            public String getVideoTokenWhenInvalid() {
-                return null;
-            }
-        });
-
-        mFraContainer.addView(mPlayerView, 0);
-
-        changeBarStatus();
-        mPlayerView.setVideoId(videoId, token);
+//        mPlayerView = new BJPlayerView(this);
+//        mPlayerView.removeView(mPlayerView.getTopView());
+//        mPlayerView.removeView(mPlayerView.getBottomView());
+//        mPlayerView.removeView(mPlayerView.getCenterView());
+//
+//        mPlayerView.setBottomPresenter(new BjyBottomViewPresenter(mFraComentBottom, null));
+//        mPlayerView.setCenterPresenter(new BJCenterViewPresenter(mfraCenter));
+//        mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
+//        mPlayerView.setMemoryPlayEnable(true);
+//        mPlayerView.setOnPlayerViewListener(new OnPlayerViewListener() {
+//            @Override
+//            public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException e) {
+//
+//            }
+//
+//            @Override
+//            public void onPause(BJPlayerView bjPlayerView) {
+//
+//            }
+//
+//            @Override
+//            public void onPlay(BJPlayerView bjPlayerView) {
+//
+//            }
+//
+//            @Override
+//            public void onError(BJPlayerView bjPlayerView, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
+//                mUpdatePosition = i;
+//            }
+//
+//            @Override
+//            public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
+//
+//            }
+//
+//            @Override
+//            public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem sectionItem) {
+//
+//            }
+//
+//            @Override
+//            public void onVideoPrepared(BJPlayerView bjPlayerView) {
+//
+//            }
+//
+//            @Override
+//            public void onCaton(BJPlayerView bjPlayerView) {
+//
+//            }
+//
+//            @Override
+//            public String getVideoTokenWhenInvalid() {
+//                return null;
+//            }
+//        });
+//
+//        mFraContainer.addView(mPlayerView, 0);
+//
+//        changeBarStatus();
+//        mPlayerView.setVideoId(videoId, token);
 
     }
 
@@ -192,14 +190,14 @@ public class InterviewCommentVideoActivity extends BaseActivity {
     protected void onStop() {
         super.onStop();
 
-        mPlayerView.pauseVideo();
+//        mPlayerView.pauseVideo();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        mPlayerView.playVideo(0);
+//        mPlayerView.playVideo(0);
     }
 
     @Override

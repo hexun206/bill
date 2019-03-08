@@ -1,5 +1,6 @@
 package com.huatu.teacheronline.direct;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -29,16 +30,12 @@ import com.artifex.mupdflib.MuPDFCore;
 import com.artifex.mupdflib.MuPDFPageAdapter;
 import com.artifex.mupdflib.MuPDFReaderView;
 import com.baijiahulian.common.networkv2.HttpException;
-import com.baijiahulian.player.BJPlayerView;
-import com.baijiahulian.player.OnPlayerViewListener;
-import com.baijiahulian.player.bean.SectionItem;
-import com.baijiahulian.player.bean.VideoItem;
-import com.baijiahulian.player.playerview.BJCenterViewPresenter;
+import com.baijiayun.videoplayer.bean.SectionItem;
+import com.baijiayun.videoplayer.bean.VideoItem;
 import com.gensee.utils.StringUtil;
 import com.greendao.DaoUtils;
 import com.greendao.DirectBean;
 import com.huatu.teacheronline.BaseActivity;
-import com.huatu.teacheronline.CustomApplication;
 import com.huatu.teacheronline.R;
 import com.huatu.teacheronline.direct.adapter.DirectClassPdfAdapter;
 import com.huatu.teacheronline.direct.adapter.DirectClassScheduleCustomAdapter;
@@ -75,8 +72,8 @@ import cn.xiaoneng.uiapi.Ntalker;
  * 面试视频详情页 百家云播放页面
  * Created by zhxm on 2016/1/11.
  */
-public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements OnPlayerViewListener, FilePicker.FilePickerSupport {
-
+public class DirectPlayDetailsActivityForBjysdk extends BaseActivity  {
+//implements OnPlayerViewListener, FilePicker.FilePickerSupport
     private RelativeLayout rl_main_left_player;
     private String settingid1 = "kf_10092_1513839603881";
     private RadioButton tv_detail_intro, tv_detail_text, tv_detail_plan, tv_chanjian;
@@ -152,9 +149,10 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
     private ChooseSpeedPopwindows chooseSpeedPopwindows;
     private int speedType = 0;
     private DirectBean playdirectBean;//播放中的课程
-    private BJPlayerView player;//百家云播放器
+//    private BJPlayerView player;//百家云播放器
     private BjyBottomViewPresenter mBjyBottomViewPresenter;//底部自定义
 
+    @SuppressLint("InvalidWakeLockTag")
     @Override
     public void initView() {
         setContentView(R.layout.activity_direct_playbjy_detail);
@@ -183,15 +181,15 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
         wherefrom = getIntent().getIntExtra("wherefrom", 0);
         uid = CommonUtils.getSharedPreferenceItem(null, UserInfo.KEY_SP_USERID, "");
         mCustomLoadingDialog = new CustomAlertDialog(DirectPlayDetailsActivityForBjysdk.this, R.layout.dialog_loading_custom);
-        player = (BJPlayerView) findViewById(R.id.videoView);
-        //以下三个方法分别设置底部、顶部和中部界面
-        mBjyBottomViewPresenter = new BjyBottomViewPresenter(player.getBottomView(), this);
-        player.setBottomPresenter(mBjyBottomViewPresenter);
-//        player.setBottomPresenter(new BJBottomViewPresenter(player.getBottomView()));
-        player.setCenterPresenter(new BJCenterViewPresenter(player.getCenterView()));
-        //初始化partnerId，第一个参数换成您的partnerId
-        //        player.initPartner(123456L, BJPlayerView.PLAYER_DEPLOY_ONLINE);
-        player.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
+//        player = (BJPlayerView) findViewById(R.id.videoView);
+//        //以下三个方法分别设置底部、顶部和中部界面
+//        mBjyBottomViewPresenter = new BjyBottomViewPresenter(player.getBottomView(), this);
+//        player.setBottomPresenter(mBjyBottomViewPresenter);
+////        player.setBottomPresenter(new BJBottomViewPresenter(player.getBottomView()));
+//        player.setCenterPresenter(new BJCenterViewPresenter(player.getCenterView()));
+//        //初始化partnerId，第一个参数换成您的partnerId
+//        //        player.initPartner(123456L, BJPlayerView.PLAYER_DEPLOY_ONLINE);
+//        player.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
         getplayrecord = CommonUtils.getSharedPreferenceItem(null, directBean.getRid(), "");
         rl_main_left_player = (RelativeLayout) findViewById(R.id.rl_main_left_player);
         rl_main_left_pdf = (RelativeLayout) findViewById(R.id.rl_main_left_pdf);
@@ -259,9 +257,9 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
         this.playdirectBean = directBean;
         //评价弹窗
         if (directBean.getIs_last() != null && directBean.getIs_last()) {
-            if (player.isPlaying()) {
-                player.pause();
-            }
+//            if (player.isPlaying()) {
+//                player.pause();
+//            }
             DebugUtil.e("initPlayInfo :" + playdirectBean.toString());
             AppraiseAlertDialog appraiseAlertDialog = new AppraiseAlertDialog(this, directBean);
             appraiseAlertDialog.show();
@@ -286,10 +284,10 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
                 String localpath = directBean.getLocalPath();
                 File file = new File(localpath);
                 if (file.exists()) {
-                    player.setOnPlayerViewListener(this);
-                    player.setVideoRate(10);
-                    player.setVideoPath(localpath);
-                    player.playVideo(0);
+//                    player.setOnPlayerViewListener(this);
+//                    player.setVideoRate(10);
+//                    player.setVideoPath(localpath);
+//                    player.playVideo(0);
                 } else {
                     ToastUtils.showToast(localpath + "不存在该视频");
                 }
@@ -298,11 +296,11 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
 //                //播放网络的
                 //第一个参数为百家云后台配置的视频id，第二个参数为视频token
                 if (!StringUtil.isEmpty(directBean.getBjyvideoid()) && !StringUtil.isEmpty(directBean.getBjytoken())) {
-                    player.setVideoId(Long.parseLong(directBean.getBjyvideoid()), directBean.getBjytoken());
-                    player.setVideoRate(10);
-                    //播放
-                    player.playVideo(0);
-                    player.setOnPlayerViewListener(this);
+//                    player.setVideoId(Long.parseLong(directBean.getBjyvideoid()), directBean.getBjytoken());
+//                    player.setVideoRate(10);
+//                    //播放
+//                    player.playVideo(0);
+//                    player.setOnPlayerViewListener(this);
                 }else {
                     ToastUtils.showToast("参数错误");
                 }
@@ -466,36 +464,36 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 mBjyBottomViewPresenter.setVideoSpeedText(getString(R.string.speed_original));
-                if (player != null) {
-                    player.setVideoRate(10);
-                }
+//                if (player != null) {
+//                    player.setVideoRate(10);
+//                }
                 break;
             case R.id.tv_speed_quick1:
                 speedType = 1;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 mBjyBottomViewPresenter.setVideoSpeedText(getString(R.string.speed_quick1));
-                if (player != null){
-                    player.setVideoRate(12);
-                }
+//                if (player != null){
+//                    player.setVideoRate(12);
+//                }
                 break;
             case R.id.tv_speed_quick2:
                 speedType = 2;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 mBjyBottomViewPresenter.setVideoSpeedText(getString(R.string.speed_quick2));
-                if (player != null){
-                    player.setVideoRate(15);
-                }
+//                if (player != null){
+//                    player.setVideoRate(15);
+//                }
                 break;
             case R.id.tv_speed_quick3:
                 speedType = 3;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 mBjyBottomViewPresenter.setVideoSpeedText(getString(R.string.speed_quick3));
-                if (player != null){
-                    player.setVideoRate(20);
-                }
+//                if (player != null){
+//                    player.setVideoRate(20);
+//                }
                 break;
 
         }
@@ -577,37 +575,37 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
         webView.loadDataWithBaseURL(null, webData, "text/html", "UTF-8", null);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (player != null) {
-            player.onResume();
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (player != null) {
-            player.onPause();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (player != null) {
-            player.onDestroy();
-        }
-    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        if (player != null) {
+//            player.onResume();
+//        }
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        if (player != null) {
+//            player.onPause();
+//        }
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (player != null) {
+//            player.onDestroy();
+//        }
+//    }
 
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        if (player != null) {
-            player.onConfigurationChanged(newConfig);
-        }
+//        if (player != null) {
+//            player.onConfigurationChanged(newConfig);
+//        }
         if (newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE || newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_USER) {
             //全面屏
             isFullScreen = true;
@@ -630,9 +628,9 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
 
     @Override
     public void onBackPressed() {
-        if (!player.onBackPressed()) {
-            super.onBackPressed();
-        }
+//        if (!player.onBackPressed()) {
+//            super.onBackPressed();
+//        }
     }
 
     @Override
@@ -680,85 +678,85 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
         SendRequest.getLiveDataForClassSchedule(directBean.getRid(), uid, obtatinDataListener);
     }
 
-    @Override
-    public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException exception) {
-        DebugUtil.e(TAG, "onVideoInfoInitialized:");
-        //TODO: 视频信息初始化结束
-        if (exception != null) {
-            // 视频信息初始化成功
-            VideoItem videoItem = player.getVideoItem();
-        }
-    }
-
-    @Override
-    public void onPause(BJPlayerView bjPlayerView) {
-        //TODO: video暂停
-        DebugUtil.e(TAG, "onPause:");
-    }
-
-    @Override
-    public void onPlay(BJPlayerView bjPlayerView) {
-        //TODO: 开始播放
-        DebugUtil.e(TAG, "onPlay:");
-    }
-
-    @Override
-    public void onError(BJPlayerView bjPlayerView, int i) {
-        //TODO: 播放出错
-        DebugUtil.e(TAG, "onError:" + " onError:" + i);
-    }
-
-    @Override
-    public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
-        //TODO: 播放过程中更新播放位置
-        DebugUtil.e(TAG, "onUpdatePosition:" + i);
-    }
-
-    @Override
-    public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
-        //TODO: 拖动进度条
-        DebugUtil.e(TAG, "onSeekComplete:" + i);
-    }
-
-    @Override
-    public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
-        //TODO: 设置倍速播放
-        DebugUtil.e(TAG, "onSpeedUp:" + v);
-    }
-
-    @Override
-    public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
-        //TODO: 设置清晰度完成
-        DebugUtil.e(TAG, "onVideoDefinition:" + i);
-    }
-
-    @Override
-    public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem nextSection) {
-        //TODO: 当前视频播放完成 [nextSection已被废弃，请勿使用]
-        DebugUtil.e(TAG, "onPlayCompleted:" + videoItem.videoId);
-    }
-
-    @Override
-    public void onVideoPrepared(BJPlayerView bjPlayerView) {
-        DebugUtil.e(TAG, "onVideoPrepared" + bjPlayerView.getVideoItem().videoId);
-        //TODO: 准备好了，马上要播放
-        // 可以在这时获取视频时长
-        player.getDuration();
-    }
-
-    @Override
-    public void onCaton(BJPlayerView bjPlayerView) {
-
-    }
-
-    @Override
-    public String getVideoTokenWhenInvalid() {
-        return null;
-    }
-
-    @Override
-    public void performPickFor(FilePicker picker) {
-    }
+//    @Override
+//    public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException exception) {
+//        DebugUtil.e(TAG, "onVideoInfoInitialized:");
+//        //TODO: 视频信息初始化结束
+//        if (exception != null) {
+//            // 视频信息初始化成功
+//            VideoItem videoItem = player.getVideoItem();
+//        }
+//    }
+//
+//    @Override
+//    public void onPause(BJPlayerView bjPlayerView) {
+//        //TODO: video暂停
+//        DebugUtil.e(TAG, "onPause:");
+//    }
+//
+//    @Override
+//    public void onPlay(BJPlayerView bjPlayerView) {
+//        //TODO: 开始播放
+//        DebugUtil.e(TAG, "onPlay:");
+//    }
+//
+//    @Override
+//    public void onError(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 播放出错
+//        DebugUtil.e(TAG, "onError:" + " onError:" + i);
+//    }
+//
+//    @Override
+//    public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 播放过程中更新播放位置
+//        DebugUtil.e(TAG, "onUpdatePosition:" + i);
+//    }
+//
+//    @Override
+//    public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 拖动进度条
+//        DebugUtil.e(TAG, "onSeekComplete:" + i);
+//    }
+//
+//    @Override
+//    public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
+//        //TODO: 设置倍速播放
+//        DebugUtil.e(TAG, "onSpeedUp:" + v);
+//    }
+//
+//    @Override
+//    public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 设置清晰度完成
+//        DebugUtil.e(TAG, "onVideoDefinition:" + i);
+//    }
+//
+//    @Override
+//    public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem nextSection) {
+//        //TODO: 当前视频播放完成 [nextSection已被废弃，请勿使用]
+//        DebugUtil.e(TAG, "onPlayCompleted:" + videoItem.videoId);
+//    }
+//
+//    @Override
+//    public void onVideoPrepared(BJPlayerView bjPlayerView) {
+//        DebugUtil.e(TAG, "onVideoPrepared" + bjPlayerView.getVideoItem().videoId);
+//        //TODO: 准备好了，马上要播放
+//        // 可以在这时获取视频时长
+//        player.getDuration();
+//    }
+//
+//    @Override
+//    public void onCaton(BJPlayerView bjPlayerView) {
+//
+//    }
+//
+//    @Override
+//    public String getVideoTokenWhenInvalid() {
+//        return null;
+//    }
+//
+//    @Override
+//    public void performPickFor(FilePicker picker) {
+//    }
 
     private static class ObtatinDataListener extends ObtainDataFromNetListener<ArrayList<DirectBean>, String> {
         private WeakReference<DirectPlayDetailsActivityForBjysdk> weak_activity;
@@ -1105,7 +1103,7 @@ public class DirectPlayDetailsActivityForBjysdk extends BaseActivity implements 
             }
 
         };
-        mDocView.setAdapter(new MuPDFPageAdapter(DirectPlayDetailsActivityForBjysdk.this, this, core));
+//        mDocView.setAdapter(new MuPDFPageAdapter(DirectPlayDetailsActivityForBjysdk.this, this, core));
         mDocView.setKeepScreenOn(true);
         mDocView.setLinksHighlighted(false);
         mDocView.setScrollingDirectionHorizontal(true);

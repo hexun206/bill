@@ -14,7 +14,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.baijiahulian.BJVideoPlayerSDK;
 import com.baijiayun.download.DownloadTask;
 import com.baijiayun.download.constant.TaskStatus;
 import com.gensee.utils.StringUtil;
@@ -579,7 +578,7 @@ public class DownManageActivity extends BaseActivity implements View.OnClickList
                 exist = true;
 
                 if (directBean.getVideoType() == 0) {
-                    String fileName = task.getFileName();
+                    String fileName = task.getVideoFileName();
                     directBean.setDown_status(DownManageActivity.CCDOWNSTATE_COMPLETE + "");
                     DebugUtil.e(TAG, "bjyDOWNSTATE_COMPLETE" + directBean.toString());
                     directBean.setLocalPath(FileUtils.getBjyVideoDiskCacheDir() + fileName);
@@ -923,7 +922,7 @@ public class DownManageActivity extends BaseActivity implements View.OnClickList
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        BJVideoPlayerSDK.getInstance().releaseDownloadClient();
+//        BJVideoPlayerSDK.getInstance().releaseDownloadClient();
         if (downLoaded != null) {
             for (DirectBean directBean : downLoaded) {
                 directBean.setIsCheck(false);

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bjplayer_error_tips">
+        <item>本视频格式不支持</item>
+        <item>打开媒体成功</item>
+        <item>打开媒体失败</item>
+        <item>seek成功</item>
+        <item>seek失败</item>
+        <item>开始播放之前缓冲百分比</item>
+        <item>配置信息获取成功</item>
+        <item>开始播放</item>
+        <item>播出结束</item>
+        <item>整个视频长度ms</item>
+        <item>当前播放长度ms</item>
+        <item>播放时预加载数据信息</item>
+        <item>整个视频大小 </item>
+        <item>没有网络连接</item>
+        <item>请求hot_vrs失败重试3边后,提示用户</item>
+        <item>网络播放文件解析不正确</item>
+        <item>播放时网络请求超时</item>
+        <item>播放时网络断开</item>
+        <item>预加载结束</item>
+        <item>因为网速原因,暂停播放,开始缓冲</item>
+        <item>中间缓冲,开始播放</item>
+        <item>当前播放piece</item>
+        <item>不支持显示 </item>
+        <item>下载视频加速</item>
+        <item>改变视频清晰度</item>
+        <item>moov在文件末尾</item>
+    </string-array>
+    <color name="bjplayer_color_3_quater_black">#BF000000</color>
+    <color name="bjplayer_color_ad_blue">#F237A4F5</color>
+    <color name="bjplayer_color_primary">#ff9900</color>
+    <color name="bjplayer_controller_bg">#66000000</color>
+    <color name="bjplayer_controller_bg_99">#99000000</color>
+    <declare-styleable name="BJPlayerView">
+        <attr format="reference" name="top_controller"/>
+        <attr format="reference" name="center_controller"/>
+        <attr format="reference" name="bottom_controller"/>
+
+        <attr format="enum" name="bjplayer_type">
+            <enum name="ijk_surface_view" value="2"/>
+            <enum name="ijk_texture_view" value="3"/>
+        </attr>
+   </declare-styleable>
+    <declare-styleable name="BJVideoView">
+        <attr format="enum" name="aspect_ratio">
+            <enum name="fit_parent" value="0"/>
+            <enum name="fill_parent" value="1"/>
+            <enum name="wrap_content" value="2"/>
+            <enum name="match_parent" value="3"/>
+            <enum name="fit_parent_16_9" value="4"/>
+            <enum name="fit_parent_4_3" value="5"/>
+        </attr>
+
+        <attr format="enum" name="player_type">
+            <enum name="android" value="1"/>
+            <enum name="ijk_surface_view" value="2"/>
+            <enum name="ijk_texture_view" value="3"/>
+        </attr>
+
+        <attr format="boolean" name="auto_play"/>
+    </declare-styleable>
+    <item name="water_mark_iv_id" type="id"/>
+    <string name="app_name">videoplayer-sdk</string>
+    <string name="bjplayer_error_unknow">视频播放失败, 请重试</string>
+    <string name="bjplayer_network_error">网络问题，请刷新重试!</string>
+    <string name="bjplayer_play_loading">正在加载视频...</string>
+    <string name="bjplayer_play_no_wifi">您正在使用非WiFi网络\n播放将产生流量费</string>
+    <string name="bjplayer_video_frame_1080p">1080p</string>
+    <string name="bjplayer_video_frame_720p">720p</string>
+    <string name="bjplayer_video_frame_audio">音频</string>
+    <string name="bjplayer_video_frame_high">高清</string>
+    <string name="bjplayer_video_frame_low">标清</string>
+    <string name="bjplayer_video_frame_super">超清</string>
+    <string name="bjplayer_video_functions_frame_normal">标清</string>
+    <string name="bjplayer_video_functions_rate">倍速</string>
+    <string name="bjplayer_video_functions_segments">选集</string>
+    <string name="bjplayer_video_goon">继续播放</string>
+    <string name="bjplayer_video_info_init">正在初始化视频信息...</string>
+    <string name="bjplayer_video_info_init_failed">视频信息加载失败，请重试!</string>
+    <string name="bjplayer_video_player_error_no_network">网络未连接，请检查网络设置</string>
+    <string name="bjplayer_video_rate_0_7">0.7x</string>
+    <string name="bjplayer_video_rate_1">1x</string>
+    <string name="bjplayer_video_rate_1_2">1.2x</string>
+    <string name="bjplayer_video_rate_1_5">1.5x</string>
+    <string name="bjplayer_video_rate_2">2x</string>
+    <string name="bjplayer_video_reload">重新加载</string>
+    <string name="video_data_loading">视频正在缓冲中</string>
+    <style name="bjplayer_SeekBarTheme">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:progressDrawable">
+            @drawable/bjplayer_progressbar
+        </item>
+        <item name="android:thumb">@drawable/bjplayer_ic_circles</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">5dip</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+    </style>
+    <style name="bjplayer_image">
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <style name="bjplayer_progressbar" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorPrimary">@color/bjplayer_color_primary</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:maxWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+    <style name="bjplayer_text_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="bjplayer_text_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="bjplayer_text_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="bjplayer_text_super_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

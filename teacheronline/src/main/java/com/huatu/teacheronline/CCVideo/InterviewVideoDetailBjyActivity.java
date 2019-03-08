@@ -1,5 +1,6 @@
 package com.huatu.teacheronline.CCVideo;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -16,11 +17,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.baijiahulian.common.networkv2.HttpException;
-import com.baijiahulian.player.BJPlayerView;
-import com.baijiahulian.player.OnPlayerViewListener;
-import com.baijiahulian.player.bean.SectionItem;
-import com.baijiahulian.player.bean.VideoItem;
-import com.baijiahulian.player.playerview.BJCenterViewPresenter;
+import com.baijiayun.videoplayer.bean.SectionItem;
+import com.baijiayun.videoplayer.bean.VideoItem;
 import com.huatu.teacheronline.BaseActivity;
 import com.huatu.teacheronline.CustomApplication;
 import com.huatu.teacheronline.R;
@@ -40,7 +38,7 @@ import java.lang.ref.WeakReference;
  * Created by zhxm on 2016/1/11.
  * 面试视频详情页
  */
-public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnPlayerViewListener {
+public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements OnPlayerViewListener
 
     private static final String TAG = "InterviewVideoDetailBjyActivity";
     private RelativeLayout rl_main_left;
@@ -53,7 +51,7 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
     private final static String CLASS_LABEL = "InterviewVideoDetailActivity";
     private PowerManager.WakeLock mWakeLock;// 禁止锁屏
     private ObtainDataListerForLoadingVideoDetailInfo obtainDataListerForLoadingVideoDetailInfo;
-    private BJPlayerView player;
+//    private BJPlayerView player;
     private LinearLayout topbar;
     //    private ImageView ib_main_right_player;
 //    private RelativeLayout rl_main_left_player;
@@ -73,6 +71,7 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
 
     private ImageView img_bottom_screen;
 
+    @SuppressLint("InvalidWakeLockTag")
     @Override
     public void initView() {
         setContentView(R.layout.activity_interview_video_detail_bjy);
@@ -108,15 +107,15 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
         loadData();
 //        ib_main_right_player.setVisibility(View.GONE);
 //        rl_main_left_player.setVisibility(View.GONE);
-        player = (BJPlayerView) findViewById(R.id.videoView);
-        //以下三个方法分别设置底部、顶部和中部界面
-        mBjyBottomViewPresenter = new BjyBottomViewPresenter(player.getBottomView(), this);
-        player.setBottomPresenter(mBjyBottomViewPresenter);
-        bjyTopViewPresenter = new BjyTopViewPresenter(player.getTopView());
-        player.setTopPresenter(bjyTopViewPresenter);
-        player.setCenterPresenter(new BJCenterViewPresenter(player.getCenterView()));
-        //初始化partnerId，第一个参数换成您的partnerId
-        player.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
+//        player = (BJPlayerView) findViewById(R.id.videoView);
+//        //以下三个方法分别设置底部、顶部和中部界面
+//        mBjyBottomViewPresenter = new BjyBottomViewPresenter(player.getBottomView(), this);
+//        player.setBottomPresenter(mBjyBottomViewPresenter);
+//        bjyTopViewPresenter = new BjyTopViewPresenter(player.getTopView());
+//        player.setTopPresenter(bjyTopViewPresenter);
+//        player.setCenterPresenter(new BJCenterViewPresenter(player.getCenterView()));
+//        //初始化partnerId，第一个参数换成您的partnerId
+//        player.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
         chooseSpeedPopwindows = new ChooseSpeedPopwindows(this);
 
         img_bottom_screen = (ImageView) findViewById(R.id.iv_screen);
@@ -129,81 +128,81 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
         SendRequest.getInterviewVideoDetail(currentVideoId, obtainDataListerForLoadingVideoDetailInfo);
     }
 
-    @Override
-    public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException exception) {
-        DebugUtil.e(TAG, "onVideoInfoInitialized:");
-        //TODO: 视频信息初始化结束
-        if (exception != null) {
-            // 视频信息初始化成功
-            VideoItem videoItem = player.getVideoItem();
-        }
-    }
-
-    @Override
-    public void onPause(BJPlayerView bjPlayerView) {
-        //TODO: video暂停
-        DebugUtil.e(TAG, "onPause:");
-    }
-
-    @Override
-    public void onPlay(BJPlayerView bjPlayerView) {
-        //TODO: 开始播放
-        DebugUtil.e(TAG, "onPlay:");
-    }
-
-    @Override
-    public void onError(BJPlayerView bjPlayerView, int i) {
-        //TODO: 播放出错
-        DebugUtil.e(TAG, "onError:" + " onError:" + i);
-    }
-
-    @Override
-    public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
-        //TODO: 播放过程中更新播放位置
-        DebugUtil.e(TAG, "onUpdatePosition:" + i);
-    }
-
-    @Override
-    public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
-        //TODO: 拖动进度条
-        DebugUtil.e(TAG, "onSeekComplete:" + i);
-    }
-
-    @Override
-    public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
-        //TODO: 设置倍速播放
-        DebugUtil.e(TAG, "onSpeedUp:" + v);
-    }
-
-    @Override
-    public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
-        //TODO: 设置清晰度完成
-        DebugUtil.e(TAG, "onVideoDefinition:" + i);
-    }
-
-    @Override
-    public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem nextSection) {
-        //TODO: 当前视频播放完成 [nextSection已被废弃，请勿使用]
-        DebugUtil.e(TAG, "onPlayCompleted:" + videoItem.videoId);
-    }
-
-    @Override
-    public void onVideoPrepared(BJPlayerView bjPlayerView) {
-        DebugUtil.e(TAG, "onVideoPrepared" + bjPlayerView.getVideoItem().videoId);
-        //TODO: 准备好了，马上要播放
-        // 可以在这时获取视频时长
-        player.getDuration();
-    }
-
-    @Override
-    public void onCaton(BJPlayerView bjPlayerView) {
-
-    }
-
-    @Override
-    public String getVideoTokenWhenInvalid() {
-        return null;
-    }
+//    @Override
+//    public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException exception) {
+//        DebugUtil.e(TAG, "onVideoInfoInitialized:");
+//        //TODO: 视频信息初始化结束
+//        if (exception != null) {
+//            // 视频信息初始化成功
+//            VideoItem videoItem = player.getVideoItem();
+//        }
+//    }
+//
+//    @Override
+//    public void onPause(BJPlayerView bjPlayerView) {
+//        //TODO: video暂停
+//        DebugUtil.e(TAG, "onPause:");
+//    }
+//
+//    @Override
+//    public void onPlay(BJPlayerView bjPlayerView) {
+//        //TODO: 开始播放
+//        DebugUtil.e(TAG, "onPlay:");
+//    }
+//
+//    @Override
+//    public void onError(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 播放出错
+//        DebugUtil.e(TAG, "onError:" + " onError:" + i);
+//    }
+//
+//    @Override
+//    public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 播放过程中更新播放位置
+//        DebugUtil.e(TAG, "onUpdatePosition:" + i);
+//    }
+//
+//    @Override
+//    public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 拖动进度条
+//        DebugUtil.e(TAG, "onSeekComplete:" + i);
+//    }
+//
+//    @Override
+//    public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
+//        //TODO: 设置倍速播放
+//        DebugUtil.e(TAG, "onSpeedUp:" + v);
+//    }
+//
+//    @Override
+//    public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
+//        //TODO: 设置清晰度完成
+//        DebugUtil.e(TAG, "onVideoDefinition:" + i);
+//    }
+//
+//    @Override
+//    public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem nextSection) {
+//        //TODO: 当前视频播放完成 [nextSection已被废弃，请勿使用]
+//        DebugUtil.e(TAG, "onPlayCompleted:" + videoItem.videoId);
+//    }
+//
+//    @Override
+//    public void onVideoPrepared(BJPlayerView bjPlayerView) {
+//        DebugUtil.e(TAG, "onVideoPrepared" + bjPlayerView.getVideoItem().videoId);
+//        //TODO: 准备好了，马上要播放
+//        // 可以在这时获取视频时长
+//        player.getDuration();
+//    }
+//
+//    @Override
+//    public void onCaton(BJPlayerView bjPlayerView) {
+//
+//    }
+//
+//    @Override
+//    public String getVideoTokenWhenInvalid() {
+//        return null;
+//    }
 
     private static class ObtainDataListerForLoadingVideoDetailInfo extends ObtainDataFromNetListener<InterviewVideoBean, String> {
 
@@ -265,11 +264,11 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
     private void initPlayInfo() {
         try {
             //第一个参数为百家云后台配置的视频id，第二个参数为视频token
-            player.setVideoId(Long.parseLong(bjyid), token);
-            DebugUtil.e(TAG, "initPlayInfo: " + bjyid + "  token" + token);
-            //播放
-            player.playVideo(0);
-            player.setOnPlayerViewListener(this);
+//            player.setVideoId(Long.parseLong(bjyid), token);
+//            DebugUtil.e(TAG, "initPlayInfo: " + bjyid + "  token" + token);
+//            //播放
+//            player.playVideo(0);
+//            player.setOnPlayerViewListener(this);
         } catch (IllegalArgumentException e) {
             DebugUtil.e("player error", e.getMessage());
         } catch (IllegalStateException e) {
@@ -334,36 +333,36 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_original));
-                if (player != null) {
-                    player.setVideoRate(10);
-                }
+//                if (player != null) {
+//                    player.setVideoRate(10);
+//                }
                 break;
             case R.id.tv_speed_quick1:
                 speedType = 1;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick1));
-                if (player != null) {
-                    player.setVideoRate(12);
-                }
+//                if (player != null) {
+//                    player.setVideoRate(12);
+//                }
                 break;
             case R.id.tv_speed_quick2:
                 speedType = 2;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick2));
-                if (player != null) {
-                    player.setVideoRate(15);
-                }
+//                if (player != null) {
+//                    player.setVideoRate(15);
+//                }
                 break;
             case R.id.tv_speed_quick3:
                 speedType = 3;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick3));
-                if (player != null) {
-                    player.setVideoRate(20);
-                }
+//                if (player != null) {
+//                    player.setVideoRate(20);
+//                }
                 break;
         }
     }
@@ -407,33 +406,33 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
     @Override
     protected void onResume() {
         super.onResume();
-        if (player != null) {
-            player.onResume();
-        }
+//        if (player != null) {
+//            player.onResume();
+//        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (player != null) {
-            player.onPause();
-        }
+//        if (player != null) {
+//            player.onPause();
+//        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (player != null) {
-            player.onDestroy();
-        }
+//        if (player != null) {
+//            player.onDestroy();
+//        }
     }
 
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        if (player != null) {
-            player.onConfigurationChanged(newConfig);
-        }
+//        if (player != null) {
+//            player.onConfigurationChanged(newConfig);
+//        }
         if (newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE || newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_USER) {
             img_bottom_screen.setImageResource(R.drawable.ic_fullsc_land);
             // 全屏
@@ -447,7 +446,7 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
                 navigationBarHeight = CommonUtils.getNavigationBarHeight();
             }
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(screenHeight + CommonUtils.getStatusBarHeight() + navigationBarHeight, screenWidth);
-            player.setLayoutParams(params);
+//            player.setLayoutParams(params);
 //            rl_main_left_player.setVisibility(View.VISIBLE);
         } else if (newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
             img_bottom_screen.setImageResource(R.drawable.ic_fullsc);
@@ -456,10 +455,10 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
 //            rl_main_left_player.setVisibility(View.GONE);
             /* 若当下为竖排，则更改为横排呈现 */
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            ViewGroup.LayoutParams lp = player.getLayoutParams();
-            lp.width = rlVideoWidth;
-            lp.height = rlVideoheight;
-            player.setLayoutParams(lp);
+//            ViewGroup.LayoutParams lp = player.getLayoutParams();
+//            lp.width = rlVideoWidth;
+//            lp.height = rlVideoheight;
+//            player.setLayoutParams(lp);
 //            int screenWidth = CommonUtils.getScreenWidth();
 //            int screenHeight = CommonUtils.getScreenHeight();
 //            rl_main_left_player.setVisibility(View.GONE);
@@ -470,9 +469,9 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity implements OnP
 
     @Override
     public void onBackPressed() {
-        if (!player.onBackPressed()) {
-            super.onBackPressed();
-        }
+//        if (!player.onBackPressed()) {
+//            super.onBackPressed();
+//        }
     }
 
     @Override

@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.baijia.player.playback.PBRoom;
 import com.baijiahulian.livecore.context.LPConstants;
-import com.baijiahulian.livecore.models.imodels.IMessageModel;
 import com.baijiahulian.livecore.utils.DisplayUtils;
+import com.baijiayun.playback.PBRoom;
+import com.baijiayun.playback.bean.models.imodels.IMessageModel;
 import com.huatu.teacheronline.R;
 import com.huatu.teacheronline.utils.GsonUtils;
 import com.orhanobut.logger.Logger;
@@ -73,16 +73,16 @@ public class MessageListFragment extends Fragment {
 
 
         mRcvMessage.setAdapter(messageAdapter);
-        mRoom.getChatVM().getObservableOfNotifyDataChange()
-                .onBackpressureBuffer(1000)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<List<IMessageModel>>() {
-                    @Override
-                    public void call(List<IMessageModel> iMessageModels) {
-                        messageAdapter.notifyDataSetChanged();
-                        mRcvMessage.scrollToPosition(messageAdapter.getItemCount()-1);
-                    }
-                });
+//        mRoom.getChatVM().getObservableOfNotifyDataChange()
+//                .onBackpressureBuffer(1000)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Action1<List<IMessageModel>>() {
+//                    @Override
+//                    public void call(List<IMessageModel> iMessageModels) {
+//                        messageAdapter.notifyDataSetChanged();
+//                        mRcvMessage.scrollToPosition(messageAdapter.getItemCount()-1);
+//                    }
+//                });
 
 
     }
@@ -102,27 +102,27 @@ public class MessageListFragment extends Fragment {
             Logger.e("messageModel:"+ GsonUtils.toJson(messageModel));
 
             String time = messageModel.getTimestamp() == null?"":formatData("HH:mm:ss", messageModel.getTimestamp().getTime());
-            boolean isTeacher = messageModel.getFrom().getType() == LPConstants.LPUserType.Teacher;
+//            boolean isTeacher = messageModel.getFrom().getType() == LPConstants.LPUserType.Teacher;
 
             holder.name.setText(messageModel.getFrom().getName());
             holder.time.setText(time);
 //            holder.record.setText(messageModel.getContent());
-            holder.name.setTextColor(isTeacher ? getResources().getColor(R.color.blue005) : getResources().getColor(R.color.black013));
+//            holder.name.setTextColor(isTeacher ? getResources().getColor(R.color.blue005) : getResources().getColor(R.color.black013));
 
-            if (messageModel.getMessageType() == LPConstants.MessageType.Emoji) {
-                holder.img.setVisibility(View.VISIBLE);
-                Picasso.with(getContext()).load(messageModel.getUrl())
-                        .placeholder(R.drawable.live_ic_emoji_holder)
-                        .error(R.drawable.live_ic_emoji_holder)
-                        .resize(emojiSize, emojiSize)
-                        .into(holder.img);
-                holder.record.setVisibility(View.GONE);
-
-            } else {
-                holder.record.setVisibility(View.VISIBLE);
-                holder.img.setVisibility(View.GONE);
-                holder.record.setText(messageModel.getContent());
-            }
+//            if (messageModel.getMessageType() == LPConstants.MessageType.Emoji) {
+//                holder.img.setVisibility(View.VISIBLE);
+//                Picasso.with(getContext()).load(messageModel.getUrl())
+//                        .placeholder(R.drawable.live_ic_emoji_holder)
+//                        .error(R.drawable.live_ic_emoji_holder)
+//                        .resize(emojiSize, emojiSize)
+//                        .into(holder.img);
+//                holder.record.setVisibility(View.GONE);
+//
+//            } else {
+//                holder.record.setVisibility(View.VISIBLE);
+//                holder.img.setVisibility(View.GONE);
+//                holder.record.setText(messageModel.getContent());
+//            }
 
         }
 

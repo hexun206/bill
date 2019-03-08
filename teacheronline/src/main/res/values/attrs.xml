@@ -148,4 +148,5 @@
         <attr name="cover_color" format="color" />
     </declare-styleable>
 
+
 </resources>

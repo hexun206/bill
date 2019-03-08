@@ -11,7 +11,7 @@ import android.support.multidex.MultiDex;
 import android.support.v4.app.NotificationCompat;
 import android.widget.RemoteViews;
 
-import com.baijiahulian.BJVideoPlayerSDK;
+import com.baijiayun.BJYPlayerSDK;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.greendao.DirectBean;
 import com.huatu.teacheronline.alipay.PartnerConfig;
@@ -98,7 +98,12 @@ public class CustomApplication extends Application {
 
 
         //百家云视频播放
-        BJVideoPlayerSDK.getInstance().init(this);
+        new BJYPlayerSDK.Builder(this)
+                .setDevelopMode(true)
+                //如果没有个性域名请注释
+//                .setCustomDomain("teacheronline")
+                .setEncrypt(true)
+                .build();
         FlowManager.init(this);
 //        try {
 //            ApplicationInfo appInfo = getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);

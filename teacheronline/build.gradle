@@ -8,13 +8,13 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-    compileSdkVersion 25
-    buildToolsVersion '28.0.2'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.1'
 
     defaultConfig {
         applicationId "com.huatu.teacheronline"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 45
         versionName "2.3.9"
         // dex突破65535的限制
@@ -28,7 +28,7 @@ android {
 
 
         ndk {
-            abiFilters "armeabi-v7a"
+            abiFilters "armeabi-v7a", 'armeabi'
         }
     }
     signingConfigs {
@@ -70,7 +70,7 @@ android {
         huawei {}
 //        gfan {}
 //        appchina {}
-        anzhi {}
+//        anzhi {}
 //        nduo {}
 //        mumayi {}
 //        eoemarket {}
@@ -124,23 +124,22 @@ android {
 
 
 
-configurations.all {
-    resolutionStrategy.eachDependency { details ->
-        def requested = details.requested
-        if (requested.group == 'com.android.support') {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion '25.3.1'
-            }
-        }
-    }
-}
+//configurations.all {
+//    resolutionStrategy.eachDependency { details ->
+//        def requested = details.requested
+//        if (requested.group == 'com.android.support') {
+//            if (!requested.name.startsWith("multidex")) {
+//                details.useVersion '25.3.1'
+//            }
+//        }
+//    }
+//}
 
 
 
 dependencies {
     implementation 'com.android.support:support-v4:25.4.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:cardview-v7:25.3.1'
@@ -203,7 +202,7 @@ dependencies {
 //    compile 'com.baijia.player:video-playback:1.4.9'
 //    compile 'com.baijia.player:videoplayer:1.7.0'
     //百家云点播和回放2.0版本
-    compile'com.baijia.player:VideoplayerCore:2.0.2-alpha'
+    implementation 'com.baijia.player:VideoplayerUI:2.0.1'
     //    compile 'com.github.markzhai:blockcanary-android:1.5.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
@@ -229,6 +228,7 @@ dependencies {
     implementation 'com.github.dmytrodanylyk.shadow-layout:library:1.0.3'
     implementation project(':library_video_selector')
     implementation project(':library_card_stack')
+    implementation project(':bjyui')
 
     //神策
     implementation 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:3.0.0'

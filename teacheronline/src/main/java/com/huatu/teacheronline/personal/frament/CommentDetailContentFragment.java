@@ -16,11 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.baijiahulian.common.networkv2.HttpException;
-import com.baijiahulian.player.BJPlayerView;
-import com.baijiahulian.player.OnPlayerViewListener;
-import com.baijiahulian.player.bean.SectionItem;
-import com.baijiahulian.player.bean.VideoItem;
-import com.baijiahulian.player.playerview.BJCenterViewPresenter;
+
+import com.baijiayun.videoplayer.bean.SectionItem;
+import com.baijiayun.videoplayer.bean.VideoItem;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterInside;
@@ -109,7 +107,7 @@ public class CommentDetailContentFragment extends Fragment {
     private InterviewCommentsDetail.CommentDetail mInfo;
     private List<Fragment> mFragments;
     private File mTeacherAudio;
-    private BJPlayerView mPlayerView;
+//    private BJPlayerView mPlayerView;
     private boolean immersive = true;
     private int mPosition = -1;
     private boolean needSeek = false;
@@ -341,99 +339,99 @@ public class CommentDetailContentFragment extends Fragment {
         });
 
 
-        mPlayerView = new BJPlayerView(getActivity());
-        mPlayerView.removeView(mPlayerView.getTopView());
-        mPlayerView.removeView(mPlayerView.getBottomView());
-        mPlayerView.removeView(mPlayerView.getCenterView());
+//        mPlayerView = new BJPlayerView(getActivity());
+//        mPlayerView.removeView(mPlayerView.getTopView());
+//        mPlayerView.removeView(mPlayerView.getBottomView());
+//        mPlayerView.removeView(mPlayerView.getCenterView());
+////
 //
-
-
-        mPlayerView.setBottomPresenter(new BjyBottomViewPresenter(mfraBottom, null));
-        mPlayerView.setCenterPresenter(new BJCenterViewPresenter(mfraCenter));
-        mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
-        mPlayerView.setMemoryPlayEnable(true);
-
-
-        fra_container.addView(mPlayerView, 0);
-
-        changeBarStatus();
-
-        if (!StringUtil.isEmpty(mInfo.getBjyvideoid()) && !StringUtil.isEmpty(mInfo.getToken())) {
-            mPlayerView.setVideoId(Long.parseLong(mInfo.getBjyvideoid()), mInfo.getToken());
-        } else {
-            ToastUtils.showToast("视频播放参数错误！");
-
-        }
-        mPlayerView.setOnPlayerViewListener(new OnPlayerViewListener() {
-
-
-            @Override
-            public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException e) {
-
-            }
-
-            @Override
-            public void onPause(BJPlayerView bjPlayerView) {
-            }
-
-            @Override
-            public void onPlay(BJPlayerView bjPlayerView) {
-
-            }
-
-            @Override
-            public void onError(BJPlayerView bjPlayerView, int i) {
-            }
-
-            @Override
-            public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
-                if (needSeek && mPosition != -1) {
-                    mPlayerView.seekVideo(mPosition);
-                    needSeek = false;
-                }
-            }
-
-            @Override
-            public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
-
-            }
-
-            @Override
-            public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
-
-            }
-
-            @Override
-            public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
-
-            }
-
-            @Override
-            public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem sectionItem) {
-
-            }
-
-            @Override
-            public void onVideoPrepared(BJPlayerView bjPlayerView) {
-
+//
+//        mPlayerView.setBottomPresenter(new BjyBottomViewPresenter(mfraBottom, null));
+//        mPlayerView.setCenterPresenter(new BJCenterViewPresenter(mfraCenter));
+//        mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
+//        mPlayerView.setMemoryPlayEnable(true);
+//
+//
+//        fra_container.addView(mPlayerView, 0);
+//
+//        changeBarStatus();
+//
+//        if (!StringUtil.isEmpty(mInfo.getBjyvideoid()) && !StringUtil.isEmpty(mInfo.getToken())) {
+//            mPlayerView.setVideoId(Long.parseLong(mInfo.getBjyvideoid()), mInfo.getToken());
+//        } else {
+//            ToastUtils.showToast("视频播放参数错误！");
+//
+//        }
+//        mPlayerView.setOnPlayerViewListener(new OnPlayerViewListener() {
+//
+//
+//            @Override
+//            public void onVideoInfoInitialized(BJPlayerView bjPlayerView, HttpException e) {
+//
+//            }
+//
+//            @Override
+//            public void onPause(BJPlayerView bjPlayerView) {
+//            }
+//
+//            @Override
+//            public void onPlay(BJPlayerView bjPlayerView) {
+//
+//            }
+//
+//            @Override
+//            public void onError(BJPlayerView bjPlayerView, int i) {
+//            }
+//
+//            @Override
+//            public void onUpdatePosition(BJPlayerView bjPlayerView, int i) {
 //                if (needSeek && mPosition != -1) {
-//                    bjPlayerView.seekVideo(mPosition);
+//                    mPlayerView.seekVideo(mPosition);
 //                    needSeek = false;
 //                }
-
-
-            }
-
-            @Override
-            public void onCaton(BJPlayerView bjPlayerView) {
-
-            }
-
-            @Override
-            public String getVideoTokenWhenInvalid() {
-                return null;
-            }
-        });
+//            }
+//
+//            @Override
+//            public void onSeekComplete(BJPlayerView bjPlayerView, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onSpeedUp(BJPlayerView bjPlayerView, float v) {
+//
+//            }
+//
+//            @Override
+//            public void onVideoDefinition(BJPlayerView bjPlayerView, int i) {
+//
+//            }
+//
+//            @Override
+//            public void onPlayCompleted(BJPlayerView bjPlayerView, VideoItem videoItem, SectionItem sectionItem) {
+//
+//            }
+//
+//            @Override
+//            public void onVideoPrepared(BJPlayerView bjPlayerView) {
+//
+////                if (needSeek && mPosition != -1) {
+////                    bjPlayerView.seekVideo(mPosition);
+////                    needSeek = false;
+////                }
+//
+//
+//            }
+//
+//            @Override
+//            public void onCaton(BJPlayerView bjPlayerView) {
+//
+//            }
+//
+//            @Override
+//            public String getVideoTokenWhenInvalid() {
+//                return null;
+//            }
+//        });
 
 
     }
@@ -503,16 +501,16 @@ public class CommentDetailContentFragment extends Fragment {
     protected void onVisible() {
 
         View firtView = fra_container.getChildAt(0);
-        if (firtView instanceof BJPlayerView) {
-
-        } else {
-            fra_container.addView(mPlayerView, 0);
-
-        }
-
-        if (mPlayerView != null) {
-            mPlayerView.onResume();
-        }
+//        if (firtView instanceof BJPlayerView) {
+//
+//        } else {
+//            fra_container.addView(mPlayerView, 0);
+//
+//        }
+//
+//        if (mPlayerView != null) {
+//            mPlayerView.onResume();
+//        }
 
 
     }
@@ -521,10 +519,10 @@ public class CommentDetailContentFragment extends Fragment {
     public void onResume() {
         super.onResume();
         if (isVisible()) {
-            if (mPlayerView != null) {
-                mPlayerView.onResume();
-
-            }
+//            if (mPlayerView != null) {
+//                mPlayerView.onResume();
+//
+//            }
         }
 
     }
@@ -533,28 +531,28 @@ public class CommentDetailContentFragment extends Fragment {
     public void onPause() {
         super.onPause();
 
-        if (mPlayerView != null) {
-            if (!mDontPauseVideo) {
-                mPlayerView.pauseVideo();
-                mDontPauseVideo = false;
-            }
-            mPlayerView.onPause();
-
-        }
+//        if (mPlayerView != null) {
+//            if (!mDontPauseVideo) {
+//                mPlayerView.pauseVideo();
+//                mDontPauseVideo = false;
+//            }
+//            mPlayerView.onPause();
+//
+//        }
     }
 
     protected void onInvisible() {
         View firtView = fra_container.getChildAt(0);
-        if (firtView instanceof BJPlayerView) {
-            fra_container.removeView(mPlayerView);
-        }
-
-
-        if (mPlayerView != null) {
-            mPlayerView.pauseVideo();
-            mPlayerView.onPause();
-
-        }
+//        if (firtView instanceof BJPlayerView) {
+//            fra_container.removeView(mPlayerView);
+//        }
+//
+//
+//        if (mPlayerView != null) {
+//            mPlayerView.pauseVideo();
+//            mPlayerView.onPause();
+//
+//        }
     }
 
 
@@ -562,9 +560,9 @@ public class CommentDetailContentFragment extends Fragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_comment_detail_play:
-                if (mPlayerView != null) {
-                    mPlayerView.playVideo(0);
-                }
+//                if (mPlayerView != null) {
+//                    mPlayerView.playVideo(0);
+//                }
                 mImgCommentDetailPlay.setVisibility(View.GONE);
                 mImgCommentDetailPreview.setVisibility(View.GONE);
 
