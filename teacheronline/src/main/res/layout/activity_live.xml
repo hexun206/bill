@@ -10,7 +10,7 @@
         android:id="@+id/rl_playlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_heightPercent="61.8%w">
+        >
 
         <Chronometer
             android:id="@+id/play_chronometer"
@@ -33,7 +33,8 @@
             <FrameLayout
                 android:id="@+id/fra_live_ppt"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></FrameLayout>
+                android:layout_height="match_parent"
+                android:visibility="gone"></FrameLayout>
 
 
             <!--<com.baijiahulian.player.BJPlayerView-->
@@ -53,7 +54,8 @@
                 android:id="@+id/ll_live_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
 
             </LinearLayout>
@@ -61,7 +63,8 @@
             <FrameLayout
                 android:id="@+id/fra_live_touch"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:id="@+id/ll_live_center_dialog"
@@ -99,6 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
+                android:visibility="gone"
                 ></include>
 
             <include
@@ -107,6 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 ></include>
 
             <include
@@ -115,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:visibility="gone"
                 ></include>
             <include
 
@@ -124,7 +130,6 @@
                 android:layout_gravity="bottom"
                 android:visibility="gone"
                 ></include>
-
 
         </FrameLayout>
 
@@ -238,59 +243,6 @@
         </com.zhy.android.percent.support.PercentRelativeLayout>
 
     </com.zhy.android.percent.support.PercentRelativeLayout>
-
-    <!--height:30dp-->
-    <!--<com.zhy.android.percent.support.PercentRelativeLayout-->
-    <!--android:id="@+id/rl_tab"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_below="@+id/rl_playlayout"-->
-    <!--android:orientation="horizontal"-->
-    <!--app:layout_heightPercent="8.33%w">-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/tv_hudong"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:text="互动"-->
-    <!--android:textColor="@color/black004"-->
-
-    <!--app:layout_marginLeftPercent="26.38%w"-->
-    <!--app:layout_textSizePercent="3.88%w"/>-->
-
-
-    <!--<TextView-->
-    <!--android:id="@+id/tv_jianjie"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:layout_toRightOf="@+id/tv_kebiao"-->
-    <!--android:text="讲义"-->
-    <!--android:textColor="@color/black004"-->
-    <!--app:layout_marginLeftPercent="12.22%w"-->
-    <!--app:layout_marginRightPercent="26.38%w"-->
-    <!--app:layout_textSizePercent="3.88%w"/>-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/tv_kebiao"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:layout_toRightOf="@+id/tv_hudong"-->
-    <!--android:text="课表"-->
-    <!--android:textColor="@color/black004"-->
-    <!--app:layout_marginLeftPercent="12.22%w"-->
-    <!--app:layout_textSizePercent="3.88%w"/>-->
-
-
-    <!--<View-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="@dimen/width_1"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:background="@color/gray008"/>-->
-
-    <!--</com.zhy.android.percent.support.PercentRelativeLayout>-->
 
     <RadioGroup
         android:id="@+id/rl_tab"
@@ -607,6 +559,5 @@
         </ExpandableListView>
 
     </com.zhy.android.percent.support.PercentLinearLayout>
-
 
 </com.zhy.android.percent.support.PercentRelativeLayout>

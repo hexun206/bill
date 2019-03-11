@@ -1,9 +1,11 @@
 package com.huatu.teacheronline;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -29,6 +31,7 @@ import org.greenrobot.eventbus.ThreadMode;
 public abstract class BaseActivity extends FragmentActivity implements OnClickListener {
     private boolean isShowing;//避免重复弹窗
     public boolean isDestoryed;
+    protected boolean isLandscape;
     /**
      * 使用者定义并使用的广播
      */
@@ -54,6 +57,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnClickLi
     private boolean isNetConnected = true;
     private AlertDialog mLoadingDialog;
 
+    @SuppressLint("WrongConstant")
     @Subscribe
     @Override
     public void onCreate(Bundle arg0) {
@@ -65,6 +69,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnClickLi
         //注册eventBus
         EventBus.getDefault().register(this);
         AppManager.getInstance().addActivity(this);//添加当前Activity到堆栈
+        this.isLandscape = this.getWindowManager().getDefaultDisplay().getRotation() == 1;
     }
 
 
@@ -147,7 +152,28 @@ public abstract class BaseActivity extends FragmentActivity implements OnClickLi
 
         return super.onKeyDown(keyCode, event);
     }
+    @SuppressLint("WrongConstant")
+    public void onBackPressed() {
+        if (this.isLandscape) {
+            this.setRequestedOrientation(1);
+        } else {
+            super.onBackPressed();
+        }
+    }
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == 2) {
+            this.isLandscape = true;
+            this.requestLayout(true);
+        } else {
+            this.isLandscape = false;
+            this.requestLayout(false);
+        }
 
+    }
+
+    protected void requestLayout(boolean isLandscape) {
+    }
     @Override
     protected void onPause() {
         super.onPause();

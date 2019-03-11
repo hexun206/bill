@@ -44,7 +44,7 @@ import com.artifex.mupdflib.FilePicker;
 import com.artifex.mupdflib.MuPDFCore;
 import com.artifex.mupdflib.MuPDFPageAdapter;
 import com.artifex.mupdflib.MuPDFReaderView;
-import com.baijiahulian.common.networkv2.HttpException;
+import com.baijia.baijiashilian.liveplayer.ViESurfaceViewRenderer;
 import com.baijiahulian.livecore.LiveSDK;
 import com.baijiahulian.livecore.context.LPConstants;
 import com.baijiahulian.livecore.context.LPError;
@@ -55,21 +55,20 @@ import com.baijiahulian.livecore.models.imodels.ILoginConflictModel;
 import com.baijiahulian.livecore.models.imodels.IMediaModel;
 import com.baijiahulian.livecore.utils.LPErrorPrintSubscriber;
 import com.baijiayun.BJYPlayerSDK;
+import com.baijiayun.constant.VideoDefinition;
 import com.baijiayun.playback.PBRoom;
 import com.baijiayun.videoplayer.IBJYVideoPlayer;
 import com.baijiayun.videoplayer.VideoPlayerFactory;
-import com.baijiayun.videoplayer.bean.SectionItem;
-import com.baijiayun.videoplayer.bean.VideoItem;
 import com.baijiayun.videoplayer.player.PlayerStatus;
 import com.baijiayun.videoplayer.player.error.PlayerError;
-import com.baijiayun.videoplayer.widget.BJYPlayerView;
+import com.baijiayun.videoplayer.ui.event.UIEventKey;
+import com.baijiayun.videoplayer.util.Utils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.gensee.utils.StringUtil;
 import com.google.gson.reflect.TypeToken;
 import com.greendao.DaoUtils;
 import com.greendao.DirectBean;
 import com.huatu.teacheronline.BaseActivity;
-import com.huatu.teacheronline.CustomApplication;
 import com.huatu.teacheronline.R;
 import com.huatu.teacheronline.SensorDataSdk;
 import com.huatu.teacheronline.bean.DefinitionBean;
@@ -104,6 +103,7 @@ import com.huatu.teacheronline.utils.ClickUtils;
 import com.huatu.teacheronline.utils.CommonUtils;
 import com.huatu.teacheronline.utils.DateTimeUtil;
 import com.huatu.teacheronline.utils.DebugUtil;
+import com.huatu.teacheronline.utils.FileUtils;
 import com.huatu.teacheronline.utils.GsonUtils;
 import com.huatu.teacheronline.utils.NetWorkUtils;
 import com.huatu.teacheronline.utils.StringUtils;
@@ -113,11 +113,13 @@ import com.huatu.teacheronline.widget.ChooseSpeedPopwindows;
 import com.huatu.teacheronline.widget.CustomAlertDialog;
 import com.huatu.teacheronline.widget.WithdrawalDialog;
 import com.huatu.teacheronline.widget.bjywidget.BjyBottomViewPresenter;
+import com.huatu.teacheronline.widget.bjywidget.MyBJYVideoView;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.kyleduo.switchbutton.SwitchButton;
 import com.orhanobut.logger.Logger;
 import com.umeng.analytics.MobclickAgent;
+import com.zhy.android.percent.support.PercentRelativeLayout;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -125,6 +127,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -201,15 +204,16 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     private String joinTime;//当前视频开始时间
     private String leavetime;//当前视频离开时间
     private LiveRoom mLiveRoom;
-
+    @BindView(R.id.rl_playlayout)
+    PercentRelativeLayout rlPlayLayout;
 
     @BindView(R.id.ll_live_container)
     LinearLayout mSurfaceContainer;
     @BindView(R.id.fra_live_container)
     FrameLayout mFra_container;
 
-    IBJYVideoPlayer iVideoPlayer;
-    BJYPlayerView mPlayerView;
+    IBJYVideoPlayer ibjyVideoPlayer;
+    MyBJYVideoView mPlayerView;
     @BindView(R.id.fra_live_ppt)
     FrameLayout mFraLivePpt;
     @BindView(R.id.fra_live_chat)
@@ -339,11 +343,12 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
      */
     private String mStartWatchCourse;
 
-//    private String mProvince;
+    //    private String mProvince;
 //    private String mCategorie;
 //    private String mPeriod;
 //    private String mSubject;
-
+    private List<VideoDefinition> definitionList = new ArrayList<>(Arrays.asList(VideoDefinition._720P,
+            VideoDefinition.SHD, VideoDefinition.HD, VideoDefinition.SD, VideoDefinition._1080P));
 
     @Override
     public void onCreate(Bundle arg0) {
@@ -432,12 +437,39 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         listview = (ExpandableListView) findViewById(R.id.listview);
         lv_pdf = (ListView) findViewById(R.id.pdf_listview);//pdf列表
         ll_no_notes = (RelativeLayout) findViewById(R.id.ll_no_notes);//暂无pdf
+        ll_no_notes = (RelativeLayout) findViewById(R.id.ll_no_notes);//暂无pdf
 
-        //创建默认播放器实例
-        iVideoPlayer = VideoPlayerFactory.createDefaultVideoPlayer();
-        //播放器实例绑定BJYPlayerView
-        iVideoPlayer.bindPlayerView(mPlayerView);
-
+        mPlayerView = new MyBJYVideoView(this);
+        ibjyVideoPlayer = new VideoPlayerFactory.Builder()
+                //后台暂停播放
+                .setSupportBackgroundAudio(false)
+                //开启循环播放
+                .setSupportLooping(true)
+                //开启记忆播放
+                .setSupportBreakPointPlay(true, this)
+                //绑定activity生命周期
+                .setLifecycle(getLifecycle()).build();
+        mPlayerView.initPlayer(ibjyVideoPlayer);
+        mPlayerView.setComponentEventListener((eventCode, bundle) -> {
+            switch (eventCode) {
+//                case UIEventKey.CUSTOM_CODE_REQUEST_BACK://播放器返回按钮 已经自定义隐藏
+//                    if (isLandscape) {
+//                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//                    } else {
+//                        finish();
+//                    }
+//                    break;
+                case UIEventKey.CUSTOM_CODE_REQUEST_TOGGLE_SCREEN://播放器全屏按钮
+                    setRequestedOrientation(isLandscape ?
+                            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT :
+                            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                    break;
+                default:
+                    break;
+            }
+        });
+        //初始设置显示布局宽高
+        requestLayout(false);
         mSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -573,7 +605,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 DefinitionBean definitionBean = mDefinitionAdapter.getData().get(position);
 
                 if (mPlayerView != null) {
-//                    mPlayerView.setVideoDefinition(Utils.getVideoDefinitionFromString(definitionBean.getType()));
+//                    mPlayerView.changeDefinition(Utils.getVideoDefinitionFromString(definitionBean.getType()));
+                    mPlayerView.changeDefinition(definitionList.get(2));
                     mDefinitionAdapter.select(definitionBean);
 
                 } else {
@@ -592,23 +625,23 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         mSpeedAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                if (iVideoPlayer != null) {
+                if (mPlayerView != null) {
                     speedType = position;
                     switch (position) {
                         case 1:
-                            iVideoPlayer.setPlayRate(12);
+                            mPlayerView.setPlayRate(1.25f);
                             tv_speed.setText(getString(R.string.speed_quick1));
                             break;
                         case 2:
-                            iVideoPlayer.setPlayRate(15);
+                            mPlayerView.setPlayRate(1.5f);
                             tv_speed.setText(getString(R.string.speed_quick2));
                             break;
                         case 3:
-                            iVideoPlayer.setPlayRate(20);
+                            mPlayerView.setPlayRate(2.0f);
                             tv_speed.setText(getString(R.string.speed_quick3));
                             break;
                         default:
-                            iVideoPlayer.setPlayRate(10);
+                            mPlayerView.setPlayRate(1.0f);
                             tv_speed.setText(getString(R.string.speed_original));
                             break;
 
@@ -685,35 +718,35 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         initBottomExtendView(zDirectBean);
 
 
-//        LivePlaybackSDK.deployType = LPConstants.LPDeployType.Product;
-//        rl_deatil_waiting.setVisibility(View.VISIBLE);
-
+////        LivePlaybackSDK.deployType = LPConstants.LPDeployType.Product;
+////        rl_deatil_waiting.setVisibility(View.VISIBLE);
+//
         showAppraiseDialog(position);
         mIsVideo = zDirectBean.getVideoType() == 0;
-
-        tv_speed.setVisibility(View.VISIBLE);
+//
+        tv_speed.setVisibility(View.GONE);
 
 
         if (mIsVideo) {
             //点播
 
-            mPlayerView = new BJYPlayerView(this);
+//            mPlayerView = new BJYPlayerView(this);
 //            mPlayerView.removeView(mPlayerView.getTopView());
 //            mPlayerView.removeView(mPlayerView.getBottomView());
 //            mPlayerView.removeView(mPlayerView.getCenterView());
 
-            iVideoPlayer.setUserInfo(nickName, uid);
+            mPlayerView.setUserInfo(nickName, uid);
 
             mFra_container.addView(mPlayerView, 0);
             iv_icon.setVisibility(View.GONE);
 
             //开启记忆播放
-            iVideoPlayer.enableBreakPointMemory(this);
+//            mPlayerView.enableBreakPointMemory(this);
 
 
             mFraLivePpt.setVisibility(View.GONE);
             mSurfaceContainer.setVisibility(View.GONE);
-            mRelPlayBackBottom.setVisibility(View.VISIBLE);
+            mRelPlayBackBottom.setVisibility(View.GONE);
 //            iv_screen.setVisibility(View.GONE);
             mRelLiveBottom.setVisibility(View.GONE);
 
@@ -721,7 +754,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //            mBjyBottomViewPresenter = new BjyBottomViewPresenter(mRelPlayBackBottom, this);
 //            mPlayerView.setBottomPresenter(mBjyBottomViewPresenter);
 //            mPlayerView.setCenterPresenter(new CenterViewPresenter(mFraPlayBackCenter));
-//            mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
+//            mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJYVideoView.PLAYER_DEPLOY_ONLINE);
 
 
             boolean isLocalPlay = false;
@@ -741,12 +774,12 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
 
 //            mPlayerView.setOnPlayerViewListener(mPlayerListener);
-            iVideoPlayer.setPlayRate(10);
+            mPlayerView.setPlayRate(10);
             if (isLocalPlay) {
-                iVideoPlayer.setupLocalVideoWithFilePath(zDirectBean.getLocalPath());
+                mPlayerView.setupLocalVideoWithFilePath(zDirectBean.getLocalPath());
             } else {
                 if (!StringUtil.isEmpty(zDirectBean.getBjyvideoid()) && !StringUtil.isEmpty(zDirectBean.getBjytoken())) {
-                    iVideoPlayer.setupOnlineVideoWithId(Long.parseLong(zDirectBean.getBjyvideoid()), zDirectBean.getBjytoken());
+                    mPlayerView.setupOnlineVideoWithId(Long.parseLong(zDirectBean.getBjyvideoid()), zDirectBean.getBjytoken());
                 } else {
 
                     ToastUtils.showToast("播放参数错误！");
@@ -755,16 +788,16 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
 
             }
-            iVideoPlayer.play(0);
+            mPlayerView.play(0);
 
 
         } else {
-            //直播
+            //直播或回放
 
             mIsPlayback = zDirectBean.getVideo_status().equals("2") || zDirectBean.getVideo_status().equals("3");
 
 //        joinTime = StringUtils.getNowTime();
-
+            //<<<<<<<<<<<<<<<<回放部分开始>>>>>>>>>>>>>>
             if (mIsPlayback) {
                 //playback
                 if (StringUtils.isEmpty(zDirectBean.getRoom_id())) {
@@ -772,18 +805,17 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     return;
                 }
 
-                mPlayerView = new BJYPlayerView(this);
+//                mPlayerView = new BJYPlayerView(this);
 //              mPlayerView.removeView(mPlayerView.getTopView());
 //              mPlayerView.removeView(mPlayerView.getBottomView());
 //              mPlayerView.removeView(mPlayerView.getCenterView());
 
-                iVideoPlayer.setUserInfo(nickName, uid);
+                mPlayerView.setUserInfo(nickName, uid);
 
                 mFra_container.addView(mPlayerView, 0);
-                iv_icon.setVisibility(View.GONE);
 
                 //开启记忆播放
-                iVideoPlayer.enableBreakPointMemory(this);
+//                mPlayerView.enableBreakPointMemory(this);
 
                 mFraLivePpt.setVisibility(View.VISIBLE);
                 mSurfaceContainer.setVisibility(View.GONE);
@@ -796,18 +828,18 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
                 mBjyBottomViewPresenter = new BjyBottomViewPresenter(mRelPlayBackBottom, this);
 //                mPlayerView.setBottomPresenter(mBjyBottomViewPresenter);
-//        player.setBottomPresenter(new BJBottomViewPresenter(player.getBottomView()));
+//                mPlayerView.setBottomPresenter(new BJBottomViewPresenter(mPlayerView.getBottomView()));
 //                mPlayerView.setCenterPresenter(new CenterViewPresenter(mFraPlayBackCenter));
 
 
                 //回放离线播放
-//            DirectBean directQuery = daoUtils.queryDirectBeanForPlayBack(uid, zDirectBean.getRoom_id(), zDirectBean.getSession_id(), zDirectBean.getNumber());
-//            if (directQuery != null) {
-//                zDirectBean.setDown_status(directQuery.getDown_status());
-//                zDirectBean.setLocalPath(directQuery.getLocalPath());
-//                zDirectBean.setStart(directQuery.getStart());
-//                zDirectBean.setEnd(directQuery.getEnd());
-//            }
+//                DirectBean directQuery = daoUtils.queryDirectBeanForPlayBack(uid, zDirectBean.getRoom_id(), zDirectBean.getSession_id(), zDirectBean.getNumber());
+//                if (directQuery != null) {
+//                    zDirectBean.setDown_status(directQuery.getDown_status());
+//                    zDirectBean.setLocalPath(directQuery.getLocalPath());
+//                    zDirectBean.setStart(directQuery.getStart());
+//                    zDirectBean.setEnd(directQuery.getEnd());
+//                }
 
                 String localpath = zDirectBean.getLocalPath();
 
@@ -834,77 +866,69 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 }
 
                 Logger.d("liveRoom playback path:" + localpath + "   " + mOffLinePlayBack);
+                if (!StringUtil.isEmpty(zDirectBean.getDown_status()) && Integer.parseInt(zDirectBean.getDown_status()) == DownManageActivity.CCDOWNSTATE_COMPLETE
+                        && !StringUtil.isEmpty(localpath) && new File(localpath).exists()) {
+                    File videoFile = new File(localpath);
+                    String sigleName = "s_" + videoFile.getName().substring(0, videoFile.getName().length() - 4);
+                    String singleFile = FileUtils.getBjyVideoDiskCacheDir() + sigleName;
+                    mRoom = BJYPlayerSDK.newPlayBackRoom(this, directBean.getLocalPath(), singleFile);//, Long.parseLong(zDirectBean.getRoom_id())
+                    mOffLinePlayBack = true;
 
-//            if (!StringUtil.isEmpty(zDirectBean.getDown_status()) && Integer.parseInt(zDirectBean.getDown_status()) == DownManageActivity.CCDOWNSTATE_COMPLETE
-//                    && !StringUtil.isEmpty(localpath) && new File(localpath).exists()) {
-//                File videoFile = new File(localpath);
-//                String sigleName = "s_" + videoFile.getName().substring(0, videoFile.getName().length() - 4);
-//                String singleFile = FileUtils.getBjyVideoDiskCacheDir() + sigleName;
-//                mRoom = LivePlaybackSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), directBean.getLocalPath(), singleFile);
-//                mOffLinePlayBack = true;
-//
-//            } else {
-//                if (!mOffLinePlayBack) {
-//                    if (StringUtils.isEmpty(zDirectBean.getSession_id())) {
-//                        mRoom = LivePlaybackSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), zDirectBean.getBjyhftoken());
-//
-//                    } else {
-//                        mRoom = LivePlaybackSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), Long.parseLong(zDirectBean.getSession_id()), zDirectBean.getBjyhftoken());
-//                    }
-//                }
-//
-////            }
-//
-//                mRoom.setOnLiveRoomListener(new OnLiveRoomListener() {
-//                    @Override
-//                    public void onError(LPError lpError) {
-////                    addRecordTime();
-//                        Logger.e("liveRoom playback" + "code" + lpError.getCode() + " msg:" + lpError.getMessage());
-//                    }
-//                });
-//
-//                mRoom.enterRoom(new LPLaunchListener() {
-//                    @Override
-//                    public void onLaunchSteps(int step, int totalStep) {
-////                    Logger.e("liveRoom launchStep:" + (step * 100 / totalStep) + "%");
-//                    }
-//
-//                    @Override
-//                    public void onLaunchError(LPError lpError) {
-//                        ToastUtils.showToast(R.string.notice_bjy_enter_error + lpError.getMessage());
-//
-//                    }
-//
-//                    @Override
-//                    public void onLaunchSuccess(LiveRoom liveRoom) {
-//                        Logger.e("playback onLaunchSuccess");
-//
-//
-//                        addRecordTime();
-//                        recodingInfo = zDirectBean;
-//                        joinTime = StringUtils.getNowTime();
-//
-//                        RecordInfoManager.getInstance().init(uid, account, joinTime, recodingInfo);
-//
-//                        luanchSuccess = true;
-//                        trackWatchCourse(true);
-////                        rl_deatil_waiting.setVisibility(View.GONE);
-//                        if (!mInBack) {
-//                            iVideoPlayer.play();
-//                            Logger.d("liveActivity playVideo mInBack = " + mInBack);
-//                        }
-//
-//
-//                        setZOrderMediaOverlay(mPlayerView, false);
-//                        setZOrderMediaOverlay(mPptFragment.getView(), true);
-//
-//
-//                    }
-//                });
-//
-//                mRoom.bindPlayerView(mPlayerView);
+                } else {
+                    if (!mOffLinePlayBack) {
+                        if (StringUtils.isEmpty(zDirectBean.getSession_id())) {
+                            mRoom = BJYPlayerSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), zDirectBean.getBjyhftoken());
+
+                        } else {
+                            mRoom = BJYPlayerSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), Long.parseLong(zDirectBean.getSession_id()), zDirectBean.getBjyhftoken());
+                        }
+                    }
+
+                }
+
+                mRoom.enterRoom(
+                        new com.baijiayun.playback.mocklive.LPLaunchListener() {
+                            @Override
+                            public void onLaunchSteps(int step, int totalStep) {
+//                    Logger.e("liveRoom launchStep:" + (step * 100 / totalStep) + "%");
+                            }
+
+                            @Override
+                            public void onLaunchError(com.baijiayun.playback.context.LPError lpError) {
+                                ToastUtils.showToast(R.string.notice_bjy_enter_error + lpError.getMessage());
+
+                            }
+
+                            @Override
+                            public void onLaunchSuccess(PBRoom liveRoom) {
+                                Logger.e("playback onLaunchSuccess");
+
+
+                                addRecordTime();
+                                recodingInfo = zDirectBean;
+                                joinTime = StringUtils.getNowTime();
+
+                                RecordInfoManager.getInstance().init(uid, account, joinTime, recodingInfo);
+
+                                luanchSuccess = true;
+                                trackWatchCourse(true);
+//                        rl_deatil_waiting.setVisibility(View.GONE);
+                                if (!mInBack) {
+                                    mPlayerView.play();
+                                    Logger.d("liveActivity playVideo mInBack = " + mInBack);
+                                }
+
+
+                                setZOrderMediaOverlay(mPlayerView, false);
+                                setZOrderMediaOverlay(mPptFragment.getView(), true);
+
+
+                            }
+                        });
+
+                mRoom.bindPlayer(ibjyVideoPlayer);
 //                mRoom.setOnPlayerListener(mPlayerListener);
-//                mPptFragment = PPTFragment.newInstance(mRoom);
+//                mPptFragment = PPTFragment.newInstance(mRoom);//2.0在线回放无画板
 
 
                 if (!isFinishing() && !isDestroyed()) {
@@ -927,9 +951,10 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
 //            mAm = (AudioManager) getSystemService(AUDIO_SERVICE);
 
+                //<<<<<<<<<<<<<<<<回放部分结束>>>>>>>>>>>>>>
 
             } else {
-
+                //<<<<<<<<<<<<<<<<直播部分开始>>>>>>>>>>>>>>
                 if (StringUtils.isEmpty(zDirectBean.getStudent_code())) {
                     ToastUtils.showToast("找不到邀请码!");
                     return;
@@ -1012,7 +1037,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                                     .commitAllowingStateLoss();
                         }
 
-//                        mSurface = ViESurfaceViewRenderer.CreateRenderer(PlayerActivityForBjysdk.this, true);
+                        mSurface = ViESurfaceViewRenderer.CreateRenderer(PlayerActivityForBjysdk.this, true);
 
                         //TODO 直播时的亮度和音量调节
 //                        LiveSurfaceGestureListener liveSurfaceGestureListener = new LiveSurfaceGestureListener();
@@ -1035,8 +1060,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                        });
 
 
-//                        mSurface.setZOrderMediaOverlay(true);
-//                    mSurface.setZOrderOnTop(true);
+                        mSurface.setZOrderMediaOverlay(true);
+//                        mSurface.setZOrderOnTop(true);
                         mSurfaceContainer.removeAllViews();
                         mSurfaceContainer.addView(mSurface);
 
@@ -1122,8 +1147,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
                     }
                 });
-
-
+                //<<<<<<<<<<<<<<<<直播部分结束>>>>>>>>>>>>>>
             }
         }
 
@@ -1215,15 +1239,15 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         }
 
         tv_speed.setText("倍数");
-        if (iVideoPlayer != null) {
-            iVideoPlayer.setPlayRate(10);
+        if (mPlayerView != null) {
+            mPlayerView.setPlayRate(10);
         }
 
 
-        if (iVideoPlayer != null) {
+        if (mPlayerView != null) {
 //            if (mPlayerView.isPlaying()) {
-            iVideoPlayer.pause();
-            iVideoPlayer.release();
+//            mPlayerView.pause();
+//            mPlayerView.onDestroy();
 //            }
 
             mFra_container.removeView(mPlayerView);
@@ -1294,7 +1318,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     }
                     if (mIsPlayback || mIsVideo) {
                         mRelPlayBackBottom.setVisibility(immersive ? View.GONE : View.VISIBLE);
-                        if (!isPPT && iVideoPlayer.getDuration() == 0) {//IBJYVideoPlayer.VIDEO_ORIENTATION_LANDSCAPE
+                        if (!isPPT && mPlayerView.getDuration() == 0) {//IBJYVideoPlayer.VIDEO_ORIENTATION_LANDSCAPE
                             findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(immersive ? View.GONE : View.VISIBLE);
                         } else {
                             findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
@@ -1550,7 +1574,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 }
                 break;
 
-            case R.id.tv_player_speed:
+            case R.id.tv_player_speed://清晰度 标清
                 if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
                     mSpeedAdapter.select(speedType);
                     mRcvSpeed.setVisibility(View.VISIBLE);
@@ -1569,8 +1593,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_original));
-                if (iVideoPlayer != null) {
-                    iVideoPlayer.setPlayRate(10);
+                if (mPlayerView != null) {
+                    mPlayerView.setPlayRate(1.0f);
                 }
                 break;
             case R.id.tv_speed_quick1:
@@ -1578,8 +1602,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick1));
-                if (iVideoPlayer != null) {
-                    iVideoPlayer.setPlayRate(12);
+                if (mPlayerView != null) {
+                    mPlayerView.setPlayRate(1.25f);
                 }
                 break;
             case R.id.tv_speed_quick2:
@@ -1587,8 +1611,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick2));
-                if (iVideoPlayer != null) {
-                    iVideoPlayer.setPlayRate(15);
+                if (mPlayerView != null) {
+                    mPlayerView.setPlayRate(1.5f);
                 }
                 break;
             case R.id.tv_speed_quick3:
@@ -1596,8 +1620,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick3));
-                if (iVideoPlayer != null) {
-                    iVideoPlayer.setPlayRate(20);
+                if (mPlayerView != null) {
+                    mPlayerView.setPlayRate(2.0f);
                 }
                 break;
 
@@ -1618,7 +1642,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         public void call(Boolean aBoolean) {
                             mIsFirstWatch = false;
                             if (aBoolean) {
-                                mClGuide.setVisibility(View.VISIBLE);
+                                // TODO: 2019/3/11  遮挡播放布局待处理
+//                                mClGuide.setVisibility(View.VISIBLE);
 
                             }
 
@@ -1652,65 +1677,65 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         }
 
 
-        if (isPPT) {
-            iv_icon.setBackgroundResource(R.drawable.ic_tovi);
-            mFraLivePpt.setVisibility(View.VISIBLE);
-            mFraLivePpt.setTranslationX(0);
-            findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
-//            mSurfaceContainer.setVisibility(View.GONE);
-//            mPlayerView.setVisibility(View.GONE);
-            if (mPlayerView != null) {
-                mFra_container.removeView(mPlayerView);
-                mPlayerView.setTranslationX(3000);
-            }
-            mSurfaceContainer.setTranslationX(3000);
-            if (!mIsPlayback) {
-                mRelLiveBottom.setVisibility(View.VISIBLE);
-//                Fragment pptFragment = getSupportFragmentManager().findFragmentByTag(PPTFragment.class.getName());
-
-            } else {
-
-                mRelPlayBackBottom.setVisibility(View.VISIBLE);
-            }
-            mLlPlayBackTop.setVisibility(View.VISIBLE);
-
-
-//            top_bar_player.setVisibility(View.VISIBLE);
-        } else {
-
-
-            if (mIsPlayback) {
-                checkFirstWatch();
-
-                mFraLivePpt.setTranslationX(3000);
-                if (mPlayerView != null) {
-                    mPlayerView.setTranslationX(0);
-                    mFra_container.addView(mPlayerView, 0);
-                }
-            } else {
-                mSurfaceContainer.setTranslationX(0);
-            }
-
-
-            iv_icon.setBackgroundResource(R.drawable.ic_toppt);
-
-            if (mIsPlayback) {
-                if (mPlayerView != null) {
-                    mPlayerView.setVisibility(View.VISIBLE);
-                }
-                mRelLiveBottom.setVisibility(View.GONE);
-                mRelPlayBackBottom.setVisibility(View.VISIBLE);
-                if (iVideoPlayer != null && iVideoPlayer.getDuration() == 0) {//BJPlayerView.VIDEO_ORIENTATION_LANDSCAPE
-                    findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.VISIBLE);
-                }
-
-//                top_bar_player.setVisibility(View.GONE);
-            } else {
-                findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
-                mRelLiveBottom.setVisibility(View.VISIBLE);
-                mSurfaceContainer.setVisibility(View.VISIBLE);
-            }
-        }
+//        if (isPPT) {
+//            iv_icon.setBackgroundResource(R.drawable.ic_tovi);
+//            mFraLivePpt.setVisibility(View.VISIBLE);
+//            mFraLivePpt.setTranslationX(0);
+//            findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
+////            mSurfaceContainer.setVisibility(View.GONE);
+////            mPlayerView.setVisibility(View.GONE);
+//            if (playerView != null) {
+//                mFra_container.removeView(playerView);
+//                playerView.setTranslationX(3000);
+//            }
+//            mSurfaceContainer.setTranslationX(3000);
+//            if (!mIsPlayback) {
+//                mRelLiveBottom.setVisibility(View.VISIBLE);
+////                Fragment pptFragment = getSupportFragmentManager().findFragmentByTag(PPTFragment.class.getName());
+//
+//            } else {
+//
+//                mRelPlayBackBottom.setVisibility(View.VISIBLE);
+//            }
+//            mLlPlayBackTop.setVisibility(View.VISIBLE);
+//
+//
+////            top_bar_player.setVisibility(View.VISIBLE);
+//        } else {
+//
+//
+//            if (mIsPlayback) {
+//                checkFirstWatch();
+//
+//                mFraLivePpt.setTranslationX(3000);
+//                if (playerView != null) {
+//                    playerView.setTranslationX(0);
+////                    mFra_container.addView(mPlayerView, 0);
+//                }
+//            } else {
+//                mSurfaceContainer.setTranslationX(0);
+//            }
+//
+//
+//            iv_icon.setBackgroundResource(R.drawable.ic_toppt);
+//
+//            if (mIsPlayback) {
+//                if (playerView != null) {
+//                    playerView.setVisibility(View.VISIBLE);
+//                }
+//                mRelLiveBottom.setVisibility(View.GONE);
+//                mRelPlayBackBottom.setVisibility(View.VISIBLE);
+//                if (mPlayerView != null && mPlayerView.getDuration() == 0) {//mPlayerView.VIDEO_ORIENTATION_LANDSCAPE
+//                    findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.VISIBLE);
+//                }
+//
+////                top_bar_player.setVisibility(View.GONE);
+//            } else {
+//                findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
+//                mRelLiveBottom.setVisibility(View.VISIBLE);
+//                mSurfaceContainer.setVisibility(View.VISIBLE);
+//            }
+//        }
     }
 
     /**
@@ -2522,14 +2547,14 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //
 //        }
 //
-        if (iVideoPlayer != null) {
-
-//            setZOrderMediaOverlay(mPlayerView, !isPPT);
-            iVideoPlayer.rePlay();
-        }
+//        if (mPlayerView != null) {
+//
+////            setZOrderMediaOverlay(mPlayerView, !isPPT);
+//            mPlayerView.play();
+//        }
 
         isPPT = true;
-        changeDisplayContent();
+//        changeDisplayContent();
 
 
     }
@@ -2538,9 +2563,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     protected void onPause() {
         super.onPause();
         m_wakeLock.release();//解除保持唤醒
-        if (iVideoPlayer != null) {
-            iVideoPlayer.pause();
-        }
+//        if (mPlayerView != null) {
+//            mPlayerView.pause();
+//        }
     }
 
     @Override
@@ -2636,7 +2661,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     protected void onDestroy() {
         super.onDestroy();
         m_wakeLock.release(); //解除保持唤醒
-
+        mPlayerView.onDestroy();//释放播放器
         //取消pdf下载
         PdfDownloadManager.getInstance().destory();
         quitLiveRoom();
@@ -3422,5 +3447,17 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
     }
 
-
+    @Override
+    protected void requestLayout(boolean isLandscape) {
+        super.requestLayout(isLandscape);
+        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) rlPlayLayout.getLayoutParams();
+        if (isLandscape) {
+            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+        } else {
+            layoutParams.width = Utils.getScreenWidthPixels(this);
+            layoutParams.height = layoutParams.width * 9 / 16;
+        }
+        rlPlayLayout.setLayoutParams(layoutParams);
+    }
 }

@@ -99,7 +99,7 @@ public class CustomApplication extends Application {
 
         //百家云视频播放
         new BJYPlayerSDK.Builder(this)
-                .setDevelopMode(true)
+                .setDevelopMode(false)
                 //如果没有个性域名请注释
 //                .setCustomDomain("teacheronline")
                 .setEncrypt(true)
