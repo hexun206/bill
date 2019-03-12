@@ -1,13 +1,16 @@
 package com.huatu.teacheronline.direct;
 
+import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
+import android.widget.Toast;
 
 import com.baijiahulian.common.networkv2.HttpException;
 import com.baijiayun.constant.VideoDefinition;
 import com.baijiayun.download.DownloadListener;
 import com.baijiayun.download.DownloadManager;
+import com.baijiayun.download.DownloadService;
 import com.baijiayun.download.DownloadTask;
 import com.greendao.DaoUtils;
 import com.greendao.DirectBean;
@@ -26,8 +29,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 
 public class VideoDownLoadService extends Service {
     private String userid;//用户id
@@ -39,7 +41,6 @@ public class VideoDownLoadService extends Service {
     private DownloadTask bjyTask;//百家云task
     private List<VideoDefinition> definitionList = new ArrayList<>(Arrays.asList(VideoDefinition._720P,
             VideoDefinition.SHD, VideoDefinition.HD, VideoDefinition.SD, VideoDefinition._1080P));
-//    private PlaybackDownloader mPlaybackDownloader;
 
 
     /**
@@ -63,19 +64,24 @@ public class VideoDownLoadService extends Service {
         userid = CommonUtils.getSharedPreferenceItem(null, UserInfo.KEY_SP_USERID, "");
         daoUtils = DaoUtils.getInstance();
 
+        manager = DownloadService.getDownloadManager(getApplicationContext());
 
         //回放下载的初始化
 //        mPlaybackDownloader = new PlaybackDownloader(this, CustomApplication.BJPlayerView_partnerId,
 //                FileUtils.getBjyVideoDiskCacheDir(), 1);
 //
-//        //初始化下载
-//        manager = mPlaybackDownloader.getManager();
-//
-//        //设置缓存文件路径
-//        manager.setTargetFolder(FileUtils.getBjyVideoDiskCacheDir());
+        //初始化下载
+        manager = DownloadService.getDownloadManager(getApplicationContext());
+
+        //设置缓存文件路径
+        manager.setTargetFolder(FileUtils.getBjyVideoDiskCacheDir());
 //        //读取磁盘缓存的下载任务
 //        manager.loadDownloadInfo(CustomApplication.BJPlayerView_partnerId);
 //        PlayerConstants.DEPLOY_TYPE = BJPlayerView.PLAYER_DEPLOY_ONLINE;
+        manager.setPreferredDefinitionList(definitionList);
+        //迁移下载记录
+        manager.upgrade();
+        manager.loadDownloadInfo();
         super.onCreate();
     }
 
@@ -150,75 +156,68 @@ public class VideoDownLoadService extends Service {
 
         private void downLoadTask(final DirectBean directBean) {
 
-//            if (!CommonUtils.isAvaiableSpace(500)) {
-//                ToastUtils.showToast(R.string.sd_is_full_info);
-//                downLoadingList.remove(directBean);
-//                directBean.setDown_status("500");
-//                directBean.setErrorcode(getResources().getString(R.string.sd_is_full_info));
-//                daoUtils.updateDirectBean(directBean);
-//                sendBroadcastByDirectBean(directBean);
-//                return;
+            if (!CommonUtils.isAvaiableSpace(500)) {
+                ToastUtils.showToast(R.string.sd_is_full_info);
+                downLoadingList.remove(directBean);
+                directBean.setDown_status("500");
+                directBean.setErrorcode(getResources().getString(R.string.sd_is_full_info));
+                daoUtils.updateDirectBean(directBean);
+                sendBroadcastByDirectBean(directBean);
+                return;
+
+            }
+
+//            DownloadTask task = null;
+            directBean.setUserid(userid);
+
+
 //
-//            }
-//
-////            DownloadTask task = null;
-//            directBean.setUserid(userid);
-//
-//
-////
-//            if (directBean.getVideoType() == 0) {
-//                String videoId = directBean.getBjyvideoid().trim();
-//                manager.newDownloadTask(videoId, Long.parseLong(videoId), directBean.getBjytoken(), definitionList, 1, "haha")
-//                        .observeOn(AndroidSchedulers.mainThread())
-//                        .subscribe(new Action1<DownloadTask>() {
-//                            @Override
-//                            public void call(DownloadTask task) {
-//                                //直接开始下载
-//                                task.start();
-//                                task.setDownloadListener(new VideoDownloadListener(directBean));
-//                            }
-//
-//                        }, new Action1<Throwable>() {
-//
-//                            @Override
-//                            public void call(Throwable throwable) {
-//                                downLoadingList.remove(directBean);
-//                                throwable.printStackTrace();
-//                                ToastUtils.showToast(R.string.network);
-//                                directBean.setDown_status("500");
-//                                directBean.setErrorcode("" + throwable.getMessage());
-//                                daoUtils.updateDirectBean(directBean);
-//                                sendBroadcastByDirectBean(directBean);
-//                            }
-//                        });
-//
-//
-//            } else {
-//                long sessionId = (StringUtils.isEmpty(directBean.getSession_id()) ? 0 : Long.parseLong(directBean.getSession_id()));
-//                long roomId = Long.parseLong(directBean.getRoom_id());
-//                mPlaybackDownloader.downloadRoomPackage(directBean.getRoom_id() + directBean.getSession_id(), roomId, sessionId, directBean.getBjyhftoken(), definitionList, 1, "kinn")
-//                        .observeOn(AndroidSchedulers.mainThread())
-//                        .subscribe(new Action1<DownloadTask>() {
-//                            @Override
-//                            public void call(DownloadTask task) {
-//                                task.start();
-//                                task.setDownloadListener(new VideoDownloadListener(directBean));
-//                            }
-//                        }, new Action1<Throwable>() {
-//                            @Override
-//                            public void call(Throwable throwable) {
-//                                downLoadingList.remove(directBean);
-//                                throwable.printStackTrace();
-//                                ToastUtils.showToast(R.string.network);
-//                                directBean.setDown_status("500");
-//                                directBean.setErrorcode("" + throwable.getMessage());
-////                                daoUtils.insertOrUpdateDirectBean(directBean, 0);
-//                                sendBroadcastByDirectBean(directBean);
-//
-//                            }
-//                        });
-//
-//            }
+            if (directBean.getVideoType() == 0) {
+                String videoId = directBean.getBjyvideoid().trim();
+                manager.newVideoDownloadTask(videoId, Long.parseLong(videoId), directBean.getBjytoken(), "haha")
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                downloadTask -> {
+                                    //直接开始下载
+                                    downloadTask.start();
+                                    downloadTask.setDownloadListener(new VideoDownloadListener(directBean));
+                                }
+                                , throwable -> {
+                                    throwable.printStackTrace();
+                                    downLoadingList.remove(directBean);
+                                    throwable.printStackTrace();
+                                    ToastUtils.showToast(R.string.network);
+                                    directBean.setDown_status("500");
+                                    directBean.setErrorcode("" + throwable.getMessage());
+                                    daoUtils.updateDirectBean(directBean);
+                                    sendBroadcastByDirectBean(directBean);
+                                });
+
+
+            } else {
+                long sessionId = (StringUtils.isEmpty(directBean.getSession_id()) ? 0 : Long.parseLong(directBean.getSession_id()));
+                long roomId = Long.parseLong(directBean.getRoom_id());
+                manager.newPlaybackDownloadTask(directBean.getRoom_id() + directBean.getSession_id(), roomId, sessionId, directBean.getBjyhftoken(), "kinn")
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(
+                                downloadTask -> {
+                                    //直接开始下载
+                                    downloadTask.start();
+                                    downloadTask.setDownloadListener(new VideoDownloadListener(directBean));
+                                }
+                                , throwable -> {
+                                    throwable.printStackTrace();
+                                    downLoadingList.remove(directBean);
+                                    throwable.printStackTrace();
+                                    ToastUtils.showToast(R.string.network);
+                                    directBean.setDown_status("500");
+                                    directBean.setErrorcode("" + throwable.getMessage());
+//                                daoUtils.insertOrUpdateDirectBean(directBean, 0);
+                                    sendBroadcastByDirectBean(directBean);
+                                });
+
+            }
+
 
 //            }
 
@@ -319,7 +318,7 @@ public class VideoDownLoadService extends Service {
 
             if (waitingList.size() != 0) {
                 DirectBean directBean = waitingList.get(0);
-                addDownloadTask(directBean);
+                simpleBinder.addDownloadTask(directBean);
 
 
             }

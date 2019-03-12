@@ -18,7 +18,7 @@
         android:layout_height="233dp"
         app:layout_heightPercent="64.8%w">
 
-        <com.baijiahulian.player.BJPlayerView
+        <com.huatu.teacheronline.widget.bjywidget.MyBJYVideoView
             android:id="@+id/videoView"
             android:layout_width="match_parent"
             android:layout_height="233dp"
@@ -27,7 +27,7 @@
             app:layout_heightPercent="64.8%w"
             app:top_controller="@layout/player_topbar_interview"
             >
-        </com.baijiahulian.player.BJPlayerView>
+        </com.huatu.teacheronline.widget.bjywidget.MyBJYVideoView>
     </com.zhy.android.percent.support.PercentRelativeLayout>
 
     <com.zhy.android.percent.support.PercentLinearLayout

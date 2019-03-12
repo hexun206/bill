@@ -17,8 +17,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.baijiahulian.common.networkv2.HttpException;
+import com.baijiayun.videoplayer.VideoPlayerFactory;
 import com.baijiayun.videoplayer.bean.SectionItem;
 import com.baijiayun.videoplayer.bean.VideoItem;
+import com.baijiayun.videoplayer.ui.event.UIEventKey;
+import com.baijiayun.videoplayer.util.Utils;
 import com.huatu.teacheronline.BaseActivity;
 import com.huatu.teacheronline.CustomApplication;
 import com.huatu.teacheronline.R;
@@ -31,6 +34,7 @@ import com.huatu.teacheronline.widget.ChooseSpeedPopwindows;
 import com.huatu.teacheronline.widget.CustomAlertDialog;
 import com.huatu.teacheronline.widget.bjywidget.BjyBottomViewPresenter;
 import com.huatu.teacheronline.widget.bjywidget.BjyTopViewPresenter;
+import com.huatu.teacheronline.widget.bjywidget.MyBJYVideoView;
 
 import java.lang.ref.WeakReference;
 
@@ -51,7 +55,7 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
     private final static String CLASS_LABEL = "InterviewVideoDetailActivity";
     private PowerManager.WakeLock mWakeLock;// 禁止锁屏
     private ObtainDataListerForLoadingVideoDetailInfo obtainDataListerForLoadingVideoDetailInfo;
-//    private BJPlayerView player;
+    private MyBJYVideoView player;
     private LinearLayout topbar;
     //    private ImageView ib_main_right_player;
 //    private RelativeLayout rl_main_left_player;
@@ -81,15 +85,15 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
             mWakeLock.acquire();
         }
 
-         findViewById(R.id.rl_play_bottom).setOnTouchListener(new View.OnTouchListener() {
-             @Override
-             public boolean onTouch(View v, MotionEvent event) {
-                 return true;
-             }
-         });
+//         findViewById(R.id.rl_play_bottom).setOnTouchListener(new View.OnTouchListener() {
+//             @Override
+//             public boolean onTouch(View v, MotionEvent event) {
+//                 return true;
+//             }
+//         });
 
-        tv_speed = (TextView) findViewById(R.id.tv_speed);
-        tv_speed.setOnClickListener(this);
+//        tv_speed = (TextView) findViewById(R.id.tv_speed);
+//        tv_speed.setOnClickListener(this);
         currentVideoId = getIntent().getStringExtra("video_id");
         bjyid = getIntent().getStringExtra("bjyid");
         token = getIntent().getStringExtra("token");
@@ -107,8 +111,36 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
         loadData();
 //        ib_main_right_player.setVisibility(View.GONE);
 //        rl_main_left_player.setVisibility(View.GONE);
-//        player = (BJPlayerView) findViewById(R.id.videoView);
-//        //以下三个方法分别设置底部、顶部和中部界面
+        player = (MyBJYVideoView) findViewById(R.id.videoView);
+        player.initPlayer(new VideoPlayerFactory.Builder()
+                //后台暂停播放
+                .setSupportBackgroundAudio(false)
+                //开启循环播放
+                .setSupportLooping(true)
+                //开启记忆播放
+                .setSupportBreakPointPlay(true, this)
+                //绑定activity生命周期
+                .setLifecycle(getLifecycle()).build());
+        player.setComponentEventListener((eventCode, bundle) -> {
+            switch (eventCode) {
+//                case UIEventKey.CUSTOM_CODE_REQUEST_BACK://播放器返回按钮 已经自定义隐藏
+//                    if (isLandscape) {
+//                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//                    } else {
+//                        finish();
+//                    }
+//                    break;
+                case UIEventKey.CUSTOM_CODE_REQUEST_TOGGLE_SCREEN://播放器全屏按钮
+                    setRequestedOrientation(isLandscape ?
+                            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT :
+                            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                    break;
+                default:
+                    break;
+            }
+        });
+        requestLayout(false);
+        //以下三个方法分别设置底部、顶部和中部界面
 //        mBjyBottomViewPresenter = new BjyBottomViewPresenter(player.getBottomView(), this);
 //        player.setBottomPresenter(mBjyBottomViewPresenter);
 //        bjyTopViewPresenter = new BjyTopViewPresenter(player.getTopView());
@@ -118,8 +150,8 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
 //        player.initPartner(CustomApplication.BJPlayerView_partnerId, BJPlayerView.PLAYER_DEPLOY_ONLINE);
         chooseSpeedPopwindows = new ChooseSpeedPopwindows(this);
 
-        img_bottom_screen = (ImageView) findViewById(R.id.iv_screen);
-        img_bottom_screen.setOnClickListener(this);
+//        img_bottom_screen = (ImageView) findViewById(R.id.iv_screen);
+//        img_bottom_screen.setOnClickListener(this);
     }
 
     private void loadData() {
@@ -264,10 +296,10 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
     private void initPlayInfo() {
         try {
             //第一个参数为百家云后台配置的视频id，第二个参数为视频token
-//            player.setVideoId(Long.parseLong(bjyid), token);
-//            DebugUtil.e(TAG, "initPlayInfo: " + bjyid + "  token" + token);
-//            //播放
-//            player.playVideo(0);
+            player.setupOnlineVideoWithId(Long.parseLong(bjyid), token);
+            DebugUtil.e(TAG, "initPlayInfo: " + bjyid + "  token" + token);
+            //播放
+            player.play(0);
 //            player.setOnPlayerViewListener(this);
         } catch (IllegalArgumentException e) {
             DebugUtil.e("player error", e.getMessage());
@@ -333,36 +365,36 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_original));
-//                if (player != null) {
-//                    player.setVideoRate(10);
-//                }
+                if (player != null) {
+                    player.setPlayRate(1.0f);
+                }
                 break;
             case R.id.tv_speed_quick1:
                 speedType = 1;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick1));
-//                if (player != null) {
-//                    player.setVideoRate(12);
-//                }
+                if (player != null) {
+                    player.setPlayRate(1.25f);
+                }
                 break;
             case R.id.tv_speed_quick2:
                 speedType = 2;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick2));
-//                if (player != null) {
-//                    player.setVideoRate(15);
-//                }
+                if (player != null) {
+                    player.setPlayRate(1.5f);
+                }
                 break;
             case R.id.tv_speed_quick3:
                 speedType = 3;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
                 tv_speed.setText(getString(R.string.speed_quick3));
-//                if (player != null) {
-//                    player.setVideoRate(20);
-//                }
+                if (player != null) {
+                    player.setPlayRate(2.0f);
+                }
                 break;
         }
     }
@@ -427,51 +459,24 @@ public class InterviewVideoDetailBjyActivity extends BaseActivity  {//implements
 //        }
     }
 
-
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-//        if (player != null) {
-//            player.onConfigurationChanged(newConfig);
-//        }
-        if (newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE || newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_USER) {
-            img_bottom_screen.setImageResource(R.drawable.ic_fullsc_land);
-            // 全屏
-            topbar.setVisibility(View.GONE);
-//            rl_main_left_player.setVisibility(View.VISIBLE);
+    protected void requestLayout(boolean isLandscape) {
+        super.requestLayout(isLandscape);
+        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) player.getLayoutParams();
+        if (isLandscape) {
+//            img_bottom_screen.setImageResource(R.drawable.ic_fullsc_land);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
-            /* 若当下为横排，则更改为竖排呈现 */
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            int navigationBarHeight = 0;
-            if (CommonUtils.checkDeviceHasNavigationBar(this)) {
-                navigationBarHeight = CommonUtils.getNavigationBarHeight();
-            }
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(screenHeight + CommonUtils.getStatusBarHeight() + navigationBarHeight, screenWidth);
-//            player.setLayoutParams(params);
-//            rl_main_left_player.setVisibility(View.VISIBLE);
-        } else if (newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
-            img_bottom_screen.setImageResource(R.drawable.ic_fullsc);
+            topbar.setVisibility(View.GONE);// 全屏
+            layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+        } else {
+//            img_bottom_screen.setImageResource(R.drawable.ic_fullsc);
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);//显示状态栏
             topbar.setVisibility(View.VISIBLE);
-//            rl_main_left_player.setVisibility(View.GONE);
-            /* 若当下为竖排，则更改为横排呈现 */
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//            ViewGroup.LayoutParams lp = player.getLayoutParams();
-//            lp.width = rlVideoWidth;
-//            lp.height = rlVideoheight;
-//            player.setLayoutParams(lp);
-//            int screenWidth = CommonUtils.getScreenWidth();
-//            int screenHeight = CommonUtils.getScreenHeight();
-//            rl_main_left_player.setVisibility(View.GONE);
+            layoutParams.width = Utils.getScreenWidthPixels(this);
+            layoutParams.height = layoutParams.width * 9 / 16;
         }
-        super.onConfigurationChanged(newConfig);
-    }
-
-
-    @Override
-    public void onBackPressed() {
-//        if (!player.onBackPressed()) {
-//            super.onBackPressed();
-//        }
+        player.setLayoutParams(layoutParams);
     }
 
     @Override

@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ll_playback_top"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_play_top"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <com.zhy.android.percent.support.PercentRelativeLayout
         android:id="@+id/rl_titleContainer_main"
         android:layout_width="match_parent"
-        android:layout_height="32dp">
+        android:layout_height="32dp"
+       >
 
         <com.zhy.android.percent.support.PercentRelativeLayout
             android:id="@+id/rl_main_left_player"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:layout_alignParentLeft="true">
+            android:layout_alignParentLeft="true"
+            >
 
             <ImageView
                 android:id="@+id/ib_main_left"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_centerInParent="true"
+                android:src="@drawable/back_arrow"
                 android:padding="6dp"
-                android:src="@drawable/back_arrow" />
+                />
         </com.zhy.android.percent.support.PercentRelativeLayout>
 
         <TextView
@@ -40,7 +45,7 @@
             android:visibility="visible"
             app:layout_marginLeftPercent="13.66%w"
             app:layout_marginRightPercent="13.66%w"
-            app:layout_textSizePercent="5%w" />
+            app:layout_textSizePercent="5%w"/>
 
 
         <TextView
@@ -53,26 +58,25 @@
             android:background="@drawable/bg_rectangle_white_noradius"
             android:paddingLeft="6dp"
             android:paddingRight="6dp"
+            android:visibility="invisible"
             android:text="标清"
             android:textColor="@color/white"
-            android:textSize="14sp"
-            android:visibility="invisible" />
+            android:textSize="14sp"/>
 
 
         <TextView
             android:id="@+id/tv_player_speed"
             android:layout_width="wrap_content"
-            android:layout_height="21dp"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="12dp"
             android:layout_toLeftOf="@+id/rl_main_right_player"
             android:background="@drawable/bg_rectangle_white_noradius"
-            android:gravity="center"
             android:paddingLeft="6dp"
             android:paddingRight="6dp"
             android:text="倍数"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="14sp"/>
 
         <com.zhy.android.percent.support.PercentRelativeLayout
             android:id="@+id/rl_main_right_player"
@@ -86,9 +90,10 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_centerVertical="true"
-                android:padding="6dp"
                 android:src="@drawable/download_zhibo"
-                android:visibility="visible" />
+                android:padding="6dp"
+                android:visibility="visible"
+                />
 
         </com.zhy.android.percent.support.PercentRelativeLayout>
     </com.zhy.android.percent.support.PercentRelativeLayout>
@@ -96,6 +101,7 @@
     <View
         android:id="@+id/view_line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/width_1" />
+        android:layout_height="@dimen/width_1"
+        />
     <!--android:background="@color/gray004"-->
 </com.zhy.android.percent.support.PercentLinearLayout>

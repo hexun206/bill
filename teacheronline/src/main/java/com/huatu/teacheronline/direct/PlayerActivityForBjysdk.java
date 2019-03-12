@@ -820,7 +820,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 mFraLivePpt.setVisibility(View.VISIBLE);
                 mSurfaceContainer.setVisibility(View.GONE);
 //            mPlayerView.setVisibility(View.GONE);
-                mRelPlayBackBottom.setVisibility(View.VISIBLE);
+                mRelPlayBackBottom.setVisibility(View.GONE);
 //                iv_screen.setVisibility(View.GONE);
                 mRelLiveBottom.setVisibility(View.GONE);
 //            rl_fullScreenBack.setVisibility(View.GONE);
@@ -920,7 +920,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
 
                                 setZOrderMediaOverlay(mPlayerView, false);
-                                setZOrderMediaOverlay(mPptFragment.getView(), true);
+//                                setZOrderMediaOverlay(mPptFragment.getView(), true);
 
 
                             }
@@ -931,7 +931,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                mPptFragment = PPTFragment.newInstance(mRoom);//2.0在线回放无画板
 
 
-                if (!isFinishing() && !isDestroyed()) {
+                if (!isFinishing() && !isDestroyed()&&mPptFragment!=null) {
                     getSupportFragmentManager()
                             .beginTransaction()
                             .add(R.id.fra_live_ppt, mPptFragment, PPTFragment.class.getName())
