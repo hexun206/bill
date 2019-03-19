@@ -49,6 +49,8 @@ public class DefinitionAdapter extends BaseQuickAdapter<DefinitionBean, BaseView
     }
 
     public String getNameByValue(int value) {
+        if(value==-1)
+            return "标清";
         return nameList[value];
 
     }
@@ -84,9 +86,8 @@ public class DefinitionAdapter extends BaseQuickAdapter<DefinitionBean, BaseView
             helper.getView(R.id.tv_definition_name).setEnabled(false);
 
         }
-        helper.addOnClickListener(R.id.tv_definition_name);
-
-
+//        helper.addOnClickListener(R.id.content_layout);
+//        helper.addOnClickListener(R.id.tv_definition_name);
     }
 
     @Override

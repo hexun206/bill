@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.android.percent.support.PercentRelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,26 +8,12 @@
     <com.zhy.android.percent.support.PercentRelativeLayout
         android:id="@+id/rl_playlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <Chronometer
-            android:id="@+id/play_chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:format="s%"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:visibility="gone"
-            />
+        android:layout_height="wrap_content">
 
         <FrameLayout
             android:id="@+id/fra_live_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
             <FrameLayout
                 android:id="@+id/fra_live_ppt"
@@ -36,18 +21,16 @@
                 android:layout_height="match_parent"
                 android:visibility="gone"></FrameLayout>
 
+            <!--<com.huatu.teacheronline.widget.bjywidget.MyBJYVideoView-->
+                <!--android:id="@+id/pb_bjy_videoview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/black00"-->
+                <!--android:visibility="gone"-->
+                <!--app:render_type="texture_view"-->
+                <!--app:aspect_ratio="fit_parent_16_9">-->
 
-            <!--<com.baijiahulian.player.BJPlayerView-->
-            <!--android:id="@+id/playview_live_playback"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="@color/black00"-->
-            <!--android:visibility="gone"-->
-            <!--app:aspect_ratio="fit_parent_4_3"-->
-            <!--app:bottom_controller="@layout/playback_empty"-->
-            <!--app:center_controller="@layout/playback_empty"-->
-            <!--app:top_controller="@layout/playback_empty">-->
-            <!--</com.baijiahulian.player.BJPlayerView>-->
+            <!--</com.huatu.teacheronline.widget.bjywidget.MyBJYVideoView>-->
 
 
             <LinearLayout
@@ -64,81 +47,9 @@
                 android:id="@+id/fra_live_touch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone"/>
-
-            <LinearLayout
-                android:id="@+id/ll_live_center_dialog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/bjplayer_bg_radius_8"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                android:visibility="gone">
-
-                <ImageView
-                    android:id="@+id/img_live_center_dialog"
-                    style="@style/bjplayer_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bjplayer_ic_volume_up_white"/>
-
-                <TextView
-                    android:id="@+id/tv_live_center_dialog"
-                    style="@style/bjplayer_text_big"
-                    android:text="50%"
-                    />
-
-            </LinearLayout>
-
-
-            <include
-
-                layout="@layout/player_topbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:visibility="gone"
-                ></include>
-
-            <include
-
-                layout="@layout/bjplayer_layout_center_controller_copy"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                ></include>
-
-            <include
-
-                layout="@layout/player_bottombar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:visibility="gone"
-                ></include>
-            <include
-
-                layout="@layout/live_bottombar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:visibility="gone"
-                ></include>
+                android:visibility="gone" />
 
         </FrameLayout>
-
-
-        <!--<include-->
-        <!--android:id="@+id/top_bar_no_titlebar"-->
-        <!--layout="@layout/player_topbar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"/>-->
 
         <ImageView
             android:id="@+id/iv_icon"
@@ -149,19 +60,7 @@
             android:background="@drawable/ic_tovi"
             android:padding="2dp"
             android:visibility="visible"
-            app:layout_marginRightPercent="2.78%w"/>
-
-        <!--<ImageView-->
-            <!--android:id="@+id/iv_directScreen"-->
-            <!--android:layout_width="32dp"-->
-            <!--android:layout_height="32dp"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_margin="6dp"-->
-            <!--android:padding="6dp"-->
-            <!--android:src="@drawable/ic_fullsc"-->
-            <!--android:visibility="gone"-->
-            <!--/>-->
+            app:layout_marginRightPercent="2.78%w" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/cl_guide"
@@ -174,13 +73,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
                 android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
                 android:src="@drawable/pic_guide_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.4"/>
+                app:layout_constraintVertical_bias="0.4" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -191,7 +90,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.24"/>
+                app:layout_constraintVertical_bias="0.24" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -201,29 +100,22 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.38"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/img_guide_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_marginBottom="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
                 android:src="@drawable/pic_guide_4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintVertical_bias="0.724"/>
+                app:layout_constraintVertical_bias="0.724" />
 
 
         </android.support.constraint.ConstraintLayout>
-
-
-        <!--height:38-->
-
-
-
 
         <com.zhy.android.percent.support.PercentRelativeLayout
             android:id="@+id/rl_deatil_waiting"
@@ -239,7 +131,7 @@
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:indeterminateDrawable="@anim/anim_direct_loading"
-                android:indeterminateDuration="1500"/>
+                android:indeterminateDuration="1500" />
         </com.zhy.android.percent.support.PercentRelativeLayout>
 
     </com.zhy.android.percent.support.PercentRelativeLayout>
@@ -249,8 +141,7 @@
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_below="@+id/rl_playlayout"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/tv_hudong"
@@ -262,8 +153,7 @@
             android:gravity="center"
             android:text="互动"
             android:textColor="@color/text_check_staus_play"
-            android:textSize="14dp"
-            />
+            android:textSize="14dp" />
 
         <RadioButton
             android:id="@+id/tv_kebiao"
@@ -276,8 +166,7 @@
             android:gravity="center"
             android:text="课程表"
             android:textColor="@color/text_check_staus_play"
-            android:textSize="14dp"
-            />
+            android:textSize="14dp" />
 
         <RadioButton
             android:id="@+id/tv_jianjie"
@@ -289,7 +178,7 @@
             android:gravity="center"
             android:text="讲义"
             android:textColor="@color/text_check_staus_play"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
 
         <RadioButton
             android:id="@+id/tv_chanjian"
@@ -301,14 +190,14 @@
             android:gravity="center"
             android:text="常见问题"
             android:textColor="@color/text_check_staus_play"
-            android:textSize="14dp"/>
+            android:textSize="14dp" />
     </RadioGroup>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/width_1"
         android:layout_below="@+id/rl_tab"
-        android:background="@color/gray008"/>
+        android:background="@color/gray008" />
 
     <com.zhy.android.percent.support.PercentLinearLayout
         android:layout_width="match_parent"
@@ -323,15 +212,14 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:visibility="gone"
-            app:layout_marginTopPercent="5.56%w"
-            >
+            app:layout_marginTopPercent="5.56%w">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="暂无聊天记录!"
                 android:textColor="@color/black014"
-                app:layout_textSizePercent="3.78%w"/>
+                app:layout_textSizePercent="3.78%w" />
         </com.zhy.android.percent.support.PercentLinearLayout>
 
         <com.zhy.android.percent.support.PercentRelativeLayout
@@ -340,8 +228,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:visibility="gone"
-            app:layout_heightPercent="55.56%w"
-            >
+            app:layout_heightPercent="55.56%w">
 
             <ImageView
                 android:id="@+id/img_no_notes"
@@ -350,15 +237,14 @@
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:paddingBottom="20dp"
-                android:src="@drawable/pic_nopaper"/>
+                android:src="@drawable/pic_nopaper" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_no_notes"
                 android:layout_centerHorizontal="true"
-                android:text="@string/no_notes"
-                />
+                android:text="@string/no_notes" />
         </com.zhy.android.percent.support.PercentRelativeLayout>
 
         <com.zhy.android.percent.support.PercentLinearLayout
@@ -368,8 +254,7 @@
             android:layout_below="@+id/rl_tab"
             android:gravity="bottom"
             android:orientation="vertical"
-            android:weightSum="1"
-            >
+            android:weightSum="1">
 
             <WebView
                 android:id="@+id/webview"
@@ -377,19 +262,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scrollbars="none"
-                android:visibility="gone"/>
-
-            <!--<com.huatu.teacheronline.widget.PinnedHeaderListView-->
-            <!--android:id="@+id/listview"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--android:cacheColorHint="#00000000"-->
-            <!--android:divider="@color/gray012"-->
-            <!--android:dividerHeight="@dimen/width_1"-->
-            <!--android:scrollbars="none"-->
-            <!--android:visibility="visible"/>-->
-
+                android:visibility="gone" />
 
             <ExpandableListView
                 android:id="@+id/listview"
@@ -400,20 +273,10 @@
                 android:dividerHeight="@dimen/width_1"
                 android:groupIndicator="@null"
                 android:scrollbars="none"
-                android:visibility="visible"
-                >
+                android:visibility="visible">
 
             </ExpandableListView>
 
-            <!--<ListView-->
-            <!--android:id="@+id/chat_listview"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--android:cacheColorHint="#00000000"-->
-            <!--android:divider="@null"-->
-            <!--android:scrollbars="none"-->
-            <!--android:visibility="gone"/>-->
             <FrameLayout
                 android:id="@+id/fra_live_chat"
                 android:layout_width="match_parent"
@@ -431,38 +294,31 @@
                 android:cacheColorHint="@color/gray006"
                 android:dividerHeight="1px"
                 android:scrollbars="none"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <com.joanzapata.pdfview.PDFView
                 android:id="@+id/pdfView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
 
         </com.zhy.android.percent.support.PercentLinearLayout>
     </com.zhy.android.percent.support.PercentLinearLayout>
-    <!--<View-->
-    <!--android:id="@+id/line1"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="@dimen/width_1"-->
-    <!--android:layout_above="@+id/rl_sendMessage"-->
-    <!--android:layout_gravity="bottom"-->
-    <!--android:background="@color/gray008"/>-->
-    <!-- height:56.5dp -->
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/img_customer_service"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:src="@drawable/ic_diret_kefu"/>
+            android:src="@drawable/ic_diret_kefu" />
     </RelativeLayout>
 
     <com.zhy.android.percent.support.PercentRelativeLayout
@@ -472,8 +328,7 @@
         android:layout_below="@+id/rl_tab"
         android:visibility="gone"
         app:layout_heightPercent="13.89%w"
-        app:layout_widthPercent="13.89%w"
-        >
+        app:layout_widthPercent="13.89%w">
 
         <ImageView
             android:id="@+id/ib_main_left"
@@ -481,7 +336,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_batoli"/>
+            android:src="@drawable/ic_batoli" />
     </com.zhy.android.percent.support.PercentRelativeLayout>
 
 
@@ -490,16 +345,14 @@
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:visibility="gone"
-        ></android.support.v7.widget.RecyclerView>
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rcv_player_speed"
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:visibility="gone"
-        ></android.support.v7.widget.RecyclerView>
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
 
 
     <com.zhy.android.percent.support.PercentLinearLayout
@@ -518,8 +371,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <TextView
 
@@ -553,8 +405,7 @@
             android:cacheColorHint="#00000000"
             android:divider="@color/white"
             android:dividerHeight="@dimen/width_1"
-            android:scrollbars="none"
-            >
+            android:scrollbars="none">
 
         </ExpandableListView>
 

@@ -18,6 +18,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -57,8 +58,11 @@ import com.baijiahulian.livecore.utils.LPErrorPrintSubscriber;
 import com.baijiayun.BJYPlayerSDK;
 import com.baijiayun.constant.VideoDefinition;
 import com.baijiayun.playback.PBRoom;
+import com.baijiayun.playback.mocklive.OnPlayerListener;
 import com.baijiayun.videoplayer.IBJYVideoPlayer;
 import com.baijiayun.videoplayer.VideoPlayerFactory;
+import com.baijiayun.videoplayer.bean.BJYVideoInfo;
+import com.baijiayun.videoplayer.bean.VideoItem;
 import com.baijiayun.videoplayer.player.PlayerStatus;
 import com.baijiayun.videoplayer.player.error.PlayerError;
 import com.baijiayun.videoplayer.ui.event.UIEventKey;
@@ -151,9 +155,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     private WebView webview;
     private RelativeLayout rl_deatil_waiting;
     private ImageView iv_icon;
-//    private ImageView iv_screen;
 
-    //listview
     private View loadView;
     // 均匀旋转动画
     private ExpandableListView listview;
@@ -220,92 +222,20 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     FrameLayout mFraLiveChat;
     @BindView(R.id.fra_live_touch)
     FrameLayout mFraLiveTouch;
-    @BindView(R.id.rl_play_bottom_)
-    RelativeLayout mRelPlayBackBottom;
-    @BindView(R.id.ll_playback_top)
-    LinearLayout mLlPlayBackTop;
-    @BindView(R.id.fra_playback_center)
-    FrameLayout mFraPlayBackCenter;
-    @BindView(R.id.tv_player_speed)
-    TextView tv_speed;
-
-    /*********横屏view**********/
-
-    @BindView(R.id.ll_bottombar_top)
-    LinearLayout mLlTop;
-    @BindView(R.id.ll_bottombar_bottom)
-    LinearLayout mLlBottiom;
-
-    @BindView(R.id.switch_bottombar)
-    SwitchButton mSwitch;
-    @BindView(R.id.ll_bottombar_withdraw)
-    LinearLayout mLlWithDraw;
-    @BindView(R.id.img_bottombar_withdraw)
-    ImageView mImgWithDraw;
-    @BindView(R.id.pb_bottombar_withdraw)
-    ProgressBar mPbWithDraw;
-    @BindView(R.id.tv_bottombar_withdraw)
-    TextView mTvWithDraw;
-    @BindView(R.id.ll_bottombar_timetable)
-    LinearLayout mLlTimeTableBottomBar;
-    @BindView(R.id.img_bottombar_timetable)
-    ImageView mImgTimeTable;
-    @BindView(R.id.tv_bottombar_timetable)
-    TextView mTvTimeTable;
-
     @BindView(R.id.ll_live_timetable)
     LinearLayout mLlTimeTable;
     @BindView(R.id.lv_live_fullscreen)
     ExpandableListView mLvTimeTable;
     @BindView(R.id.cl_guide)
     ConstraintLayout mClGuide;
-    @BindView(R.id.iv_screen)
-    ImageView mImgBottomBarScreen;
-
     @BindView(R.id.rcv_player_definition)
     RecyclerView mRcvDefinition;
     @BindView(R.id.rcv_player_speed)
     RecyclerView mRcvSpeed;
-    @BindView(R.id.tv_player_definition)
-    TextView mTvDefinition;
-    @BindView(R.id.img_live_center_dialog)
-    ImageView mImgLiveCenterDialog;
-    @BindView(R.id.ll_live_center_dialog)
-    LinearLayout mLlLiveCenterDialog;
-    @BindView(R.id.tv_live_center_dialog)
-    TextView mTvLiveCenterDialog;
-
-    /****直播时的bottombar****/
-    @BindView(R.id.rl_live_bottom)
-    RelativeLayout mRelLiveBottom;
-
-    @BindView(R.id.switch_live_bottombar_continuous)
-    SwitchButton mSwitchLiveContinuous;
-    @BindView(R.id.tv_live_bottombar_continuous)
-    TextView mTvLiveContinuous;
-    @BindView(R.id.ll_live_bottombar_withdraw)
-    LinearLayout mLlLiveWithDraw;
-    @BindView(R.id.pb_live_bottombar_withdraw)
-    ProgressBar mPbLiveWithDraw;
-    @BindView(R.id.img_live_bottombar_withdraw)
-    ImageView mImgLiveWithDraw;
-    @BindView(R.id.tv_live_bottombar_withdraw)
-    TextView mTvLiveWithDraw;
-    @BindView(R.id.ll_live_bottombar_timetable)
-    LinearLayout mLlLiveTimeTableBottomBar;
-    @BindView(R.id.img_live_bottombar_timetable)
-    ImageView mImgLiveTimeTable;
-    @BindView(R.id.iv_live_screen)
-    ImageView mImgLiveScreen;
-    @BindView(R.id.tv_live_bottombar_timetable)
-    TextView mTvLiveTimeTable;
-    @BindView(R.id.ll_live_bottombar_function)
-    LinearLayout mLlLiveFunction;
 
 
     PBRoom mRoom = null;
     private boolean mIsPlayback = true;
-    private BjyBottomViewPresenter mBjyBottomViewPresenter;
     private ChooseSpeedPopwindows chooseSpeedPopwindows;
     private int speedType;
     private String mPresenteUserId;
@@ -342,13 +272,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
      * 神策使用
      */
     private String mStartWatchCourse;
-
-    //    private String mProvince;
-//    private String mCategorie;
-//    private String mPeriod;
-//    private String mSubject;
-    private List<VideoDefinition> definitionList = new ArrayList<>(Arrays.asList(VideoDefinition._720P,
-            VideoDefinition.SHD, VideoDefinition.HD, VideoDefinition.SD, VideoDefinition._1080P));
 
     @Override
     public void onCreate(Bundle arg0) {
@@ -391,119 +314,44 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         m_wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "cn");
         m_wakeLock.acquire(); //设置保持唤醒
         daoUtils = DaoUtils.getInstance();
-//        nickName = CommonUtils.getSharedPreferenceItem(null, com.huatu.teacheronline.utils.UserInfo.KEY_SP_NICKNAME, "");
-//        if (StringUtil.isEmpty(nickName)) {
         //直播使用用户名不用昵称
         nickName = CommonUtils.getSharedPreferenceItem(null, com.huatu.teacheronline.utils.UserInfo.KEY_SP_ACCOUNT, "1");
-//        }
         directBean = (DirectBean) getIntent().getSerializableExtra("DirectBean");
-
-//        mCategorie = StringUtils.isEmpty(getIntent().getStringExtra(DirectDetailsActivity.KEY_CATEGORIE)) ? null : getIntent().getStringExtra(DirectDetailsActivity.KEY_CATEGORIE);
-//        mPeriod = StringUtils.isEmpty(getIntent().getStringExtra(DirectDetailsActivity.KEY_PERIOD)) ? null : getIntent().getStringExtra(DirectDetailsActivity.KEY_PERIOD);
-//        mSubject = StringUtils.isEmpty(getIntent().getStringExtra(DirectDetailsActivity.KEY_SUBJECT)) ? null : getIntent().getStringExtra(DirectDetailsActivity.KEY_SUBJECT);
-//        mProvince = StringUtils.isEmpty(getIntent().getStringExtra(DirectDetailsActivity.KEY_PROVINCE)) ? null : getIntent().getStringExtra(DirectDetailsActivity.KEY_PROVINCE);
-
         directBeanListForClassSchedule = DataStore_Direct.directDatailList;
         position = getIntent().getIntExtra("position", 0);
         wherefrom = getIntent().getIntExtra("wherefrom", 0);
-        int key = getIntent().getIntExtra("key", 0);//判断是否从24小时直播进入 0不是 1是
-//        if (key==1){
-//            settingid1="kf_10092_1515490706283";
-//        }else{
-//            settingid1="kf_10092_1513839603881";
-//        }
         mCustomLoadingDialog = new CustomAlertDialog(PlayerActivityForBjysdk.this, R.layout.dialog_loading_custom);
 
-        rl_main_left_player = (RelativeLayout) findViewById(R.id.rl_main_left_player);
-        tv_jianjie = (RadioButton) findViewById(R.id.tv_jianjie);
-        tv_kebiao = (RadioButton) findViewById(R.id.tv_kebiao);
-        tv_chanjian = (RadioButton) findViewById(R.id.tv_chanjian);
-        tv_hudong = (RadioButton) findViewById(R.id.tv_hudong);
-        webview = (WebView) findViewById(R.id.webview);
+        rl_main_left_player = findViewById(R.id.rl_main_left_player);
+        tv_jianjie = findViewById(R.id.tv_jianjie);
+        tv_kebiao = findViewById(R.id.tv_kebiao);
+        tv_chanjian = findViewById(R.id.tv_chanjian);
+        tv_hudong = findViewById(R.id.tv_hudong);
+        webview = findViewById(R.id.webview);
 
         WebSettings webSettings = webview.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
 
-        tv_speed.setOnClickListener(this);
-        rl_deatil_waiting = (RelativeLayout) findViewById(R.id.rl_deatil_waiting);
-        ll_content_play = (LinearLayout) findViewById(R.id.ll_content_play);
-        rl_main_left_pdf = (RelativeLayout) findViewById(R.id.rl_main_left_pdf);
-        iv_icon = (ImageView) findViewById(R.id.iv_icon);
-//        iv_screen = (ImageView) findViewById(R.id.iv_directScreen);
-        img_customer_service = (ImageView) findViewById(R.id.img_customer_service);
+        rl_deatil_waiting = findViewById(R.id.rl_deatil_waiting);
+        ll_content_play = findViewById(R.id.ll_content_play);
+        rl_main_left_pdf = findViewById(R.id.rl_main_left_pdf);
+        iv_icon = findViewById(R.id.iv_icon);
+        img_customer_service = findViewById(R.id.img_customer_service);
         img_customer_service.setVisibility(View.GONE);
         loadView = getLayoutInflater().inflate(R.layout.background_isloading, null);
-        listview = (ExpandableListView) findViewById(R.id.listview);
-        lv_pdf = (ListView) findViewById(R.id.pdf_listview);//pdf列表
-        ll_no_notes = (RelativeLayout) findViewById(R.id.ll_no_notes);//暂无pdf
-        ll_no_notes = (RelativeLayout) findViewById(R.id.ll_no_notes);//暂无pdf
+        listview = findViewById(R.id.listview);
+        lv_pdf = findViewById(R.id.pdf_listview);//pdf列表
+        ll_no_notes = findViewById(R.id.ll_no_notes);//暂无pdf
 
-        mPlayerView = new MyBJYVideoView(this);
-        ibjyVideoPlayer = new VideoPlayerFactory.Builder()
-                //后台暂停播放
-                .setSupportBackgroundAudio(false)
-                //开启循环播放
-                .setSupportLooping(true)
-                //开启记忆播放
-                .setSupportBreakPointPlay(true, this)
-                //绑定activity生命周期
-                .setLifecycle(getLifecycle()).build();
-        mPlayerView.initPlayer(ibjyVideoPlayer);
-        mPlayerView.setComponentEventListener((eventCode, bundle) -> {
-            switch (eventCode) {
-//                case UIEventKey.CUSTOM_CODE_REQUEST_BACK://播放器返回按钮 已经自定义隐藏
-//                    if (isLandscape) {
-//                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//                    } else {
-//                        finish();
-//                    }
-//                    break;
-                case UIEventKey.CUSTOM_CODE_REQUEST_TOGGLE_SCREEN://播放器全屏按钮
-                    setRequestedOrientation(isLandscape ?
-                            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT :
-                            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                    break;
-                default:
-                    break;
-            }
-        });
+        initBJYVideoView();
         //初始设置显示布局宽高
         requestLayout(false);
-        mSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean isChecked = ((SwitchButton) v).isChecked();
-                isContinuous = isChecked ? 0 : 1;
-            }
-        });
-
-
-        mSwitchLiveContinuous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean isChecked = ((SwitchButton) v).isChecked();
-                isContinuous = isChecked ? 0 : 1;
-            }
-        });
-
 
         initAdapter();
 
-
-        ib_main_right_player = (ImageView) findViewById(R.id.ib_main_right_player);
-
-        if ("-1".equals(directBean.getRid())) {
-            ib_main_right_player.setVisibility(View.INVISIBLE);
-        } else if (directBean.getIs_buy() != null && Integer.parseInt(directBean.getIs_buy()) == 1) {
-            ib_main_right_player.setVisibility(View.VISIBLE);
-            ib_main_right_player.setOnClickListener(this);
-        } else {
-            ib_main_right_player.setVisibility(View.INVISIBLE);
-        }
         pdfView = (PDFView) findViewById(R.id.pdfView);
 
-//        if (directBeanListForClassSchedule == null || directBeanListForClassSchedule.size() == 0) {
         //判断有无网络是否加载本地
         if (CommonUtils.isNetWorkAvilable()) {
             loadDirectPlayInfo();
@@ -530,27 +378,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         }
                     });
 
-
-//                List<DirectBean> directBeans = daoUtils.queryDirectBeanForCacheClassForRid(directBean.getRid());
-//                //数据库没有需要提示
-//                if (directBeans.size() == 0) {
-//                    ToastUtils.showToast(R.string.network);
-//                    return;
-//                }
-//                if (directBeanListForClassSchedule == null) {
-//                    directBeanListForClassSchedule = (ArrayList<DirectBean>) directBeans;
-//                    DataStore_Direct.directDatailList = directBeanListForClassSchedule;
-//                } else {
-//                    directBeanListForClassSchedule.clear();
-//                    directBeanListForClassSchedule.addAll(directBeans);
-//                }
-//                isLocaleData = true;
-//                iniFristData(isLocaleData);
         }
-//        } else {
-//            isLocaleData = false;
-//            iniFristData(isLocaleData);
-//        }
+
 
         img_customer_service.setVisibility(View.VISIBLE);
         tab = 2;
@@ -595,30 +424,29 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         directClassPdfAdapter = new DirectClassPdfAdapter(this, directBeanListPDFForClassSchedule);
         lv_pdf.setAdapter(directClassPdfAdapter);
 
+        //清晰度选择器部分
         mRcvDefinition.setHasFixedSize(true);
         mRcvDefinition.setLayoutManager(new LinearLayoutManager(this));
         mDefinitionAdapter = new DefinitionAdapter();
-        mDefinitionAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+        mDefinitionAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
-            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 DefinitionBean definitionBean = mDefinitionAdapter.getData().get(position);
 
                 if (mPlayerView != null) {
-//                    mPlayerView.changeDefinition(Utils.getVideoDefinitionFromString(definitionBean.getType()));
-                    mPlayerView.changeDefinition(definitionList.get(2));
+                    mPlayerView.changeDefinition(definitionBean.getVideoDefinitionForValue(definitionBean.getValue()));
                     mDefinitionAdapter.select(definitionBean);
-
+                    mPlayerView.controllerComponent.mDefinition.setText(mDefinitionAdapter.getNameByValue(definitionBean.getValue()));
                 } else {
                     directClassScheduleAdapter.showCustomToast("视频暂未初始化完成!");
                 }
 
                 mRcvDefinition.setVisibility(View.GONE);
-
             }
         });
         mRcvDefinition.setAdapter(mDefinitionAdapter);
 
+        //播放速率选择器部分
         mRcvSpeed.setHasFixedSize(true);
         mRcvSpeed.setLayoutManager(new LinearLayoutManager(this));
         mSpeedAdapter = new SpeedAdapter();
@@ -630,19 +458,19 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     switch (position) {
                         case 1:
                             mPlayerView.setPlayRate(1.25f);
-                            tv_speed.setText(getString(R.string.speed_quick1));
+                            mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_quick1));
                             break;
                         case 2:
                             mPlayerView.setPlayRate(1.5f);
-                            tv_speed.setText(getString(R.string.speed_quick2));
+                            mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_quick2));
                             break;
                         case 3:
                             mPlayerView.setPlayRate(2.0f);
-                            tv_speed.setText(getString(R.string.speed_quick3));
+                            mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_quick3));
                             break;
                         default:
                             mPlayerView.setPlayRate(1.0f);
-                            tv_speed.setText(getString(R.string.speed_original));
+                            mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_original));
                             break;
 
                     }
@@ -670,7 +498,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             }
         }
 
-
     }
 
 
@@ -680,13 +507,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         //试听课程播放事件track
         if (zDirectBean.getIsTrial() == 1) {
             trackPlayTrialCourse(zDirectBean);
-
-        }
-
-
-        if (mLlTimeTable != null && mLlTimeTable.getVisibility() == View.VISIBLE) {
-            mLlTimeTable.setVisibility(View.GONE);
-
         }
 
         directClassScheduleAdapter.setDirectId(position + "");
@@ -699,104 +519,63 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         if (("-1").equals(directBean.getRid()) || mPlayingDirectBean == null || !mPlayingDirectBean.getLessonid().equals(zDirectBean.getLessonid())) {
             joinTime = "";
         }
+        mLlTimeTable.setVisibility(View.GONE);
 
         this.position = position;
         mPlayingDirectBean = zDirectBean;
 
         if (!directBean.getRid().equals("-1")) {
             addWatchRecord(zDirectBean);
-
         }
 
-
         mSpeedAdapter.select(0);
-
-
         RecordInfoManager.getInstance().setJoinTime(joinTime);
-
-
         initBottomExtendView(zDirectBean);
 
-
-////        LivePlaybackSDK.deployType = LPConstants.LPDeployType.Product;
-////        rl_deatil_waiting.setVisibility(View.VISIBLE);
-//
         showAppraiseDialog(position);
         mIsVideo = zDirectBean.getVideoType() == 0;
-//
-        tv_speed.setVisibility(View.GONE);
-
 
         if (mIsVideo) {
             //点播
-
-//            mPlayerView = new BJYPlayerView(this);
-//            mPlayerView.removeView(mPlayerView.getTopView());
-//            mPlayerView.removeView(mPlayerView.getBottomView());
-//            mPlayerView.removeView(mPlayerView.getCenterView());
-
+            mPlayerView.controllerComponent.mSpeed.setVisibility(View.VISIBLE);
+            mPlayerView.controllerComponent.mTimetable.setVisibility(View.VISIBLE);
             mPlayerView.setUserInfo(nickName, uid);
 
             mFra_container.addView(mPlayerView, 0);
             iv_icon.setVisibility(View.GONE);
 
-            //开启记忆播放
-//            mPlayerView.enableBreakPointMemory(this);
-
-
             mFraLivePpt.setVisibility(View.GONE);
             mSurfaceContainer.setVisibility(View.GONE);
-            mRelPlayBackBottom.setVisibility(View.GONE);
-//            iv_screen.setVisibility(View.GONE);
-            mRelLiveBottom.setVisibility(View.GONE);
-
-
-//            mBjyBottomViewPresenter = new BjyBottomViewPresenter(mRelPlayBackBottom, this);
-//            mPlayerView.setBottomPresenter(mBjyBottomViewPresenter);
-//            mPlayerView.setCenterPresenter(new CenterViewPresenter(mFraPlayBackCenter));
-//            mPlayerView.initPartner(CustomApplication.BJPlayerView_partnerId, BJYVideoView.PLAYER_DEPLOY_ONLINE);
-
 
             boolean isLocalPlay = false;
             if (zDirectBean.getDown_status() != null && zDirectBean.getDown_status().equals(DownManageActivity.CCDOWNSTATE_COMPLETE + "") && !StringUtils.isEmpty(zDirectBean.getLocalPath())) {
                 File file = new File(zDirectBean.getLocalPath());
                 if (file.exists()) {
                     isLocalPlay = true;
-
                 }
-
             }
 
-            if (mSwitch.isChecked() && !CommonUtils.isNetWorkAvilable() && !isLocalPlay) {
+            if (mPlayerView.controllerComponent.mSwitchButton.isChecked() && !CommonUtils.isNetWorkAvilable() && !isLocalPlay) {
                 playNextVideo(position);
                 return;
             }
 
 
-//            mPlayerView.setOnPlayerViewListener(mPlayerListener);
-            mPlayerView.setPlayRate(10);
+            mPlayerView.setPlayRate(1.0f);
             if (isLocalPlay) {
                 mPlayerView.setupLocalVideoWithFilePath(zDirectBean.getLocalPath());
             } else {
                 if (!StringUtil.isEmpty(zDirectBean.getBjyvideoid()) && !StringUtil.isEmpty(zDirectBean.getBjytoken())) {
                     mPlayerView.setupOnlineVideoWithId(Long.parseLong(zDirectBean.getBjyvideoid()), zDirectBean.getBjytoken());
                 } else {
-
                     ToastUtils.showToast("播放参数错误！");
-
                 }
-
-
             }
             mPlayerView.play(0);
 
-
         } else {
             //直播或回放
-
             mIsPlayback = zDirectBean.getVideo_status().equals("2") || zDirectBean.getVideo_status().equals("3");
-
-//        joinTime = StringUtils.getNowTime();
             //<<<<<<<<<<<<<<<<回放部分开始>>>>>>>>>>>>>>
             if (mIsPlayback) {
                 //playback
@@ -804,42 +583,15 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     ToastUtils.showToast("找不到房间号!");
                     return;
                 }
-
-//                mPlayerView = new BJYPlayerView(this);
-//              mPlayerView.removeView(mPlayerView.getTopView());
-//              mPlayerView.removeView(mPlayerView.getBottomView());
-//              mPlayerView.removeView(mPlayerView.getCenterView());
+                mPlayerView.controllerComponent.mSpeed.setVisibility(View.VISIBLE);
+                mPlayerView.controllerComponent.mTimetable.setVisibility(View.VISIBLE);
 
                 mPlayerView.setUserInfo(nickName, uid);
 
                 mFra_container.addView(mPlayerView, 0);
 
-                //开启记忆播放
-//                mPlayerView.enableBreakPointMemory(this);
-
                 mFraLivePpt.setVisibility(View.VISIBLE);
                 mSurfaceContainer.setVisibility(View.GONE);
-//            mPlayerView.setVisibility(View.GONE);
-                mRelPlayBackBottom.setVisibility(View.GONE);
-//                iv_screen.setVisibility(View.GONE);
-                mRelLiveBottom.setVisibility(View.GONE);
-//            rl_fullScreenBack.setVisibility(View.GONE);
-
-
-                mBjyBottomViewPresenter = new BjyBottomViewPresenter(mRelPlayBackBottom, this);
-//                mPlayerView.setBottomPresenter(mBjyBottomViewPresenter);
-//                mPlayerView.setBottomPresenter(new BJBottomViewPresenter(mPlayerView.getBottomView()));
-//                mPlayerView.setCenterPresenter(new CenterViewPresenter(mFraPlayBackCenter));
-
-
-                //回放离线播放
-//                DirectBean directQuery = daoUtils.queryDirectBeanForPlayBack(uid, zDirectBean.getRoom_id(), zDirectBean.getSession_id(), zDirectBean.getNumber());
-//                if (directQuery != null) {
-//                    zDirectBean.setDown_status(directQuery.getDown_status());
-//                    zDirectBean.setLocalPath(directQuery.getLocalPath());
-//                    zDirectBean.setStart(directQuery.getStart());
-//                    zDirectBean.setEnd(directQuery.getEnd());
-//                }
 
                 String localpath = zDirectBean.getLocalPath();
 
@@ -852,17 +604,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         File videoFile = new File(split[0]);
                         File signalFile = new File(split[1]);
                         if (videoFile.exists() && signalFile.exists()) {
-
-//                            mRoom = BJYPlayerSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()),
-//                                    videoFile.getAbsolutePath(),
-//                                    signalFile.getAbsolutePath());
                             mOffLinePlayBack = true;
                         }
-
-
                     }
-
-
                 }
 
                 Logger.d("liveRoom playback path:" + localpath + "   " + mOffLinePlayBack);
@@ -873,12 +617,10 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     String singleFile = FileUtils.getBjyVideoDiskCacheDir() + sigleName;
                     mRoom = BJYPlayerSDK.newPlayBackRoom(this, directBean.getLocalPath(), singleFile);//, Long.parseLong(zDirectBean.getRoom_id())
                     mOffLinePlayBack = true;
-
                 } else {
                     if (!mOffLinePlayBack) {
                         if (StringUtils.isEmpty(zDirectBean.getSession_id())) {
                             mRoom = BJYPlayerSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), zDirectBean.getBjyhftoken());
-
                         } else {
                             mRoom = BJYPlayerSDK.newPlayBackRoom(this, Long.parseLong(zDirectBean.getRoom_id()), Long.parseLong(zDirectBean.getSession_id()), zDirectBean.getBjyhftoken());
                         }
@@ -896,13 +638,11 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                             @Override
                             public void onLaunchError(com.baijiayun.playback.context.LPError lpError) {
                                 ToastUtils.showToast(R.string.notice_bjy_enter_error + lpError.getMessage());
-
                             }
 
                             @Override
                             public void onLaunchSuccess(PBRoom liveRoom) {
                                 Logger.e("playback onLaunchSuccess");
-
 
                                 addRecordTime();
                                 recodingInfo = zDirectBean;
@@ -918,26 +658,20 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                                     Logger.d("liveActivity playVideo mInBack = " + mInBack);
                                 }
 
-
                                 setZOrderMediaOverlay(mPlayerView, false);
 //                                setZOrderMediaOverlay(mPptFragment.getView(), true);
-
 
                             }
                         });
 
                 mRoom.bindPlayer(ibjyVideoPlayer);
-//                mRoom.setOnPlayerListener(mPlayerListener);
-//                mPptFragment = PPTFragment.newInstance(mRoom);//2.0在线回放无画板
 
-
-                if (!isFinishing() && !isDestroyed()&&mPptFragment!=null) {
+                if (!isFinishing() && !isDestroyed() && mPptFragment != null) {
                     getSupportFragmentManager()
                             .beginTransaction()
                             .add(R.id.fra_live_ppt, mPptFragment, PPTFragment.class.getName())
                             .commitAllowingStateLoss();
                 }
-
 
                 MessageListFragment messageFragment = MessageListFragment.newInstance(mRoom);
 
@@ -947,28 +681,19 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                             .add(R.id.fra_live_chat, messageFragment, MessageListFragment.class.getName())
                             .commitAllowingStateLoss();
                 }
-
-
-//            mAm = (AudioManager) getSystemService(AUDIO_SERVICE);
-
                 //<<<<<<<<<<<<<<<<回放部分结束>>>>>>>>>>>>>>
 
             } else {
+
                 //<<<<<<<<<<<<<<<<直播部分开始>>>>>>>>>>>>>>
                 if (StringUtils.isEmpty(zDirectBean.getStudent_code())) {
                     ToastUtils.showToast("找不到邀请码!");
                     return;
                 }
 
-                tv_speed.setVisibility(View.GONE);
-//            rl_fullScreenBack.setVisibility(View.VISIBLE);
-//                iv_screen.setVisibility(View.VISIBLE);
-                mRelLiveBottom.setVisibility(View.VISIBLE);
+                mPlayerView.controllerComponent.mSpeed.setVisibility(View.GONE);
                 mFraLivePpt.setVisibility(View.VISIBLE);
-//                    mSurfaceSpeaker.setVisibility(View.GONE);
-//            mPlayerView.setVisibility(View.GONE);
                 mSurfaceContainer.setVisibility(View.GONE);
-                mRelPlayBackBottom.setVisibility(View.GONE);
 
                 LiveSDK.enterRoom(this, zDirectBean.getStudent_code(), nickName, new LPLaunchListener() {
                     @Override
@@ -989,15 +714,12 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         Logger.e("minVolume:" + minVolume);
                         mLiveRoom = liveRoom;
 
-
                         mLiveRoom.getObservableOfClassEnd().observeOn(AndroidSchedulers.mainThread())
                                 .subscribe(new Action1<Void>() {
                                     @Override
                                     public void call(Void aVoid) {
                                         //下课回调  暂定为直播结束
                                         playNextVideo(position);
-
-
                                     }
                                 });
 
@@ -1039,29 +761,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
                         mSurface = ViESurfaceViewRenderer.CreateRenderer(PlayerActivityForBjysdk.this, true);
 
-                        //TODO 直播时的亮度和音量调节
-//                        LiveSurfaceGestureListener liveSurfaceGestureListener = new LiveSurfaceGestureListener();
-//
-//                        mGestureDetector = new GestureDetector(PlayerActivityForBjysdk.this, liveSurfaceGestureListener);
-//
-//                        mSurface.setOnTouchListener(new View.OnTouchListener() {
-//                            @Override
-//                            public boolean onTouch(View v, MotionEvent event) {
-//                                if (mLlLiveCenterDialog.getVisibility() == View.VISIBLE) {
-//                                    return false;
-//                                } else if (mGestureDetector.onTouchEvent(event)) {
-//                                    return true;
-//                                } else {
-//                                    return false;
-//                                }
-//
-//
-//                            }
-//                        });
-
-
                         mSurface.setZOrderMediaOverlay(true);
-//                        mSurface.setZOrderOnTop(true);
                         mSurfaceContainer.removeAllViews();
                         mSurfaceContainer.addView(mSurface);
 
@@ -1227,7 +927,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
         isPPT = true;
         changeDisplayContent();
-        addRecordTime();
+//        addRecordTime();
 
         trackWatchCourse(false);
         luanchSuccess = false;
@@ -1238,11 +938,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             chooseSpeedPopwindows.dissmiss();
         }
 
-        tv_speed.setText("倍数");
-        if (mPlayerView != null) {
-            mPlayerView.setPlayRate(10);
-        }
-
+        mPlayerView.controllerComponent.mSpeed.setText("倍数");
 
         if (mPlayerView != null) {
 //            if (mPlayerView.isPlaying()) {
@@ -1277,11 +973,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         }
         if (chatFragment != null && chatFragment.isAdded()) {
             getSupportFragmentManager().beginTransaction().remove(chatFragment).commitAllowingStateLoss();
-
         }
         if (messageFragment != null && messageFragment.isAdded()) {
             getSupportFragmentManager().beginTransaction().remove(messageFragment).commitAllowingStateLoss();
-
         }
     }
 
@@ -1312,12 +1006,12 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     touchTime = time;
                     immersive = !immersive;
 //            if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                    mLlPlayBackTop.setVisibility(immersive ? View.GONE : View.VISIBLE);
+//                    mLlPlayBackTop.setVisibility(immersive ? View.GONE : View.VISIBLE);
                     if (!mIsVideo) {
                         iv_icon.setVisibility(immersive ? View.GONE : View.VISIBLE);
                     }
                     if (mIsPlayback || mIsVideo) {
-                        mRelPlayBackBottom.setVisibility(immersive ? View.GONE : View.VISIBLE);
+//                        mRelPlayBackBottom.setVisibility(immersive ? View.GONE : View.VISIBLE);
                         if (!isPPT && mPlayerView.getDuration() == 0) {//IBJYVideoPlayer.VIDEO_ORIENTATION_LANDSCAPE
                             findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(immersive ? View.GONE : View.VISIBLE);
                         } else {
@@ -1327,7 +1021,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
                     } else {
 //                        iv_screen.setVisibility(immersive ? View.GONE : View.VISIBLE);
-                        mRelLiveBottom.setVisibility(immersive ? View.GONE : View.VISIBLE);
+//                        mRelLiveBottom.setVisibility(immersive ? View.GONE : View.VISIBLE);
                     }
 
                     return false;
@@ -1338,19 +1032,13 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             }
         });
 
-        mImgBottomBarScreen.setOnClickListener(this);
-        mImgLiveScreen.setOnClickListener(this);
-        rl_main_left_player.setOnClickListener(this);
         rl_main_left_pdf.setOnClickListener(this);
         tv_jianjie.setOnClickListener(this);
         tv_kebiao.setOnClickListener(this);
         tv_chanjian.setOnClickListener(this);
         tv_hudong.setOnClickListener(this);
-//        dosView.setOnDocViewClickedListener(this);
-//        rl_fullScreenBack.setOnClickListener(this);
         tv_jianjie.setOnClickListener(this);
         iv_icon.setOnClickListener(this);
-//        videoView.setOnClickListener(this);
         img_customer_service.setOnClickListener(this);
         directClassScheduleAdapter.setVideoClickbutton(new CourseWareAdapter.VideoClick() {
             @Override
@@ -1358,35 +1046,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
-//        listview.setOnScrollListener(new AbsListView.OnScrollListener() {
-//            @Override
-//            public void onScrollStateChanged(AbsListView view, int scrollState) {
-//                if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
-//                    if (isLoadEnd) {
-//                        if (view.getLastVisiblePosition() == view.getCount() - 1) {
-//                            listview.addFooterView(loadView);
-//                            loadIcon.startAnimation(refreshingAnimation);
-//                            loadDirectClasSchedule(false);
-//                        }
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-//            }
-//        });
 
-//        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                if ("0".equals(directBeanListForClassSchedule.get(position).getVideo_status())) {//正在直播
-//                    initRtComp(position);
-//                } else {
-//                    ToastUtils.showToast("直播未开始");
-//                }
-//            }
-//        });
         lv_pdf.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -1443,13 +1103,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             case R.id.rl_main_left_player:
                 back();
                 break;
-//            case R.id.img_direct_dealite_face:
-//                if (mGridView.getVisibility() == View.GONE) {
-//                    mGridView.setVisibility(View.VISIBLE);
-//                } else {
-//                    mGridView.setVisibility(View.GONE);
-//                }
-//                break;
+
             case R.id.img_customer_service:
                 MobclickAgent.onEvent(this, "consultationOnClik");
 //                H5DetailActivity.newIntent(this, "咨询", directBean.getCustomer());
@@ -1471,12 +1125,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
                 }
 
-//                settingid1 = directBean.getbranchschoolid();
-//                if (directBean.getRid().equals("-1")) {
-//                    settingid1 = "kf_10092_1515490706283";
-//                } else {
-//                    settingid1 = "kf_10092_1513839603881";
-//                }
                 //小能登录
                 Ntalker.getBaseInstance().login(uid, CommonUtils.getSharedPreferenceItem(null, com.huatu.teacheronline.utils.UserInfo.KEY_SP_ACCOUNT, ""), 0);
                 ChatParamsBody chatparams = new ChatParamsBody();
@@ -1485,13 +1133,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 break;
             case R.id.ib_main_right:
             case R.id.ib_main_right_player:
-                if (ClickUtils.isFastClick()) {
-                    return;
-                }
 
-                if (directBeanListForClassSchedule != null && directBeanListForClassSchedule.size() > 0) {
-                    DownManageActivity.newIntent(PlayerActivityForBjysdk.this, directBeanListForClassSchedule);
-                }
                 break;
             case R.id.videoView://视频点击事件
                 if (directBean != null) {
@@ -1502,13 +1144,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 if (directBean == null) {
                     return;
                 }
-                //直播未开始，不能切换
-//                if ("0".equals(directBean.getVideo_status())) {
                 isPPT = !isPPT;
                 changeDisplayContent();
 
-
-//                }
                 break;
             case R.id.iv_screen:
             case R.id.iv_live_screen:
@@ -1516,8 +1154,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 if (directBean != null) {
                     if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
-
-
                     } else {
                         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//横屏
                     }
@@ -1529,7 +1165,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 } else {
                     finish();
                 }
-
 
                 break;
             case R.id.tv_jianjie://pdf
@@ -1575,16 +1210,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 break;
 
             case R.id.tv_player_speed://清晰度 标清
-                if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-                    mSpeedAdapter.select(speedType);
-                    mRcvSpeed.setVisibility(View.VISIBLE);
-
-
-                } else {
-                    if (chooseSpeedPopwindows != null) {
-                        chooseSpeedPopwindows.showPopUp(v, this, speedType);
-                    }
-                }
 
 
                 break;
@@ -1592,7 +1217,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 speedType = 0;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
-                tv_speed.setText(getString(R.string.speed_original));
+                mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_original));
                 if (mPlayerView != null) {
                     mPlayerView.setPlayRate(1.0f);
                 }
@@ -1601,7 +1226,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 speedType = 1;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
-                tv_speed.setText(getString(R.string.speed_quick1));
+                mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_quick1));
                 if (mPlayerView != null) {
                     mPlayerView.setPlayRate(1.25f);
                 }
@@ -1610,7 +1235,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 speedType = 2;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
-                tv_speed.setText(getString(R.string.speed_quick2));
+                mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_quick2));
                 if (mPlayerView != null) {
                     mPlayerView.setPlayRate(1.5f);
                 }
@@ -1619,7 +1244,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 speedType = 3;
 //                chooseSpeedPopwindows.setClickViewGone(v);
                 chooseSpeedPopwindows.dissmiss();
-                tv_speed.setText(getString(R.string.speed_quick3));
+                mPlayerView.controllerComponent.mSpeed.setText(getString(R.string.speed_quick3));
                 if (mPlayerView != null) {
                     mPlayerView.setPlayRate(2.0f);
                 }
@@ -1665,7 +1290,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             return;
         }
 
-        mLlPlayBackTop.setVisibility(View.VISIBLE);
+//        mLlPlayBackTop.setVisibility(View.VISIBLE);
         iv_icon.setVisibility(View.VISIBLE);
 
         if (mPptFragment != null) {
@@ -1684,13 +1309,13 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //            findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
 ////            mSurfaceContainer.setVisibility(View.GONE);
 ////            mPlayerView.setVisibility(View.GONE);
-//            if (playerView != null) {
-//                mFra_container.removeView(playerView);
-//                playerView.setTranslationX(3000);
+//            if (mPlayerView != null) {
+//                mFra_container.removeView(mPlayerView);
+//                mPlayerView.setTranslationX(3000);
 //            }
 //            mSurfaceContainer.setTranslationX(3000);
 //            if (!mIsPlayback) {
-//                mRelLiveBottom.setVisibility(View.VISIBLE);
+////                mRelLiveBottom.setVisibility(View.VISIBLE);
 ////                Fragment pptFragment = getSupportFragmentManager().findFragmentByTag(PPTFragment.class.getName());
 //
 //            } else {
@@ -1708,8 +1333,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //                checkFirstWatch();
 //
 //                mFraLivePpt.setTranslationX(3000);
-//                if (playerView != null) {
-//                    playerView.setTranslationX(0);
+//                if (mPlayerView != null) {
+//                    mPlayerView.setTranslationX(0);
 ////                    mFra_container.addView(mPlayerView, 0);
 //                }
 //            } else {
@@ -1720,10 +1345,10 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //            iv_icon.setBackgroundResource(R.drawable.ic_toppt);
 //
 //            if (mIsPlayback) {
-//                if (playerView != null) {
-//                    playerView.setVisibility(View.VISIBLE);
+//                if (mPlayerView != null) {
+//                    mPlayerView.setVisibility(View.VISIBLE);
 //                }
-//                mRelLiveBottom.setVisibility(View.GONE);
+////                mRelLiveBottom.setVisibility(View.GONE);
 //                mRelPlayBackBottom.setVisibility(View.VISIBLE);
 //                if (mPlayerView != null && mPlayerView.getDuration() == 0) {//mPlayerView.VIDEO_ORIENTATION_LANDSCAPE
 //                    findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.VISIBLE);
@@ -1732,7 +1357,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 ////                top_bar_player.setVisibility(View.GONE);
 //            } else {
 //                findViewById(R.id.bjplayer_center_video_functions_ll).setVisibility(View.GONE);
-//                mRelLiveBottom.setVisibility(View.VISIBLE);
+////                mRelLiveBottom.setVisibility(View.VISIBLE);
 //                mSurfaceContainer.setVisibility(View.VISIBLE);
 //            }
 //        }
@@ -1934,76 +1559,76 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {//横屏
-
-
-            mImgLiveScreen.setImageResource(R.drawable.ic_fullsc_land);
-            mImgBottomBarScreen.setImageResource(R.drawable.ic_fullsc_land);
-            img_customer_service.setVisibility(View.GONE);
-//            rl_sendMessage.setVisibility(View.GONE);
-//            top_bar_player.setVisibility(View.GONE);
-            if (mIsVideo || mIsPlayback) {
-                tv_speed.setVisibility(View.VISIBLE);
-
-                mTvDefinition.setVisibility(View.VISIBLE);
-                mLlBottiom.setVisibility(View.VISIBLE);
-
-
-            } else {
-
-                if (!directBean.getRid().equals("-1")) {
-                    mLlLiveFunction.setVisibility(View.VISIBLE);
-                }
-
-
-            }
-
-            View firstView = mLlTop.getChildAt(0);
-            mLlTop.removeView(firstView);
-            View endView = mLlTop.getChildAt(mLlTop.getChildCount() - 1);
-            mLlTop.removeView(endView);
-
-            mLlBottiom.addView(firstView, 0);
-            mLlBottiom.addView(endView);
-
-
-            isScreenButtonVisible();
-        } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {//竖屏
-
-//            img_customer_service.setVisibility(View.VISIBLE);
-            mRcvDefinition.setVisibility(View.GONE);
-            mRcvSpeed.setVisibility(View.GONE);
-
-            mLlTimeTable.setVisibility(View.GONE);
-            mImgLiveScreen.setImageResource(R.drawable.ic_fullsc);
-            mImgBottomBarScreen.setImageResource(R.drawable.ic_fullsc);
-            findViewById(R.id.bjplayer_center_video_functions_frame_tv).setVisibility(View.GONE);
-//            if (isPPT) {
-//                top_bar_player.setVisibility(View.VISIBLE);
+//        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {//横屏
+//
+//
+//            mImgLiveScreen.setImageResource(R.drawable.ic_fullsc_land);
+//            mImgBottomBarScreen.setImageResource(R.drawable.ic_fullsc_land);
+//            img_customer_service.setVisibility(View.GONE);
+////            rl_sendMessage.setVisibility(View.GONE);
+////            top_bar_player.setVisibility(View.GONE);
+//            if (mIsVideo || mIsPlayback) {
+//                tv_speed.setVisibility(View.VISIBLE);
+//
+//                mTvDefinition.setVisibility(View.VISIBLE);
+//                mLlBottiom.setVisibility(View.VISIBLE);
+//
+//
+//            } else {
+//
+//                if (!directBean.getRid().equals("-1")) {
+//                    mLlLiveFunction.setVisibility(View.VISIBLE);
+//                }
+//
+//
 //            }
-            if (mIsVideo || mIsPlayback) {
-                tv_speed.setVisibility(View.VISIBLE);
-                mTvDefinition.setVisibility(View.INVISIBLE);
-
-            } else {
-                mLlLiveFunction.setVisibility(View.INVISIBLE);
-            }
-
-            mLlBottiom.setVisibility(View.GONE);
-            View firstView = mLlBottiom.getChildAt(0);
-            mLlBottiom.removeView(firstView);
-            View endView = mLlBottiom.getChildAt(mLlBottiom.getChildCount() - 1);
-            mLlBottiom.removeView(endView);
-
-            mLlTop.addView(firstView, 0);
-            mLlTop.addView(endView);
-
-
-            if (tab != 3) {
-                img_customer_service.setVisibility(View.VISIBLE);
-            }
-            isScreenButtonVisible();
-        }
+//
+//            View firstView = mLlTop.getChildAt(0);
+//            mLlTop.removeView(firstView);
+//            View endView = mLlTop.getChildAt(mLlTop.getChildCount() - 1);
+//            mLlTop.removeView(endView);
+//
+//            mLlBottiom.addView(firstView, 0);
+//            mLlBottiom.addView(endView);
+//
+//
+//            isScreenButtonVisible();
+//        } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {//竖屏
+//
+////            img_customer_service.setVisibility(View.VISIBLE);
+//            mRcvDefinition.setVisibility(View.GONE);
+//            mRcvSpeed.setVisibility(View.GONE);
+//
+//            mLlTimeTable.setVisibility(View.GONE);
+//            mImgLiveScreen.setImageResource(R.drawable.ic_fullsc);
+//            mImgBottomBarScreen.setImageResource(R.drawable.ic_fullsc);
+//            findViewById(R.id.bjplayer_center_video_functions_frame_tv).setVisibility(View.GONE);
+////            if (isPPT) {
+////                top_bar_player.setVisibility(View.VISIBLE);
+////            }
+//            if (mIsVideo || mIsPlayback) {
+//                tv_speed.setVisibility(View.VISIBLE);
+//                mTvDefinition.setVisibility(View.INVISIBLE);
+//
+//            } else {
+//                mLlLiveFunction.setVisibility(View.INVISIBLE);
+//            }
+//
+//            mLlBottiom.setVisibility(View.GONE);
+//            View firstView = mLlBottiom.getChildAt(0);
+//            mLlBottiom.removeView(firstView);
+//            View endView = mLlBottiom.getChildAt(mLlBottiom.getChildCount() - 1);
+//            mLlBottiom.removeView(endView);
+//
+//            mLlTop.addView(firstView, 0);
+//            mLlTop.addView(endView);
+//
+//
+//            if (tab != 3) {
+//                img_customer_service.setVisibility(View.VISIBLE);
+//            }
+//            isScreenButtonVisible();
+//        }
     }
 
     private boolean immersive = false;
@@ -2064,7 +1689,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         Logger.e("liveRoom Error:" + lpError.getMessage());
         switch ((int) lpError.getCode()) {
 
-
             case LPError.CODE_ERROR_NETWORK_FAILURE: //无网
                 break;
             case LPError.CODE_ERROR_NETWORK_MOBILE: //当前网络为mobile
@@ -2111,7 +1735,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 break;
 
         }
-
 
     }
 
@@ -2314,19 +1937,12 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
      * 初始化首次加载课程表
      */
     private void iniFristData(boolean isLocaleData) {
-//        if (!isLocaleData) {
         if (!isFinishing()) {
             synchronizationLocal(directBeanListForClassSchedule);
         }
-//        }
-
 
         directClassScheduleAdapter.setDirectBeanList(directBeanListForClassSchedule, position + "", 1);
         mTimeTableAdapter.setDirectBeanList(directBeanListForClassSchedule, position + "");
-
-//        webview.loadDataWithBaseURL(null, directBean.getContent(), "text/html", "UTF-8", null);
-//        tv_main_title.setText(directBeanListForClassSchedule.get(position).getTitle());
-
 
         playNumbe = playrow;
         //课程详情进入
@@ -2341,8 +1957,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         position = i;
                         break;
                     }
-
-
                 }
 
             }
@@ -2352,7 +1966,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 switch (mDirectBean.getVideo_status()) {
                     case "1":
                         ToastUtils.showToast("直播暂未开始");
-
                         return;
                     case "3":
                         ToastUtils.showToast("暂无回放");
@@ -2367,9 +1980,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
                             if (watchRecord != null) {
                                 for (int i = 0; i < directBeanListForClassSchedule.size(); i++) {
-
                                     if (directBeanListForClassSchedule.get(i).getLessonid().equals(watchRecord.getCourseWareId())) {
-
                                         return i;
                                     }
                                 }
@@ -2382,15 +1993,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         @Override
                         public void call(Integer result) {
                             if (result != -1) {
-
-
                                 position = result;
-
                             }
-
                             chekNetState();
-
-
                         }
                     }, new Action1<Throwable>() {
                         @Override
@@ -2399,9 +2004,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         }
                     });
 
-
         }
-
 
     }
 
@@ -2461,11 +2064,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             return;
         }
         int networkType = NetWorkUtils.getAPNType(this);
-
         //网络恢复时重新请求失败的听课记录
         if (networkType != 0) {
             RecodeRequestFailureManager.getInstance().checkRequestRetry();
-
         }
 
         if (mIsPlayback || mIsVideo) {
@@ -2516,12 +2117,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                                 mLiveRoom.getPlayer().playVideo(mPresenteUserId, mSurface);
                             }
                         }
-
-
                     }
                 })
                 .show();
-
 
     }
 
@@ -2544,11 +2142,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 //            mPptFragment.onStop();
 //            setZOrderMediaOverlay(mPptFragment.getView(), isPPT);
 //            mPptFragment.onStart();
-//
 //        }
 //
 //        if (mPlayerView != null) {
-//
 ////            setZOrderMediaOverlay(mPlayerView, !isPPT);
 //            mPlayerView.play();
 //        }
@@ -2563,9 +2159,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     protected void onPause() {
         super.onPause();
         m_wakeLock.release();//解除保持唤醒
-//        if (mPlayerView != null) {
-//            mPlayerView.pause();
-//        }
     }
 
     @Override
@@ -2582,10 +2175,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 mLiveRoom.getPlayer().playVideo(mPresenteUserId, mSurface);
             }
         }
-
-
-//        trackWatchCourse(true);
-
 
     }
 
@@ -2615,7 +2204,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     .course_subject(directBean.getCourse_subject())
                     .course_class_type(directBean.getCourse_class_type())
                     .course_province(directBean.getCourse_province());
-
 
             if (isStart) {
                 mStartWatchCourse = DateTimeUtil.getNowTime(DateTimeUtil.yMd_Hms_format);
@@ -2653,29 +2241,21 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             }
         }
 
-//        trackWatchCourse(false);
-
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         m_wakeLock.release(); //解除保持唤醒
-        mPlayerView.onDestroy();//释放播放器
         //取消pdf下载
         PdfDownloadManager.getInstance().destory();
         quitLiveRoom();
-
         //关闭异常崩溃保存听课记录
         RecordInfoManager.getInstance().release();
-
-
         if (mNetworkChangeReceiver != null) {
             unregisterReceiver(mNetworkChangeReceiver);
-
         }
-
-
+        mPlayerView.onDestroy();//释放播放器
     }
 
 
@@ -2734,24 +2314,9 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                         directBeanListForClassSchedule.get(i).setEnd(directQuery.getEnd());
                     }
 
-
                 }
-//                else {
-//                    DirectBean directBean1 = daoUtils.queryDirectBeanForGeeneVedioId(uid, directBeanListForClassSchedule.get(i).getLubourl(),
-//                            directBeanListForClassSchedule.get(i).getNumber());
-//                    if (directBean1 != null) {
-//                        directBeanListForClassSchedule.get(i).setDown_status(directBean1.getDown_status());
-//                        directBeanListForClassSchedule.get(i).setLocalPath(directBean1.getLocalPath());
-//                        directBeanListForClassSchedule.get(i).setStart(directBean1.getStart());
-//                        directBeanListForClassSchedule.get(i).setEnd(directBean1.getEnd());
-////                    directBeanListForClassSchedule.get(i).setVideo_status(directBean1.getVideo_status());
-//                    }
-//                }
-
             }
         }
-
-
         //删除rid相同的课程后，同步完数据库之后再加入课时缓存
 //        DebugUtil.e("synchronizationLocal:" + DirectPlayDetailsActivityForRtsdk.this.directBean.toString());
         daoUtils.deletDirectBeanListForRid(PlayerActivityForBjysdk.this.directBean.getRid());
@@ -2761,11 +2326,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             directBean.setRid(PlayerActivityForBjysdk.this.directBean.getRid());
             daoUtils.insertOrUpdateDirectBeanCacheClass(directBean);
             DebugUtil.e("synchronizationLocal:" + directBean.toString());
-
-
         }
-
-
         mCustomLoadingDialog.dismiss();
     }
 
@@ -2873,7 +2434,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             protected void onMoveToChild(int i) {
                 DebugUtil.e(TAG, "onMoveToChild " + i);
                 super.onMoveToChild(i);
-//                mTitle.setText(String.format(" %s / %s ",  i + 1, totalPageCount));
                 if ((i + 1) == totalPageCount) {
                     isFinished = true;
                 }
@@ -2897,7 +2457,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
 
         ll_content_play.addView(mDocView, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         mDocView.setDisplayedViewIndex(lastPagePosition - 1);
-//        mTitle.setText(String.format(" %s / %s ", lastPagePosition, totalPageCount));
     }
 
     private MuPDFCore openFile(String path) {
@@ -2907,9 +2466,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         System.out.println("Trying to open " + path);
         try {
             core = new MuPDFCore(this, path);
-            // New file: drop the old outline data
-            //OutlineActivityData.set(null);
-//            PDFPreviewGridActivityData.set(null);
         } catch (Exception e) {
             System.out.println(e);
             DebugUtil.e(TAG, e.getMessage());
@@ -2963,9 +2519,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     public void flushPdfContent_OnSucess(ArrayList<PdfBean> res) {
         mCustomLoadingDialog.dismiss();
         if (res != null && res.size() > 0) {
-//            tv_main_title.setText(directBean.getTitle());
-//            webview.loadDataWithBaseURL(null, directBean.getContent(), "text/html", "UTF-8", null);
-
             directBeanListPDFForClassSchedule.addAll(res);
             for (PdfBean pdfBean : directBeanListPDFForClassSchedule) {
 
@@ -2975,10 +2528,7 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                 final File file = new File(jyDownLoadUrlForLocal);
                 if (file.exists()) {
                     pdfBean.setState(1);
-
                 }
-
-
             }
 
             DataStore_Direct.directPdfDatailList = directBeanListPDFForClassSchedule;
@@ -3006,37 +2556,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         obtatinPdfListener = new ObtatinPdfListener(PlayerActivityForBjysdk.this);
         SendRequest.getLivePDFForClassSchedule(directBean.getRid(), uid, obtatinPdfListener);
     }
-
-
-//    @Override
-//    protected void onSaveInstanceState(Bundle outState) {
-//        Logger.e("crash save");
-//        //异常销毁时  保存当前的观看时长记录
-//        if (!StringUtils.isEmpty(joinTime) && recodingInfo != null) {
-//            //记录时长
-//            leavetime = StringUtils.getNowTime();
-//            if (recodingInfo.getReturncash() > 0) {
-//
-//
-//
-//                RecodeRequestFailure recodeRequestFailure = new RecodeRequestFailure(uid,
-//                        account,
-//                        recodingInfo.getOrderid(),
-//                        joinTime,
-//                        leavetime,
-//                        recodingInfo.getNetClassId(),
-//                        recodingInfo.getLessonid(),
-//                        mIsPlayback ? "lubo" : "zhibo");
-//
-//                RecodeRequestFailureManager.getInstance().save(recodeRequestFailure);
-//                Logger.e("crash save success");
-//            }
-//
-//            joinTime = "";
-//        }
-//        super.onSaveInstanceState(outState);
-//    }
-
 
     /**
      * 记录时长
@@ -3076,11 +2595,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                                 mDirectBean.setFstatus(res.getFstatus());
                                 directClassScheduleAdapter.notifyDataSetChanged();
                                 if (mDirectBean.getLessonid().equals(mPlayingDirectBean.getLessonid())) {
-                                    mPbWithDraw.setProgress(res.getProgress());
-                                    mPbLiveWithDraw.setProgress(res.getProgress());
+                                    mPlayerView.controllerComponent.mWithdrawProgress.setProgress(res.getProgress());
                                 }
-
-
                             }
                         });
                     }
@@ -3107,58 +2623,12 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     }
 
 
-    @OnClick({R.id.ll_bottombar_withdraw, R.id.ll_bottombar_timetable, R.id.ll_live_timetable_title, R.id.img_guide_confirm, R.id.tv_player_definition
-            , R.id.ll_live_bottombar_withdraw, R.id.ll_live_bottombar_timetable
-    })
+    @OnClick({R.id.img_guide_confirm})
     public void onBottomBarClick(View v) {
         switch (v.getId()) {
-            case R.id.ll_bottombar_withdraw:
-            case R.id.ll_live_bottombar_withdraw:
-                if (mPlayingDirectBean == null || mPlayingDirectBean.getFstatus() == 2 || mPlayingDirectBean.getProgress() == 0 || mPlayingDirectBean.getFstatus() == 0 || mPlayingDirectBean == null) {
-
-                    return;
-                }
-
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
-
-                WithdrawalDialog mWithdrawalDialog = new WithdrawalDialog(this, mPlayingDirectBean, mPlayingDirectBean.getRid(), mPlayingDirectBean.getOrderid());
-                mWithdrawalDialog.show();
-                mWithdrawalDialog.setOnWithdrawaledListener(new WithdrawalDialog.OnWithdrawaledListener() {
-                    @Override
-                    public void submitCompleted(String res) {
-                        mPlayingDirectBean.setFstatus(2);
-
-                    }
-                });
-
-
-                break;
-            case R.id.ll_live_bottombar_timetable:
-            case R.id.ll_bottombar_timetable:
-
-                mLlTimeTable.setVisibility(View.VISIBLE);
-                mTimeTableAdapter.setSelection(position);
-
-                break;
-
-
-            case R.id.ll_live_timetable_title:
-                mLlTimeTable.setVisibility(View.GONE);
-
-                break;
-
             case R.id.img_guide_confirm:
                 mClGuide.setVisibility(View.GONE);
-
                 break;
-
-            case R.id.tv_player_definition:
-
-                mRcvDefinition.setVisibility(View.VISIBLE);
-
-                break;
-
-
         }
 
     }
@@ -3169,11 +2639,8 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
      * @param info
      */
     private void addWatchRecord(DirectBean info) {
-
         WatchRecordDAO.getInstance()
                 .addRecord(directBean.getRid(), info.getLessonid());
-
-
     }
 
 
@@ -3185,28 +2652,16 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         if (directBean.getRid().equals("-1")) {
             return;
         }
-
         int nextPosition = currentPosition + 1;
-
-
-        if (mSwitch.isChecked()) {
-
-
+        if (mPlayerView.controllerComponent.mSwitchButton.isChecked()) {
             if (directBeanListForClassSchedule.size() > nextPosition) {
-
                 DirectBean directBean = directBeanListForClassSchedule.get(nextPosition);
-
                 if ((directBean.getIs_buy() == null || (Integer.parseInt(directBean.getIs_buy()) == 0) && directBean.getIsTrial() != 1)) {
                     return;
                 }
-
-
                 if (directBean.getVideoType() == 1 && (directBean.getVideo_status().equals("1") || directBean.getVideo_status().equals("3"))) {
-
                     playNextVideo(nextPosition);
-
                 } else {
-
                     if (NetWorkUtils.isNetworkConnected(this)) {
                         initLiveRoom(directBean, nextPosition);
                     } else if ((DownManageActivity.CCDOWNSTATE_COMPLETE + "").equals(directBean.getDown_status())) {
@@ -3214,20 +2669,11 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
                     } else {
                         playNextVideo(nextPosition);
                     }
-
-
                 }
-
             } else {
                 directClassScheduleAdapter.showCustomToast("没有可以连续播放的视频了~");
-
-
             }
-
-
         }
-
-
     }
 
 
@@ -3237,8 +2683,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         if (mIsVideo || mIsPlayback) {
             return super.onKeyDown(keyCode, event);
         }
-
-
         if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
             mAudioManager.adjustStreamVolume(AudioManager.STREAM_VOICE_CALL, AudioManager.ADJUST_RAISE,
                     AudioManager.FLAG_PLAY_SOUND | AudioManager.FLAG_SHOW_UI);
@@ -3246,7 +2690,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             if (mLiveRoom != null) {
                 mLiveRoom.getPlayer().unMute();
             }
-
             Logger.e("mStreamVolume up:" + mStreamVolume);
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
@@ -3273,68 +2716,68 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
      */
     private void initBottomExtendView(DirectBean directBean) {
 
-        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-
-            mLlBottiom.setVisibility(View.VISIBLE);
-            mLlLiveFunction.setVisibility(View.VISIBLE);
-
-
-        } else {
-            mLlBottiom.setVisibility(View.GONE);
-            mLlLiveFunction.setVisibility(View.INVISIBLE);
-        }
-
-
-        if (isContinuous != -1) {
-            mSwitchLiveContinuous.setChecked(isContinuous == 0);
-            mSwitch.setChecked(isContinuous == 0);
-
-        }
-
-
-        //提现状态逻辑
-
-        if (this.directBean.getRid().equals("-1") ||
-                directBean.getIsTrial() == 1 || directBean.getReturncash() == 0) {
-            mLlWithDraw.setVisibility(View.GONE);
-            mLlLiveWithDraw.setVisibility(View.GONE);
-
-
-        } else {
-
-
-            mLlWithDraw.setVisibility(View.VISIBLE);
-            mLlLiveWithDraw.setVisibility(View.VISIBLE);
-            mPbWithDraw.setProgress(directBean.getProgress());
-            mPbLiveWithDraw.setProgress(directBean.getProgress());
-            if (directBean.getProgress() == 100 && directBean.getFstatus() != 0) {
-                mImgWithDraw.setVisibility(View.VISIBLE);
-                mPbWithDraw.setVisibility(View.GONE);
-                mTvWithDraw.setTextColor(getResources().getColor(R.color.gold));
-                mImgLiveWithDraw.setVisibility(View.VISIBLE);
-                mPbLiveWithDraw.setVisibility(View.GONE);
-                mTvLiveWithDraw.setTextColor(getResources().getColor(R.color.gold));
-
-            } else {
-                mImgWithDraw.setVisibility(View.GONE);
-                mPbWithDraw.setVisibility(View.VISIBLE);
-                mTvWithDraw.setTextColor(getResources().getColor(R.color.white));
-                mImgLiveWithDraw.setVisibility(View.GONE);
-                mPbLiveWithDraw.setVisibility(View.VISIBLE);
-                mTvLiveWithDraw.setTextColor(getResources().getColor(R.color.white));
-
-
-            }
-            if (directBean.getFstatus() == 2) {
-                mTvWithDraw.setText("已提现");
-                mTvLiveWithDraw.setText("已提现");
-            } else {
-                mTvWithDraw.setText("提现");
-                mTvLiveWithDraw.setText("提现");
-            }
-
-
-        }
+//        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+//
+//            mLlBottiom.setVisibility(View.VISIBLE);
+//            mLlLiveFunction.setVisibility(View.VISIBLE);
+//
+//
+//        } else {
+//            mLlBottiom.setVisibility(View.GONE);
+//            mLlLiveFunction.setVisibility(View.INVISIBLE);
+//        }
+//
+//
+//        if (isContinuous != -1) {
+//            mSwitchLiveContinuous.setChecked(isContinuous == 0);
+//            mSwitch.setChecked(isContinuous == 0);
+//
+//        }
+//
+//
+//        //提现状态逻辑
+//
+//        if (this.directBean.getRid().equals("-1") ||
+//                directBean.getIsTrial() == 1 || directBean.getReturncash() == 0) {
+//            mLlWithDraw.setVisibility(View.GONE);
+//            mLlLiveWithDraw.setVisibility(View.GONE);
+//
+//
+//        } else {
+//
+//
+//            mLlWithDraw.setVisibility(View.VISIBLE);
+//            mLlLiveWithDraw.setVisibility(View.VISIBLE);
+//            mPbWithDraw.setProgress(directBean.getProgress());
+//            mPbLiveWithDraw.setProgress(directBean.getProgress());
+//            if (directBean.getProgress() == 100 && directBean.getFstatus() != 0) {
+//                mImgWithDraw.setVisibility(View.VISIBLE);
+//                mPbWithDraw.setVisibility(View.GONE);
+//                mTvWithDraw.setTextColor(getResources().getColor(R.color.gold));
+//                mImgLiveWithDraw.setVisibility(View.VISIBLE);
+//                mPbLiveWithDraw.setVisibility(View.GONE);
+//                mTvLiveWithDraw.setTextColor(getResources().getColor(R.color.gold));
+//
+//            } else {
+//                mImgWithDraw.setVisibility(View.GONE);
+//                mPbWithDraw.setVisibility(View.VISIBLE);
+//                mTvWithDraw.setTextColor(getResources().getColor(R.color.white));
+//                mImgLiveWithDraw.setVisibility(View.GONE);
+//                mPbLiveWithDraw.setVisibility(View.VISIBLE);
+//                mTvLiveWithDraw.setTextColor(getResources().getColor(R.color.white));
+//
+//
+//            }
+//            if (directBean.getFstatus() == 2) {
+//                mTvWithDraw.setText("已提现");
+//                mTvLiveWithDraw.setText("已提现");
+//            } else {
+//                mTvWithDraw.setText("提现");
+//                mTvLiveWithDraw.setText("提现");
+//            }
+//
+//
+//        }
 
 
     }
@@ -3343,108 +2786,140 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onPlayEvent(PlayByIndexEvent event) {
         initLiveRoom(event.getInfo(), event.getIndex());
-
-
     }
 
+    private void initBJYVideoView() {
+        ibjyVideoPlayer = new VideoPlayerFactory.Builder()
+                //后台暂停播放
+                .setSupportBackgroundAudio(false)
+                //开启循环播放
+                .setSupportLooping(true)
+                //开启记忆播放
+                .setSupportBreakPointPlay(true, this)
+                //绑定activity生命周期
+                .setLifecycle(getLifecycle()).build();
+        mPlayerView = new MyBJYVideoView(this);
+        mPlayerView.initPlayer(ibjyVideoPlayer);
+        mPlayerView.setComponentEventListener((eventCode, bundle) -> {
+            switch (eventCode) {
+                case UIEventKey.CUSTOM_CODE_REQUEST_BACK://播放器返回按钮 已经自定义隐藏
+                    if (isLandscape) {
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    } else {
+                        finish();
+                    }
+                    break;
+                case UIEventKey.CUSTOM_CODE_REQUEST_TOGGLE_SCREEN://播放器全屏按钮
+                    setRequestedOrientation(isLandscape ?
+                            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT :
+                            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                    break;
+                case MyBJYVideoView.CUSTOM_CODE_TIMETABLE://时间表课表按钮
+                    mFraLiveTouch.setVisibility(View.VISIBLE);
+                    mLlTimeTable.setVisibility(View.VISIBLE);
+                    mTimeTableAdapter.setSelection(position);
+                    break;
+                case MyBJYVideoView.CUSTOM_CODE_WITHDRAW://听课返现
+                    if (mPlayingDirectBean == null || mPlayingDirectBean.getFstatus() == 2 || mPlayingDirectBean.getProgress() == 0 || mPlayingDirectBean.getFstatus() == 0 || mPlayingDirectBean == null) {
+                        return;
+                    }
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
+                    WithdrawalDialog mWithdrawalDialog = new WithdrawalDialog(this, mPlayingDirectBean, mPlayingDirectBean.getRid(), mPlayingDirectBean.getOrderid());
+                    mWithdrawalDialog.show();
+                    mWithdrawalDialog.setOnWithdrawaledListener(new WithdrawalDialog.OnWithdrawaledListener() {
+                        @Override
+                        public void submitCompleted(String res) {
+                            mPlayingDirectBean.setFstatus(2);
+                        }
+                    });
+                    break;
+                case MyBJYVideoView.CUSTOM_CODE_SWITCH://是否连续播放
+                    isContinuous = bundle.getBoolean("isChecked") ? 0 : 1;
+                    break;
+                case MyBJYVideoView.CUSTOM_CODE_DEFINITION://清晰度
+                    mRcvDefinition.setVisibility(View.VISIBLE);
+                    mFraLiveTouch.setVisibility(View.VISIBLE);
+                    break;
+                case MyBJYVideoView.CUSTOM_CODE_SPEED://播放倍率
+                    mFraLiveTouch.setVisibility(View.VISIBLE);
+                    if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
+                        mSpeedAdapter.select(speedType);
+                        mRcvSpeed.setVisibility(View.VISIBLE);
+                    } else {
+                        if (chooseSpeedPopwindows != null)
+                            chooseSpeedPopwindows.showPopUp(mPlayerView.controllerComponent.mSpeed, this, speedType);
+                    }
+                    break;
+                case MyBJYVideoView.CUSTOM_CODE_DOWN://下载
+                    if (ClickUtils.isFastClick())
+                        return;
+                    if (directBeanListForClassSchedule != null && directBeanListForClassSchedule.size() > 0)
+                        DownManageActivity.newIntent(PlayerActivityForBjysdk.this, directBeanListForClassSchedule);
+                    break;
+                default:
+                    break;
+            }
+        });
+        ibjyVideoPlayer.addOnPlayerStatusChangeListener(new OnPlayerListener() {
+            @Override
+            public void onBufferingStart() {
 
-    /**********************************手势处理*************************************/
-
-
-    private class LiveSurfaceGestureListener extends GestureDetector.SimpleOnGestureListener {
-        private boolean M;
-        private boolean N;
-        private boolean O;
-
-
-        public boolean onDown(MotionEvent var1) {
-            this.O = true;
-            return true;
-        }
-
-        @Override
-        public boolean onSingleTapUp(MotionEvent e) {
-            dismissBrightnessSlide();
-
-            return true;
-        }
-
-        public boolean onScroll(MotionEvent var1, MotionEvent var2, float var3, float var4) {
-            float var5 = var1.getX();
-            float var6 = var1.getY();
-            float var7 = var6 - var2.getY();
-            if (this.O) {
-                this.M = Math.abs(var3) >= Math.abs(var4);
-                this.N = var5 > (float) mSurface.getMeasuredWidth() * 0.5F;
-                this.O = false;
             }
 
-//            if (this.M) {
-//                if (!BJPlayerView.this.isPlayingAd && !BJPlayerView.this.isAdViewShowing && BJPlayerView.this.enableSeekCtrl) {
-//                    BJPlayerView.this.onProgressSlide(-var8 / (float)mVideoWidth);
-//                }
-//            } else
-            if (!M) {
+            @Override
+            public void onBufferingEnd() {
 
-                float var9 = var7 / (float) mSurface.getMeasuredHeight();
+            }
 
-                if (this.N) {
-                    onVolumeSlide(var9);
-                } else {
-                    onBrightnessSlide(var9);
+            @Override
+            public void onError(PlayerError playerError) {
+                Log.d("error", playerError.getMessage());
+            }
+
+            @Override
+            public void onStatusChange(PlayerStatus playerStatus) {
+                switch (playerStatus) {
+                    case STATE_INITIALIZED:
+                        BJYVideoInfo videoInfo = ibjyVideoPlayer.getVideoInfo();
+                        List<DefinitionBean> ownedList = new ArrayList<>();
+
+                        if (videoInfo.getSupportedDefinitionList() != null) {
+                            for (int i = 0; i < videoInfo.getSupportedDefinitionList().size(); i++) {
+                                VideoDefinition videoDefinition = videoInfo.getSupportedDefinitionList().get(i);
+                                DefinitionBean definitionBean = new DefinitionBean();
+                                definitionBean.setType(String.valueOf(videoDefinition.getType()));
+                                definitionBean.setValue(videoDefinition.getType());
+                                ownedList.add(definitionBean);
+                            }
+                        }
+                        mDefinitionAdapter.setOwnedList(ownedList);
+                        DefinitionBean definitionBean = new DefinitionBean();
+                        definitionBean.setType(String.valueOf(videoInfo.getDefinition().getType()));
+                        definitionBean.setValue(videoInfo.getDefinition().getType());
+
+                        mDefinitionAdapter.select(definitionBean);
+                        mPlayerView.controllerComponent.mDefinition.setText(mDefinitionAdapter.getNameByValue(videoInfo.getDefinition().getType()));
+                        break;
+                    case STATE_PLAYBACK_COMPLETED:
+                        playNextVideo(position);
+                        break;
                 }
-
-                return true;
             }
 
-            return super.onScroll(var1, var2, var3, var4);
-        }
+            @Override
+            public void onPlayingTimeChange(int i, int i1) {
 
-
-    }
-
-
-    private void onBrightnessSlide(float var1) {
-        if (this.brightness < 0.0F) {
-            this.brightness = getWindow().getAttributes().screenBrightness;
-            if (this.brightness <= 0.0F) {
-                this.brightness = 0.5F;
-            } else if (this.brightness < 0.01F) {
-                this.brightness = 0.01F;
             }
+        });
+        if ("-1".equals(directBean.getRid())) {
+            mPlayerView.controllerComponent.mDown.setVisibility(View.GONE);
+        } else if (directBean.getIs_buy() != null && Integer.parseInt(directBean.getIs_buy()) == 1) {
+            mPlayerView.controllerComponent.mDown.setVisibility(View.VISIBLE);
+        } else {
+            mPlayerView.controllerComponent.mDown.setVisibility(View.GONE);
         }
-
-        WindowManager.LayoutParams var2 = getWindow().getAttributes();
-        var2.screenBrightness = this.brightness + var1;
-        if (var2.screenBrightness > 1.0F) {
-            var2.screenBrightness = 1.0F;
-        } else if (var2.screenBrightness < 0.01F) {
-            var2.screenBrightness = 0.01F;
-        }
-
-        showBrightnessSlide((int) (var2.screenBrightness * 100.0F));
-
-        getWindow().setAttributes(var2);
-
-    }
-
-    private void showBrightnessSlide(int i) {
-        mLlLiveCenterDialog.setVisibility(View.VISIBLE);
-
-        mImgLiveCenterDialog.setImageResource(R.drawable.bjplayer_ic_brightness);
-        mTvLiveCenterDialog.setText(i + "%");
-
-
-    }
-
-    private void dismissBrightnessSlide() {
-        mLlLiveCenterDialog.setVisibility(View.GONE);
-
-    }
-
-    private void onVolumeSlide(float var9) {
-
-
+        mPlayerView.controllerComponent.mSpeed.setText("倍数");
+        mPlayerView.setPlayRate(1.0f);
     }
 
     @Override
@@ -3454,9 +2929,19 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         if (isLandscape) {
             layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
             layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+            if (mPlayerView != null) {
+                mPlayerView.controllerComponent.mBottomButton.setVisibility(View.VISIBLE);
+                mPlayerView.controllerComponent.mDefinition.setVisibility(View.VISIBLE);
+            }
+            img_customer_service.setVisibility(View.GONE);//客服按钮
         } else {
             layoutParams.width = Utils.getScreenWidthPixels(this);
             layoutParams.height = layoutParams.width * 9 / 16;
+            if (mPlayerView != null) {
+                mPlayerView.controllerComponent.mBottomButton.setVisibility(View.GONE);
+                mPlayerView.controllerComponent.mDefinition.setVisibility(View.GONE);
+            }
+            img_customer_service.setVisibility(View.VISIBLE);//客服按钮
         }
         rlPlayLayout.setLayoutParams(layoutParams);
     }

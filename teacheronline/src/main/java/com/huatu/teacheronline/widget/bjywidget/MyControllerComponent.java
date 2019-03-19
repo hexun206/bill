@@ -11,6 +11,8 @@ import android.os.Message;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -25,11 +27,15 @@ import com.baijiayun.videoplayer.ui.listener.OnTouchGestureListener;
 import com.baijiayun.videoplayer.ui.utils.NetworkUtils;
 import com.baijiayun.videoplayer.util.Utils;
 import com.huatu.teacheronline.R;
+import com.kyleduo.switchbutton.SwitchButton;
+import com.zhy.android.percent.support.PercentLinearLayout;
+import com.zhy.android.percent.support.PercentRelativeLayout;
+
+import butterknife.BindView;
 
 public class MyControllerComponent extends BaseComponent implements OnTouchGestureListener {
 
     private final int MSG_CODE_DELAY_HIDDEN_CONTROLLER = 101;
-
     View mTopContainer;
     View mBottomContainer;
     ImageView mBackIcon;
@@ -39,6 +45,16 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
     TextView mTotalTime;
     ImageView mSwitchScreen;
     SeekBar mSeekBar;
+
+    public View mBottomButton;             //横屏显示时的控件按钮组
+    public View mTimetable;                //时间表课表按钮
+    public View mWithdraw;                 //听课返现
+    public SwitchButton mSwitchButton;     //是否连续播放
+    public TextView mDefinition;           //清晰度
+    public TextView mSpeed;                //播放倍率
+    public View mDown;                     //下载
+    public ProgressBar mWithdrawProgress;  //进度按钮
+
 
     private int mBufferPercentage;
 
@@ -65,7 +81,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
 
     @Override
     protected View onCreateComponentView(Context context) {
-        return View.inflate(context, R.layout.layout_controller_component_new, null);
+        return View.inflate(context, R.layout.layout_controller_component_teacheronline, null);
     }
 
     @Override
@@ -148,6 +164,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
     protected void onInitView() {
         mTopContainer = findViewById(R.id.cover_player_controller_top_container);
         mBottomContainer = findViewById(R.id.cover_player_controller_bottom_container);
+        mBottomButton = findViewById(R.id.ll_bottombar_bottom);
         mBackIcon = findViewById(R.id.cover_player_controller_image_view_back_icon);
         mTopTitle = findViewById(R.id.cover_player_controller_text_view_video_title);
         mStateIcon = findViewById(R.id.cover_player_controller_image_view_play_state);
@@ -156,7 +173,26 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
         mSwitchScreen = findViewById(R.id.cover_player_controller_image_view_switch_screen);
         mSeekBar = findViewById(R.id.cover_player_controller_seek_bar);
 
+        mTimetable = findViewById(R.id.ll_bottombar_timetable); //时间表课表按钮
+        mWithdraw = findViewById(R.id.ll_bottombar_withdraw);   //听课返现
+        mSwitchButton = findViewById(R.id.switch_bottombar);    //是否连续播放
+        mDefinition = findViewById(R.id.tv_player_definition);  //清晰度
+        mSpeed = findViewById(R.id.tv_player_speed);            //播放倍率
+        mDown = findViewById(R.id.rl_main_right_player);        //下载
+        mWithdrawProgress = findViewById(R.id.pb_bottombar_withdraw);        //下载
+
         mBackIcon.setOnClickListener(v -> notifyComponentEvent(UIEventKey.CUSTOM_CODE_REQUEST_BACK, null));
+
+        mTimetable.setOnClickListener(v -> notifyComponentEvent(MyBJYVideoView.CUSTOM_CODE_TIMETABLE, null));
+        mWithdraw.setOnClickListener(v -> notifyComponentEvent(MyBJYVideoView.CUSTOM_CODE_WITHDRAW, null));
+        mSwitchButton.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("isChecked", mSwitchButton.isChecked());
+            notifyComponentEvent(MyBJYVideoView.CUSTOM_CODE_SWITCH, bundle);
+        });
+        mDefinition.setOnClickListener(v -> notifyComponentEvent(MyBJYVideoView.CUSTOM_CODE_DEFINITION, null));
+        mSpeed.setOnClickListener(v -> notifyComponentEvent(MyBJYVideoView.CUSTOM_CODE_SPEED, null));
+        mDown.setOnClickListener(v -> notifyComponentEvent(MyBJYVideoView.CUSTOM_CODE_DOWN, null));
 
         mStateIcon.setOnClickListener(v -> {
             boolean selected = mStateIcon.isSelected();
@@ -191,7 +227,6 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
                 mHandler.postDelayed(mSeekEventRunnable, 300);
             }
         });
-        mTopContainer.setVisibility(View.GONE);
     }
 
     @Override
@@ -263,7 +298,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
     }
 
     private void setTitle(String text) {
-        mTopTitle.setText(text);
+//        mTopTitle.setText(text);
     }
 
     private void setSwitchScreenIcon(boolean isFullScreen) {
@@ -305,7 +340,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
             });
             mTopAnimator.start();
         } else {
-            mTopContainer.setVisibility(View.GONE);
+            mTopContainer.setVisibility(View.VISIBLE);
         }
     }
 

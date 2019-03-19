@@ -80,7 +80,7 @@
         android:layout_marginRight="6dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:visibility="gone"
+        android:visibility="visible"
         >
 
 

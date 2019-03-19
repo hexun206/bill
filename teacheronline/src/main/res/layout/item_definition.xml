@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#F0000000"
+    android:id="@+id/content_layout"
     >
 
 
     <TextView
         android:id="@+id/tv_definition_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:textColor="@color/gray007"

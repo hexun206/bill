@@ -1,5 +1,7 @@
 package com.huatu.teacheronline.bean;
 
+import com.baijiayun.constant.VideoDefinition;
+
 import java.util.Objects;
 
 /**
@@ -50,5 +52,27 @@ public class DefinitionBean {
     public int hashCode() {
 
         return Objects.hash(type, value);
+    }
+
+    public VideoDefinition getVideoDefinitionForValue(int value) {
+        VideoDefinition videoDefinition = VideoDefinition.Audio;
+        switch (value) {
+            case 0:
+                videoDefinition = VideoDefinition.SD;
+                break;
+            case 1:
+                videoDefinition = VideoDefinition.HD;
+                break;
+            case 2:
+                videoDefinition = VideoDefinition.SHD;
+                break;
+            case 3:
+                videoDefinition = VideoDefinition._720P;
+                break;
+            case 4:
+                videoDefinition = VideoDefinition._1080P;
+                break;
+        }
+        return videoDefinition;
     }
 }
