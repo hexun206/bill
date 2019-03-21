@@ -3,7 +3,10 @@ package com.huatu.teacheronline.direct;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
@@ -1928,7 +1931,17 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             DataStore_Direct.directDatailList = directBeanListForClassSchedule;
             iniFristData(isLocaleData);
         } else {
-            ToastUtils.showToast(getString(R.string.course_not_start));
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("提示")
+                    .setMessage(getString(R.string.course_not_start))
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    }).create();
+            builder.show();
+//            ToastUtils.showToast(getString(R.string.course_not_start));
         }
         mCustomLoadingDialog.dismiss();
     }
@@ -2676,39 +2689,6 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
         }
     }
 
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        if (mIsVideo || mIsPlayback) {
-            return super.onKeyDown(keyCode, event);
-        }
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            mAudioManager.adjustStreamVolume(AudioManager.STREAM_VOICE_CALL, AudioManager.ADJUST_RAISE,
-                    AudioManager.FLAG_PLAY_SOUND | AudioManager.FLAG_SHOW_UI);
-            mStreamVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_VOICE_CALL);
-            if (mLiveRoom != null) {
-                mLiveRoom.getPlayer().unMute();
-            }
-            Logger.e("mStreamVolume up:" + mStreamVolume);
-            return true;
-        } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            AudioManager mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-            if (mAudioManager == null) return true;
-            mAudioManager.adjustStreamVolume(AudioManager.STREAM_VOICE_CALL, AudioManager.ADJUST_LOWER,
-                    AudioManager.FLAG_PLAY_SOUND | AudioManager.FLAG_SHOW_UI);
-            int volume = mAudioManager.getStreamVolume(AudioManager.STREAM_VOICE_CALL);
-            if (volume == minVolume && mStreamVolume == minVolume && mLiveRoom != null) {
-                mLiveRoom.getPlayer().mute();
-            }
-            mStreamVolume = volume;
-            Logger.e("mStreamVolume down:" + mStreamVolume);
-            return true;
-        } else {
-            return super.onKeyDown(keyCode, event);
-        }
-    }
-
     /**
      * 初始化全屏时的BottomView
      *
@@ -2944,5 +2924,18 @@ public class PlayerActivityForBjysdk extends BaseActivity implements OnLiveRoomL
             img_customer_service.setVisibility(View.VISIBLE);//客服按钮
         }
         rlPlayLayout.setLayoutParams(layoutParams);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // 对返回键的处理，横屏时返回后变竖屏，竖屏时返回后退出
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (isLandscape) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            } else {
+                finish();
+            }
+        }
+        return false;
     }
 }

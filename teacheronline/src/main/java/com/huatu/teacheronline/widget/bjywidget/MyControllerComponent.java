@@ -62,6 +62,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
     private boolean mControllerTopEnable = false;
     private ObjectAnimator mBottomAnimator;
     private ObjectAnimator mTopAnimator;
+    private int topContrVisiblity = View.VISIBLE;
 
     private Handler mHandler = new Handler(Looper.getMainLooper()) {
         @Override
@@ -326,7 +327,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
                 public void onAnimationStart(Animator animation) {
                     super.onAnimationStart(animation);
                     if (state) {
-                        mTopContainer.setVisibility(View.VISIBLE);
+                        mTopContainer.setVisibility(topContrVisiblity);
                     }
                 }
 
@@ -340,7 +341,7 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
             });
             mTopAnimator.start();
         } else {
-            mTopContainer.setVisibility(View.VISIBLE);
+            mTopContainer.setVisibility(topContrVisiblity);
         }
     }
 
@@ -383,6 +384,11 @@ public class MyControllerComponent extends BaseComponent implements OnTouchGestu
             }
         });
         mBottomAnimator.start();
+    }
+
+    public void setTopContrVisiblity(int topContrVisiblity) {
+        this.topContrVisiblity = topContrVisiblity;
+        mTopContainer.setVisibility(topContrVisiblity);
     }
 
     @Override

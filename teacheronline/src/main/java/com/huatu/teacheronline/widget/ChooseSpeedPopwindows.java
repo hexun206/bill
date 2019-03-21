@@ -158,8 +158,8 @@ public class ChooseSpeedPopwindows {
         popupWindow.setFocusable(true);
         // 获得位置
         v.getLocationOnScreen(location);
-//        popupWindow.showAtLocation(v, Gravity.BOTTOM,0,0);
-        popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, (location[0] + v.getWidth() / 2) - popupWidth / 2, location[1] - popupHeight);
+        popupWindow.showAsDropDown(v);
+//        popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, (location[0] + v.getWidth() / 2) - popupWidth / 2, location[1] - popupHeight);
     }
 
     public void dissmiss() {

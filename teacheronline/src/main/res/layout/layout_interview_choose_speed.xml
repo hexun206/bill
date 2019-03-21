@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="62dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bsbg"
         android:gravity="center"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout3">
-
-        <TextView
-            android:id="@+id/tv_speed_quick3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:text="@string/speed_quick3"
-            android:textColor="@color/white"
-            android:textSize="12dp"/>
-
-
-        <TextView
-            android:id="@+id/tv_speed_quick2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:text="@string/speed_quick2"
-            android:textColor="@color/white"
-            android:textSize="12dp"/>
-
-        <TextView
-            android:id="@+id/tv_speed_quick1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:text="@string/speed_quick1"
-            android:textColor="@color/white"
-            android:textSize="12dp"/>
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_speed_original"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:padding="6dp"
             android:text="@string/speed_original"
             android:textColor="@color/white"
-            android:textSize="12dp"/>
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_speed_quick1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/speed_quick1"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_speed_quick2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/speed_quick2"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_speed_quick3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/speed_quick3"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
     </LinearLayout>
 </RelativeLayout>

@@ -123,9 +123,9 @@ public class SendRequest {
 //    private static String url_classmesgg=url_vip+"notice";    //课程通知测试线
 
 
-    public static String url_user = "http://mobileappa.hteacher.net/teacher/index.php/"; //测试服务器地址
+//    public static String url_user = "http://mobileappa.hteacher.net/teacher/index.php/"; //测试服务器地址
 //    public static String url_user = "http://mobileappb.hteacher.net/teacher/index.php/"; //预发布服务器地址
-//    public static String url_user = "http://mobileapp.hteacher.net/teacher/index.php/"; //正式服务器
+    public static String url_user = "http://mobileapp.hteacher.net/teacher/index.php/"; //正式服务器
 
     private static String url_vip = "http://221.122.54.137:8080/jszx/";    //vip相关正式
 //    private static String url_vip = "http://112.74.196.127:8080/web/";    //vip测试线
