@@ -15,16 +15,40 @@
             android:layout_width="match_parent"
             android:layout_height="0dp" />
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:gravity="center"
-            android:text="贴吧"
-            android:textColor="@color/black_5B6C8A"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_height="44dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="贴吧"
+                android:textColor="@color/black_5B6C8A"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
+            <RelativeLayout
+                android:id="@+id/rlMine"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_mine" />
+            </RelativeLayout>
+        </RelativeLayout>
     </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTieba"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

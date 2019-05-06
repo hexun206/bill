@@ -13,10 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bysj.bill_system.R;
+import com.bysj.bill_system.bean.TiebaBean;
 import com.bysj.bill_system.fragment.BillFragment;
 import com.bysj.bill_system.fragment.MineFragment;
 import com.bysj.bill_system.fragment.TiebaFragment;
 import com.bysj.bill_system.fragment.TripFragment;
+import com.bysj.bill_system.sqlite.TiebaDao;
 import com.bysj.bill_system.utils.ToastUtils;
 
 import java.util.HashMap;
@@ -80,6 +82,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     void initData() {
+        insertData();
         showLoadingDialog();
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -202,5 +205,20 @@ public class MainActivity extends BaseActivity {
             }
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private void insertData() {
+        List<TiebaBean> query = TiebaDao.getInstance(this).query();
+        if (query.size() == 0) {
+            TiebaDao.getInstance(this).createTie(new TiebaBean(0, "文章阅读网 -情感文章-美文故事-散文欣赏", "爱情、亲情、友情等情感文章欣赏及人生感悟、经典、哲理、励志、搞笑文章,校园文章、美文故事、散文随笔等免费在线阅读。欢迎作者在本站发表文章,分享心情。",
+                    "水经验帖", "阳光美文", "13110801991", "", System.currentTimeMillis() - 3 * 24 * 3600 * 1000));
+            TiebaDao.getInstance(this).createTie(new TiebaBean(0, "一只可爱流浪猫咪求好心人带走", "纯白色猫咪，健康很干净，性格温和。",
+                    "求助帖", "善良人士", "13100012001", "", System.currentTimeMillis() - 2 * 24 * 3600 * 1000));
+            TiebaDao.getInstance(this).createTie(new TiebaBean(0, "福特 嘉年华三厢 2010款 三厢 1.5L 手动光芒限定版-精品福特嘉年华", "历史用途：\n" +
+                    "纯个人代步使用 平时接送孩子 上下班自己用 电话信号不好 留下您的联系方式我加您\n" +
+                    "车况描述：\n" +
+                    "皮实保值，全车原版，无大小事故，保证质量，发动机变速箱特别好使，不烧机油，底盘扎实紧凑，整车状态小巅峰，到手就开不用投资，全车电器好使，北京地区可以送车上门，外地可 以物流全国。",
+                    "二手交易", "二手车曹先生", "18515182008", "", System.currentTimeMillis() - 1 * 24 * 3600 * 1000));
+        }
     }
 }

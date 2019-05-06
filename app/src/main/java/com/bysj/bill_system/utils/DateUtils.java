@@ -1,6 +1,8 @@
 package com.bysj.bill_system.utils;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DateUtils {
     public static boolean isSameDay(long time1, long time2) {
@@ -29,9 +31,14 @@ public class DateUtils {
         return numb > 9 ? "" + numb : "0" + numb;
     }
 
-    public static String format(long time){
+    public static String format(long time) {
         Calendar current = Calendar.getInstance();
         current.setTimeInMillis(time);
         return current.get(Calendar.YEAR) + "年" + fmt(current.get(Calendar.MONTH) + 1) + "月" + fmt(current.get(Calendar.DAY_OF_MONTH)) + "日";
+    }
+
+    public static String simpleFormat(long time) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd HH:mm");
+        return format.format(new Date(time));
     }
 }

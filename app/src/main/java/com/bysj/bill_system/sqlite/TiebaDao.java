@@ -1,0 +1,172 @@
+package com.bysj.bill_system.sqlite;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.bysj.bill_system.bean.ReplyBean;
+import com.bysj.bill_system.bean.TiebaBean;
+import com.bysj.bill_system.compare.TiebaCompare;
+import com.bysj.bill_system.config.Config;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class TiebaDao {
+
+    private final String tableTie = "table_tieba";
+    private final String tableReply = "table_reply";
+    private final String CREATE_Tie = "create table " + tableTie + " (id integer primary key, title varchar, content varchar, style varchar,phone varchar,nickname varchar,headUrl varchar,time long)";
+    private final String CREATE_Reply = "create table " + tableReply + " (id integer primary key, content varchar, toName varchar,owner varchar,sendTime long,ssid integer,pid integer,toNamePhone varchar,ownerPhone varchar)";
+    private DBHelper dbHelper;
+    private Context context;
+    private static TiebaDao instance;
+
+    public static TiebaDao getInstance(Context context) {
+        if (instance == null)
+            instance = new TiebaDao(context.getApplicationContext());
+        return instance;
+    }
+
+    public TiebaDao(Context context) {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add(CREATE_Tie);
+        strings.add(CREATE_Reply);
+        this.dbHelper = new DBHelper(context, "tieba.db", null, Config.DBVERSON, strings);
+    }
+
+    public void createTie(TiebaBean tiebaBean) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.execSQL("insert into " + tableTie + "(title,content,style,phone,nickname,headUrl,time)  values(?,?,?,?,?,?,?)", new Object[]{tiebaBean.title, tiebaBean.content, tiebaBean.style, tiebaBean.phone, tiebaBean.nickname, tiebaBean.headUrl, tiebaBean.time});
+        db.close();
+    }
+
+    public List<TiebaBean> query() {
+        List<TiebaBean> billBeanList = new ArrayList<>();
+        SQLiteDatabase readableDatabase = dbHelper.getReadableDatabase();
+        try {
+            Cursor cursor = readableDatabase.rawQuery("select id,title,content,style,phone,nickname,headUrl,time from " + tableTie, null);
+            while (cursor.moveToNext()) {
+                billBeanList.add(new TiebaBean(cursor.getInt(0)
+                        , cursor.getString(1)
+                        , cursor.getString(2)
+                        , cursor.getString(3)
+                        , cursor.getString(4)
+                        , cursor.getString(5)
+                        , cursor.getString(6)
+                        , cursor.getLong(7)
+                ));
+            }
+        } catch (Exception e) {
+
+        }
+        readableDatabase.close();
+        Collections.sort(billBeanList, new TiebaCompare());
+        return billBeanList;
+    }
+
+    public List<TiebaBean> queryMine(String phone) {
+        List<TiebaBean> billBeanList = new ArrayList<>();
+        SQLiteDatabase readableDatabase = dbHelper.getReadableDatabase();
+        try {
+            Cursor cursor = readableDatabase.rawQuery("select id,title,content,style,phone,nickname,headUrl,time from " + tableTie + " where phone = " + phone, null);
+            while (cursor.moveToNext()) {
+                billBeanList.add(new TiebaBean(cursor.getInt(0)
+                        , cursor.getString(1)
+                        , cursor.getString(2)
+                        , cursor.getString(3)
+                        , cursor.getString(4)
+                        , cursor.getString(5)
+                        , cursor.getString(6)
+                        , cursor.getLong(7)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        readableDatabase.close();
+        Collections.sort(billBeanList, new TiebaCompare());
+        return billBeanList;
+    }
+
+    public List<TiebaBean> queryMinePart(String phone) {
+        List<TiebaBean> billBeanList = new ArrayList<>();
+        SQLiteDatabase readableDatabase = dbHelper.getReadableDatabase();
+        try {
+            Cursor cursor = readableDatabase.rawQuery("select * from " + tableReply + " where toNamePhone = " + phone + " or ownerPhone = " + phone, null);
+            StringBuffer sb = new StringBuffer();
+            while (cursor.moveToNext()) {
+                sb.append(" id = " + cursor.getInt(6) + " or ");
+            }
+            if (sb.toString().length() != 0) {
+                Cursor cursor1 = readableDatabase.rawQuery("select * from " + tableTie + " where " + sb.toString().substring(0, sb.toString().length() - 4), null);
+                while (cursor1.moveToNext()) {
+                    TiebaBean tiebaBean = new TiebaBean(cursor.getInt(0)
+                            , cursor.getString(1)
+                            , cursor.getString(2)
+                            , cursor.getString(3)
+                            , cursor.getString(4)
+                            , cursor.getString(5)
+                            , cursor.getString(6)
+                            , cursor.getLong(7)
+                    );
+                    billBeanList.add(tiebaBean);
+                }
+            }
+        } catch (Exception e) {
+        }
+        readableDatabase.close();
+        Collections.sort(billBeanList, new TiebaCompare());
+        return billBeanList;
+    }
+
+    public void replyTie(ReplyBean replyBean) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        try {
+            db.execSQL("insert into " + tableReply + "(content,toName,owner,sendTime,ssid,pid,toNamePhone,ownerPhone)  values(?,?,?,?,?,?,?,?)", new Object[]{replyBean.content, replyBean.toName, replyBean.owner, replyBean.sendTime, replyBean.ssid, replyBean.pid, replyBean.toNamePhone, replyBean.ownerPhone});
+        } catch (Exception e) {
+
+        }
+        db.close();
+    }
+
+    public TiebaBean queryDetail(int id) {
+        SQLiteDatabase readableDatabase = dbHelper.getReadableDatabase();
+        TiebaBean tiebaBean = null;
+        try {
+            Cursor cursor = readableDatabase.rawQuery("select * from " + tableTie, null);
+            cursor.moveToNext();
+            tiebaBean = new TiebaBean(cursor.getInt(0)
+                    , cursor.getString(1)
+                    , cursor.getString(2)
+                    , cursor.getString(3)
+                    , cursor.getString(4)
+                    , cursor.getString(5)
+                    , cursor.getString(6)
+                    , cursor.getLong(7)
+            );
+            tiebaBean.replys = getReplyList(readableDatabase, tiebaBean.id, tiebaBean.id);
+        } catch (Exception e) {
+        }
+        readableDatabase.close();
+        return tiebaBean;
+    }
+
+    private List<ReplyBean> getReplyList(SQLiteDatabase readableDatabase, int pid, int ssid) {
+        Cursor cursor1 = readableDatabase.rawQuery("select * from " + tableReply + " where pid = " + pid + " and ssid = " + ssid, null);
+        List<ReplyBean> replyBeans = new ArrayList<>();
+        while (cursor1.moveToNext()) {
+            ReplyBean replyBean = new ReplyBean();
+            replyBean.id = cursor1.getInt(0);
+            replyBean.content = cursor1.getString(1);
+            replyBean.toName = cursor1.getString(2);
+            replyBean.owner = cursor1.getString(3);
+            replyBean.sendTime = cursor1.getLong(4);
+            replyBean.ssid = cursor1.getInt(5);
+            replyBean.pid = cursor1.getInt(6);
+            replyBean.replyBeanList = getReplyList(readableDatabase, pid, replyBean.id);
+            replyBeans.add(replyBean);
+        }
+        return replyBeans;
+    }
+}

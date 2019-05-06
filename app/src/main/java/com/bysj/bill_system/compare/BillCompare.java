@@ -1,4 +1,4 @@
-package com.bysj.bill_system.utils;
+package com.bysj.bill_system.compare;
 
 import com.bysj.bill_system.bean.BillBean;
 

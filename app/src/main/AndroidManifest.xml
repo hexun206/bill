@@ -17,7 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".activity.PersonalSettingActivity"></activity>
+        <activity android:name=".activity.TiebaDetailActivity"></activity>
+        <activity android:name=".activity.TMineActivity" />
+        <activity android:name=".activity.PostingActivity" />
+        <activity android:name=".activity.PersonalSettingActivity" />
         <activity android:name=".activity.CalendarActivity" />
         <activity android:name=".activity.WebActivity" />
         <activity

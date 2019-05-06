@@ -28,7 +28,8 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3a2b206c-6411-48a3-b057-566e820a6835">
       <console name="test" type="STANDARD" schema="main" session="Main"><![CDATA[select * from table_bill
-delete from table_bill where id = 2]]></console>
+delete from table_bill where id = 2
+insert into table_bill]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
