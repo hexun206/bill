@@ -5,4 +5,13 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gold_f9">#F9A329</color>
+    <color name="gold_f8">#F8CD4A</color>
+    <color name="black">#000000</color>
+    <color name="black_22">#222222</color>
+    <color name="black_5B6C8A">#5B6C8A</color>
+    <color name="transparent">#00000000</color>
+
 </resources>

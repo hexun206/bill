@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="164dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="性别"
+            android:textColor="@color/black_22"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBoy"
+            android:layout_width="218dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:background="@drawable/shape_choosed_btn_bac"
+            android:text="男"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/btnGirl"
+            android:layout_width="218dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="109dp"
+            android:background="@drawable/shape_choose_btn_bac"
+            android:text="女"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

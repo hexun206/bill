@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:id="@+id/frCountView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="49dp" />
+
+    <LinearLayout
+        android:id="@+id/llTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_tab_bac"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llTab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivTab1"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/ic_main_tab1_c" />
+
+            <TextView
+                android:id="@+id/tvTab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="明细"
+                android:textColor="@color/gold_f9"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivTab2"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/ic_main_tab2" />
+
+            <TextView
+                android:id="@+id/tvTab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="统计"
+                android:textColor="#5B6C8A"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTab"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="clip_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivTab"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_circle_bac"
+                android:src="@mipmap/ic_main_tab" />
+
+            <TextView
+                android:id="@+id/tvTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="记账"
+                android:textColor="#5B6C8A"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTab3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivTab3"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/ic_main_tab3" />
+
+            <TextView
+                android:id="@+id/tvTab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="社区"
+                android:textColor="#5B6C8A"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTab4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivTab4"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/ic_main_tab4" />
+
+            <TextView
+                android:id="@+id/tvTab4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="我的"
+                android:textColor="#5B6C8A"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vTab"
+        android:layout_width="50dp"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
