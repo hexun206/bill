@@ -46,6 +46,7 @@ public class TMineFragment extends BaseFragment {
     }
 
     private void getData() {
+        showLoadingDialog();
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -55,6 +56,13 @@ public class TMineFragment extends BaseFragment {
                     query = TiebaDao.getInstance(getActivity()).queryMine(phone);
                 else
                     query = TiebaDao.getInstance(getActivity()).queryMinePart(phone);
+                synchronized (Thread.currentThread()) {
+                    try {
+                        Thread.currentThread().wait(300);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

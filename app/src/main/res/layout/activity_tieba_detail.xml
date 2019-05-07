@@ -12,6 +12,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rlBottom"
@@ -22,7 +23,7 @@
     <RelativeLayout
         android:id="@+id/rlBottom"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white">
 
@@ -30,40 +31,33 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentTop="true"
-            android:background="@color/bar_grey_90" />
+            android:background="@color/gold_f8" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/etReview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@+id/tvConfirm"
+            android:background="@drawable/shape_et_bac"
+            android:hint="我也来说两句"
+            android:inputType="text"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:textColor="@color/black_5B6C8A"
+            android:textSize="13sp" />
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:id="@+id/details_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/topic_detail_message" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:text="评论"
-                        android:textColor="#999CAA"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_title_bac"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 </RelativeLayout>

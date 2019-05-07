@@ -1,6 +1,7 @@
 package com.bysj.bill_system.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.bysj.bill_system.R;
+import com.bysj.bill_system.activity.TiebaDetailActivity;
 import com.bysj.bill_system.bean.TiebaBean;
 import com.bysj.bill_system.utils.DataUtils;
 import com.bysj.bill_system.utils.DateUtils;
@@ -56,6 +58,12 @@ public class TiebaAdapter extends RecyclerView.Adapter<TiebaAdapter.ViewHolder> 
             holder.discussComment.setText("" + tiebaBean.replys.size());
         holder.discussTime.setText(DateUtils.simpleFormat(tiebaBean.time));
         Glide.with(context).load(tiebaBean.headUrl).apply(new RequestOptions().error(R.mipmap.ic_header).circleCrop()).into(holder.discussImage);
+        holder.llContent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, TiebaDetailActivity.class).putExtra("id", tiebaBean.id));
+            }
+        });
     }
 
     @Override
@@ -80,6 +88,8 @@ public class TiebaAdapter extends RecyclerView.Adapter<TiebaAdapter.ViewHolder> 
         TextView discussLike;
         @BindView(R.id.discuss_comment)
         TextView discussComment;
+        @BindView(R.id.llContent)
+        View llContent;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

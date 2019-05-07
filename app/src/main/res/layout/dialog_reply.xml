@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/llBacLayout">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:paddingBottom="6dp">
+
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:hint="快来回复吧"
+            android:inputType="textMultiLine"
+            android:minHeight="60dp"
+            android:textColor="@color/black_5B6C8A"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/shape_choosed_btn_bac"
+            android:gravity="center"
+            android:text="发表"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
