@@ -35,7 +35,7 @@ dependencies {
 
     //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    implementation "com.android.support:recyclerview-v7:27.1.1"
+    implementation "com.android.support:recyclerview-v7:27.0.2"
     testImplementation 'junit:junit:4.12'
     implementation 'com.baijia.common.glide:glide:4.8.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
